@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Ilyan Fraimbault</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <header>
@@ -14,107 +14,125 @@
 </header>
 <nav>
   <a href="index.html">Accueil</a>
-  <a href="bio.html">À propos</a>
+  <a href="pages/bio.html">À propos</a>
   <a href="#projects">Portfolio d'apprentissage</a>
 </nav>
 <main>
   <section id="about">
     <h2>À propos de moi</h2>
     <p>Je suis un étudiant en BUT informatique passionné par le développement web et la programmation. Avec des
-      expériences en Python, Java, C#, PHP, et SQL, je crée des solutions techniques élégantes pour des défis variés.
-      <a href="bio.html"><i class="fa fa-arrow-right"></i></a></p>
+      expériences en Python, Java, C#, PHP, et SQL, je crée des solutions techniques élégantes pour des défis variés.</p>
+    <a href="pages/bio.html" style="display:none;">bio</a>
   </section>
   <section id="projects">
     <h2>Portfolio d'apprentissage</h2>
     <div class="project">
       <h3>Site web PHP / Symfony</h3>
       <p>Un site web complet développé avec PHP et Symfony, intégrant des fonctionnalités de connexion, de stockage de
-        données, et de gestion de contenu.
-        <a href="projets/sconote.html"><i class="fa fa-arrow-right"></i></a></p>
+        données, et de gestion de contenu.</p>
+      <a href="pages/projets/sconote.html" style="display:none;">sconote</a>
     </div>
     <div class="project">
       <h3>OTPBuild système d'API C#</h3>
       <p>OTPBuild est une application non visuelle qui permet aux joueurs du jeu League of Legends de récupérer des
-        informations sur les meilleurs joueurs du jeu pour s'en inspirer.
-        <a href="projets/otpbuild.html"><i class="fa fa-arrow-right"></i></a>
-      </p>
+        informations sur les meilleurs joueurs du jeu pour s'en inspirer.</p>
+      <a href="pages/projets/otpbuild.html" style="display:none;">otpbuild</a>
     </div>
     <div class="project">
       <h3>Application jeu de plateau Java</h3>
-      <p>Une interface graphique utilisateur permettant de jouer au jeu Trains en Java à l'aide du module JavaFX.
-        <a href="projets/trains.html"><i class="fa fa-arrow-right"></i></a>
-      </p>
+      <p>Une interface graphique utilisateur permettant de jouer au jeu Trains en Java à l'aide du module JavaFX.</p>
+      <a href="pages/projets/trains.html" style="display:none;">trains</a>
     </div>
   </section>
   <section id="skills">
     <h2>Compétences</h2>
     <ul class="skills-list">
       <li>
-        <img src="img/language-icons/c-sharp.png" alt="C# Icon" class="language-icon">
-        <strong>C#</strong><span class="rating">9/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/c-sharp.png" alt="C# Icon" class="language-icon">
+          <strong>C#</strong><span class="rating">9/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 90%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/python.gif" alt="Python Icon" class="language-icon">
-        <strong>Python</strong><span class="rating">8/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/python.gif" alt="Python Icon" class="language-icon">
+          <strong>Python</strong><span class="rating">8/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/java.gif" alt="Java Icon" class="language-icon">
-        <strong>Java</strong><span class="rating">9/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/java.gif" alt="Java Icon" class="language-icon">
+          <strong>Java</strong><span class="rating">9/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 90%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/php.svg" alt="PHP Icon" class="language-icon">
-        <strong>PHP</strong><span class="rating">8/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/php.svg" alt="PHP Icon" class="language-icon">
+          <strong>PHP</strong><span class="rating">8/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/mysql.png" alt="SQL Icon" class="language-icon">
-        <strong>MySQL</strong><span class="rating">9/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/mysql.png" alt="SQL Icon" class="language-icon">
+          <strong>MySQL</strong><span class="rating">9/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 90%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/c.png" alt="C Icon" class="language-icon">
-        <strong>C</strong><span class="rating">6/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/c.png" alt="C Icon" class="language-icon">
+          <strong>C</strong><span class="rating">6/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 60%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/html5.png" alt="HTML Icon" class="language-icon">
-        <strong>HTML/CSS</strong><span class="rating">8/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/html5.png" alt="HTML Icon" class="language-icon">
+          <strong>HTML/CSS</strong><span class="rating">8/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/mongo-db.png" alt="MongoDB Icon" class="language-icon">
-        <strong>MongoDB</strong><span class="rating">8/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/mongo-db.png" alt="MongoDB Icon" class="language-icon">
+          <strong>MongoDB</strong><span class="rating">8/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/javascript.gif" alt="JavaScript Icon" class="language-icon">
-        <strong>JavaScript</strong><span class="rating">5/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/javascript.gif" alt="JavaScript Icon" class="language-icon">
+          <strong>JavaScript</strong><span class="rating">7/10</span>
+        </div>
         <div class="progress-bar">
-          <div class="progress" style="width: 50%;"></div>
+          <div class="progress" style="width: 70%;"></div>
         </div>
       </li>
       <li>
-        <img src="img/language-icons/git.png" alt="Git Icon" class="language-icon">
-        <strong>Git</strong><span class="rating">9/10</span>
+        <div class="skill-header">
+          <img src="assets/img/language-icons/git.png" alt="Git Icon" class="language-icon">
+          <strong>Git</strong><span class="rating">9/10</span>
+        </div>
         <div class="progress-bar">
           <div class="progress" style="width: 80%;"></div>
         </div>
@@ -124,5 +142,6 @@
 <footer>
   <p>&copy; 2025 Ilyan Fraimbault. Tous droits réservés.</p>
 </footer>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
