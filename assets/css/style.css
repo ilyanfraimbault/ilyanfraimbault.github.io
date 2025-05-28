@@ -174,29 +174,27 @@ section h3 {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(180, 90, 255, 0.2);
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out, border-color 0.4s ease-out, background-color 0.4s ease-out;
 }
 
 .project:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   border-color: rgba(180, 90, 255, 0.4);
-  transform: translateY(-5px);
+  background: rgba(20, 20, 40, 0.8);
 }
 
 .project h3 {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  margin-right: 120px;
+  margin-bottom: 5px;
   color: #b45aff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
+  font-size: 1.4rem;
 }
 
 .project p {
-  font-size: 1rem;
-  line-height: 1.7;
   color: #d0d0e0;
-  transition: all 0.3s ease;
+  line-height: 1.6;
+  margin-top: 15px;
 }
 
 footer {
@@ -391,12 +389,12 @@ footer {
   margin-left: 10px;
   position: relative;
   overflow: hidden;
-  opacity: 0; /* Hide arrows as requested */
-  visibility: hidden; /* Hide arrows as requested */
-  width: 0; /* Hide arrows as requested */
-  height: 0; /* Hide arrows as requested */
-  padding: 0; /* Hide arrows as requested */
-  margin: 0; /* Hide arrows as requested */
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .fa-arrow-right::before {
@@ -437,7 +435,6 @@ footer {
   margin-bottom: 20px;
 }
 
-/* Animations et transitions */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -480,7 +477,6 @@ footer {
   opacity: 0.3;
 }
 
-/* Animation pour les barres de compétences */
 @keyframes fillProgress {
   from {
     width: 0;
@@ -491,7 +487,6 @@ footer {
   transform: scale(1.2) rotate(5deg);
 }
 
-/* Animation du menu de navigation */
 nav a {
   transition: color 0.3s ease-out;
 }
@@ -500,7 +495,6 @@ nav a::after {
   transition: width 0.3s ease-out, background 0.3s ease-out;
 }
 
-/* Animation pour le header */
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -511,4 +505,45 @@ nav a::after {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.project-tag {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-out;
+}
+
+.tag-academique {
+  background: rgba(35, 150, 41, 0.15);
+  border: 1px solid rgba(35, 150, 41, 0.3);
+  color: #23d12c;
+}
+
+.tag-personnel {
+  background: rgba(180, 90, 255, 0.15);
+  border: 1px solid rgba(180, 90, 255, 0.3);
+  color: #b45aff;
+}
+
+.project:hover .project-tag {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover .tag-academique {
+  background: rgba(35, 150, 41, 0.25);
+  border-color: rgba(35, 150, 41, 0.5);
+}
+
+.project:hover .tag-personnel {
+  background: rgba(180, 90, 255, 0.25);
+  border-color: rgba(180, 90, 255, 0.5);
 }
