@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>OTPBUILD</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/project-page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -27,15 +29,36 @@
 
   <section>
     <h2>Voir le code source</h2>
-    <ul>
-      <li>Un dépôt nommé <strong>otpbuild</strong> pour la récupération des données et leur insertion dans la base de données. Consultez le code source sur <a href="https://github.com/ilyanfraimbault/OTPBUILD/" target="_blank">GitHub</a>.</li>
-      <li>Un dépôt nommé <strong>otpbuildapi</strong> qui gère l'API permettant d'accéder aux données. Consultez le code source (non documenté pour le moment) sur <a href="https://github.com/ilyanfraimbault/OTPBUILDAPI/" target="_blank">GitHub</a>.</li>
-      <li>Un dépôt nommé <strong>otpbuildweb</strong> pour le site web qui affiche les données aux utilisateurs. Consultez le code source (non documenté pour le moment) sur <a href="https://github.com/ilyanfraimbault/OTPBUILD-WEB/" target="_blank">GitHub</a>.</li>
+    <ul class="project-links">
+      <li>
+        <strong>otpbuild</strong>
+        <p>Récupération des données et leur insertion dans la base de données</p>
+        <a href="https://github.com/ilyanfraimbault/OTPBUILD/" target="_blank" class="github-link">
+          <i class="fab fa-github"></i>
+          Voir sur GitHub
+        </a>
+      </li>
+      <li>
+        <strong>otpbuildapi</strong>
+        <p>API permettant d'accéder aux données</p>
+        <a href="https://github.com/ilyanfraimbault/OTPBUILDAPI/" target="_blank" class="github-link">
+          <i class="fab fa-github"></i>
+          Voir sur GitHub
+        </a>
+      </li>
+      <li>
+        <strong>otpbuildweb</strong>
+        <p>Site web qui affiche les données aux utilisateurs</p>
+        <a href="https://github.com/ilyanfraimbault/OTPBUILD-WEB/" target="_blank" class="github-link">
+          <i class="fab fa-github"></i>
+          Voir sur GitHub
+        </a>
+      </li>
     </ul>
   </section>
 
   <h2>Les apprentisssages critiques</h2>
-  <section>
+  <section class="ac-section">
     <h3>AC23.01 | Concevoir et développer des applications communicantes</h3>
     <span class="niveau-acquis">Niveau de maîtrise : acquis</span>
     <p>
@@ -46,7 +69,7 @@
     <img src="../../assets/img/screen-ac/AC23_01.png" alt="ac23.01" class="ac-img">
   </section>
 
-  <section>
+  <section class="ac-section">
     <h3>AC23.02 | Utiliser des serveurs et des services réseaux virtualisés</h3>
     <span class="niveau-acquis">Niveau de maîtrise : acquis</span>
     <p>
@@ -56,8 +79,8 @@
     <img src="../../assets/img/screen-ac/AC23_02.png" alt="ac23.02" class="ac-img">
   </section>
 
-  <section>
-    <h3>AC23.03 | Sécuriser les services et données d’un système</h3>
+  <section class="ac-section">
+    <h3>AC23.03 | Sécuriser les services et données d'un système</h3>
     <span class="niveau-acquis">Niveau de maîtrise : acquis</span>
     <p>
       J'ai sécurisé l'application en utilisant des clés d'API pour accéder à l'API de Riot Games. J'ai également sécurisé
