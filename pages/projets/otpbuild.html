@@ -3,30 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>OTPBUILD</title>
+  <title>OTPBuild - Application League of Legends</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
   <link rel="stylesheet" href="../../assets/css/project-page.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 <header>
-  <h1>OTPBuild</h1>
+  <h1>OTPBuild - Application League of Legends</h1>
   <p>Projet personnel</p>
 </header>
 <nav>
   <a href="../../index.html">Accueil</a>
   <a href="../bio.html">À propos</a>
   <a href="../../index.html#projects">Portfolio d'apprentissage</a>
-  <a href="../bio.html#contact">Contact</a>
 </nav>
 <main>
   <section>
     <h2>Qu'est-ce que OTPBuild ?</h2>
-    <p>OTPBuild est une application non visuelle qui permet aux joueurs du jeu League of Legends de récupérer des
-      informations sur les meilleurs joueurs du jeu pour s'en inspirer. L'application utilise l'API de Riot Games pour
-      récupérer les données des joueurs, les stocke dans une base de données MySQL.
-      Les joueurs peuvent ainsi consulter les statistiques des meilleurs joueurs du jeu, et s'en inspirer pour améliorer
-      leur propre jeu. Cette application est développé en C#.</p>
+    <p>OTPBuild est une application qui permet aux joueurs du jeu League of Legends de récupérer des
+      informations sur les meilleurs joueurs pour s'en inspirer. Le projet est composé de trois parties principales :</p>
+      
+    <ul class="tech-list">
+      <li><strong>Backend (C#)</strong> - Une API qui utilise l'API de Riot Games pour récupérer les données des joueurs et les stocker dans une base de données MySQL</li>
+      <li><strong>API (C#)</strong> - Une interface de programmation qui expose les données stockées</li>
+      <li><strong>Frontend (TypeScript & Vue.js)</strong> - Une interface utilisateur web permettant aux joueurs de consulter facilement les statistiques</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Interface utilisateur</h2>
+    <p>L'interface web d'OTPBuild permet aux utilisateurs de rechercher facilement les meilleurs joueurs et d'accéder à leurs statistiques détaillées pour s'inspirer de leurs stratégies.</p>
+    <div class="screenshot-container">
+      <img src="../../assets/img/projects/otpbuild/otpbuild-search-bar.png" alt="Barre de recherche OTPBuild" class="project-screenshot">
+      <p class="screenshot-caption">La barre de recherche d'OTPBuild permet de filtrer les joueurs par nom pour trouver rapidement les experts de chaque champion</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>API REST</h2>
+    <p>L'API d'OTPBuild est documentée avec Swagger, ce qui permet aux développeurs d'explorer facilement les endpoints disponibles et de comprendre comment interagir avec le système.</p>
+    <div class="screenshot-container">
+      <img src="../../assets/img/projects/otpbuild/otpbuild-swagger.png" alt="Documentation Swagger de l'API OTPBuild" class="project-screenshot">
+      <p class="screenshot-caption">Interface Swagger de l'API OTPBuild montrant les différents endpoints et méthodes disponibles</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technologies utilisées</h2>
+    <ul class="tech-list">
+      <li><strong>C#</strong> - Langage principal pour le backend et l'API</li>
+      <li><strong>MySQL</strong> - Base de données relationnelle pour le stockage des données</li>
+      <li><strong>TypeScript</strong> - Langage typé pour le développement frontend</li>
+      <li><strong>Vue.js</strong> - Framework JavaScript pour l'interface utilisateur</li>
+      <li><strong>API REST</strong> - Architecture pour la communication entre les services</li>
+      <li><strong>Swagger</strong> - Documentation interactive de l'API</li>
+    </ul>
   </section>
 
   <section>
@@ -34,7 +66,7 @@
     <ul class="project-links">
       <li>
         <strong>otpbuild</strong>
-        <p>Récupération des données et leur insertion dans la base de données</p>
+        <p>Backend C# pour la récupération des données et leur insertion dans la base de données</p>
         <a href="https://github.com/ilyanfraimbault/OTPBUILD" target="_blank" class="github-link">
           <i class="fab fa-github"></i>
           Voir sur GitHub
@@ -42,7 +74,7 @@
       </li>
       <li>
         <strong>otpbuildapi</strong>
-        <p>API permettant d'accéder aux données</p>
+        <p>API C# permettant d'accéder aux données</p>
         <a href="https://github.com/ilyanfraimbault/OTPBUILDAPI" target="_blank" class="github-link">
           <i class="fab fa-github"></i>
           Voir sur GitHub
@@ -50,7 +82,7 @@
       </li>
       <li>
         <strong>otpbuildweb</strong>
-        <p>Site web qui affiche les données aux utilisateurs</p>
+        <p>Frontend TypeScript et Vue.js qui affiche les données aux utilisateurs</p>
         <a href="https://github.com/ilyanfraimbault/OTPBUILD-WEB" target="_blank" class="github-link">
           <i class="fab fa-github"></i>
           Voir sur GitHub
@@ -68,7 +100,7 @@
       J'ai appris à utiliser les requêtes HTTP pour envoyer des demandes à l'API, et à traiter les réponses pour
       extraire les données des joueurs.
     </p>
-    <img src="../../assets/img/screen-ac/AC23_01.png" alt="ac23.01" class="ac-img">
+    <img src="../../assets/img/ac/AC23_01.png" alt="ac23.01" class="ac-img">
   </section>
 
   <section class="ac-section">
@@ -78,7 +110,7 @@
       J'ai utilisé un serveur MySQL pour stocker les données des joueurs. J'ai appris à créer des tables pour stocker les
       données, et à écrire des requêtes SQL pour insérer, mettre à jour, et récupérer les données.
     </p>
-    <img src="../../assets/img/screen-ac/AC23_02.png" alt="ac23.02" class="ac-img">
+    <img src="../../assets/img/ac/AC23_02.png" alt="ac23.02" class="ac-img">
   </section>
 
   <section class="ac-section">
@@ -88,7 +120,7 @@
       J'ai sécurisé l'application en utilisant des clés d'API pour accéder à l'API de Riot Games. J'ai également sécurisé
       la base de données en utilisant des mots de passe forts et en limitant les accès aux utilisateurs autorisés.
     </p>
-    <img src="../../assets/img/screen-ac/AC23_03.png" alt="ac23.03" class="ac-img">
+    <img src="../../assets/img/ac/AC23_03.png" alt="ac23.03" class="ac-img">
   </section>
 </main>
 <footer>
@@ -101,6 +133,9 @@
     </a>
     <a href="mailto:ilyan@fraimbault.com" class="mail">
       <i class="fas fa-envelope"></i>
+    </a>
+    <a href="../../Fraimbault-CV.pdf" download class="cv">
+      <i class="fas fa-file-pdf"></i>
     </a>
   </div>
   <p>&copy; 2025 Ilyan Fraimbault. Tous droits réservés.</p>
