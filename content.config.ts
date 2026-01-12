@@ -90,7 +90,11 @@ export default defineContentConfig({
         stack: z.array(z.string()).optional(),
         links: z.array(createButtonSchema()).optional(),
         highlights: z.array(z.string()).optional(),
-        gallery: z.array(createImageSchema()).optional()
+        gallery: z.array(createImageSchema()).optional(),
+        sections: z.array(z.object({
+          title: z.string(),
+          items: z.array(z.string())
+        })).optional()
       })
     }),
     blog: defineCollection({

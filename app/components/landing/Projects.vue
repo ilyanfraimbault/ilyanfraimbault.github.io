@@ -58,13 +58,21 @@ const formatYear = (date: ProjectsCollectionItem['date']) => {
             <span>{{ formatYear(project.date) }}</span>
             <div class="flex flex-wrap gap-1">
               <UBadge
-                v-for="tag in project.tags"
+                v-for="tag in (project.tags || []).slice(0, 4)"
                 :key="tag"
                 size="xs"
                 variant="soft"
                 color="neutral"
               >
                 {{ tag }}
+              </UBadge>
+              <UBadge
+                v-if="(project.tags?.length || 0) > 4"
+                size="xs"
+                variant="outline"
+                color="neutral"
+              >
+                +{{ (project.tags?.length || 0) - 4 }}
               </UBadge>
             </div>
           </div>

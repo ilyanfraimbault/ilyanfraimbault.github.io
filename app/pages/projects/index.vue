@@ -11,10 +11,13 @@ if (!page.value) {
 }
 
 const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').all()
+  return queryCollection('projects').order('date', 'DESC').all()
 })
 
 const { global } = useAppConfig()
+
+const projectHref = (project: { url?: string, slug?: string }) =>
+  project?.url || `/projects/${project?.slug ?? ''}`
 
 useSeoMeta({
   title: page.value?.seo?.title || page.value?.title,
@@ -69,7 +72,7 @@ useSeoMeta({
         <UPageCard
           :title="project.title"
           :description="project.description"
-          :to="`/projects/${(project as { slug?: string }).slug}`"
+          :to="projectHref(project as { url?: string, slug?: string })"
           orientation="horizontal"
           variant="naked"
           :reverse="index % 2 === 1"
@@ -85,7 +88,7 @@ useSeoMeta({
           </template>
           <template #footer>
             <ULink
-              :to="project.url"
+              :to="projectHref(project as { url?: string, slug?: string })"
               class="text-sm text-primary flex items-center"
             >
               Voir le projet

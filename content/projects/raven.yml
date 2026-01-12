@@ -1,0 +1,46 @@
+slug: raven
+title: Projet Entreprise - Raven
+description: "Projet entreprise démarré en stage puis poursuivi en alternance chez EfiCAD. Application de gouvernance du référentiel client pour aligner EfiOPS, Salesforce et Dynamics : audit global, qualification des erreurs (avertissement/critique) et synchronisation guidée des comptes."
+image: /images/projects/eficad-raven/audit-comptes.jpeg
+gallery:
+  - src: /images/projects/eficad-raven/detection-erreur-compte.PNG
+    alt: Détection et typage des erreurs sur un compte depuis Raven
+  - src: /images/projects/eficad-raven/synchronisation-compte.PNG
+    alt: Vue tri-panneaux EfiOPS, Salesforce, Dynamics pour la synchronisation des comptes
+url: /projects/raven
+tags: ["Data stewardship", "CRM", "Data quality", "ASP.NET", "Vue.js", "Nuxt"]
+date: "2025-07-01"
+stack:
+  - Entity Framework
+  - ASP.NET
+  - Vue.js
+  - Nuxt 3
+links:
+  - label: Projet entreprise chez EfiCAD
+    icon: i-lucide-briefcase
+    color: neutral
+    variant: subtle
+    to: /projects/raven
+highlights:
+  - Vue d'audit consolidée pour suivre comptes sains, avertissements et erreurs critiques dans le référentiel EfiOPS/Salesforce/Dynamics.
+  - Qualification fine des divergences par compte avec typage avertissement/critique, horodatage et rattachement au système concerné.
+  - IHM tri-panneaux guidée pour rechercher, créer dans EfiOPS, aligner les champs et synchroniser les identifiants Flex ID, Salesforce ID et Dynamics ID.
+sections:
+  - title: Audit global des comptes
+    items:
+      - "Suivi consolidé : total des comptes analysés, sains, avertissements et erreurs critiques."
+      - "Distinction avertissement (écarts secondaires) vs erreurs critiques (identifiants manquants, liens obsolètes) pour prioriser les actions."
+  - title: Détection et qualification par compte
+    items:
+      - "Consolidation des données EfiOPS, Salesforce et Dynamics, comparaison sur le mapping inter-systèmes."
+      - "Typage avertissement/critique, horodatage et rattachement au système source pour la traçabilité."
+  - title: Recherche et synchronisation tri-panneaux
+    items:
+      - "Recherche multi-critères préremplie, création guidée dans EfiOPS en l'absence d'équivalent."
+      - "Affichage côte à côte des trois systèmes avec mise en évidence des divergences."
+      - "Propagation des identifiants Flex ID, Salesforce ID, Dynamics ID et alignement des champs."
+  - title: Valeur ajoutée MDM
+    items:
+      - "Pilotage qualité du référentiel clients/revendeurs et réduction des doublons."
+      - "Synchronisation fiable entre CRM pour limiter la ressaisie et les erreurs."
+      - "Fondations pour une gouvernance MDM durable."

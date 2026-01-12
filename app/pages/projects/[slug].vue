@@ -92,11 +92,30 @@ useSeoMeta({
         container: '!pt-0'
       }"
     >
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-        <div class="space-y-3 lg:col-span-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <UCard class="h-full" :ui="{ body: 'space-y-4' }">
           <p class="text-base text-muted leading-relaxed">
             {{ project.description }}
           </p>
+          <p class="text-sm text-muted">
+            Projet démarré en stage puis poursuivi en alternance chez EfiCAD pour industrialiser la gouvernance du référentiel client.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <UBadge
+              color="neutral"
+              variant="soft"
+              size="sm"
+            >
+              {{ formattedDate }}
+            </UBadge>
+            <UBadge
+              color="primary"
+              variant="subtle"
+              size="sm"
+            >
+              Stage → Alternance
+            </UBadge>
+          </div>
           <div
             v-if="project.links?.length"
             class="flex flex-wrap gap-2"
@@ -107,10 +126,14 @@ useSeoMeta({
               v-bind="link"
             />
           </div>
-        </div>
-        <div class="space-y-6">
-          <div v-if="project.highlights?.length">
-            <h3 class="text-lg font-semibold mb-2">
+        </UCard>
+
+        <div class="space-y-4">
+          <UCard
+            v-if="project.highlights?.length"
+            :ui="{ body: 'space-y-3' }"
+          >
+            <h3 class="text-lg font-semibold">
               Points clés
             </h3>
             <ul class="space-y-2 text-sm text-muted">
@@ -126,10 +149,13 @@ useSeoMeta({
                 <span>{{ item }}</span>
               </li>
             </ul>
-          </div>
+          </UCard>
 
-          <div v-if="project.stack?.length">
-            <h3 class="text-lg font-semibold mb-2">
+          <UCard
+            v-if="project.stack?.length"
+            :ui="{ body: 'space-y-3' }"
+          >
+            <h3 class="text-lg font-semibold">
               Stack
             </h3>
             <div class="flex flex-wrap gap-2">
@@ -143,7 +169,39 @@ useSeoMeta({
                 {{ tech }}
               </UBadge>
             </div>
-          </div>
+          </UCard>
+        </div>
+      </div>
+    </UPageSection>
+
+    <UPageSection
+      v-if="project.sections?.length"
+      :ui="{
+        container: '!pt-0'
+      }"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div
+          v-for="section in project.sections"
+          :key="section.title"
+          class="rounded-2xl border border-muted p-5 bg-(--ui-bg-elevated) shadow-sm space-y-3"
+        >
+          <h3 class="text-lg font-semibold">
+            {{ section.title }}
+          </h3>
+          <ul class="space-y-2 text-sm text-muted">
+            <li
+              v-for="item in section.items"
+              :key="item"
+              class="flex gap-2 items-start"
+            >
+              <UIcon
+                name="i-lucide-sparkles"
+                class="mt-0.5 text-primary"
+              />
+              <span>{{ item }}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </UPageSection>
