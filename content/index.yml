@@ -1,0 +1,94 @@
+seo:
+  title: "Ilyan Fraimbault - Développeur fullstack (BUT 3)"
+  description: "Portfolio Nuxt UI d'Ilyan Fraimbault, étudiant en 3e année de BUT Informatique à Montpellier. APIs ASP.NET, front Vue/Angular et projets personnels."
+title: "Salut, je suis Ilyan Fraimbault"
+description: "Développeur fullstack en 3e année de BUT Informatique à Montpellier. J'aime transformer des besoins métier en APIs fiables (ASP.NET) et en interfaces web claires (Vue/Angular)."
+hero:
+  links:
+    - label: "Télécharger mon CV"
+      to: /Fraimbault-CV.pdf
+      icon: i-lucide-file-down
+      color: "neutral"
+      target: _blank
+  images:
+    - src: /icons/languages/c-sharp.png
+      alt: "Logo C#"
+    - src: /icons/languages/c.png
+      alt: "Logo C"
+    - src: /icons/languages/java.gif
+      alt: "Logo Java"
+    - src: /icons/languages/javascript.gif
+      alt: "Logo JavaScript"
+    - src: /icons/languages/typescript.png
+      alt: "Logo TypeScript"
+    - src: /icons/languages/vue.png
+      alt: "Logo Vue.js"
+    - src: /icons/languages/php.svg
+      alt: "Logo PHP"
+    - src: /icons/languages/mysql.png
+      alt: "Logo MySQL"
+    - src: /icons/languages/mongo-db.png
+      alt: "Logo MongoDB"
+    - src: /icons/languages/python.gif
+      alt: "Logo Python"
+    - src: /icons/languages/html5.png
+      alt: "Logo HTML5"
+    - src: /icons/languages/css3.png
+      alt: "Logo CSS3"
+about:
+  title: "À propos"
+  description: |
+    Passionné de backend et de frontend, je construis des APIs en ASP.NET et des interfaces web modernes (Vue/Angular). Après deux ans de projets encadrés, je suis maintenant en 3e année de BUT Informatique à Montpellier où j'alterne entre cours, projets d'équipe et missions en entreprise.
+    J'aime relier la technique au besoin métier : clarifier le problème, prototyper vite, livrer avec des tests et documenter pour l'équipe.
+experience:
+  title: Expériences professionnelles
+  items:
+    - position: "Stage d'observation"
+      date: "Janvier 2019"
+      company:
+        name: IBM Montpellier
+        logo: "/icons/ibm.png"
+        url: "https://www.ibm.com/fr-fr"
+        color: "#0f62fe"
+    - position: "Stage développeur web full stack"
+      date: "Juin – Août 2025"
+      company:
+        name: EFICAD
+        logo: "/icons/eficad.png"
+        url: "https://www.eficad.com/"
+        color: "#0f766e"
+    - position: "Alternance développeur web full stack"
+      date: "Septembre 2025 – Août 2026"
+      company:
+        name: EFICAD
+        logo: "/icons/eficad.png"
+        url: "https://www.eficad.com/"
+        color: "#0ea5e9"
+projects:
+  title: Projets personnels et SAE
+  description: "Sélection de projets menés pendant le BUT et sur mon temps libre : APIs, outils web et expériences utilisateurs."
+  links:
+    - label: "Voir tous les projets"
+      to: /projects
+      color: neutral
+testimonials: []
+faq:
+  title: Questions fréquentes
+  description: Quelques réponses rapides si vous voulez en savoir plus.
+  categories:
+    - title: Parcours
+      questions:
+        - label: Es-tu en alternance ou en stage ?
+          content: |
+            Je suis en 3e année de BUT Informatique. Après un stage API chez EFICAD (juin-août 2025), je poursuis en alternance dans la même équipe jusqu'en août 2026.
+        - label: Quels sujets te motivent le plus ?
+          content: |
+            Concevoir des APIs propres (ASP.NET), synchroniser des données entre services (Salesforce/Dynamics), et construire des interfaces claires en Vue ou Angular.
+    - title: Contact
+      questions:
+        - label: Comment te joindre ?
+          content: |
+            Le plus simple : un message LinkedIn. Vous pouvez aussi m'écrire à ilyan@fraimbault.com ou télécharger mon CV directement depuis la page d'accueil.
+        - label: Disponible pour quels projets ?
+          content: |
+            Je suis ouvert aux missions web qui mixent backend .NET et frontend JavaScript/TypeScript, ainsi qu'aux collaborations open-source autour de Nuxt ou Angular.

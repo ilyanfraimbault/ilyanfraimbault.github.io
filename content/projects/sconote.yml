@@ -1,0 +1,20 @@
+slug: sconote
+title: Sconote
+description: Intranet PHP/MySQL pour générer et partager les avis de poursuite d'étude des étudiants du BUT Informatique.
+image: /images/projects/sconote/sconote-import-notes.png
+gallery:
+  - src: /images/projects/sconote/sconote.png
+    alt: Tableau de notes des étudiants après import Excel dans Sconote
+  - src: /images/projects/sconote/sconote-graphiques.png
+    alt: Synthèse graphique des notes par semestre dans Sconote
+url: /projects/sconote
+tags: ["PHP", "MySQL", "Intranet"]
+date: "2024-02-01"
+stack:
+  - PHP
+  - MySQL
+  - HTML/CSS
+highlights:
+  - Génération automatique des avis et dossiers accessibles aux écoles et aux étudiants.
+  - Optimisation des requêtes SQL pour supporter les pics de consultation.
+  - Tableaux de synthèse pour visualiser les notes par semestre.

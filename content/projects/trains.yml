@@ -1,0 +1,15 @@
+slug: trains
+title: Trains
+description: Jeu de plateau en JavaFX où les joueurs construisent des lignes ferroviaires pour relier des villes.
+image: /images/projects/trains/trains.png
+url: /projects/trains
+tags: ["Java", "JavaFX", "Jeu"]
+date: "2023-03-01"
+stack:
+  - Java
+  - JavaFX
+  - UML
+highlights:
+  - Modélisation des règles du jeu en UML puis implémentation en Java.
+  - Interface graphique réactive pour jouer en local.
+  - Gestion des contraintes de ressources et du scoring.

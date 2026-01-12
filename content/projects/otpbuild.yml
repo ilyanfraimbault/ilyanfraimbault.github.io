@@ -1,0 +1,37 @@
+slug: otpbuild
+title: OTPBuild
+description: Suite d'outils League of Legends pour suivre les meilleurs joueurs et partager des builds à partir de leurs statistiques.
+image: /images/projects/otpbuild/otpbuild-search-bar.png
+gallery:
+  - src: /images/projects/otpbuild/otpbuild-swagger.png
+    alt: Documentation Swagger des endpoints OTPBuild
+url: /projects/otpbuild
+tags: ["API", "Vue", "C#", "MySQL"]
+date: "2025-05-01"
+stack:
+  - ASP.NET
+  - C#
+  - Vue 3
+  - TypeScript
+  - MySQL
+  - Swagger
+links:
+  - label: Backend
+    to: https://github.com/ilyanfraimbault/OTPBUILD
+    icon: i-lucide-server
+    target: _blank
+    color: neutral
+  - label: API
+    to: https://github.com/ilyanfraimbault/OTPBUILDAPI
+    icon: i-lucide-link
+    target: _blank
+    color: neutral
+  - label: Frontend
+    to: https://github.com/ilyanfraimbault/OTPBUILD-WEB
+    icon: i-lucide-globe
+    target: _blank
+    color: primary
+highlights:
+  - Connexion à l'API Riot Games et persistance des données joueurs dans MySQL.
+  - Documentation Swagger et endpoints REST sécurisés par clé d'API.
+  - Interface Vue pour filtrer et comparer les performances par champion.

@@ -1,0 +1,6 @@
+title: Articles et notes
+description: Brouillons techniques (Nuxt, .NET, Angular) que je publierai au fil de l'année.
+links:
+  - label: "Suivre sur LinkedIn"
+    to: https://www.linkedin.com/in/ilyan-fraimbault/
+    color: neutral

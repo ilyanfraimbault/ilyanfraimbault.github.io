@@ -1,0 +1,18 @@
+title: À propos
+description: "Faisons connaissance : parcours en BUT Informatique, projets persos et la manière dont j'aborde les apps web."
+content: |
+  Salut, moi c'est **Ilyan Fraimbault**. Je suis en **3e année de BUT Informatique à Montpellier** et je partage mon temps entre les cours, mes projets persos et une alternance chez EFICAD.
+
+  ### Ce que j'aime
+
+  - **Applis web & APIs** : partir du backend en **ASP.NET** avec **PostgreSQL** pour les données, sécuriser/documenter l'API, puis itérer avec les équipes métier.
+  - **Front-end** : donner vie aux écrans en **Vue.js/Nuxt** (et parfois **Angular**) pour garder des parcours clairs et accessibles sans sacrifier la performance.
+  - **Automatisation & data** : scripts et outils internes pour fiabiliser les flux de données et les tâches de data stewardship.
+
+  ### Ma manière de travailler
+
+  Comprendre le besoin, prototyper rapidement, tester tôt, puis documenter pour l'équipe. J'aime relier les décisions techniques aux enjeux métier et garder un code lisible (typiquement TypeScript + tests unitaires).
+
+  ### Et en dehors du code
+
+  Je pratique le **water-polo à bon niveau depuis de nombreuses années**, ce qui m'apprend la rigueur collective et la réactivité. Je reste curieux des nouvelles stacks front, je bricole des bots et j'aime décortiquer des APIs publiques. Vous pouvez me retrouver sur [LinkedIn](https://www.linkedin.com/in/ilyan-fraimbault/) ou via le formulaire de contact du portfolio.
