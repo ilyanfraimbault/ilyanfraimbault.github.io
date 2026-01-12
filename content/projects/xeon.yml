@@ -1,0 +1,20 @@
+slug: xeon
+title: Xeon
+description: Bot Discord en Python (py-cord) avec outils de modération, gestion de rôles et système de logs détaillés.
+image: /images/projects/xeon/screen-xeon.png
+url: /projects/xeon
+tags: ["Python", "Discord", "MongoDB"]
+date: "2022-11-01"
+stack:
+  - Python
+  - py-cord
+  - MongoDB
+links:
+  - label: Code source
+    to: https://github.com/ilyanfraimbault/Xeon
+    icon: i-lucide-github
+    target: _blank
+highlights:
+  - Commandes de modération et attribution automatique de rôles.
+  - Logs d'événements (édition/suppression de messages) envoyés sur des canaux dédiés.
+  - Persistance des configurations dans MongoDB.
