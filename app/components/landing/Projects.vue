@@ -38,15 +38,13 @@ const formatYear = (date: ProjectsCollectionItem['date']) => {
     <template #links>
       <UButton
         v-if="page.projects.links?.[0]"
-        :label="page.projects.links[0].label"
-        :to="page.projects.links[0].to"
         v-bind="page.projects.links[0]"
       />
     </template>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <Motion
         v-for="(project, index) in projects"
-        :key="project._path"
+        :key="project.slug || project.title"
         :initial="{ opacity: 0, transform: 'translateY(10px)' }"
         :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
         :transition="{ delay: 0.2 * index }"
