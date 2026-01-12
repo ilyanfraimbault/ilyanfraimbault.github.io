@@ -30,9 +30,9 @@ const allImages = computed(() => [
 ])
 
 const isModalOpen = ref(false)
-const activeImage = ref<{ src: string; alt?: string } | null>(null)
+const activeImage = ref<{ src: string, alt?: string } | null>(null)
 
-const openImage = (image: { src: string; alt?: string }) => {
+const openImage = (image: { src: string, alt?: string }) => {
   activeImage.value = image
   isModalOpen.value = true
 }
@@ -191,7 +191,10 @@ useSeoMeta({
           aria-label="Fermer"
           @click="closeImage"
         >
-          <UIcon name="i-lucide-x" class="size-6" />
+          <UIcon
+            name="i-lucide-x"
+            class="size-6"
+          />
         </button>
         <img
           :src="activeImage.src"
