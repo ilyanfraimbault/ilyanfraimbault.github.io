@@ -17,7 +17,8 @@ const createButtonSchema = () => z.object({
 
 const createImageSchema = () => z.object({
   src: z.string().editor({ input: 'media' }),
-  alt: z.string()
+  alt: z.string(),
+  caption: z.string().optional()
 })
 
 const createAuthorSchema = () => z.object({
@@ -84,6 +85,7 @@ export default defineContentConfig({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
         image: z.string().nonempty().editor({ input: 'media' }),
+        imageCaption: z.string().optional(),
         url: z.string().nonempty(),
         tags: z.array(z.string()),
         date: z.coerce.date(),

@@ -24,13 +24,14 @@ const galleryImages = computed(() => project.value?.gallery ?? [])
 const allImages = computed(() => [
   {
     src: project.value?.image ?? '',
-    alt: project.value?.title ?? ''
+    alt: project.value?.title ?? '',
+    caption: project.value?.imageCaption ?? ''
   },
   ...(galleryImages.value || [])
 ])
 
 const isModalOpen = ref(false)
-const activeImage = ref<{ src: string, alt?: string } | null>(null)
+const activeImage = ref<{ src: string, alt?: string, caption?: string } | null>(null)
 
 const openImage = (image: { src: string, alt?: string }) => {
   activeImage.value = image
@@ -96,9 +97,6 @@ useSeoMeta({
         <UCard class="h-full" :ui="{ body: 'space-y-4' }">
           <p class="text-base text-muted leading-relaxed">
             {{ project.description }}
-          </p>
-          <p class="text-sm text-muted">
-            Projet démarré en stage puis poursuivi en alternance chez EfiCAD pour industrialiser la gouvernance du référentiel client.
           </p>
           <div class="flex flex-wrap gap-2">
             <UBadge
@@ -209,7 +207,7 @@ useSeoMeta({
     <UPageSection
       v-if="allImages.length"
       :ui="{
-        container: '!pt-0'
+        container: '!pt-0 max-w-none'
       }"
     >
       <div class="grid grid-cols-1 gap-8">
@@ -224,14 +222,14 @@ useSeoMeta({
             <NuxtImg
               :src="image.src"
               :alt="image.alt || `${project.title} - capture ${index + 1}`"
-              class="w-full h-auto max-h-[640px] object-contain mx-auto"
+              class="w-full h-auto object-contain"
             />
             <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-sm font-medium">
               Cliquer pour agrandir
             </div>
           </div>
           <p class="text-sm text-muted">
-            {{ image.alt || `${project.title} - capture ${index + 1}` }}
+            {{ image.caption || image.alt || `${project.title} - capture ${index + 1}` }}
           </p>
         </button>
       </div>
@@ -260,7 +258,7 @@ useSeoMeta({
           class="w-full max-h-[85vh] object-contain rounded-lg border border-muted bg-(--ui-bg-elevated)"
         >
         <p class="text-sm text-muted mt-3 text-center">
-          {{ activeImage.alt || project.title }}
+          {{ activeImage.caption || activeImage.alt || project.title }}
         </p>
       </div>
     </div>

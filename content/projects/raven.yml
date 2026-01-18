@@ -1,12 +1,15 @@
 slug: raven
 title: Projet Entreprise - Raven
-description: "Projet entreprise démarré en stage puis poursuivi en alternance chez EfiCAD. Application de gouvernance du référentiel client pour aligner EfiOPS, Salesforce et Dynamics : audit global, qualification des erreurs (avertissement/critique) et synchronisation guidée des comptes."
+description: "Projet professionnel de data stewardship initié en stage chez EFICAD, puis poursuivi en alternance apres validation en interne. L'application centralise la gouvernance des donnees clients entre EfiOPS (referentiel maitre), Salesforce (CRM commercial) et Microsoft Dynamics 365 (CRM support/technique) afin de detecter automatiquement les incoherences, les prioriser et guider leur correction. Valeur pour l'entreprise : referentiels plus fiables, moins de ressaisie et une meilleure qualite de service."
 image: /images/projects/eficad-raven/audit-comptes.jpeg
+imageCaption: "Page d'accueil : audit global des comptes EfiOPS avec les indicateurs cles (erreurs critiques, avertissements, comptes sains). Cette vue sert de point d'entree pour piloter la qualite des donnees."
 gallery:
   - src: /images/projects/eficad-raven/detection-erreur-compte.PNG
     alt: Détection et typage des erreurs sur un compte depuis Raven
+    caption: "Detail d'un compte depuis la page d'accueil : ouverture de l'accordeon et affichage des erreurs detectees (divergences entre EfiOPS, Salesforce et Dynamics), avec contextualisation des problemes."
   - src: /images/projects/eficad-raven/synchronisation-compte.PNG
     alt: Vue tri-panneaux EfiOPS, Salesforce, Dynamics pour la synchronisation des comptes
+    caption: "Vue tri-panneaux de synchronisation : EfiOPS, Salesforce et Dynamics cote a cote, alignement des champs, detection visuelle des divergences et synchronisation guidee."
 url: /projects/raven
 tags: ["Data stewardship", "CRM", "Data quality", "ASP.NET", "Vue.js", "Nuxt"]
 date: "2025-07-01"
