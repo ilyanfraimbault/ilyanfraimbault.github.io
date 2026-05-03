@@ -1,0 +1,65 @@
+slug: uniflow
+title: Projet Entreprise - Uniflow
+description: "Projet professionnel de data stewardship initié en stage chez EFICAD, puis poursuivi en alternance après validation en interne. L'application centralise la gouvernance des données clients entre EfiOPS (référentiel maître), Salesforce (CRM commercial) et Microsoft Dynamics 365 (CRM support/technique) afin de détecter automatiquement les incohérences, les prioriser et guider leur correction. Valeur pour l'entreprise : référentiels plus fiables, moins de ressaisie et une meilleure qualité de service."
+image: /images/projects/eficad-uniflow/audit-comptes.png
+imageCaption: "Page d'accueil : audit global des comptes EfiOPS avec les indicateurs clés (erreurs critiques, avertissements, comptes sains). Cette vue sert de point d'entrée pour piloter la qualité des données."
+gallery:
+  - src: /images/projects/eficad-uniflow/connexion-msal.png
+    alt: Écran de connexion Uniflow avec authentification Microsoft (MSAL)
+    caption: "Connexion : authentification déléguée à Microsoft (MSAL) pour aligner Uniflow sur l'identité Azure AD utilisée chez EFICAD."
+  - src: /images/projects/eficad-uniflow/detection-erreur-cadware.png
+    alt: Compte CADWARE avec erreurs critiques (identifiant invalide, identifiant manquant) et avertissement
+    caption: "Détail d'un compte avec erreurs critiques : identifiant Dynamics invalide (pointe vers un autre compte EfiOPS) et identifiant Dynamics manquant. La sévérité \"critique\" pousse l'action en haut de la pile."
+  - src: /images/projects/eficad-uniflow/vue-tri-panneaux.png
+    alt: Vue tri-panneaux EfiOPS / Salesforce / Dynamics avec formulaires alignés et résultats de recherche
+    caption: "Vue tri-panneaux de synchronisation : EfiOPS comme source à gauche, Salesforce et Dynamics à droite avec recherche intégrée et résultats. Les champs alignés (Nom, Raison sociale, Adresse, Téléphone, Pays…) facilitent la détection visuelle des divergences et la propagation des identifiants Flex ID, Salesforce ID et Dynamics ID."
+url: /projects/uniflow
+tags: ["Data stewardship", "CRM", "Data quality", "ASP.NET", "Vue.js", "Nuxt"]
+date: "2025-07-01"
+stack:
+  - Entity Framework
+  - ASP.NET
+  - Vue.js
+  - Nuxt 3
+  - MSAL (Microsoft Authentication)
+links:
+  - label: Projet entreprise chez EfiCAD
+    icon: i-lucide-briefcase
+    color: neutral
+    variant: subtle
+    to: /projects/uniflow
+highlights:
+  - Vue d'audit consolidée pour suivre comptes sains, avertissements et erreurs critiques dans le référentiel EfiOPS/Salesforce/Dynamics.
+  - Qualification fine des divergences par compte avec typage avertissement/critique, horodatage et rattachement au système concerné.
+  - IHM tri-panneaux guidée pour rechercher, créer dans EfiOPS, aligner les champs et synchroniser les identifiants Flex ID, Salesforce ID et Dynamics ID.
+sections:
+  - title: Audit global des comptes
+    items:
+      - "Suivi consolidé : total des comptes analysés, sains, avertissements et erreurs critiques."
+      - "Distinction avertissement (écarts secondaires) vs erreurs critiques (identifiants manquants, liens obsolètes) pour prioriser les actions."
+  - title: Détection et qualification par compte
+    items:
+      - "Consolidation des données EfiOPS, Salesforce et Dynamics, comparaison sur le mapping inter-systèmes."
+      - "Typage avertissement/critique, horodatage et rattachement au système source pour la traçabilité."
+  - title: Recherche et synchronisation tri-panneaux
+    items:
+      - "Recherche multi-critères préremplie, création guidée dans EfiOPS en l'absence d'équivalent."
+      - "Affichage côte à côte des trois systèmes avec mise en évidence des divergences."
+      - "Propagation des identifiants Flex ID, Salesforce ID, Dynamics ID et alignement des champs."
+  - title: Valeur ajoutée MDM
+    items:
+      - "Pilotage qualité du référentiel clients/revendeurs et réduction des doublons."
+      - "Synchronisation fiable entre CRM pour limiter la ressaisie et les erreurs."
+      - "Fondations pour une gouvernance MDM durable."
+  - title: Évolution du projet (POC stage → outil interne)
+    items:
+      - "Démarré en stage (juin-août 2025) sous forme de POC pour démontrer la faisabilité de la consolidation EfiOPS / Salesforce / Dynamics."
+      - "Validé en interne en fin de stage : décision de pérenniser l'outil et de l'intégrer au quotidien des équipes."
+      - "Repris en alternance (septembre 2025) : refonte de l'authentification (MSAL Azure AD), enrichissement des règles de détection, ouverture progressive aux équipes commerciales et support."
+      - "Maintenu et déployé sur l'environnement interne EFICAD ; consulté quotidiennement pour piloter la qualité des données."
+  - title: Démarche & méthodes de travail
+    items:
+      - "Cycle agile aligné sur le rythme de l'équipe : sprints courts, démos fonctionnelles, rétrospectives régulières."
+      - "Mise en place d'une chaîne CI/CD pour automatiser le build et le déploiement des évolutions."
+      - "Sensibilisation des équipes commerciales et support à la qualité des données : démos ciblées, accompagnement à la lecture des erreurs critiques vs avertissements."
+      - "Authentification Azure AD via MSAL pour aligner Uniflow sur la politique d'identité interne."

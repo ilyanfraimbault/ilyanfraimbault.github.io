@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b8def"/>
+    </marker>
+    <marker id="arrow-ext" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d79b00"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="currentColor">TrueMain — Architecture</text>
+
+  <!-- External services container -->
+  <rect x="40" y="60" width="820" height="100" rx="6" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-dasharray="6 4"/>
+  <text x="56" y="80" font-size="12" font-weight="bold" fill="currentColor" fill-opacity="0.7">External services</text>
+
+  <!-- Riot API -->
+  <rect x="120" y="95" width="240" height="55" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="240" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Riot Games API</text>
+  <text x="240" y="136" text-anchor="middle" font-size="11" fill="#7a4f00">match history, ranked, accounts</text>
+
+  <!-- DDragon -->
+  <rect x="540" y="95" width="240" height="55" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="660" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Riot DDragon CDN</text>
+  <text x="660" y="136" text-anchor="middle" font-size="11" fill="#7a4f00">images champions / patchs</text>
+
+  <!-- Docker Compose container -->
+  <rect x="40" y="200" width="820" height="200" rx="6" fill="none" stroke="#5b8def" stroke-opacity="0.6" stroke-dasharray="6 4"/>
+  <text x="56" y="220" font-size="12" font-weight="bold" fill="#5b8def">Docker Compose</text>
+
+  <!-- Worker -->
+  <rect x="80" y="245" width="220" height="80" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="190" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">Ingestor (Worker)</text>
+  <text x="190" y="296" text-anchor="middle" font-size="12" fill="#1f3a5f">.NET 10</text>
+  <text x="190" y="313" text-anchor="middle" font-size="11" font-style="italic" fill="#1f3a5f">ingestion Riot API</text>
+
+  <!-- PostgreSQL cylinder -->
+  <g>
+    <ellipse cx="450" cy="265" rx="80" ry="14" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <path d="M370,265 L370,335 A80,14 0 0 0 530,335 L530,265" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <ellipse cx="450" cy="265" rx="80" ry="14" fill="none" stroke="#82b366" stroke-width="1.5"/>
+    <text x="450" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#3a6a3a">PostgreSQL</text>
+    <text x="450" y="324" text-anchor="middle" font-size="11" fill="#3a6a3a">truemain_db</text>
+  </g>
+
+  <!-- API -->
+  <rect x="600" y="245" width="220" height="80" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="710" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">API REST</text>
+  <text x="710" y="296" text-anchor="middle" font-size="12" fill="#1f3a5f">ASP.NET Core 10 + EF Core</text>
+  <text x="710" y="313" text-anchor="middle" font-size="11" font-style="italic" fill="#1f3a5f">lecture des stats agrégées</text>
+
+  <!-- Frontend -->
+  <rect x="320" y="430" width="260" height="70" rx="10" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="450" y="458" text-anchor="middle" font-size="14" font-weight="bold" fill="#7a5d1d">Frontend</text>
+  <text x="450" y="478" text-anchor="middle" font-size="12" fill="#7a5d1d">Nuxt 4 · Vue 3 · TypeScript</text>
+
+  <!-- Edges -->
+  <!-- Riot API → Worker -->
+  <line x1="240" y1="150" x2="190" y2="245" stroke="#d79b00" stroke-width="1.8" marker-end="url(#arrow-ext)"/>
+  <!-- DDragon → Frontend -->
+  <line x1="660" y1="150" x2="555" y2="430" stroke="#d79b00" stroke-width="1.8" marker-end="url(#arrow-ext)"/>
+
+  <!-- Worker → Postgres (writes) -->
+  <line x1="300" y1="285" x2="370" y2="285" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="335" y="278" text-anchor="middle" font-size="10" fill="#5b8def">écrit</text>
+
+  <!-- API → Postgres (reads) -->
+  <line x1="600" y1="285" x2="530" y2="285" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="565" y="278" text-anchor="middle" font-size="10" fill="#5b8def">lit</text>
+
+  <!-- Frontend → API -->
+  <line x1="510" y1="430" x2="690" y2="325" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="620" y="385" text-anchor="middle" font-size="10" fill="#5b8def">REST / JSON</text>
+
+  <!-- Legend -->
+  <g transform="translate(40, 430)">
+    <rect width="240" height="70" fill="none" stroke="currentColor" stroke-opacity="0.25"/>
+    <text x="10" y="18" font-size="11" font-weight="bold" fill="currentColor" fill-opacity="0.7">Légende</text>
+
+    <rect x="14" y="28" width="14" height="10" rx="2" fill="#dae8fc" stroke="#6c8ebf"/>
+    <text x="36" y="37" font-size="10" fill="currentColor" fill-opacity="0.8">.NET (Worker / API)</text>
+
+    <rect x="14" y="44" width="14" height="10" rx="2" fill="#fff2cc" stroke="#d6b656"/>
+    <text x="36" y="53" font-size="10" fill="currentColor" fill-opacity="0.8">Frontend (Nuxt)</text>
+
+    <rect x="130" y="28" width="14" height="10" rx="2" fill="#d5e8d4" stroke="#82b366"/>
+    <text x="152" y="37" font-size="10" fill="currentColor" fill-opacity="0.8">PostgreSQL</text>
+
+    <rect x="130" y="44" width="14" height="10" rx="2" fill="#ffe6cc" stroke="#d79b00"/>
+    <text x="152" y="53" font-size="10" fill="currentColor" fill-opacity="0.8">Service externe</text>
+  </g>
+</svg>
