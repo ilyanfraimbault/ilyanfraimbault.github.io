@@ -109,7 +109,10 @@ useSeoMeta({
       }"
     >
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <UCard class="h-full" :ui="{ body: 'space-y-4' }">
+        <UCard
+          class="h-full"
+          :ui="{ body: 'space-y-4' }"
+        >
           <p class="text-base text-muted leading-relaxed">
             {{ project.description }}
           </p>

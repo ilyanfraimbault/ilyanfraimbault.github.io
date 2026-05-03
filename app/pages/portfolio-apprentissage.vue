@@ -41,10 +41,10 @@ type Competence = {
 }
 
 useSeoMeta({
-  title: "Portfolio d'apprentissage - BUT3 RACDV",
-  ogTitle: "Portfolio d'apprentissage - BUT3 RACDV",
-  description: "Bilan des apprentissages réalisés en BUT3 Informatique parcours RACDV : compétences, projets et trajectoire.",
-  ogDescription: "Bilan des apprentissages réalisés en BUT3 Informatique parcours RACDV : compétences, projets et trajectoire."
+  title: 'Portfolio d\'apprentissage - BUT3 RACDV',
+  ogTitle: 'Portfolio d\'apprentissage - BUT3 RACDV',
+  description: 'Bilan des apprentissages réalisés en BUT3 Informatique parcours RACDV : compétences, projets et trajectoire.',
+  ogDescription: 'Bilan des apprentissages réalisés en BUT3 Informatique parcours RACDV : compétences, projets et trajectoire.'
 })
 
 const infosGenerales = [
@@ -505,13 +505,25 @@ const reflexion: FaqItem[] = [
     >
       <template #links>
         <div class="flex flex-wrap gap-2">
-          <UBadge color="primary" variant="soft" size="sm">
+          <UBadge
+            color="primary"
+            variant="soft"
+            size="sm"
+          >
             BUT3 RACDV
           </UBadge>
-          <UBadge color="neutral" variant="soft" size="sm">
+          <UBadge
+            color="neutral"
+            variant="soft"
+            size="sm"
+          >
             Année 2025 - 2026
           </UBadge>
-          <UBadge color="info" variant="soft" size="sm">
+          <UBadge
+            color="info"
+            variant="soft"
+            size="sm"
+          >
             Alternance EFICAD
           </UBadge>
         </div>
@@ -566,7 +578,11 @@ const reflexion: FaqItem[] = [
           <div class="flex flex-col md:flex-row md:items-start md:gap-6">
             <div class="md:w-1/3 space-y-2 mb-4 md:mb-0">
               <div class="flex items-center gap-2">
-                <UBadge color="primary" variant="solid" size="md">
+                <UBadge
+                  color="primary"
+                  variant="solid"
+                  size="md"
+                >
                   {{ competence.code }}
                 </UBadge>
                 <h3 class="text-xl font-semibold text-highlighted">
@@ -595,7 +611,12 @@ const reflexion: FaqItem[] = [
                     :key="composante.code"
                     class="text-sm flex gap-2 items-start"
                   >
-                    <UBadge color="info" variant="subtle" size="sm" class="shrink-0 font-mono">
+                    <UBadge
+                      color="info"
+                      variant="subtle"
+                      size="sm"
+                      class="shrink-0 font-mono"
+                    >
                       {{ composante.code }}
                     </UBadge>
                     <span class="text-default">{{ composante.label }}</span>
@@ -613,7 +634,12 @@ const reflexion: FaqItem[] = [
                     :key="ac.code"
                     class="text-sm flex gap-2 items-start"
                   >
-                    <UBadge color="primary" variant="subtle" size="sm" class="shrink-0 font-mono">
+                    <UBadge
+                      color="primary"
+                      variant="subtle"
+                      size="sm"
+                      class="shrink-0 font-mono"
+                    >
                       {{ ac.code }}
                     </UBadge>
                     <span class="text-default">{{ ac.label }}</span>
@@ -635,7 +661,10 @@ const reflexion: FaqItem[] = [
         description: '!mx-0 text-left'
       }"
     >
-      <UCard class="mb-6" :ui="{ body: 'space-y-3' }">
+      <UCard
+        class="mb-6"
+        :ui="{ body: 'space-y-3' }"
+      >
         <h4 class="text-xs uppercase tracking-wide text-muted">
           Légende des niveaux
         </h4>
@@ -661,11 +690,21 @@ const reflexion: FaqItem[] = [
         </div>
         <div class="flex flex-wrap gap-4 pt-2 text-xs text-muted">
           <span class="inline-flex items-center gap-2">
-            <UBadge color="info" variant="subtle" size="sm" class="font-mono">CE</UBadge>
+            <UBadge
+              color="info"
+              variant="subtle"
+              size="sm"
+              class="font-mono"
+            >CE</UBadge>
             Composante essentielle
           </span>
           <span class="inline-flex items-center gap-2">
-            <UBadge color="primary" variant="subtle" size="sm" class="font-mono">AC</UBadge>
+            <UBadge
+              color="primary"
+              variant="subtle"
+              size="sm"
+              class="font-mono"
+            >AC</UBadge>
             Apprentissage critique
           </span>
         </div>
@@ -771,7 +810,10 @@ const reflexion: FaqItem[] = [
                         class="text-sm text-primary inline-flex items-center gap-1"
                       >
                         {{ entry.trace.label }}
-                        <UIcon name="i-lucide-external-link" class="size-3.5" />
+                        <UIcon
+                          name="i-lucide-external-link"
+                          class="size-3.5"
+                        />
                       </ULink>
                     </td>
                   </tr>
