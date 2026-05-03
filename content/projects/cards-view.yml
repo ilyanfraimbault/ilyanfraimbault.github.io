@@ -1,0 +1,61 @@
+slug: cards-view
+title: Composant Cartes (Cards View)
+description: "Composant d'interface développé en alternance chez EFICAD pour le SWOOD Report Viewer : un mode de visualisation \"cartes\" alternatif aux tableaux classiques. Chaque enregistrement (panneau, débit…) devient une carte composée de cellules configurables — l'utilisateur réorganise la grille par drag & drop, redimensionne les cellules, choisit le mode d'affichage de chaque champ (valeur, QR Code, code-barres) et insère des images. Conçu comme brique générique Angular / PrimeNG réutilisable dans les applications internes."
+image: /images/projects/cards-view/vue-card.png
+imageCaption: "Rendu final dans SWOOD Report Viewer : la \"Nouvelle vue Card\" affiche chaque panneau (Cabinet_Back, Cabinet_Front…) sous forme de carte avec ses propriétés agencées dans la grille configurée par l'utilisateur."
+gallery:
+  - src: /images/projects/cards-view/edition-card-drag-n-drop.png
+    alt: Éditeur de vue Card avec les cellules organisées dans la grille (drag & drop)
+    caption: "Édition d'une vue Card : organisation des cellules dans la grille par drag & drop et resize, barre d'outils en haut à droite pour les paramètres globaux, prévisualisation en temps réel."
+  - src: /images/projects/cards-view/personnalisation-cellule-card.png
+    alt: Panneau de personnalisation d'une cellule avec libellé, taille et mode d'affichage
+    caption: "Personnalisation d'une cellule : libellé personnalisé, taille (Petit / Moyen / Grand), affichage du libellé (Afficher / Masquer / En ligne) et mode d'affichage de la valeur (Valeur / QR Code / Code-barres)."
+  - src: /images/projects/cards-view/table-vue-default.png
+    alt: Vue tableau par défaut de SWOOD à contraster avec la vue Card
+    caption: "Vue tableau par défaut de SWOOD Report Viewer (référence) : même donnée, format tabulaire dense. La vue Card cible les usages où le format visuel et le détail par enregistrement priment."
+url: /projects/cards-view
+tags: ["Angular", "PrimeNG", "TypeScript", "Composant UI", "Drag & drop"]
+date: "2026-01-15"
+stack:
+  - Angular
+  - PrimeNG
+  - TypeScript
+  - SCSS
+links:
+  - label: Projet alternance chez EFICAD
+    icon: i-lucide-briefcase
+    color: neutral
+    variant: subtle
+    to: /projects/cards-view
+highlights:
+  - "Drag & drop : réorganisation libre des cartes dans la grille avec retour visuel."
+  - "Redimensionnement des cellules pour adapter la mise en page au contenu."
+  - "Insertion d'images dans une cellule (upload, prévisualisation, ratio préservé)."
+sections:
+  - title: Architecture du composant
+    items:
+      - "Composant Angular standalone, configurable via inputs/outputs typés."
+      - "Surcouche autour de PrimeNG pour homogénéiser le rendu avec la design language EFICAD."
+  - title: Interactions utilisateur
+    items:
+      - "Drag & drop natif HTML5 encapsulé pour gérer les zones de drop, l'ordre et la persistance."
+      - "Poignées de resize sur chaque cellule avec contraintes min/max."
+      - "Gestion d'image dans une cellule : sélection, prévisualisation, fit cover/contain."
+  - title: Réutilisabilité
+    items:
+      - "Composant générique : la cellule accepte un slot personnalisé pour héberger n'importe quel contenu."
+      - "Documentation interne et exemples pour faciliter l'adoption par d'autres équipes."
+  - title: Veille technologique préalable
+    items:
+      - "Comparatif des bibliothèques drag & drop côté Angular : Angular CDK DragDrop, ngx-drag-drop, PrimeNG Draggable."
+      - "Évaluation sur 4 critères : intégration PrimeNG existante, contrôle fin du resize, gestion du contenu personnalisé, maintenance long terme."
+      - "Choix justifié documenté dans le README technique pour faciliter la décision côté revue de code."
+  - title: Performance & profilage
+    items:
+      - "Tests sur grilles denses (≥ 100 cartes) pour mesurer la fluidité du drag et du resize."
+      - "Profilage via Chrome DevTools Performance pour identifier les re-renders inutiles."
+      - "Optimisations ciblées : trackBy sur la liste, OnPush change detection, debounce sur le resize en cours."
+  - title: Démarche & intégration équipe
+    items:
+      - "Composant intégré au backlog équipe et présenté en démo de sprint pour valider l'API publique."
+      - "Itérations sur les retours des autres équipes utilisatrices avant figement de l'interface."

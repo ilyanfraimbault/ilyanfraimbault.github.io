@@ -1,0 +1,54 @@
+slug: truemain
+title: TrueMain
+description: "Projet personnel autour de League of Legends : agréger et fiabiliser les statistiques de champions des meilleurs joueurs (top OTP, mains uniques) afin de proposer des recommandations de builds basées sur les vraies pratiques pro/high-elo plutôt que sur des moyennes globales. Développé en solo depuis février 2026, c'est l'occasion de monter une stack moderne complète : .NET 10, ASP.NET Core, un Worker Service pour ingérer en continu l'API Riot Games, PostgreSQL via Entity Framework Core, et un front Nuxt 4. Le tout conteneurisé avec Docker pour un déploiement simple."
+image: /images/projects/truemain/architecture.svg
+imageCaption: "Schéma d'architecture TrueMain : services externes (Riot API, DDragon CDN), bloc Docker Compose orchestrant le Worker .NET avec ses 7 processus, l'API ASP.NET Core en port 8080 (libs Core et Data partagées), PostgreSQL 17.2 et PgAdmin (dev/QA), et le frontend Nuxt 4 en port 3000 qui consomme l'API."
+url: /projects/truemain
+tags: ["League of Legends", ".NET 10", "ASP.NET Core", "Worker Service", "Nuxt 4", "PostgreSQL", "Docker"]
+date: "2026-02-01"
+stack:
+  - .NET 10
+  - ASP.NET Core
+  - Worker Service
+  - Entity Framework Core
+  - PostgreSQL
+  - Nuxt 4
+  - TypeScript
+  - Docker
+links:
+  - label: Code source
+    to: https://github.com/ilyanfraimbault/TrueMain
+    icon: i-lucide-github
+    target: _blank
+    color: neutral
+highlights:
+  - "Architecture découpée : API ASP.NET Core (REST), Worker Service pour l'ingestion asynchrone et front Nuxt 4 pour la consultation."
+  - "Persistance PostgreSQL pilotée par Entity Framework Core (migrations, requêtes typées, indexation des matchs et builds)."
+  - "Conteneurisation Docker (API, Worker, base) pour un environnement reproductible en dev comme en déploiement."
+sections:
+  - title: Backend ASP.NET Core
+    items:
+      - "API REST pour exposer joueurs, champions, builds et statistiques agrégées."
+      - "Authentification et limites d'usage gérées proprement, documentation Swagger."
+  - title: Worker Service d'ingestion
+    items:
+      - "Consommation continue de l'API Riot Games avec respect des quotas (rate limiting)."
+      - "Pipeline de mise à jour incrémentale des matchs et de calcul des statistiques par champion."
+  - title: Front Nuxt 4
+    items:
+      - "Pages de recherche de joueurs et de comparaison de builds par champion."
+      - "Composants typés en TypeScript, SSR pour le SEO."
+  - title: Infrastructure
+    items:
+      - "docker-compose pour orchestrer API + Worker + PostgreSQL."
+      - "Migrations EF Core versionnées et reproductibles."
+  - title: Performance & rate limiting
+    items:
+      - "Anticipation des quotas Riot Games (app rate limit + method rate limit) : mutualisation des appels, file d'attente, back-off exponentiel."
+      - "Estimation de la montée en charge sur l'ingestion : nombre de matchs / minute, taille moyenne du payload, capacité visée de la base."
+      - "Tableau de suivi des métriques d'ingestion (matchs traités/min, latence p95) pour piloter les ajustements."
+  - title: Profilage & optimisation
+    items:
+      - "Profilage des requêtes EF Core : analyse du SQL généré, ajout d'index ciblés (matchs par joueur, builds par champion)."
+      - "Mise en cache mémoire des appels lecture les plus chauds pour absorber les pics de trafic front."
+      - "Justification documentée des choix d'optimisation dans le README technique."

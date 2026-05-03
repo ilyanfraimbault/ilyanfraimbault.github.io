@@ -30,6 +30,21 @@ const allImages = computed(() => [
   ...(galleryImages.value || [])
 ])
 
+const slugify = (text: string) => text
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[̀-ͯ]/g, '')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/(^-|-$)/g, '')
+
+const sectionAnchor = (title: string) => `section-${slugify(title)}`
+
+const imageAnchor = (src: string, index: number) => {
+  const filename = src.split('/').pop() || ''
+  const base = filename.replace(/\.[^.]+$/, '')
+  return base ? `image-${slugify(base)}` : `image-${index}`
+}
+
 const isModalOpen = ref(false)
 const activeImage = ref<{ src: string, alt?: string, caption?: string } | null>(null)
 
@@ -181,11 +196,21 @@ useSeoMeta({
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div
           v-for="section in project.sections"
+          :id="sectionAnchor(section.title)"
           :key="section.title"
-          class="rounded-2xl border border-muted p-5 bg-(--ui-bg-elevated) shadow-sm space-y-3"
+          class="rounded-2xl border border-muted p-5 bg-(--ui-bg-elevated) shadow-sm space-y-3 scroll-mt-24"
         >
           <h3 class="text-lg font-semibold">
-            {{ section.title }}
+            <a
+              :href="`#${sectionAnchor(section.title)}`"
+              class="group inline-flex items-center gap-2 hover:text-primary"
+            >
+              {{ section.title }}
+              <UIcon
+                name="i-lucide-link"
+                class="size-4 opacity-0 group-hover:opacity-60 transition-opacity"
+              />
+            </a>
           </h3>
           <ul class="space-y-2 text-sm text-muted">
             <li
@@ -213,9 +238,10 @@ useSeoMeta({
       <div class="grid grid-cols-1 gap-8">
         <button
           v-for="(image, index) in allImages"
+          :id="imageAnchor(image.src, index)"
           :key="index"
           type="button"
-          class="group text-left space-y-2 w-full"
+          class="group text-left space-y-2 w-full scroll-mt-24"
           @click="openImage(image)"
         >
           <div class="relative w-full overflow-hidden rounded-2xl border border-muted shadow-lg bg-(--ui-bg-elevated)">
