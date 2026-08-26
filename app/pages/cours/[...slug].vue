@@ -15,6 +15,7 @@ if (!page.value) {
 }
 
 const { openAll, closeAll } = provideCoursReveal()
+provideCoursExemples()
 
 const parent = computed(() => {
   const segments = contentPath.value.split('/').filter(Boolean)
@@ -22,6 +23,12 @@ const parent = computed(() => {
 })
 
 const tocLinks = computed(() => page.value?.body?.toc?.links ?? [])
+
+// Le conteneur qui borne la largeur vient du gabarit, au-dessus de cette page :
+// on élargit donc la variable depuis le body plutôt que depuis la page.
+useHead({
+  bodyAttrs: { class: 'cours-large' }
+})
 
 useSeoMeta({
   title: page.value.title,
@@ -31,8 +38,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <UMain class="mt-20 px-2">
-    <UContainer class="relative min-h-screen">
+  <UMain class="cours-page mt-20 px-2">
+    <div class="relative min-h-screen">
       <UPage v-if="page">
         <ULink
           v-if="parent"
@@ -82,18 +89,21 @@ useSeoMeta({
             :value="page"
           />
         </UPageBody>
-
-        <template
-          v-if="tocLinks.length"
-          #right
-        >
-          <UContentToc
-            title="Sur cette page"
-            :links="tocLinks"
-            highlight
-          />
-        </template>
       </UPage>
-    </UContainer>
+
+      <!-- Le sommaire est sorti de la grille de UPage : en colonne de droite, il
+           amputait la largeur du contenu. Il flotte désormais à côté du
+           conteneur, et disparaît quand la fenêtre n'est plus assez large. -->
+      <aside
+        v-if="tocLinks.length"
+        class="cours-sommaire hidden min-[1600px]:block"
+      >
+        <UContentToc
+          title="Sur cette page"
+          :links="tocLinks"
+          highlight
+        />
+      </aside>
+    </div>
   </UMain>
 </template>

@@ -28,7 +28,10 @@ if (reveal) {
 </script>
 
 <template>
-  <div class="cours-question border-l-2 border-default hover:border-primary/60 transition-colors pl-4 sm:pl-5 py-1 my-7">
+  <div
+    :id="uid"
+    class="cours-question scroll-mt-24 border-l-2 border-default hover:border-primary/60 transition-colors pl-4 sm:pl-5 py-1 my-7"
+  >
     <div class="flex gap-3 items-baseline">
       <span
         v-if="label"

@@ -6,7 +6,7 @@ matiere: Mathématiques
 icone: i-lucide-sigma
 ---
 
-Chaque chapitre reprend l'intégralité des exercices. Sous chaque question, un bouton **Indice** donne une piste sans livrer la réponse, et un bouton **Voir la solution** déroule la correction complète.
+Chaque chapitre s'ouvre sur une **fiche de révision** dépliable — le cours en condensé, accompagné d'un exemple entièrement traité pour chaque type de question. Viennent ensuite les exercices : sous chaque question, un bouton **Indice** donne une piste sans livrer la réponse, un bouton **Voir la solution** déroule la correction complète, et les indices renvoient d'un clic vers l'exemple de la fiche qui traite le même cas sur d'autres nombres.
 
 Les résultats ont été vérifiés par calcul formel puis confrontés aux éléments de correction officiels ; les rares écarts sont signalés directement dans la solution concernée.
 

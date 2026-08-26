@@ -109,3 +109,101 @@
     display: block !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Fiche de révision : bloc dépliable, exemples ciblables et renvois.
+   --------------------------------------------------------------------------- */
+
+.cours-fiche-corps > * + * {
+  margin-top: 0.75rem;
+}
+
+.cours-fiche-corps h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ui-text-highlighted);
+}
+
+.cours-fiche-corps h3:first-child {
+  margin-top: 0.5rem;
+}
+
+.cours-fiche-corps h4 {
+  margin: 1rem 0 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ui-text-highlighted);
+}
+
+.cours-exemple {
+  margin-block: 0.5rem;
+  border-radius: var(--radius-lg);
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--ui-border);
+  background-color: var(--ui-bg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cours-exemple:hover {
+  border-color: color-mix(in oklch, var(--ui-primary) 50%, transparent);
+}
+
+/* Mise en évidence passagère après un renvoi depuis un indice. */
+.cours-exemple-cible {
+  border-color: var(--ui-primary);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--ui-primary) 22%, transparent);
+}
+
+.cours-exemple-corps > .cours-panel-body > :first-child {
+  margin-top: 0.25rem;
+}
+
+/* Renvoi en ligne depuis un indice vers un exemple de la fiche. */
+.cours-renvoi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  vertical-align: baseline;
+  border-radius: var(--radius-md);
+  padding-inline: 0.25rem;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--ui-primary);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.cours-renvoi:hover {
+  background-color: color-mix(in oklch, var(--ui-primary) 10%, transparent);
+  text-decoration-style: solid;
+}
+
+@media print {
+  .cours-fiche-corps,
+  .cours-exemple-corps {
+    display: block !important;
+  }
+}
+
+/* Les pages de cours portent des formules en bloc et des tableaux : elles
+   gagnent à s'étaler plus que les pages éditoriales du portfolio. La classe est
+   posée sur le body, car le conteneur qui borne la largeur vient du gabarit. */
+body.cours-large {
+  --ui-container: var(--container-6xl);
+}
+
+/* Sommaire des pages de cours : ancré à droite du conteneur, hors du flux, pour
+   laisser toute la largeur au contenu. Le décalage vaut la moitié du conteneur
+   (72rem / 2) plus une gouttière. */
+.cours-sommaire {
+  position: fixed;
+  top: 7rem;
+  left: calc(50% + 37rem);
+  width: 13rem;
+  max-height: calc(100vh - 9rem);
+  overflow-y: auto;
+}
