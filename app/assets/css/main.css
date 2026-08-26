@@ -203,7 +203,17 @@ body.cours-large {
   position: fixed;
   top: 7rem;
   left: calc(50% + 37rem);
-  width: 13rem;
+  /* Toute la place restante entre le conteneur et le bord de la fenêtre, à une
+     marge près, sans jamais dépasser une largeur de lecture confortable. */
+  width: min(24rem, calc(50vw - 39rem));
   max-height: calc(100vh - 9rem);
   overflow-y: auto;
+}
+
+/* Les intitulés de sections sont longs : on les laisse passer à la ligne
+   plutôt que de les couper, quelle que soit la largeur disponible. */
+.cours-sommaire [data-slot="linkText"] {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
 }
