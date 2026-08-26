@@ -140,6 +140,18 @@ export default defineContentConfig({
         content: z.string(),
         images: z.array(createImageSchema()).optional()
       })
+    }),
+    cours: defineCollection({
+      type: 'page',
+      source: 'cours/**/*.md',
+      schema: z.object({
+        // Affiche les commandes « tout afficher / tout masquer » en tête de page.
+        interactif: z.boolean().optional(),
+        annee: z.string().optional(),
+        matiere: z.string().optional(),
+        ordre: z.number().optional(),
+        icone: z.string().optional()
+      })
     })
   }
 })
