@@ -207,7 +207,16 @@ body.cours-large {
      marge près, sans jamais dépasser une largeur de lecture confortable. */
   width: min(24rem, calc(50vw - 39rem));
   max-height: calc(100vh - 9rem);
-  overflow-y: auto;
+  overflow: hidden auto;
+}
+
+/* UContentToc est prévu pour la colonne de UPage : son nav débordait de son
+   nouveau cadre à cause de marges négatives destinées à la mise en page mobile,
+   et son positionnement collant n'a plus de sens dans un parent déjà fixe. */
+.cours-sommaire > * {
+  margin-inline: 0;
+  padding-inline: 0;
+  position: static;
 }
 
 /* Les intitulés de sections sont longs : on les laisse passer à la ligne
