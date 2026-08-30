@@ -33,7 +33,9 @@ C'est **l'unique** fonction dérivable vérifiant $f' = f$ et $f(0) = 1$ (Théor
 
 **Les règles algébriques (Prop 1.2)** — l'exponentielle transforme les sommes en produits :
 
-$$e^{a+b} = e^ae^b \qquad e^{-a} = \frac{1}{e^a} \qquad e^{a-b} = \frac{e^a}{e^b} \qquad (e^a)^n = e^{na}$$
+$$
+e^{a+b} = e^ae^b \qquad e^{-a} = \frac{1}{e^a} \qquad e^{a-b} = \frac{e^a}{e^b} \qquad (e^a)^n = e^{na}
+$$
 
 **Les faits essentiels** :
 
@@ -45,11 +47,15 @@ $$e^{a+b} = e^ae^b \qquad e^{-a} = \frac{1}{e^a} \qquad e^{a-b} = \frac{e^a}{e^b
 ::exemple{id="fu-exp-regles" titre="Manipuler les exponentielles avec les règles algébriques" pour="Le préalable à toute équation ou simplification"}
 Toutes ces simplifications consistent à **ramener l'expression à une seule exponentielle**, en additionnant ou soustrayant les exposants.
 
-$$e^{x+2} = e^2e^x \qquad e^{3x} = (e^x)^3 \qquad \frac{e^{5x}}{e^{2x}} = e^{3x}$$
+$$
+e^{x+2} = e^2e^x \qquad e^{3x} = (e^x)^3 \qquad \frac{e^{5x}}{e^{2x}} = e^{3x}
+$$
 
 **Un cas avec plusieurs facteurs.** Simplifier $\dfrac{e^{x}\,e^{2x+1}}{e^{x-1}}$ : on calcule l'exposant total,
 
-$$x+(2x+1)-(x-1) = 2x+2 \qquad\text{donc}\qquad \frac{e^{x}\,e^{2x+1}}{e^{x-1}} = e^{2x+2}$$
+$$
+x+(2x+1)-(x-1) = 2x+2 \qquad\text{donc}\qquad \frac{e^{x}\,e^{2x+1}}{e^{x-1}} = e^{2x+2}
+$$
 
 **Un cas avec une parenthèse.** $e^{-x}(e^x+1) = e^{-x}e^x+e^{-x} = e^0+e^{-x} = 1+e^{-x}$.
 
@@ -60,26 +66,38 @@ Le point à ne jamais oublier : $e^{a+b} = e^ae^b$, mais $e^{a}+e^{b}$ **ne se s
 
 $\exp$ est continue et strictement croissante de $\mathbb{R}$ sur $]0,+\infty[$ : c'est une bijection, et sa réciproque est **ln** (Déf 1.2).
 
-$$\text{pour } x>0 : \quad y = \ln x \iff e^y = x$$
+$$
+\text{pour } x>0 : \quad y = \ln x \iff e^y = x
+$$
 
-$$e^{\ln x} = x \ (x>0) \qquad \ln(e^x) = x \qquad \ln 1 = 0 \qquad \ln e = 1$$
+$$
+e^{\ln x} = x \ (x>0) \qquad \ln(e^x) = x \qquad \ln 1 = 0 \qquad \ln e = 1
+$$
 
 ⚠️ **ln n'est définie que sur $]0,+\infty[$.** Premier réflexe devant toute équation ou inéquation : le **domaine**.
 
 **Les règles algébriques (Prop 1.12)** — le logarithme transforme les produits en sommes :
 
-$$\ln(ab) = \ln a+\ln b \qquad \ln\frac1b = -\ln b \qquad \ln\frac ab = \ln a-\ln b \qquad \ln(a^n) = n\ln a \qquad \ln\sqrt a = \frac12\ln a$$
+$$
+\ln(ab) = \ln a+\ln b \qquad \ln\frac1b = -\ln b \qquad \ln\frac ab = \ln a-\ln b \qquad \ln(a^n) = n\ln a \qquad \ln\sqrt a = \frac12\ln a
+$$
 
 **Les faits essentiels** : strictement croissante (Prop 1.15), donc $\ln a = \ln b \iff a = b$ et $\ln a \leqslant \ln b \iff a \leqslant b$ pour $a,b>0$ ; signe négatif sur $]0,1[$ et positif sur $]1,+\infty[$ ; limites $-\infty$ en $0^+$ et $+\infty$ en $+\infty$ ; dérivées $\ln'(x) = \dfrac1x$ et $(\ln u)' = \dfrac{u'}{u}$.
 
 ::exemple{id="fu-ln-regles" titre="Manipuler les logarithmes avec les règles algébriques" pour="Décomposer, recomposer, et faire disparaître un ln"}
-$$\ln 8 = \ln(2^3) = 3\ln 2 \qquad \ln 6 = \ln 2+\ln 3 \qquad \ln\frac34 = \ln 3-2\ln 2$$
+$$
+\ln 8 = \ln(2^3) = 3\ln 2 \qquad \ln 6 = \ln 2+\ln 3 \qquad \ln\frac34 = \ln 3-2\ln 2
+$$
 
-$$\ln\sqrt5 = \frac12\ln 5 \qquad \ln\frac{1}{e^2} = -2$$
+$$
+\ln\sqrt5 = \frac12\ln 5 \qquad \ln\frac{1}{e^2} = -2
+$$
 
 **Faire disparaître un logarithme.** L'égalité $e^{\ln a} = a$ est l'outil central :
 
-$$e^{2\ln 3} = \left(e^{\ln 3}\right)^2 = 3^2 = 9$$
+$$
+e^{2\ln 3} = \left(e^{\ln 3}\right)^2 = 3^2 = 9
+$$
 
 **Simplifier une différence.** $\ln(4e^3)-\ln 4 = \big(\ln 4+3\big)-\ln 4 = 3$.
 
@@ -101,11 +119,15 @@ Résolvons $\ln(2x-6) = 2$.
 
 **Transformation.** On applique l'exponentielle des deux côtés, ce qui est licite puisqu'elle est strictement croissante :
 
-$$2x-6 = e^2 \quad\Longrightarrow\quad x = \frac{e^2+6}{2} = 3+\frac{e^2}{2}$$
+$$
+2x-6 = e^2 \quad\Longrightarrow\quad x = \frac{e^2+6}{2} = 3+\frac{e^2}{2}
+$$
 
 **Vérification.** $e^2\approx 7{,}39$, donc $x \approx 6{,}69 > 3$ : la solution appartient au domaine.
 
-$$S = \left\{3+\frac{e^2}{2}\right\}$$
+$$
+S = \left\{3+\frac{e^2}{2}\right\}
+$$
 
 ⚠️ On laisse la réponse sous forme exacte, avec $e^2$ — pas de valeur décimale approchée dans l'ensemble solution.
 ::
@@ -115,7 +137,9 @@ Résolvons $e^{3x+1} = 5$.
 
 Aucune contrainte de domaine ici : l'exponentielle est définie partout. On applique $\ln$ des deux côtés :
 
-$$3x+1 = \ln 5 \quad\Longrightarrow\quad x = \frac{\ln 5-1}{3} \qquad S = \left\{\frac{\ln 5-1}{3}\right\}$$
+$$
+3x+1 = \ln 5 \quad\Longrightarrow\quad x = \frac{\ln 5-1}{3} \qquad S = \left\{\frac{\ln 5-1}{3}\right\}
+$$
 
 **Le cas où il n'y a pas de solution.** Considérons $e^{2x} = -4$. Inutile de calculer : une exponentielle est **toujours strictement positive**, elle ne peut pas valoir $-4$. Donc $S = \varnothing$.
 
@@ -129,7 +153,9 @@ Résolvons $\ln(x+5) = \ln(2x-1)$.
 
 **Transformation.** La stricte croissance de $\ln$ permet de supprimer les logarithmes :
 
-$$x+5 = 2x-1 \quad\Longrightarrow\quad x = 6$$
+$$
+x+5 = 2x-1 \quad\Longrightarrow\quad x = 6
+$$
 
 **Vérification.** $6 > \dfrac12$ : la solution convient. $S = \{6\}$.
 
@@ -143,11 +169,15 @@ Résolvons $\ln(3x) \leqslant \ln(x+2)$.
 
 **Transformation.** $\ln$ étant **strictement croissante**, l'inégalité entre les logarithmes équivaut à la même inégalité entre les arguments, **dans le même sens** :
 
-$$3x \leqslant x+2 \quad\Longrightarrow\quad 2x \leqslant 2 \quad\Longrightarrow\quad x \leqslant 1$$
+$$
+3x \leqslant x+2 \quad\Longrightarrow\quad 2x \leqslant 2 \quad\Longrightarrow\quad x \leqslant 1
+$$
 
 **Intersection avec le domaine.** On croise $x \leqslant 1$ avec $x > 0$ :
 
-$$S = \,]0,\,1]$$
+$$
+S = \,]0,\,1]
+$$
 
 L'erreur la plus fréquente n'est pas dans le calcul mais dans l'oubli du domaine : sans lui, on aurait écrit $]-\infty,1]$, qui contient des valeurs où l'inéquation n'a aucun sens.
 ::
@@ -157,11 +187,15 @@ C'est l'outil dont on a besoin dès qu'un $\ln$ ou une racine porte sur un polyn
 
 Résolvons $x^2-x-6 > 0$. On cherche d'abord les racines :
 
-$$\Delta = (-1)^2-4\times 1\times(-6) = 1+24 = 25 \qquad x = \frac{1\pm 5}{2} \in \{-2,\ 3\}$$
+$$
+\Delta = (-1)^2-4\times 1\times(-6) = 1+24 = 25 \qquad x = \frac{1\pm 5}{2} \in \{-2,\ 3\}
+$$
 
 **La règle du signe** : un trinôme est **du signe de $a$ à l'extérieur des racines**, et du signe contraire entre elles. Ici $a = 1 > 0$, donc le trinôme est positif à l'extérieur :
 
-$$S = \,]-\infty,\,-2[\ \cup\ ]3,+\infty[$$
+$$
+S = \,]-\infty,\,-2[\ \cup\ ]3,+\infty[
+$$
 
 ⚠️ **Quand $a < 0$, tout s'inverse** : un trinôme comme $-x^2+4x-3$ (racines $1$ et $3$) est **positif entre ses racines**, sur $]1,3[$, et négatif à l'extérieur. C'est le cas typique quand un logarithme porte sur un trinôme de coefficient dominant négatif : son domaine est alors un **intervalle borné**.
 ::
@@ -175,11 +209,15 @@ $$S = \,]-\infty,\,-2[\ \cup\ ]3,+\infty[$$
 ::exemple{id="fu-croissances-comparees" titre="Lever une forme indéterminée avec les croissances comparées" pour="Exercice 3 — les limites aux bornes du domaine"}
 La hiérarchie à retenir : **exponentielle $\gg$ puissances $\gg$ logarithme**. Celui qui gagne impose sa limite.
 
-$$\lim_{x\to+\infty}\frac{e^x}{x^2} = +\infty \qquad\text{donc}\qquad \lim_{x\to+\infty}\frac{x^2}{e^x} = 0$$
+$$
+\lim_{x\to+\infty}\frac{e^x}{x^2} = +\infty \qquad\text{donc}\qquad \lim_{x\to+\infty}\frac{x^2}{e^x} = 0
+$$
 
 **Une différence indéterminée.** Pour $\displaystyle\lim_{x\to+\infty}\left(e^x-x^{10}\right)$, la forme est $\infty-\infty$. On **factorise par le terme dominant** :
 
-$$e^x-x^{10} = e^x\left(1-\frac{x^{10}}{e^x}\right)$$
+$$
+e^x-x^{10} = e^x\left(1-\frac{x^{10}}{e^x}\right)
+$$
 
 La parenthèse tend vers $1-0 = 1$ et $e^x\to+\infty$, donc la limite est $+\infty$.
 
@@ -193,13 +231,17 @@ Quand l'expression contient une fonction composée, on **pose une nouvelle varia
 
 **Un exposant qui explose.** Pour $\displaystyle\lim_{x\to 0^+}e^{-1/x}$, on pose $X = \dfrac1x$. Quand $x\to 0^+$, on a $X\to+\infty$, et l'expression devient $e^{-X}$, qui tend vers $0$.
 
-$$\lim_{x\to 0^+}e^{-1/x} = 0$$
+$$
+\lim_{x\to 0^+}e^{-1/x} = 0
+$$
 
 **Attention au côté.** La même expression en $0^-$ donne $X\to-\infty$, donc $e^{-X}\to+\infty$ : la limite **dépend du côté**. Dès que $\dfrac1x$ apparaît, il faut traiter $0^+$ et $0^-$ séparément.
 
 **Une composition avec un logarithme.** Pour $\displaystyle\lim_{x\to+\infty}\frac{\ln x}{\sqrt x}$, on pose $X = \sqrt x$, donc $x = X^2$ et $\ln x = 2\ln X$ :
 
-$$\frac{\ln x}{\sqrt x} = \frac{2\ln X}{X}\xrightarrow[X\to+\infty]{} 0$$
+$$
+\frac{\ln x}{\sqrt x} = \frac{2\ln X}{X}\xrightarrow[X\to+\infty]{} 0
+$$
 ::
 
 ::exemple{id="fu-etude-plan" titre="Mener une étude de fonction complète" pour="Exercice 3 — le plan à suivre, du domaine au tableau de variations"}
@@ -213,13 +255,17 @@ En $+\infty$ : $x-1\to+\infty$ et $e^x\to+\infty$, donc $g(x)\to+\infty$.
 
 En $-\infty$ : la forme est $(-\infty)\times 0$. On développe et on applique les croissances comparées, $xe^x\to 0$ et $e^x\to 0$ :
 
-$$g(x) = xe^x-e^x \xrightarrow[x\to-\infty]{} 0$$
+$$
+g(x) = xe^x-e^x \xrightarrow[x\to-\infty]{} 0
+$$
 
 Comme $g$ est négative près de $-\infty$, la courbe s'approche de l'axe des abscisses **par en dessous** : l'axe est une **asymptote horizontale**.
 
 **3. Dérivée, puis factorisation.**
 
-$$g'(x) = 1\times e^x+(x-1)e^x = e^x\big(1+x-1\big) = x\,e^x$$
+$$
+g'(x) = 1\times e^x+(x-1)e^x = e^x\big(1+x-1\big) = x\,e^x
+$$
 
 **4. Signe de la dérivée.** Comme $e^x > 0$ pour tout $x$, le signe de $g'$ est **exactement celui de $x$** : négatif avant $0$, positif après.
 
@@ -246,7 +292,9 @@ Montrons que $x-2+\ln x = 0$ admet une solution unique sur $]0,+\infty[$.
 
 **Changement de signe.** On évalue en deux points bien choisis :
 
-$$g(1) = 1-2+0 = -1 < 0 \qquad g(2) = 2-2+\ln 2 = \ln 2 > 0$$
+$$
+g(1) = 1-2+0 = -1 < 0 \qquad g(2) = 2-2+\ln 2 = \ln 2 > 0
+$$
 
 **Conclusion.** $g$ est continue et strictement croissante, et change de signe entre $1$ et $2$ : elle s'annule **une fois et une seule**, en un réel $\alpha \in\ ]1,2[$.
 
@@ -276,15 +324,23 @@ La ligne des cosinus se lit $\dfrac{\sqrt4}{2},\dfrac{\sqrt3}{2},\dfrac{\sqrt2}{
 ::exemple{id="fu-trigo-valeurs" titre="Ramener un angle dans le tableau des valeurs remarquables" pour="Exercice 4 — se ramener au premier quadrant"}
 Un angle qui ne figure pas dans le tableau s'y ramène par **périodicité** puis **parité**.
 
-$$\cos\left(-\frac{\pi}{3}\right) = \cos\frac{\pi}{3} = \frac12 \qquad\text{(le cosinus est pair)}$$
+$$
+\cos\left(-\frac{\pi}{3}\right) = \cos\frac{\pi}{3} = \frac12 \qquad\text{(le cosinus est pair)}
+$$
 
-$$\sin\left(\frac{13\pi}{6}\right) = \sin\left(\frac{\pi}{6}+2\pi\right) = \sin\frac{\pi}{6} = \frac12 \qquad\text{(période } 2\pi\text{)}$$
+$$
+\sin\left(\frac{13\pi}{6}\right) = \sin\left(\frac{\pi}{6}+2\pi\right) = \sin\frac{\pi}{6} = \frac12 \qquad\text{(période } 2\pi\text{)}
+$$
 
-$$\cos\left(\frac{7\pi}{4}\right) = \cos\left(\frac{7\pi}{4}-2\pi\right) = \cos\left(-\frac{\pi}{4}\right) = \frac{\sqrt2}{2}$$
+$$
+\cos\left(\frac{7\pi}{4}\right) = \cos\left(\frac{7\pi}{4}-2\pi\right) = \cos\left(-\frac{\pi}{4}\right) = \frac{\sqrt2}{2}
+$$
 
 **Les deux relations qui servent le plus** :
 
-$$\sin\theta = \cos\left(\frac{\pi}{2}-\theta\right) \qquad \sin(\pi-\theta) = \sin\theta$$
+$$
+\sin\theta = \cos\left(\frac{\pi}{2}-\theta\right) \qquad \sin(\pi-\theta) = \sin\theta
+$$
 
 La première permet de convertir un sinus en cosinus — indispensable pour résoudre une équation qui mélange les deux.
 ::
@@ -292,7 +348,9 @@ La première permet de convertir un sinus en cosinus — indispensable pour rés
 ::exemple{id="fu-equation-trigo-cos" titre="Résoudre une équation cos(A) = cos(B)" pour="Exercice 4 — les deux familles de solutions"}
 La formule du cours :
 
-$$\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi \qquad (k\in\mathbb{Z})$$
+$$
+\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi \qquad (k\in\mathbb{Z})
+$$
 
 Résolvons $\cos x = -\dfrac{\sqrt2}{2}$ sur $[0,2\pi]$.
 
@@ -300,13 +358,19 @@ Résolvons $\cos x = -\dfrac{\sqrt2}{2}$ sur $[0,2\pi]$.
 
 **Étape 2 — écrire les deux familles.**
 
-$$x = \frac{3\pi}{4}+2k\pi \qquad\text{ou}\qquad x = -\frac{3\pi}{4}+2k\pi$$
+$$
+x = \frac{3\pi}{4}+2k\pi \qquad\text{ou}\qquad x = -\frac{3\pi}{4}+2k\pi
+$$
 
 **Étape 3 — sélectionner celles de l'intervalle.** Dans $[0,2\pi]$, la première famille donne $\dfrac{3\pi}{4}$ (pour $k=0$). La seconde donne, pour $k=1$ :
 
-$$-\frac{3\pi}{4}+2\pi = \frac{5\pi}{4}$$
+$$
+-\frac{3\pi}{4}+2\pi = \frac{5\pi}{4}
+$$
 
-$$S = \left\{\frac{3\pi}{4},\ \frac{5\pi}{4}\right\}$$
+$$
+S = \left\{\frac{3\pi}{4},\ \frac{5\pi}{4}\right\}
+$$
 
 **Ne jamais s'arrêter à une seule famille** : un cosinus prend chaque valeur deux fois par tour, une fois au-dessus de l'axe et une fois en dessous.
 ::
@@ -316,17 +380,31 @@ Quand les deux fonctions apparaissent, on **convertit l'une en l'autre** avec $\
 
 Résolvons $\sin(2x) = \cos\left(x+\dfrac{\pi}{6}\right)$.
 
-**Conversion.**
+**Conversion.** L'identité $\sin\theta = \cos\!\left(\dfrac{\pi}{2}-\theta\right)$ est vraie pour **tout** $\theta$ : on a donc le droit d'y poser $\theta = 2x$, à condition de remplacer $\theta$ partout.
 
-$$\sin(2x) = \cos\left(\frac{\pi}{2}-2x\right) \qquad\text{donc}\qquad \cos\left(\frac{\pi}{2}-2x\right) = \cos\left(x+\frac{\pi}{6}\right)$$
+$$
+\sin\big(\underbrace{2x}_{\theta}\big) = \cos\!\left(\frac{\pi}{2}-\underbrace{2x}_{\theta}\right)
+$$
+
+Le membre de gauche est maintenant un cosinus, le membre de droite n'a pas bougé : l'équation est devenue une égalité entre deux cosinus, à laquelle on peut appliquer la formule précédente.
+
+$$
+\cos\left(\frac{\pi}{2}-2x\right) = \cos\left(x+\frac{\pi}{6}\right)
+$$
+
+D'où vient l'identité elle-même : c'est la symétrie du cercle par rapport à la diagonale $y=x$, qui échange abscisse et ordonnée donc cosinus et sinus. Le détail est dans le [guide de trigonométrie](/cours/a1/mathematiques/trigonometrie#_6-les-angles-associés-ou-les-quatre-symétries).
 
 **Première famille** — les arguments sont égaux modulo $2\pi$ :
 
-$$\frac{\pi}{2}-2x = x+\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{\pi}{3} = 3x+2k\pi \;\Longrightarrow\; x = \frac{\pi}{9}-\frac{2k\pi}{3}$$
+$$
+\frac{\pi}{2}-2x = x+\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{\pi}{3} = 3x+2k\pi \;\Longrightarrow\; x = \frac{\pi}{9}-\frac{2k\pi}{3}
+$$
 
 **Seconde famille** — les arguments sont opposés modulo $2\pi$ :
 
-$$\frac{\pi}{2}-2x = -x-\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{2\pi}{3} = x+2k\pi \;\Longrightarrow\; x = \frac{2\pi}{3}-2k\pi$$
+$$
+\frac{\pi}{2}-2x = -x-\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{2\pi}{3} = x+2k\pi \;\Longrightarrow\; x = \frac{2\pi}{3}-2k\pi
+$$
 
 **Vérification sur un représentant de chaque famille.** Pour $x = \dfrac{\pi}{9}$ : $\sin\dfrac{2\pi}{9} = \sin 40° \approx 0{,}643$ et $\cos\left(\dfrac{\pi}{9}+\dfrac{\pi}{6}\right) = \cos 50°\approx 0{,}643$. Pour $x = \dfrac{2\pi}{3}$ : $\sin\dfrac{4\pi}{3} = -\dfrac{\sqrt3}{2}$ et $\cos\dfrac{5\pi}{6} = -\dfrac{\sqrt3}{2}$. Les deux familles conviennent.
 
@@ -340,17 +418,23 @@ Tout repose sur $\sin' = \cos$, $\cos' = -\sin$, et les formules générales app
 
 **Composée.** $\big(\cos(3x)\big)' = -3\sin(3x)$ — le coefficient sort, et le cosinus donne un signe moins.
 
-$$\big(\sin(x^2)\big)' = 2x\cos(x^2)$$
+$$
+\big(\sin(x^2)\big)' = 2x\cos(x^2)
+$$
 
 **Produit.** $\big(x\sin x\big)' = \sin x+x\cos x$.
 
 **Puissance.** $\big(\cos^4x\big)'$ se lit comme $(u^4)'$ avec $u = \cos x$ et $u' = -\sin x$ :
 
-$$\big(\cos^4x\big)' = 4\times(-\sin x)\times\cos^3x = -4\sin x\cos^3x$$
+$$
+\big(\cos^4x\big)' = 4\times(-\sin x)\times\cos^3x = -4\sin x\cos^3x
+$$
 
 **Quotient.** Soit $f(x) = \dfrac{\sin x}{1+\cos x}$, avec $u' = \cos x$ et $v' = -\sin x$ :
 
-$$f'(x) = \frac{\cos x(1+\cos x)+\sin^2x}{(1+\cos x)^2} = \frac{\cos x+\cos^2x+\sin^2x}{(1+\cos x)^2} = \frac{1+\cos x}{(1+\cos x)^2} = \frac{1}{1+\cos x}$$
+$$
+f'(x) = \frac{\cos x(1+\cos x)+\sin^2x}{(1+\cos x)^2} = \frac{\cos x+\cos^2x+\sin^2x}{(1+\cos x)^2} = \frac{1+\cos x}{(1+\cos x)^2} = \frac{1}{1+\cos x}
+$$
 
 L'avant-dernière étape utilise $\cos^2+\sin^2 = 1$ : **penser systématiquement à cette identité** pour simplifier un résultat trigonométrique qui paraît compliqué.
 ::
@@ -375,11 +459,15 @@ La phrase à se répéter : **$\arccos x$ est l'unique angle de $[0,\pi]$ dont l
 
 **Un arccos.** Quel angle de $[0,\pi]$ a pour cosinus $-\dfrac12$ ? On sait que $\cos\dfrac{\pi}{3} = \dfrac12$, et l'angle de cosinus opposé dans $[0,\pi]$ est son supplémentaire :
 
-$$\arccos\left(-\frac12\right) = \pi-\frac{\pi}{3} = \frac{2\pi}{3}$$
+$$
+\arccos\left(-\frac12\right) = \pi-\frac{\pi}{3} = \frac{2\pi}{3}
+$$
 
 **Un arcsin.** Quel angle de $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$ a pour sinus $-\dfrac{\sqrt3}{2}$ ? Le sinus est impair, donc
 
-$$\arcsin\left(-\frac{\sqrt3}{2}\right) = -\arcsin\frac{\sqrt3}{2} = -\frac{\pi}{3}$$
+$$
+\arcsin\left(-\frac{\sqrt3}{2}\right) = -\arcsin\frac{\sqrt3}{2} = -\frac{\pi}{3}
+$$
 
 **Un arctan.** $\arctan(-1) = -\dfrac{\pi}{4}$, car $\tan\left(-\dfrac{\pi}{4}\right) = -1$ et $-\dfrac{\pi}{4}$ appartient bien à $\left]-\dfrac{\pi}{2},\dfrac{\pi}{2}\right[$.
 
@@ -391,13 +479,17 @@ $\arccos(\cos x) = x$ **uniquement si** $x\in[0,\pi]$. Sinon, il faut d'abord ra
 
 **Premier cas.** Calculons $\arccos\left(\cos\dfrac{5\pi}{4}\right)$. L'angle $\dfrac{5\pi}{4}$ n'est pas dans $[0,\pi]$. On cherche donc un angle de $[0,\pi]$ ayant le même cosinus :
 
-$$\cos\frac{5\pi}{4} = \cos\left(-\frac{5\pi}{4}\right) = \cos\left(-\frac{5\pi}{4}+2\pi\right) = \cos\frac{3\pi}{4}$$
+$$
+\cos\frac{5\pi}{4} = \cos\left(-\frac{5\pi}{4}\right) = \cos\left(-\frac{5\pi}{4}+2\pi\right) = \cos\frac{3\pi}{4}
+$$
 
 et $\dfrac{3\pi}{4}\in[0,\pi]$, donc la réponse est $\dfrac{3\pi}{4}$ — **pas** $\dfrac{5\pi}{4}$.
 
 **Deuxième cas.** Pour $\arcsin\left(\sin\dfrac{2\pi}{3}\right)$, l'intervalle visé est $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$. On utilise $\sin(\pi-\theta) = \sin\theta$ :
 
-$$\sin\frac{2\pi}{3} = \sin\left(\pi-\frac{2\pi}{3}\right) = \sin\frac{\pi}{3} \qquad\text{et}\qquad \frac{\pi}{3}\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$$
+$$
+\sin\frac{2\pi}{3} = \sin\left(\pi-\frac{2\pi}{3}\right) = \sin\frac{\pi}{3} \qquad\text{et}\qquad \frac{\pi}{3}\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]
+$$
 
 La réponse est donc $\dfrac{\pi}{3}$.
 
@@ -413,17 +505,25 @@ Montrons que $\arctan x+\arctan\dfrac1x = \dfrac{\pi}{2}$ pour tout $x > 0$.
 
 **Étape 2 — dériver.** Le second terme est une composée, avec $u = \dfrac1x$ et $u' = -\dfrac{1}{x^2}$ :
 
-$$f'(x) = \frac{1}{1+x^2}+\left(-\frac{1}{x^2}\right)\times\frac{1}{1+\dfrac{1}{x^2}}$$
+$$
+f'(x) = \frac{1}{1+x^2}+\left(-\frac{1}{x^2}\right)\times\frac{1}{1+\dfrac{1}{x^2}}
+$$
 
 On simplifie le second terme en multipliant haut et bas par $x^2$ :
 
-$$\left(-\frac{1}{x^2}\right)\times\frac{x^2}{x^2+1} = -\frac{1}{x^2+1}$$
+$$
+\left(-\frac{1}{x^2}\right)\times\frac{x^2}{x^2+1} = -\frac{1}{x^2+1}
+$$
 
-$$f'(x) = \frac{1}{1+x^2}-\frac{1}{1+x^2} = 0$$
+$$
+f'(x) = \frac{1}{1+x^2}-\frac{1}{1+x^2} = 0
+$$
 
 **Étape 3 — conclure avec un point.** Une fonction de dérivée nulle sur un **intervalle** y est constante. On évalue en $x = 1$ :
 
-$$f(1) = \arctan 1+\arctan 1 = \frac{\pi}{4}+\frac{\pi}{4} = \frac{\pi}{2}$$
+$$
+f(1) = \arctan 1+\arctan 1 = \frac{\pi}{4}+\frac{\pi}{4} = \frac{\pi}{2}
+$$
 
 Donc $f(x) = \dfrac{\pi}{2}$ pour tout $x>0$.
 
@@ -432,7 +532,9 @@ Donc $f(x) = \dfrac{\pi}{2}$ pour tout $x>0$.
 
 ### 7. Fonctions hyperboliques
 
-$$\mathrm{ch}\,x = \frac{e^x+e^{-x}}{2} \qquad \mathrm{sh}\,x = \frac{e^x-e^{-x}}{2} \qquad \mathrm{th}\,x = \frac{\mathrm{sh}\,x}{\mathrm{ch}\,x}$$
+$$
+\mathrm{ch}\,x = \frac{e^x+e^{-x}}{2} \qquad \mathrm{sh}\,x = \frac{e^x-e^{-x}}{2} \qquad \mathrm{th}\,x = \frac{\mathrm{sh}\,x}{\mathrm{ch}\,x}
+$$
 
 $\mathrm{ch}\,0 = 1$, $\mathrm{sh}\,0 = 0$, $\mathrm{th}\,0 = 0$. **ch est paire, sh et th impaires.** $\mathrm{ch}\,x\geqslant 1$ toujours — donc jamais nul, ce qui autorise à diviser par $\mathrm{ch}$ sans discussion.
 
@@ -450,19 +552,27 @@ La méthode ne varie jamais : **remplacer chaque ch et chaque sh par sa définit
 
 Démontrons $\mathrm{ch}^2x-\mathrm{sh}^2x = 1$.
 
-$$\mathrm{ch}^2x-\mathrm{sh}^2x = \frac{(e^x+e^{-x})^2-(e^x-e^{-x})^2}{4}$$
+$$
+\mathrm{ch}^2x-\mathrm{sh}^2x = \frac{(e^x+e^{-x})^2-(e^x-e^{-x})^2}{4}
+$$
 
 On développe les deux carrés, en notant que $e^x\times e^{-x} = e^0 = 1$ :
 
-$$(e^x+e^{-x})^2 = e^{2x}+2+e^{-2x} \qquad (e^x-e^{-x})^2 = e^{2x}-2+e^{-2x}$$
+$$
+(e^x+e^{-x})^2 = e^{2x}+2+e^{-2x} \qquad (e^x-e^{-x})^2 = e^{2x}-2+e^{-2x}
+$$
 
 La différence ne laisse que les termes centraux :
 
-$$\frac{(e^{2x}+2+e^{-2x})-(e^{2x}-2+e^{-2x})}{4} = \frac{4}{4} = 1$$
+$$
+\frac{(e^{2x}+2+e^{-2x})-(e^{2x}-2+e^{-2x})}{4} = \frac{4}{4} = 1
+$$
 
 **Un contrôle numérique pour se rassurer.** Avec $a = \ln 2$ :
 
-$$\mathrm{ch}(\ln 2) = \frac{2+\frac12}{2} = \frac54 \qquad \mathrm{sh}(\ln 2) = \frac{2-\frac12}{2} = \frac34$$
+$$
+\mathrm{ch}(\ln 2) = \frac{2+\frac12}{2} = \frac54 \qquad \mathrm{sh}(\ln 2) = \frac{2-\frac12}{2} = \frac34
+$$
 
 et l'on vérifie $\left(\dfrac54\right)^2-\left(\dfrac34\right)^2 = \dfrac{25-9}{16} = 1$.
 
@@ -472,7 +582,9 @@ et l'on vérifie $\left(\dfrac54\right)^2-\left(\dfrac34\right)^2 = \dfrac{25-9}
 ::exemple{id="fu-hyperbolique-derivee" titre="Dériver une expression hyperbolique" pour="Exercice 8 — les formules et leurs composées"}
 Les deux formules de base, **sans aucun signe moins** :
 
-$$\mathrm{ch}' = \mathrm{sh} \qquad \mathrm{sh}' = \mathrm{ch}$$
+$$
+\mathrm{ch}' = \mathrm{sh} \qquad \mathrm{sh}' = \mathrm{ch}
+$$
 
 **Composées.** $\big(\mathrm{ch}(3x)\big)' = 3\,\mathrm{sh}(3x)$ et $\big(\mathrm{sh}(x^2)\big)' = 2x\,\mathrm{ch}(x^2)$.
 
@@ -480,7 +592,9 @@ $$\mathrm{ch}' = \mathrm{sh} \qquad \mathrm{sh}' = \mathrm{ch}$$
 
 **Quotient.** Pour $\mathrm{th}(2x) = \dfrac{\mathrm{sh}(2x)}{\mathrm{ch}(2x)}$, la formule du quotient donne
 
-$$\big(\mathrm{th}(2x)\big)' = \frac{2\,\mathrm{ch}(2x)\,\mathrm{ch}(2x)-\mathrm{sh}(2x)\times 2\,\mathrm{sh}(2x)}{\mathrm{ch}^2(2x)} = \frac{2\big(\mathrm{ch}^2(2x)-\mathrm{sh}^2(2x)\big)}{\mathrm{ch}^2(2x)} = \frac{2}{\mathrm{ch}^2(2x)}$$
+$$
+\big(\mathrm{th}(2x)\big)' = \frac{2\,\mathrm{ch}(2x)\,\mathrm{ch}(2x)-\mathrm{sh}(2x)\times 2\,\mathrm{sh}(2x)}{\mathrm{ch}^2(2x)} = \frac{2\big(\mathrm{ch}^2(2x)-\mathrm{sh}^2(2x)\big)}{\mathrm{ch}^2(2x)} = \frac{2}{\mathrm{ch}^2(2x)}
+$$
 
 en utilisant $\mathrm{ch}^2-\mathrm{sh}^2 = 1$ à la dernière étape. **C'est toujours cette identité qui conclut** les calculs de dérivées hyperboliques.
 ::
@@ -489,28 +603,40 @@ en utilisant $\mathrm{ch}^2-\mathrm{sh}^2 = 1$ à la dernière étape. **C'est t
 
 $\mathrm{argsh} : \mathbb{R}\to\mathbb{R}$, $\mathrm{argch} : [1,+\infty[\ \to[0,+\infty[$, $\mathrm{argth} : \,]-1,1[\ \to\mathbb{R}$.
 
-$$\mathrm{argsh}'x = \frac{1}{\sqrt{x^2+1}} \qquad \mathrm{argch}'x = \frac{1}{\sqrt{x^2-1}} \qquad \mathrm{argth}'x = \frac{1}{1-x^2}$$
+$$
+\mathrm{argsh}'x = \frac{1}{\sqrt{x^2+1}} \qquad \mathrm{argch}'x = \frac{1}{\sqrt{x^2-1}} \qquad \mathrm{argth}'x = \frac{1}{1-x^2}
+$$
 
-$$\mathrm{argsh}\,x = \ln\left(x+\sqrt{x^2+1}\right) \qquad \mathrm{argch}\,x = \ln\left(x+\sqrt{x^2-1}\right) \qquad \mathrm{argth}\,x = \frac12\ln\frac{1+x}{1-x}$$
+$$
+\mathrm{argsh}\,x = \ln\left(x+\sqrt{x^2+1}\right) \qquad \mathrm{argch}\,x = \ln\left(x+\sqrt{x^2-1}\right) \qquad \mathrm{argth}\,x = \frac12\ln\frac{1+x}{1-x}
+$$
 
 ::exemple{id="fu-derivee-reciproque" titre="Calculer la dérivée d'une fonction réciproque" pour="Exercice 9 — dériver l'égalité f(f⁻¹(x)) = x"}
 La méthode en trois temps, illustrée sur $\arcsin$ — la démarche est identique pour argsh, argch et argth.
 
 **1. Partir de l'égalité de définition.** Pour $x\in\,]-1,1[$ :
 
-$$\sin\big(\arcsin x\big) = x$$
+$$
+\sin\big(\arcsin x\big) = x
+$$
 
 **2. Dériver les deux membres**, en traitant la gauche comme une composée :
 
-$$\arcsin'(x)\times\cos\big(\arcsin x\big) = 1 \qquad\Longrightarrow\qquad \arcsin'(x) = \frac{1}{\cos\big(\arcsin x\big)}$$
+$$
+\arcsin'(x)\times\cos\big(\arcsin x\big) = 1 \qquad\Longrightarrow\qquad \arcsin'(x) = \frac{1}{\cos\big(\arcsin x\big)}
+$$
 
 **3. Éliminer la composée avec l'identité fondamentale.** De $\cos^2+\sin^2 = 1$ on tire
 
-$$\cos\big(\arcsin x\big) = \pm\sqrt{1-\sin^2(\arcsin x)} = \pm\sqrt{1-x^2}$$
+$$
+\cos\big(\arcsin x\big) = \pm\sqrt{1-\sin^2(\arcsin x)} = \pm\sqrt{1-x^2}
+$$
 
 **et c'est ici qu'on justifie le signe** : $\arcsin x$ appartient à $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$, intervalle sur lequel le cosinus est **positif**. On garde donc la racine positive :
 
-$$\arcsin'(x) = \frac{1}{\sqrt{1-x^2}}$$
+$$
+\arcsin'(x) = \frac{1}{\sqrt{1-x^2}}
+$$
 
 **Pour les fonctions hyperboliques**, c'est $\mathrm{ch}^2-\mathrm{sh}^2 = 1$ qui joue le rôle de l'identité fondamentale, et la justification du signe repose sur $\mathrm{ch}\geqslant 1 > 0$. La troisième étape est toujours la seule qui demande une vraie rédaction.
 ::
@@ -524,13 +650,19 @@ Montrons que $\ln(1+e^x) = x+\ln(1+e^{-x})$ pour tout réel $x$.
 
 **2. Dériver.**
 
-$$f'(x) = \frac{e^x}{1+e^x}$$
+$$
+f'(x) = \frac{e^x}{1+e^x}
+$$
 
-$$g'(x) = 1+\frac{-e^{-x}}{1+e^{-x}} = \frac{(1+e^{-x})-e^{-x}}{1+e^{-x}} = \frac{1}{1+e^{-x}}$$
+$$
+g'(x) = 1+\frac{-e^{-x}}{1+e^{-x}} = \frac{(1+e^{-x})-e^{-x}}{1+e^{-x}} = \frac{1}{1+e^{-x}}
+$$
 
 Il reste à voir que les deux expressions coïncident : on multiplie numérateur et dénominateur de $g'$ par $e^x$,
 
-$$\frac{1}{1+e^{-x}} = \frac{e^x}{e^x+1} = f'(x)$$
+$$
+\frac{1}{1+e^{-x}} = \frac{e^x}{e^x+1} = f'(x)
+$$
 
 **3. Comparer en un point.** $f(0) = \ln 2$ et $g(0) = 0+\ln 2 = \ln 2$.
 
@@ -579,7 +711,9 @@ Les trois étapes déroulées sur une autre équation : :voir-exemple[équation 
 
 **Vérification** : $e-1 \approx 1{,}72 > -1$ ✓
 
-$$\boxed{S = \{e-1\}}$$
+$$
+\boxed{S = \{e-1\}}
+$$
 
 ::
 
@@ -599,7 +733,9 @@ Le chemin inverse, sur une autre équation : :voir-exemple[équation de la forme
 
 **Résolution** : $3 > 0$ donc on peut composer par ln : $x-1 = \ln 3 \iff x = 1+\ln 3$.
 
-$$\boxed{S = \{1+\ln 3\}}$$
+$$
+\boxed{S = \{1+\ln 3\}}
+$$
 
 ::
 
@@ -619,13 +755,17 @@ La méthode sur une autre équation du même type : :voir-exemple[équation ln(A
 
 **Résolution** : $\ln A = \ln B \iff A = B$ :
 
-$$x^2+1 = 2x \iff x^2-2x+1 = 0 \iff (x-1)^2 = 0 \iff x = 1$$
+$$
+x^2+1 = 2x \iff x^2-2x+1 = 0 \iff (x-1)^2 = 0 \iff x = 1
+$$
 
 *(identité remarquable, une racine double)*
 
 **Vérification** : $1 > 0$ ✓
 
-$$\boxed{S = \{1\}}$$
+$$
+\boxed{S = \{1\}}
+$$
 
 ::
 
@@ -645,7 +785,9 @@ La méthode sur une autre équation du même type : :voir-exemple[équation ln(A
 
 **Résolution** : $x-2 = x+1 \iff -2 = 1$ : **impossible**.
 
-$$\boxed{S = \varnothing}$$
+$$
+\boxed{S = \varnothing}
+$$
 
 *(Logique : $x-2 < x+1$ pour tout $x$, et ln est strictement croissante, donc $\ln(x-2) < \ln(x+1)$ toujours — les deux membres ne peuvent jamais être égaux.)*
 
@@ -659,7 +801,9 @@ Résoudre les inéquations suivantes après avoir déterminé le domaine de rés
 
 **Méthode : les mêmes 3 étapes qu'à l'exercice 1**, mais à l'étape 2 on utilise la **stricte croissance de ln** (Prop 1.15) : elle conserve le sens des inégalités,
 
-$$\ln(A) \leqslant \ln(B) \iff A \leqslant B \quad (\text{sur le domaine où } A, B > 0).$$
+$$
+\ln(A) \leqslant \ln(B) \iff A \leqslant B \quad (\text{sur le domaine où } A, B > 0).
+$$
 
 ::question{label="1."}
 
@@ -679,7 +823,9 @@ Le domaine puis le sens de l'inégalité, sur un autre exemple : :voir-exemple[i
 
 **Intersection avec $D$** : tout $x > 2$ vérifie $x \geqslant -1$, donc la condition est toujours satisfaite sur $D$.
 
-$$\boxed{S = \left]2,+\infty\right[}$$
+$$
+\boxed{S = \left]2,+\infty\right[}
+$$
 
 ::
 
@@ -699,13 +845,17 @@ Pour la méthode, :voir-exemple[inéquation avec des logarithmes]{id="fu-inequat
 
 **Résolution** : $1+\dfrac{2}{x} \geqslant x$. On multiplie par $x > 0$ (le sens ne change pas car $x$ est positif) :
 
-$$x+2 \geqslant x^2 \iff x^2-x-2 \leqslant 0$$
+$$
+x+2 \geqslant x^2 \iff x^2-x-2 \leqslant 0
+$$
 
 **Signe du trinôme** : $\Delta = 1+8 = 9$, racines $x = \dfrac{1\pm 3}{2}$, soit $-1$ et $2$. Coefficient $a = 1 > 0$, donc le trinôme est **négatif entre ses racines** : $-1 \leqslant x \leqslant 2$.
 
 **Intersection avec $D$** : $0 < x \leqslant 2$.
 
-$$\boxed{S = \left]0, 2\right]}$$
+$$
+\boxed{S = \left]0, 2\right]}
+$$
 
 ::
 
@@ -727,7 +877,9 @@ Pour la méthode, :voir-exemple[inéquation avec des logarithmes]{id="fu-inequat
 
 **Intersection avec $D$** : $x \geqslant 3$.
 
-$$\boxed{S = \left[3,+\infty\right[}$$
+$$
+\boxed{S = \left[3,+\infty\right[}
+$$
 
 ::
 
@@ -760,7 +912,9 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Dérivée** : forme $e^u$ avec $u = \sqrt{x}$, dérivable sur $]0,+\infty[$ seulement (la racine carrée n'est pas dérivable en $0$), $u' = \dfrac{1}{2\sqrt{x}}$. Par la Prop 1.9 :
 
-$$f_1'(x) = \frac{1}{2\sqrt{x}}\,e^{\sqrt{x}} \quad \text{sur } ]0,+\infty[$$
+$$
+f_1'(x) = \frac{1}{2\sqrt{x}}\,e^{\sqrt{x}} \quad \text{sur } ]0,+\infty[
+$$
 
 **Signe** : $e^{\sqrt{x}} > 0$ (Prop 1.3) et $\dfrac{1}{2\sqrt{x}} > 0$, donc $f_1' > 0$ : $f_1$ est **strictement croissante**.
 
@@ -796,17 +950,23 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Domaine** : il faut $-x^2+3x-2 > 0$. Racines du trinôme : $\Delta = 9-8 = 1$, $x = \dfrac{-3\pm 1}{-2}$, soit $x = 1$ et $x = 2$. Coefficient $a = -1 < 0$, donc le trinôme est **positif entre ses racines** :
 
-$$D_{f_2} = \left]1, 2\right[$$
+$$
+D_{f_2} = \left]1, 2\right[
+$$
 
 **Dérivée** : forme $\ln u$ avec $u = -x^2+3x-2 > 0$ sur $D$, $u' = -2x+3$. Par la Prop 1.20 :
 
-$$f_2'(x) = \frac{-2x+3}{-x^2+3x-2} \quad \text{sur } ]1,2[$$
+$$
+f_2'(x) = \frac{-2x+3}{-x^2+3x-2} \quad \text{sur } ]1,2[
+$$
 
 **Signe** : le dénominateur est $> 0$ sur $D$ (c'est la condition du domaine), donc $f_2'(x)$ est du signe de $-2x+3$, qui s'annule en $x = \frac{3}{2}$ : positif avant, négatif après.
 
 **Limites et valeurs** : aux deux bornes, $u \to 0^+$ donc $\ln u \to -\infty$ (Prop 1.16). Maximum en $\frac{3}{2}$ :
 
-$$f_2\left(\tfrac{3}{2}\right) = \ln\left(-\tfrac{9}{4}+\tfrac{9}{2}-2\right) = \ln\tfrac{1}{4} = -2\ln 2$$
+$$
+f_2\left(\tfrac{3}{2}\right) = \ln\left(-\tfrac{9}{4}+\tfrac{9}{2}-2\right) = \ln\tfrac{1}{4} = -2\ln 2
+$$
 
 ::tableau-variations
 ---
@@ -843,7 +1003,9 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Dérivée** : produit $u\times v$ avec $u = x$, $u' = 1$ et $v = e^{1/x}$, $v' = -\dfrac{1}{x^2}e^{1/x}$ (Prop 1.9 avec $\frac{1}{x}$ de dérivée $-\frac{1}{x^2}$) :
 
-$$f_3'(x) = e^{1/x}+x\left(-\frac{1}{x^2}\right)e^{1/x} = e^{1/x}\left(1-\frac{1}{x}\right) = e^{1/x}\,\frac{x-1}{x} \quad \text{sur } \mathbb{R}^*$$
+$$
+f_3'(x) = e^{1/x}+x\left(-\frac{1}{x^2}\right)e^{1/x} = e^{1/x}\left(1-\frac{1}{x}\right) = e^{1/x}\,\frac{x-1}{x} \quad \text{sur } \mathbb{R}^*
+$$
 
 *(on factorise toujours par l'exponentielle)*
 
@@ -911,11 +1073,15 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Étape 2 — dérivée.** Quotient avec $u = \sin x$, $u' = \cos x$ (Prop 2.3) et $v = x$, $v' = 1$ :
 
-$$f_4'(x) = \frac{x\cos x-\sin x}{x^2} \quad \text{sur } \mathbb{R}^*$$
+$$
+f_4'(x) = \frac{x\cos x-\sin x}{x^2} \quad \text{sur } \mathbb{R}^*
+$$
 
 **Étape 3 — signe, via une fonction auxiliaire.** $x^2 > 0$, donc $f_4'$ est du signe de $g(x) = x\cos x-\sin x$, qu'on étudie sur $]0,+\infty[$ :
 
-$$g'(x) = \cos x - x\sin x-\cos x = -x\sin x$$
+$$
+g'(x) = \cos x - x\sin x-\cos x = -x\sin x
+$$
 
 Or, sur $]0,+\infty[$, $\sin x \geqslant 0 \iff x \in [n\pi,(n+1)\pi]$ avec $n$ **pair**. Donc $g$ est **strictement décroissante** sur chacun des intervalles $[n\pi,(n+1)\pi]$ avec $n$ pair, et **strictement croissante** sur $[n\pi,(n+1)\pi]$ avec $n$ impair.
 
@@ -1014,11 +1180,15 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Domaine** : $x^2-5x+6 \geqslant 0$. Racines : $\Delta = 25-24 = 1$, $x = \dfrac{5\pm 1}{2}$, soit $2$ et $3$. Comme $a = 1 > 0$, le trinôme est positif **à l'extérieur** des racines :
 
-$$D_{f_5} = \left]-\infty,2\right] \cup \left[3,+\infty\right[$$
+$$
+D_{f_5} = \left]-\infty,2\right] \cup \left[3,+\infty\right[
+$$
 
 **Dérivée** : forme $\sqrt{u}$ avec $u = x^2-5x+6$, $u' = 2x-5$ :
 
-$$f_5'(x) = \frac{2x-5}{2\sqrt{x^2-5x+6}} \quad \text{sur } ]-\infty,2[\,\cup\,]3,+\infty[$$
+$$
+f_5'(x) = \frac{2x-5}{2\sqrt{x^2-5x+6}} \quad \text{sur } ]-\infty,2[\,\cup\,]3,+\infty[
+$$
 
 *(pas de dérivée en $2$ ni en $3$ : $u$ s'y annule, la formule $(\sqrt{u})' = \frac{u'}{2\sqrt{u}}$ exige $u > 0$ — tangentes verticales)*
 
@@ -1058,11 +1228,15 @@ Le plan complet déroulé sur une autre fonction : :voir-exemple[mener une étud
 
 **Dérivée** : produit avec $u = e^x$, $u' = e^x$ et $v = \ln(x+1)$, $v' = \dfrac{1}{x+1}$ (Prop 1.20) :
 
-$$f_6'(x) = e^x\ln(x+1)+\frac{e^x}{x+1} = e^x\left[\ln(x+1)+\frac{1}{x+1}\right] \quad \text{sur } ]-1,+\infty[$$
+$$
+f_6'(x) = e^x\ln(x+1)+\frac{e^x}{x+1} = e^x\left[\ln(x+1)+\frac{1}{x+1}\right] \quad \text{sur } ]-1,+\infty[
+$$
 
 **Signe** : $e^x > 0$, donc $f_6'$ est du signe de $h(x) = \ln(x+1)+\dfrac{1}{x+1}$. Ce signe n'est pas évident, d'où une **étude auxiliaire** :
 
-$$h'(x) = \frac{1}{x+1}-\frac{1}{(x+1)^2} = \frac{(x+1)-1}{(x+1)^2} = \frac{x}{(x+1)^2}$$
+$$
+h'(x) = \frac{1}{x+1}-\frac{1}{(x+1)^2} = \frac{(x+1)-1}{(x+1)^2} = \frac{x}{(x+1)^2}
+$$
 
 $h' < 0$ sur $]-1,0[$ et $h' > 0$ sur $]0,+\infty[$ : $h$ atteint son **minimum en $0$**, qui vaut $h(0) = \ln 1+1 = 1 > 0$. Donc $h > 0$ partout, donc $f_6' > 0$ : $f_6$ est **strictement croissante**.
 
@@ -1092,7 +1266,9 @@ Résoudre les équations trigonométriques suivantes.
 
 **Méthode** : on se ramène à une égalité entre **deux cosinus** (ou deux sinus), puis on utilise la lecture du cercle trigonométrique (Déf 2.1, avec la parité de cos et la périodicité, Prop 2.1–2.2) :
 
-$$\cos A = \cos B \iff A = B+2k\pi \;\text{ ou }\; A = -B+2k\pi \quad(k\in\mathbb{Z})$$
+$$
+\cos A = \cos B \iff A = B+2k\pi \;\text{ ou }\; A = -B+2k\pi \quad(k\in\mathbb{Z})
+$$
 
 et la formule des angles complémentaires pour convertir un sinus : $\sin\theta = \cos\!\left(\dfrac{\pi}{2}-\theta\right)$.
 
@@ -1113,7 +1289,9 @@ La conversion puis les deux familles, sur une autre équation : :voir-exemple[é
 
 **Étape 1 — tout mettre en cosinus** :
 
-$$\sin\left(2x-\frac{\pi}{3}\right) = \cos\left(\frac{\pi}{2}-\left(2x-\frac{\pi}{3}\right)\right) = \cos\left(\frac{5\pi}{6}-2x\right)$$
+$$
+\sin\left(2x-\frac{\pi}{3}\right) = \cos\left(\frac{\pi}{2}-\left(2x-\frac{\pi}{3}\right)\right) = \cos\left(\frac{5\pi}{6}-2x\right)
+$$
 
 *(calcul : $\frac{\pi}{2}+\frac{\pi}{3} = \frac{3\pi+2\pi}{6} = \frac{5\pi}{6}$)*
 
@@ -1121,17 +1299,25 @@ $$\sin\left(2x-\frac{\pi}{3}\right) = \cos\left(\frac{\pi}{2}-\left(2x-\frac{\pi
 
 **Famille 1** : $x-\dfrac{\pi}{4} = \dfrac{5\pi}{6}-2x+2k\pi$
 
-$$3x = \frac{5\pi}{6}+\frac{\pi}{4}+2k\pi = \frac{10\pi+3\pi}{12}+2k\pi = \frac{13\pi}{12}+2k\pi$$
+$$
+3x = \frac{5\pi}{6}+\frac{\pi}{4}+2k\pi = \frac{10\pi+3\pi}{12}+2k\pi = \frac{13\pi}{12}+2k\pi
+$$
 
-$$x = \frac{13\pi}{36}+\frac{2k\pi}{3}$$
+$$
+x = \frac{13\pi}{36}+\frac{2k\pi}{3}
+$$
 
 **Famille 2** : $x-\dfrac{\pi}{4} = -\dfrac{5\pi}{6}+2x+2k\pi$
 
-$$-x = -\frac{5\pi}{6}+\frac{\pi}{4}+2k\pi = -\frac{7\pi}{12}+2k\pi \quad\Longrightarrow\quad x = \frac{7\pi}{12}-2k\pi$$
+$$
+-x = -\frac{5\pi}{6}+\frac{\pi}{4}+2k\pi = -\frac{7\pi}{12}+2k\pi \quad\Longrightarrow\quad x = \frac{7\pi}{12}-2k\pi
+$$
 
 Comme $k$ parcourt tout $\mathbb{Z}$, on écrit simplement $x = \dfrac{7\pi}{12}+2k\pi$.
 
-$$\boxed{S = \left\{\frac{13\pi}{36}+\frac{2k\pi}{3},\; k\in\mathbb{Z}\right\}\cup\left\{\frac{7\pi}{12}+2k\pi,\; k\in\mathbb{Z}\right\}}$$
+$$
+\boxed{S = \left\{\frac{13\pi}{36}+\frac{2k\pi}{3},\; k\in\mathbb{Z}\right\}\cup\left\{\frac{7\pi}{12}+2k\pi,\; k\in\mathbb{Z}\right\}}
+$$
 
 *(Vérifié numériquement : cela donne bien exactement 4 solutions par tour, par exemple $\frac{13\pi}{36}, \frac{7\pi}{12}, \frac{37\pi}{36}, \frac{61\pi}{36}$ dans $[0,2\pi[$.)*
 
@@ -1151,11 +1337,15 @@ La même méthode avec une autre valeur : :voir-exemple[équation cos(A) = cos(B
 
 **Valeur remarquable** : $\dfrac{1}{2} = \cos\dfrac{\pi}{3}$. Donc :
 
-$$\cos x = \cos\frac{\pi}{3} \iff x = \frac{\pi}{3}+2k\pi \;\text{ ou }\; x = -\frac{\pi}{3}+2k\pi$$
+$$
+\cos x = \cos\frac{\pi}{3} \iff x = \frac{\pi}{3}+2k\pi \;\text{ ou }\; x = -\frac{\pi}{3}+2k\pi
+$$
 
 **Dans $[0,2\pi]$** : la première famille donne $x = \dfrac{\pi}{3}$ (avec $k=0$) ; la seconde donne $x = -\dfrac{\pi}{3}+2\pi = \dfrac{5\pi}{3}$ (avec $k=1$).
 
-$$\boxed{S = \left\{\frac{\pi}{3},\; \frac{5\pi}{3}\right\}}$$
+$$
+\boxed{S = \left\{\frac{\pi}{3},\; \frac{5\pi}{3}\right\}}
+$$
 
 ⚠️ *L'énoncé dit « inéquation » mais écrit une équation ($=$). Si l'intention était $\cos x \leqslant \frac{1}{2}$, la lecture du cercle donne $S = \left[\frac{\pi}{3}, \frac{5\pi}{3}\right]$ (l'arc où le cosinus, c'est-à-dire l'abscisse sur le cercle, est sous $\frac{1}{2}$).*
 
@@ -1183,7 +1373,9 @@ Les mêmes formules sur d'autres expressions : :voir-exemple[dériver une expres
 
 Somme, dérivée terme à terme :
 
-$$\boxed{f'(x) = 2x-\sin x}$$
+$$
+\boxed{f'(x) = 2x-\sin x}
+$$
 
 ::
 
@@ -1201,7 +1393,9 @@ Les mêmes formules sur d'autres expressions : :voir-exemple[dériver une expres
 
 Forme $\sin(ax+b)$ avec $a = 2$, $b = 0$ :
 
-$$\boxed{f'(x) = 2\cos 2x}$$
+$$
+\boxed{f'(x) = 2\cos 2x}
+$$
 
 ::
 
@@ -1219,9 +1413,13 @@ Les mêmes formules sur d'autres expressions : :voir-exemple[dériver une expres
 
 Produit, avec $u = \cos x$, $u' = -\sin x$ et $v = \sin x$, $v' = \cos x$ :
 
-$$f'(x) = -\sin x\sin x+\cos x\cos x = \cos^2x-\sin^2x$$
+$$
+f'(x) = -\sin x\sin x+\cos x\cos x = \cos^2x-\sin^2x
+$$
 
-$$\boxed{f'(x) = \cos^2x-\sin^2x \;(= \cos 2x)}$$
+$$
+\boxed{f'(x) = \cos^2x-\sin^2x \;(= \cos 2x)}
+$$
 
 ::
 
@@ -1239,7 +1437,9 @@ Le cas de la puissance y est traité sur une autre fonction : :voir-exemple[dér
 
 Carré $u^2$ (avec $n = 2$), $u = \sin x$, $u' = \cos x$ :
 
-$$\boxed{f'(x) = 2\sin x\cos x \;(= \sin 2x)}$$
+$$
+\boxed{f'(x) = 2\sin x\cos x \;(= \sin 2x)}
+$$
 
 ::
 
@@ -1257,7 +1457,9 @@ Le cas du produit y est traité sur une autre fonction : :voir-exemple[dériver 
 
 Produit, avec $u = x^2$, $u' = 2x$ et $v = \cos x$, $v' = -\sin x$ :
 
-$$\boxed{f'(x) = 2x\cos x-x^2\sin x}$$
+$$
+\boxed{f'(x) = 2x\cos x-x^2\sin x}
+$$
 
 ::
 
@@ -1275,7 +1477,9 @@ Le cas de la puissance y est traité sur une autre fonction : :voir-exemple[dér
 
 Carré $u^2$, avec $u = \cos x$, $u' = -\sin x$ :
 
-$$\boxed{f'(x) = -2\sin x\cos x \;(= -\sin 2x)}$$
+$$
+\boxed{f'(x) = -2\sin x\cos x \;(= -\sin 2x)}
+$$
 
 ::
 
@@ -1293,7 +1497,9 @@ Les mêmes formules sur d'autres expressions : :voir-exemple[dériver une expres
 
 Somme, dérivée terme à terme :
 
-$$\boxed{f'(x) = \cos x-\sin x}$$
+$$
+\boxed{f'(x) = \cos x-\sin x}
+$$
 
 ⚠️ *La correction officielle imprime $-\cos x+\sin x$ : erreur de signe — puisque $\sin' = \cos$ et $\cos' = -\sin$, la dérivée est bien $\cos x-\sin x$.*
 
@@ -1315,9 +1521,13 @@ Quotient, avec $u = 2\cos x+3$, $u' = -2\sin x$ et $v = 2\cos x-3$, $v' = -2\sin
 
 Numérateur : $-2\sin x(2\cos x-3)-(2\cos x+3)(-2\sin x)$. On **factorise par $-2\sin x$** :
 
-$$-2\sin x\big[(2\cos x-3)-(2\cos x+3)\big] = -2\sin x\times(-6) = 12\sin x$$
+$$
+-2\sin x\big[(2\cos x-3)-(2\cos x+3)\big] = -2\sin x\times(-6) = 12\sin x
+$$
 
-$$\boxed{f'(x) = \frac{12\sin x}{(2\cos x-3)^2}}$$
+$$
+\boxed{f'(x) = \frac{12\sin x}{(2\cos x-3)^2}}
+$$
 
 *(Remarque : $\lvert\cos x\rvert\leqslant 1$ donc $2\cos x-3 \leqslant -1 < 0$ : le dénominateur ne s'annule jamais, $f$ est dérivable sur $\mathbb{R}$.)*
 
@@ -1374,7 +1584,9 @@ Pour les valeurs, :voir-exemple[calculer un arctan]{id="fu-arc-valeurs"} ; pour 
 
 On réduit d'abord l'angle : $\dfrac{7\pi}{3} = \dfrac{\pi}{3}+2\pi$, donc $\tan\dfrac{7\pi}{3} = \tan\dfrac{\pi}{3}$ (périodicité). Et cette fois $\dfrac{\pi}{3} \in \left]-\frac{\pi}{2},\frac{\pi}{2}\right[$, donc :
 
-$$\arctan\left(\tan\frac{7\pi}{3}\right) = \arctan\left(\tan\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}$$
+$$
+\arctan\left(\tan\frac{7\pi}{3}\right) = \arctan\left(\tan\frac{\pi}{3}\right) = \boxed{\frac{\pi}{3}}
+$$
 
 ::
 
@@ -1396,15 +1608,21 @@ Posons $f(x) = \arccos x+\arcsin x$ sur $[-1,1]$.
 
 - $f$ est dérivable sur $]-1,1[$ (Prop 3.4) et :
 
-$$f'(x) = \frac{-1}{\sqrt{1-x^2}}+\frac{1}{\sqrt{1-x^2}} = 0$$
+$$
+f'(x) = \frac{-1}{\sqrt{1-x^2}}+\frac{1}{\sqrt{1-x^2}} = 0
+$$
 
 - Donc $f$ est **constante** sur $]-1,1[$. Sa valeur : en $x = 0$,
 
-$$f(0) = \arccos 0+\arcsin 0 = \frac{\pi}{2}+0 = \frac{\pi}{2}$$
+$$
+f(0) = \arccos 0+\arcsin 0 = \frac{\pi}{2}+0 = \frac{\pi}{2}
+$$
 
 - Donc $f(x) = \dfrac{\pi}{2}$ sur $]-1,1[$. Aux bornes, on vérifie directement : $f(1) = 0+\dfrac{\pi}{2}$ ✓ et $f(-1) = \pi+\left(-\dfrac{\pi}{2}\right) = \dfrac{\pi}{2}$ ✓.
 
-$$\boxed{\forall x\in[-1,1],\quad \arccos x+\arcsin x = \frac{\pi}{2}}$$
+$$
+\boxed{\forall x\in[-1,1],\quad \arccos x+\arcsin x = \frac{\pi}{2}}
+$$
 
 ::
 
@@ -1430,7 +1648,9 @@ La méthode déroulée sur une autre identité : :voir-exemple[revenir aux expon
 
 On développe le membre de droite :
 
-$$\mathrm{ch}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,a\,\mathrm{sh}\,b = \frac{(e^a+e^{-a})(e^b+e^{-b})}{4}+\frac{(e^a-e^{-a})(e^b-e^{-b})}{4}$$
+$$
+\mathrm{ch}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,a\,\mathrm{sh}\,b = \frac{(e^a+e^{-a})(e^b+e^{-b})}{4}+\frac{(e^a-e^{-a})(e^b-e^{-b})}{4}
+$$
 
 Premier produit : $e^{a+b}+e^{a-b}+e^{-a+b}+e^{-a-b}$.
 
@@ -1438,7 +1658,9 @@ Second produit : $e^{a+b}-e^{a-b}-e^{-a+b}+e^{-a-b}$.
 
 En sommant, les termes croisés **se compensent** :
 
-$$= \frac{2e^{a+b}+2e^{-(a+b)}}{4} = \frac{e^{a+b}+e^{-(a+b)}}{2} = \mathrm{ch}(a+b) \qquad\blacksquare$$
+$$
+= \frac{2e^{a+b}+2e^{-(a+b)}}{4} = \frac{e^{a+b}+e^{-(a+b)}}{2} = \mathrm{ch}(a+b) \qquad\blacksquare
+$$
 
 ::
 
@@ -1458,19 +1680,25 @@ La méthode déroulée sur une autre identité : :voir-exemple[revenir aux expon
 
 **Somme** :
 
-$$\mathrm{ch}^2a+\mathrm{sh}^2a = \left(\frac{e^a+e^{-a}}{2}\right)^2+\left(\frac{e^a-e^{-a}}{2}\right)^2 = \frac{e^{2a}+e^{-2a}+2}{4}+\frac{e^{2a}+e^{-2a}-2}{4} = 2\cdot\frac{e^{2a}+e^{-2a}}{4} = \mathrm{ch}(2a)$$
+$$
+\mathrm{ch}^2a+\mathrm{sh}^2a = \left(\frac{e^a+e^{-a}}{2}\right)^2+\left(\frac{e^a-e^{-a}}{2}\right)^2 = \frac{e^{2a}+e^{-2a}+2}{4}+\frac{e^{2a}+e^{-2a}-2}{4} = 2\cdot\frac{e^{2a}+e^{-2a}}{4} = \mathrm{ch}(2a)
+$$
 
 *(en développant les carrés avec $e^a\cdot e^{-a} = 1$)*
 
 **Différence** :
 
-$$\mathrm{ch}^2a-\mathrm{sh}^2a = \frac{e^{2a}+e^{-2a}+2}{4}-\frac{e^{2a}+e^{-2a}-2}{4} = \frac{4}{4} = 1$$
+$$
+\mathrm{ch}^2a-\mathrm{sh}^2a = \frac{e^{2a}+e^{-2a}+2}{4}-\frac{e^{2a}+e^{-2a}-2}{4} = \frac{4}{4} = 1
+$$
 
 *(on retrouve la Prop 4.1)*
 
 Ainsi $\mathrm{ch}(2a) = \mathrm{ch}^2a+\mathrm{sh}^2a$ ; et comme $\mathrm{ch}^2a-\mathrm{sh}^2a = 1$, c'est-à-dire $\mathrm{sh}^2a = \mathrm{ch}^2a-1$ et $\mathrm{ch}^2a = 1+\mathrm{sh}^2a$, on obtient en substituant :
 
-$$\mathrm{ch}(2a) = 2\,\mathrm{ch}^2a-1 = 1+2\,\mathrm{sh}^2a \qquad\blacksquare$$
+$$
+\mathrm{ch}(2a) = 2\,\mathrm{ch}^2a-1 = 1+2\,\mathrm{sh}^2a \qquad\blacksquare
+$$
 
 *(Variante plus rapide : prendre $b = a$ dans l'égalité 1, puis utiliser la Prop 4.1.)*
 
@@ -1490,7 +1718,9 @@ La méthode déroulée sur une autre identité : :voir-exemple[revenir aux expon
 
 Même méthode :
 
-$$\mathrm{sh}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,b\,\mathrm{ch}\,a = \frac{(e^a-e^{-a})(e^b+e^{-b})}{4}+\frac{(e^b-e^{-b})(e^a+e^{-a})}{4}$$
+$$
+\mathrm{sh}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,b\,\mathrm{ch}\,a = \frac{(e^a-e^{-a})(e^b+e^{-b})}{4}+\frac{(e^b-e^{-b})(e^a+e^{-a})}{4}
+$$
 
 Premier produit : $e^{a+b}+e^{a-b}-e^{b-a}-e^{-a-b}$.
 
@@ -1498,7 +1728,9 @@ Second produit : $e^{a+b}+e^{b-a}-e^{a-b}-e^{-a-b}$.
 
 Somme (les termes en $e^{a-b}$ et $e^{b-a}$ se compensent) :
 
-$$= \frac{2e^{a+b}-2e^{-(a+b)}}{4} = \mathrm{sh}(a+b) \qquad\blacksquare$$
+$$
+= \frac{2e^{a+b}-2e^{-(a+b)}}{4} = \mathrm{sh}(a+b) \qquad\blacksquare
+$$
 
 ::
 
@@ -1516,7 +1748,9 @@ La méthode déroulée sur une autre identité : :voir-exemple[revenir aux expon
 
 On prend $b = a$ dans l'égalité de la question 3 :
 
-$$\mathrm{sh}(2a) = \mathrm{sh}\,a\,\mathrm{ch}\,a+\mathrm{sh}\,a\,\mathrm{ch}\,a = \boxed{2\,\mathrm{sh}\,a\,\mathrm{ch}\,a} \qquad\blacksquare$$
+$$
+\mathrm{sh}(2a) = \mathrm{sh}\,a\,\mathrm{ch}\,a+\mathrm{sh}\,a\,\mathrm{ch}\,a = \boxed{2\,\mathrm{sh}\,a\,\mathrm{ch}\,a} \qquad\blacksquare
+$$
 
 ::
 
@@ -1534,11 +1768,15 @@ La méthode déroulée sur une autre identité : :voir-exemple[revenir aux expon
 
 **Stratégie** : $\mathrm{th} = \dfrac{\mathrm{sh}}{\mathrm{ch}}$, donc on fait le quotient des égalités 3 et 1 :
 
-$$\mathrm{th}(a+b) = \frac{\mathrm{sh}(a+b)}{\mathrm{ch}(a+b)} = \frac{\mathrm{sh}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,b\,\mathrm{ch}\,a}{\mathrm{ch}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,a\,\mathrm{sh}\,b}$$
+$$
+\mathrm{th}(a+b) = \frac{\mathrm{sh}(a+b)}{\mathrm{ch}(a+b)} = \frac{\mathrm{sh}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,b\,\mathrm{ch}\,a}{\mathrm{ch}\,a\,\mathrm{ch}\,b+\mathrm{sh}\,a\,\mathrm{sh}\,b}
+$$
 
 Pour faire apparaître des th, on **divise numérateur et dénominateur par $\mathrm{ch}\,a\,\mathrm{ch}\,b$** (licite : $\mathrm{ch} \geqslant 1$ ne s'annule jamais) :
 
-$$= \frac{\dfrac{\mathrm{sh}\,a}{\mathrm{ch}\,a}+\dfrac{\mathrm{sh}\,b}{\mathrm{ch}\,b}}{1+\dfrac{\mathrm{sh}\,a}{\mathrm{ch}\,a}\dfrac{\mathrm{sh}\,b}{\mathrm{ch}\,b}} = \frac{\mathrm{th}\,a+\mathrm{th}\,b}{1+\mathrm{th}\,a\,\mathrm{th}\,b} \qquad\blacksquare$$
+$$
+= \frac{\dfrac{\mathrm{sh}\,a}{\mathrm{ch}\,a}+\dfrac{\mathrm{sh}\,b}{\mathrm{ch}\,b}}{1+\dfrac{\mathrm{sh}\,a}{\mathrm{ch}\,a}\dfrac{\mathrm{sh}\,b}{\mathrm{ch}\,b}} = \frac{\mathrm{th}\,a+\mathrm{th}\,b}{1+\mathrm{th}\,a\,\mathrm{th}\,b} \qquad\blacksquare
+$$
 
 ::
 
@@ -1562,7 +1800,9 @@ Les formules et leurs composées : :voir-exemple[dériver une expression hyperbo
 
 #solution
 
-$$\mathrm{ch}'x = \left(\frac{e^x+e^{-x}}{2}\right)' = \frac{e^x-e^{-x}}{2} = \boxed{\mathrm{sh}\,x}$$
+$$
+\mathrm{ch}'x = \left(\frac{e^x+e^{-x}}{2}\right)' = \frac{e^x-e^{-x}}{2} = \boxed{\mathrm{sh}\,x}
+$$
 
 ::
 
@@ -1578,7 +1818,9 @@ Les formules et leurs composées : :voir-exemple[dériver une expression hyperbo
 
 #solution
 
-$$\mathrm{sh}'x = \left(\frac{e^x-e^{-x}}{2}\right)' = \frac{e^x-(-e^{-x})}{2} = \frac{e^x+e^{-x}}{2} = \boxed{\mathrm{ch}\,x}$$
+$$
+\mathrm{sh}'x = \left(\frac{e^x-e^{-x}}{2}\right)' = \frac{e^x-(-e^{-x})}{2} = \frac{e^x+e^{-x}}{2} = \boxed{\mathrm{ch}\,x}
+$$
 
 ::
 
@@ -1596,14 +1838,18 @@ Le même calcul de quotient sur une expression voisine : :voir-exemple[dériver 
 
 $\mathrm{th} = \dfrac{\mathrm{sh}}{\mathrm{ch}}$ : formule du **quotient**, avec les deux dérivées qu'on vient d'établir :
 
-$$\mathrm{th}'x = \frac{\mathrm{sh}'x\,\mathrm{ch}\,x-\mathrm{sh}\,x\,\mathrm{ch}'x}{\mathrm{ch}^2x} = \frac{\mathrm{ch}^2x-\mathrm{sh}^2x}{\mathrm{ch}^2x}$$
+$$
+\mathrm{th}'x = \frac{\mathrm{sh}'x\,\mathrm{ch}\,x-\mathrm{sh}\,x\,\mathrm{ch}'x}{\mathrm{ch}^2x} = \frac{\mathrm{ch}^2x-\mathrm{sh}^2x}{\mathrm{ch}^2x}
+$$
 
 Deux lectures de ce résultat, qui donnent les deux formes demandées :
 
 - avec la **Prop 4.1**, le numérateur vaut $1$ : $\mathrm{th}'x = \dfrac{1}{\mathrm{ch}^2x}$ ;
 - en séparant la fraction : $\mathrm{th}'x = 1-\dfrac{\mathrm{sh}^2x}{\mathrm{ch}^2x} = 1-\mathrm{th}^2x$.
 
-$$\boxed{\mathrm{th}'x = 1-\mathrm{th}^2x = \frac{1}{\mathrm{ch}^2x}} \qquad\blacksquare$$
+$$
+\boxed{\mathrm{th}'x = 1-\mathrm{th}^2x = \frac{1}{\mathrm{ch}^2x}} \qquad\blacksquare
+$$
 
 ::
 
@@ -1629,15 +1875,21 @@ Les trois temps de la méthode, sur une autre réciproque : :voir-exemple[dériv
 
 On dérive l'égalité $\mathrm{ch}(\mathrm{argch}\,x) = x$ :
 
-$$\mathrm{argch}'x\times\mathrm{sh}(\mathrm{argch}\,x) = 1 \quad\Longrightarrow\quad \mathrm{argch}'x = \frac{1}{\mathrm{sh}(\mathrm{argch}\,x)}$$
+$$
+\mathrm{argch}'x\times\mathrm{sh}(\mathrm{argch}\,x) = 1 \quad\Longrightarrow\quad \mathrm{argch}'x = \frac{1}{\mathrm{sh}(\mathrm{argch}\,x)}
+$$
 
 Exprimons $\mathrm{sh}(\mathrm{argch}\,x)$ en fonction de $x$ : par la Prop 4.1,
 
-$$\mathrm{sh}^2(\mathrm{argch}\,x) = \mathrm{ch}^2(\mathrm{argch}\,x)-1 = x^2-1$$
+$$
+\mathrm{sh}^2(\mathrm{argch}\,x) = \mathrm{ch}^2(\mathrm{argch}\,x)-1 = x^2-1
+$$
 
 **Justification du signe** : pour $x > 1$, $\mathrm{argch}\,x > 0$ et $\mathrm{sh}\,t > 0$ quand $t > 0$, donc on prend la racine **positive** : $\mathrm{sh}(\mathrm{argch}\,x) = +\sqrt{x^2-1}$.
 
-$$\boxed{\mathrm{argch}'x = \frac{1}{\sqrt{x^2-1}}} \qquad\blacksquare$$
+$$
+\boxed{\mathrm{argch}'x = \frac{1}{\sqrt{x^2-1}}} \qquad\blacksquare
+$$
 
 ::
 
@@ -1655,11 +1907,15 @@ Les trois temps de la méthode, sur une autre réciproque : :voir-exemple[dériv
 
 On dérive $\mathrm{sh}(\mathrm{argsh}\,x) = x$ :
 
-$$\mathrm{argsh}'x\times\mathrm{ch}(\mathrm{argsh}\,x) = 1 \quad\Longrightarrow\quad \mathrm{argsh}'x = \frac{1}{\mathrm{ch}(\mathrm{argsh}\,x)}$$
+$$
+\mathrm{argsh}'x\times\mathrm{ch}(\mathrm{argsh}\,x) = 1 \quad\Longrightarrow\quad \mathrm{argsh}'x = \frac{1}{\mathrm{ch}(\mathrm{argsh}\,x)}
+$$
 
 Par la Prop 4.1 : $\mathrm{ch}^2(\mathrm{argsh}\,x) = 1+\mathrm{sh}^2(\mathrm{argsh}\,x) = 1+x^2$, et comme $\mathrm{ch} \geqslant 1 > 0$ **toujours**, $\mathrm{ch}(\mathrm{argsh}\,x) = +\sqrt{x^2+1}$.
 
-$$\boxed{\mathrm{argsh}'x = \frac{1}{\sqrt{x^2+1}}} \qquad\blacksquare$$
+$$
+\boxed{\mathrm{argsh}'x = \frac{1}{\sqrt{x^2+1}}} \qquad\blacksquare
+$$
 
 ::
 
@@ -1677,11 +1933,15 @@ Les trois temps de la méthode, sur une autre réciproque : :voir-exemple[dériv
 
 On dérive $\mathrm{th}(\mathrm{argth}\,x) = x$, en utilisant $\mathrm{th}' = 1-\mathrm{th}^2$ (exercice 8) :
 
-$$\mathrm{argth}'x\times\big(1-\mathrm{th}^2(\mathrm{argth}\,x)\big) = 1$$
+$$
+\mathrm{argth}'x\times\big(1-\mathrm{th}^2(\mathrm{argth}\,x)\big) = 1
+$$
 
 Or $\mathrm{th}(\mathrm{argth}\,x) = x$, donc $1-\mathrm{th}^2(\mathrm{argth}\,x) = 1-x^2 \neq 0$ (car $\lvert x\rvert<1$) :
 
-$$\boxed{\mathrm{argth}'x = \frac{1}{1-x^2}} \qquad\blacksquare$$
+$$
+\boxed{\mathrm{argth}'x = \frac{1}{1-x^2}} \qquad\blacksquare
+$$
 
 ::
 
@@ -1709,13 +1969,17 @@ Posons $f(x) = \ln\left(x+\sqrt{x^2-1}\right)$. *(Bien défini : pour $x\geqslan
 
 Dérivons sur $]1,+\infty[$, forme $\ln u$ avec $u = x+\sqrt{x^2-1}$, $u' = 1+\dfrac{2x}{2\sqrt{x^2-1}} = 1+\dfrac{x}{\sqrt{x^2-1}}$ :
 
-$$f'(x) = \frac{1+\dfrac{x}{\sqrt{x^2-1}}}{x+\sqrt{x^2-1}} = \frac{\dfrac{\sqrt{x^2-1}+x}{\sqrt{x^2-1}}}{x+\sqrt{x^2-1}} = \frac{1}{\sqrt{x^2-1}} = \mathrm{argch}'x$$
+$$
+f'(x) = \frac{1+\dfrac{x}{\sqrt{x^2-1}}}{x+\sqrt{x^2-1}} = \frac{\dfrac{\sqrt{x^2-1}+x}{\sqrt{x^2-1}}}{x+\sqrt{x^2-1}} = \frac{1}{\sqrt{x^2-1}} = \mathrm{argch}'x
+$$
 
 *(le facteur $x+\sqrt{x^2-1}$ se simplifie — c'est tout l'intérêt de cette forme)*
 
 Donc $f$ et $\mathrm{argch}$ diffèrent d'une constante sur $[1,+\infty[$. En $x = 1$ : $f(1) = \ln(1+0) = 0$ et $\mathrm{argch}\,1 = 0$ (car $\mathrm{ch}\,0 = 1$). La constante est nulle :
 
-$$\boxed{\forall x\geqslant 1,\quad \mathrm{argch}\,x = \ln\left(x+\sqrt{x^2-1}\right)} \qquad\blacksquare$$
+$$
+\boxed{\forall x\geqslant 1,\quad \mathrm{argch}\,x = \ln\left(x+\sqrt{x^2-1}\right)} \qquad\blacksquare
+$$
 
 ::
 
@@ -1733,11 +1997,15 @@ La méthode sur une autre égalité : :voir-exemple[démontrer que deux fonction
 
 *(C'est mot pour mot la démonstration de la Prop 4.3 du cours.)* Posons $f(x) = \ln\left(x+\sqrt{x^2+1}\right)$. *(Bien défini sur $\mathbb{R}$ : $\sqrt{x^2+1} > \sqrt{x^2} = \lvert x\rvert \geqslant -x$, donc $x+\sqrt{x^2+1} > 0$.)*
 
-$$f'(x) = \frac{1+\dfrac{x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}} = \frac{\dfrac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}} = \frac{1}{\sqrt{x^2+1}} = \mathrm{argsh}'x$$
+$$
+f'(x) = \frac{1+\dfrac{x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}} = \frac{\dfrac{\sqrt{x^2+1}+x}{\sqrt{x^2+1}}}{x+\sqrt{x^2+1}} = \frac{1}{\sqrt{x^2+1}} = \mathrm{argsh}'x
+$$
 
 Et $f(0) = \ln(0+1) = 0 = \mathrm{argsh}\,0$ (car $\mathrm{sh}\,0 = 0$). Donc :
 
-$$\boxed{\forall x\in\mathbb{R},\quad \mathrm{argsh}\,x = \ln\left(x+\sqrt{x^2+1}\right)} \qquad\blacksquare$$
+$$
+\boxed{\forall x\in\mathbb{R},\quad \mathrm{argsh}\,x = \ln\left(x+\sqrt{x^2+1}\right)} \qquad\blacksquare
+$$
 
 ::
 
@@ -1755,11 +2023,15 @@ La méthode sur une autre égalité : :voir-exemple[démontrer que deux fonction
 
 Posons $f(x) = \dfrac{1}{2}\ln\left(\dfrac{1+x}{1-x}\right) = \dfrac{1}{2}\big[\ln(1+x)-\ln(1-x)\big]$ (Prop 1.12, licite car $1+x>0$ et $1-x>0$ sur $]-1,1[$).
 
-$$f'(x) = \frac{1}{2}\left[\frac{1}{1+x}-\frac{-1}{1-x}\right] = \frac{1}{2}\times\frac{(1-x)+(1+x)}{(1+x)(1-x)} = \frac{1}{2}\times\frac{2}{1-x^2} = \frac{1}{1-x^2} = \mathrm{argth}'x$$
+$$
+f'(x) = \frac{1}{2}\left[\frac{1}{1+x}-\frac{-1}{1-x}\right] = \frac{1}{2}\times\frac{(1-x)+(1+x)}{(1+x)(1-x)} = \frac{1}{2}\times\frac{2}{1-x^2} = \frac{1}{1-x^2} = \mathrm{argth}'x
+$$
 
 Et $f(0) = \dfrac{1}{2}\ln 1 = 0 = \mathrm{argth}\,0$ (car $\mathrm{th}\,0 = 0$). Donc :
 
-$$\boxed{\forall x\in\left]-1,1\right[,\quad \mathrm{argth}\,x = \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right)} \qquad\blacksquare$$
+$$
+\boxed{\forall x\in\left]-1,1\right[,\quad \mathrm{argth}\,x = \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right)} \qquad\blacksquare
+$$
 
 ::
 

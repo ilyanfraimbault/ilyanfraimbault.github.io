@@ -18,9 +18,13 @@ Cette page reprend donc tout depuis le début, chaque notion étant accompagnée
 
 Au collège, le cosinus se définit dans un **triangle rectangle** :
 
-$$\cos\alpha = \frac{\text{adjacent}}{\text{hypoténuse}} \qquad \sin\alpha = \frac{\text{opposé}}{\text{hypoténuse}}$$
+$$
+\cos\alpha = \frac{\text{adjacent}}{\text{hypoténuse}} \qquad \sin\alpha = \frac{\text{opposé}}{\text{hypoténuse}}
+$$
 
-$$\tan\alpha = \frac{\text{opposé}}{\text{adjacent}} = \frac{\sin\alpha}{\cos\alpha}$$
+$$
+\tan\alpha = \frac{\text{opposé}}{\text{adjacent}} = \frac{\sin\alpha}{\cos\alpha}
+$$
 
 *(« adjacent » et « opposé » désignent les côtés adjacent et opposé à l'angle $\alpha$.)*
 
@@ -28,11 +32,15 @@ Cette définition a deux défauts : elle ne marche que pour un angle **aigu** (e
 
 **L'idée du cercle trigonométrique** : on fixe une fois pour toutes l'hypoténuse à $1$. Concrètement, on place le triangle dans un repère, l'angle au centre $O$, et on fait tourner le point $M$ sur le cercle de rayon $1$. Comme l'hypoténuse vaut $1$, les deux quotients ci-dessus se simplifient d'eux-mêmes :
 
-$$\cos\alpha = \frac{\text{adjacent}}{1} = \text{adjacent} \qquad \sin\alpha = \frac{\text{opposé}}{1} = \text{opposé}$$
+$$
+\cos\alpha = \frac{\text{adjacent}}{1} = \text{adjacent} \qquad \sin\alpha = \frac{\text{opposé}}{1} = \text{opposé}
+$$
 
 Autrement dit, **le côté adjacent est l'abscisse du point $M$, et le côté opposé son ordonnée**. D'où la définition qu'on garde pour tout le reste du cours — si $M$ est le point du cercle de rayon $1$ repéré par l'angle $\theta$, alors
 
-$$\boxed{\;M\,(\cos\theta\ ;\ \sin\theta)\;}$$
+$$
+\boxed{\;M\,(\cos\theta\ ;\ \sin\theta)\;}
+$$
 
 Le gain est immédiat : le point peut maintenant tourner **sans limite**, dans les deux sens, et $\cos$ et $\sin$ restent définis pour tout angle — y compris obtus, négatif, ou supérieur à un tour.
 
@@ -61,9 +69,13 @@ Comme le périmètre de ce cercle vaut $2\pi$, un tour complet vaut $2\pi$ radia
 
 **La conversion**, dans les deux sens, découle de $180° = \pi$ :
 
-$$\text{degrés} \longrightarrow \text{radians} \ : \ \times\frac{\pi}{180}$$
+$$
+\text{degrés} \longrightarrow \text{radians} \ : \ \times\frac{\pi}{180}
+$$
 
-$$\text{radians} \longrightarrow \text{degrés} \ : \ \times\frac{180}{\pi}$$
+$$
+\text{radians} \longrightarrow \text{degrés} \ : \ \times\frac{180}{\pi}
+$$
 
 ::rappel{titre="Pourquoi s'embêter avec les radians ?" icone="i-lucide-help-circle"}
 Parce que les formules de dérivation n'y sont vraies qu'en radians. $\sin' = \cos$ **suppose** que $x$ est en radians ; en degrés, la dérivée vaudrait $\frac{\pi}{180}\cos x$, et toutes les formules du chapitre se traîneraient ce facteur. Le radian est le choix qui rend l'analyse propre — c'est sa seule raison d'être.
@@ -77,11 +89,15 @@ Une fois la figure en place, tout se lit directement.
 
 - **L'encadrement** : le point reste sur le cercle, donc son abscisse et son ordonnée restent entre $-1$ et $1$.
 
-$$-1 \leqslant \cos\theta \leqslant 1 \qquad\qquad -1 \leqslant \sin\theta \leqslant 1$$
+$$
+-1 \leqslant \cos\theta \leqslant 1 \qquad\qquad -1 \leqslant \sin\theta \leqslant 1
+$$
 
 - **L'identité de Pythagore** : $M$ est à distance $1$ de l'origine, et $OM^2 = x_M^2+y_M^2$. Donc
 
-$$\boxed{\cos^2\theta+\sin^2\theta = 1} \qquad \text{pour \textbf{tout} } \theta$$
+$$
+\boxed{\cos^2\theta+\sin^2\theta = 1} \qquad \text{pour \textbf{tout} } \theta
+$$
 
 - **Les signes**, qui ne dépendent que du quadrant où se trouve $M$ :
 
@@ -109,7 +125,9 @@ Cinq angles suffisent, les autres s'y ramènent (section 6).
 
 **Le moyen mnémotechnique** : écris la ligne des cosinus sous la forme
 
-$$\frac{\sqrt4}{2},\quad \frac{\sqrt3}{2},\quad \frac{\sqrt2}{2},\quad \frac{\sqrt1}{2},\quad \frac{\sqrt0}{2}$$
+$$
+\frac{\sqrt4}{2},\quad \frac{\sqrt3}{2},\quad \frac{\sqrt2}{2},\quad \frac{\sqrt1}{2},\quad \frac{\sqrt0}{2}
+$$
 
 Les entiers descendent de $4$ à $0$, et la ligne des sinus est la même **lue à l'envers**. Il n'y a donc qu'une seule suite à retenir.
 
@@ -122,13 +140,17 @@ Les entiers descendent de $4$ à $0$, et la ligne des sinus est la même **lue �
 
 **Périodicité.** Ajouter un tour complet ramène au même point. Donc, pour tout $k\in\mathbb{Z}$ :
 
-$$\cos(\theta+2k\pi) = \cos\theta \qquad\qquad \sin(\theta+2k\pi) = \sin\theta$$
+$$
+\cos(\theta+2k\pi) = \cos\theta \qquad\qquad \sin(\theta+2k\pi) = \sin\theta
+$$
 
 C'est ce qui permet de **ramener n'importe quel angle dans $[0,2\pi[$** avant de chercher sa valeur : $\dfrac{13\pi}{6} = \dfrac{\pi}{6}+2\pi$ donne le même point que $\dfrac{\pi}{6}$.
 
 **Parité.** Tourner de $-\theta$ au lieu de $\theta$, c'est prendre le symétrique par rapport à l'axe horizontal : l'abscisse ne bouge pas, l'ordonnée change de signe.
 
-$$\cos(-\theta) = \cos\theta \quad \text{(cos est \textbf{paire})} \qquad\qquad \sin(-\theta) = -\sin\theta \quad \text{(sin est \textbf{impaire})}$$
+$$
+\cos(-\theta) = \cos\theta \quad \text{(cos est \textbf{paire})} \qquad\qquad \sin(-\theta) = -\sin\theta \quad \text{(sin est \textbf{impaire})}
+$$
 
 ## 6. Les angles associés, ou les quatre symétries
 
@@ -148,11 +170,37 @@ C'est le point qui coûte le plus de temps quand on l'apprend par cœur — et l
 
 La quatrième, dite des **angles complémentaires**, est la plus utile en pratique : c'est elle qui permet de convertir un sinus en cosinus, indispensable dès qu'une équation mélange les deux.
 
-$$\sin\theta = \cos\!\left(\frac{\pi}{2}-\theta\right)$$
+$$
+\sin\theta = \cos\!\left(\frac{\pi}{2}-\theta\right)
+$$
+
+**Pourquoi cette symétrie-là échange cosinus et sinus.** Réfléchir un point par rapport à la diagonale $y=x$ revient à **échanger son abscisse et son ordonnée** : le point $M(\cos\theta\,;\ \sin\theta)$ devient $M'(\sin\theta\,;\ \cos\theta)$. Et cette réflexion envoie l'angle $\theta$ sur l'angle $\frac{\pi}{2}-\theta$ — décoche puis recoche la symétrie sur la figure ci-dessus pour le voir. Donc l'abscisse du point d'angle $\frac{\pi}{2}-\theta$, c'est-à-dire $\cos\!\left(\frac{\pi}{2}-\theta\right)$, vaut l'ordonnée du point d'angle $\theta$, c'est-à-dire $\sin\theta$.
+
+Dans un triangle rectangle, c'est encore plus court : les deux angles aigus valent ensemble $\frac{\pi}{2}$, donc si l'un vaut $\theta$, l'autre vaut $\frac{\pi}{2}-\theta$. Or le côté **opposé** au premier est le côté **adjacent** au second : « opposé sur hypoténuse » pour l'un est exactement « adjacent sur hypoténuse » pour l'autre.
+
+::rappel{titre="Le point qui bloque le plus souvent : θ n'est pas forcément un angle « nu »" icone="i-lucide-key"}
+Ces formules sont des **identités** : elles sont vraies pour *tout* $\theta$. On a donc le droit de remplacer $\theta$ par n'importe quelle expression — à condition de la remplacer **partout**.
+
+Avec $\theta = 2x$ :
+
+$$
+\sin(2x) = \cos\!\left(\frac{\pi}{2}-2x\right)
+$$
+
+Avec $\theta = x+\dfrac{\pi}{3}$ :
+
+$$
+\sin\!\left(x+\frac{\pi}{3}\right) = \cos\!\left(\frac{\pi}{2}-\left(x+\frac{\pi}{3}\right)\right) = \cos\!\left(\frac{\pi}{6}-x\right)
+$$
+
+C'est le mécanisme exact de la conversion utilisée pour résoudre une équation qui mélange sinus et cosinus. On ne « transforme » pas l'équation : on réécrit un sinus en cosinus pour que les deux membres soient écrits avec la même fonction.
+::
 
 Une cinquième s'en déduit, en remplaçant $\theta$ par $-\theta$ :
 
-$$\cos\!\left(\frac{\pi}{2}+\theta\right) = -\sin\theta \qquad\qquad \sin\!\left(\frac{\pi}{2}+\theta\right) = \cos\theta$$
+$$
+\cos\!\left(\frac{\pi}{2}+\theta\right) = -\sin\theta \qquad\qquad \sin\!\left(\frac{\pi}{2}+\theta\right) = \cos\theta
+$$
 
 ::rappel{titre="La méthode générale pour un angle quelconque" icone="i-lucide-list-ordered"}
 1. **Périodicité** : ajouter ou retirer des $2\pi$ pour ramener l'angle dans $[0,2\pi[$ — ou dans $]-\pi,\pi]$, souvent plus commode.
@@ -165,7 +213,9 @@ Exemple complet : $\cos\dfrac{11\pi}{6}$. On a $\dfrac{11\pi}{6} = 2\pi-\dfrac{\
 
 ## 7. La tangente
 
-$$\tan\theta = \frac{\sin\theta}{\cos\theta} \qquad \text{définie pour } \cos\theta\neq 0,\ \text{c'est-à-dire } \theta \neq \frac{\pi}{2}+k\pi$$
+$$
+\tan\theta = \frac{\sin\theta}{\cos\theta} \qquad \text{définie pour } \cos\theta\neq 0,\ \text{c'est-à-dire } \theta \neq \frac{\pi}{2}+k\pi
+$$
 
 Sur la figure, elle se lit sur la **droite verticale d'abscisse $1$** : on prolonge le rayon $OM$ jusqu'à cette droite, et l'ordonnée du point d'arrivée vaut $\tan\theta$. Coche « Montrer tan θ » ci-dessous pour la voir apparaître.
 
@@ -177,7 +227,9 @@ Ce que la figure rend évident :
 - Quand $\theta\to\frac{\pi}{2}$, le rayon devient **parallèle** à la droite verticale : il ne la coupe plus. C'est exactement pour cela que $\tan\frac{\pi}{2}$ n'existe pas.
 - Le point diamétralement opposé donne **le même** point d'intersection : la tangente est $\pi$-périodique, et non $2\pi$-périodique.
 
-$$\tan(\theta+k\pi) = \tan\theta \qquad \tan(-\theta) = -\tan\theta$$
+$$
+\tan(\theta+k\pi) = \tan\theta \qquad \tan(-\theta) = -\tan\theta
+$$
 
 Les valeurs remarquables s'en déduisent par simple division :
 
@@ -196,15 +248,21 @@ Résoudre $\cos x = k$, c'est chercher les points du cercle dont **l'abscisse** 
 
 **Les deux formules du cours** — ce sont les seules à connaître :
 
-$$\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi \qquad (k\in\mathbb{Z})$$
+$$
+\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi \qquad (k\in\mathbb{Z})
+$$
 
-$$\sin A = \sin B \iff A = B+2k\pi \ \text{ ou }\ A = \pi-B+2k\pi \qquad (k\in\mathbb{Z})$$
+$$
+\sin A = \sin B \iff A = B+2k\pi \ \text{ ou }\ A = \pi-B+2k\pi \qquad (k\in\mathbb{Z})
+$$
 
 Elles se lisent sur la figure : deux angles ont le même cosinus lorsqu'ils sont **opposés** (symétrie par rapport à l'axe horizontal), et le même sinus lorsqu'ils sont **supplémentaires** (symétrie par rapport à l'axe vertical).
 
 Pour la tangente, les deux points d'intersection sont diamétralement opposés, d'où une seule famille avec un pas de $\pi$ :
 
-$$\tan A = \tan B \iff A = B+k\pi \qquad (k\in\mathbb{Z})$$
+$$
+\tan A = \tan B \iff A = B+k\pi \qquad (k\in\mathbb{Z})
+$$
 
 ::rappel{titre="La marche à suivre, à chaque fois" icone="i-lucide-list-ordered"}
 1. **Uniformiser** : s'il y a un sinus d'un côté et un cosinus de l'autre, tout convertir avec $\sin\theta = \cos\!\left(\frac{\pi}{2}-\theta\right)$.
@@ -233,7 +291,9 @@ D'où **le piège** : $\arccos(\cos x) = x$ **seulement si** $x\in[0,\pi]$. Sino
 
 **La méthode** : ramener l'angle dans l'intervalle de la réciproque **sans changer la valeur** de la fonction, à l'aide des symétries de la section 6.
 
-$$\arccos\!\left(\cos\frac{5\pi}{4}\right) : \quad \cos\frac{5\pi}{4} = \cos\!\left(-\frac{5\pi}{4}\right) = \cos\!\left(-\frac{5\pi}{4}+2\pi\right) = \cos\frac{3\pi}{4} \quad\text{et}\quad \frac{3\pi}{4}\in[0,\pi]$$
+$$
+\arccos\!\left(\cos\frac{5\pi}{4}\right) : \quad \cos\frac{5\pi}{4} = \cos\!\left(-\frac{5\pi}{4}\right) = \cos\!\left(-\frac{5\pi}{4}+2\pi\right) = \cos\frac{3\pi}{4} \quad\text{et}\quad \frac{3\pi}{4}\in[0,\pi]
+$$
 
 La réponse est donc $\dfrac{3\pi}{4}$, et non $\dfrac{5\pi}{4}$.
 
@@ -241,11 +301,15 @@ La réponse est donc $\dfrac{3\pi}{4}$, et non $\dfrac{5\pi}{4}$.
 
 ## 10. Dérivées
 
-$$\sin' = \cos \qquad \cos' = -\sin \qquad \tan' = 1+\tan^2 = \frac{1}{\cos^2}$$
+$$
+\sin' = \cos \qquad \cos' = -\sin \qquad \tan' = 1+\tan^2 = \frac{1}{\cos^2}
+$$
 
 et, avec une composée $u$ :
 
-$$\big(\sin u\big)' = u'\cos u \qquad \big(\cos u\big)' = -u'\sin u \qquad \big(\sin(ax+b)\big)' = a\cos(ax+b)$$
+$$
+\big(\sin u\big)' = u'\cos u \qquad \big(\cos u\big)' = -u'\sin u \qquad \big(\sin(ax+b)\big)' = a\cos(ax+b)
+$$
 
 Le seul point de vigilance est le **signe moins** de la dérivée du cosinus. Il se retrouve sur la figure : quand $\theta$ augmente à partir de $0$, le point part vers la gauche, donc son abscisse — le cosinus — **diminue**. Une fonction qui décroît a bien une dérivée négative.
 
@@ -272,13 +336,17 @@ Une seule égalité à utiliser dans les deux sens : $180° = \pi$. Pour aller d
 
 **Des degrés aux radians :**
 
-$$135 \times \frac{\pi}{180} = \frac{135\pi}{180} = \frac{3\pi}{4}$$
+$$
+135 \times \frac{\pi}{180} = \frac{135\pi}{180} = \frac{3\pi}{4}
+$$
 
 *(on simplifie par $45$ : $135 = 3\times45$ et $180 = 4\times45$)*
 
 **Des radians aux degrés :**
 
-$$\frac{7\pi}{6} \times \frac{180}{\pi} = \frac{7\times180}{6} = 7\times30 = 210°$$
+$$
+\frac{7\pi}{6} \times \frac{180}{\pi} = \frac{7\times180}{6} = 7\times30 = 210°
+$$
 
 **Contrôle** : $\frac{3\pi}{4}$ est entre $\frac{\pi}{2}$ et $\pi$, donc l'angle est obtus — cohérent avec $135°$. Et $210°$ dépasse $180°$, donc le point est dans le 3ᵉ quadrant — cohérent avec $\frac{7\pi}{6}$, juste après $\pi$.
 
@@ -296,15 +364,21 @@ Commence par la parité pour te débarrasser du signe moins, puis ramène $\frac
 
 **Étape 1 — la parité.** $\cos$ est paire, $\sin$ est impaire :
 
-$$\cos\left(-\frac{5\pi}{6}\right) = \cos\frac{5\pi}{6} \qquad \sin\left(-\frac{5\pi}{6}\right) = -\sin\frac{5\pi}{6}$$
+$$
+\cos\left(-\frac{5\pi}{6}\right) = \cos\frac{5\pi}{6} \qquad \sin\left(-\frac{5\pi}{6}\right) = -\sin\frac{5\pi}{6}
+$$
 
 **Étape 2 — la symétrie $\pi-\theta$.** Comme $\dfrac{5\pi}{6} = \pi-\dfrac{\pi}{6}$ :
 
-$$\cos\frac{5\pi}{6} = -\cos\frac{\pi}{6} = -\frac{\sqrt3}{2} \qquad \sin\frac{5\pi}{6} = \sin\frac{\pi}{6} = \frac12$$
+$$
+\cos\frac{5\pi}{6} = -\cos\frac{\pi}{6} = -\frac{\sqrt3}{2} \qquad \sin\frac{5\pi}{6} = \sin\frac{\pi}{6} = \frac12
+$$
 
 **Étape 3 — conclusion.**
 
-$$\cos\left(-\frac{5\pi}{6}\right) = -\frac{\sqrt3}{2} \qquad \sin\left(-\frac{5\pi}{6}\right) = -\frac12$$
+$$
+\cos\left(-\frac{5\pi}{6}\right) = -\frac{\sqrt3}{2} \qquad \sin\left(-\frac{5\pi}{6}\right) = -\frac12
+$$
 
 **Contrôle de signe.** $-\dfrac{5\pi}{6}$ équivaut à $-\dfrac{5\pi}{6}+2\pi = \dfrac{7\pi}{6}$ : le point est dans le 3ᵉ quadrant, où cosinus **et** sinus sont négatifs. Les deux résultats le sont bien.
 
@@ -342,11 +416,15 @@ Traite les trois termes séparément avec le tableau des angles associés — in
 
 **Terme par terme**, avec le tableau de la section 6 :
 
-$$\cos(\pi-x) = -\cos x \qquad \cos(\pi+x) = -\cos x \qquad \sin\left(\frac{\pi}{2}+x\right) = \cos x$$
+$$
+\cos(\pi-x) = -\cos x \qquad \cos(\pi+x) = -\cos x \qquad \sin\left(\frac{\pi}{2}+x\right) = \cos x
+$$
 
 **Somme :**
 
-$$A = -\cos x-\cos x+\cos x = -\cos x$$
+$$
+A = -\cos x-\cos x+\cos x = -\cos x
+$$
 
 **Vérification numérique** en $x = 0$ : $A = \cos\pi+\cos\pi+\sin\dfrac{\pi}{2} = -1-1+1 = -1$, et $-\cos 0 = -1$. Cohérent.
 
@@ -366,11 +444,15 @@ Reconnais d'abord l'angle de référence dans le tableau. Attention : pour un **
 
 **Les deux familles :**
 
-$$x = \frac{\pi}{3}+2k\pi \qquad\text{ou}\qquad x = \pi-\frac{\pi}{3}+2k\pi = \frac{2\pi}{3}+2k\pi$$
+$$
+x = \frac{\pi}{3}+2k\pi \qquad\text{ou}\qquad x = \pi-\frac{\pi}{3}+2k\pi = \frac{2\pi}{3}+2k\pi
+$$
 
 **Dans $[0,2\pi]$**, chaque famille donne un représentant, avec $k=0$ :
 
-$$\boxed{S = \left\{\frac{\pi}{3},\ \frac{2\pi}{3}\right\}}$$
+$$
+\boxed{S = \left\{\frac{\pi}{3},\ \frac{2\pi}{3}\right\}}
+$$
 
 **Lecture sur le cercle** : la droite horizontale d'ordonnée $\dfrac{\sqrt3}{2}$ coupe le cercle en deux points situés en haut, l'un à droite, l'autre à gauche — les deux solutions.
 
@@ -390,15 +472,21 @@ Pose l'équation sur $2x$ d'abord, comme si c'était l'inconnue : deux familles,
 
 **Les deux familles sur $2x$ :**
 
-$$2x = \frac{2\pi}{3}+2k\pi \qquad\text{ou}\qquad 2x = -\frac{2\pi}{3}+2k\pi$$
+$$
+2x = \frac{2\pi}{3}+2k\pi \qquad\text{ou}\qquad 2x = -\frac{2\pi}{3}+2k\pi
+$$
 
 **On divise par $2$** — c'est l'étape où le pas devient $k\pi$ :
 
-$$x = \frac{\pi}{3}+k\pi \qquad\text{ou}\qquad x = -\frac{\pi}{3}+k\pi$$
+$$
+x = \frac{\pi}{3}+k\pi \qquad\text{ou}\qquad x = -\frac{\pi}{3}+k\pi
+$$
 
 **Sélection dans $[0,\pi]$.** Première famille : $k=0$ donne $\dfrac{\pi}{3}$ ; $k=1$ donne $\dfrac{4\pi}{3} > \pi$, rejeté. Seconde famille : $k=0$ donne $-\dfrac{\pi}{3} < 0$, rejeté ; $k=1$ donne $-\dfrac{\pi}{3}+\pi = \dfrac{2\pi}{3}$, accepté.
 
-$$\boxed{S = \left\{\frac{\pi}{3},\ \frac{2\pi}{3}\right\}}$$
+$$
+\boxed{S = \left\{\frac{\pi}{3},\ \frac{2\pi}{3}\right\}}
+$$
 
 **Vérification** : $\cos\left(2\times\dfrac{\pi}{3}\right) = \cos\dfrac{2\pi}{3} = -\dfrac12$ et $\cos\left(2\times\dfrac{2\pi}{3}\right) = \cos\dfrac{4\pi}{3} = -\dfrac12$. Les deux conviennent.
 
@@ -416,19 +504,27 @@ Dans les deux cas, l'angle de départ **n'est pas** dans l'intervalle de la réc
 
 **Premier calcul.** $\arccos$ renvoie dans $[0,\pi]$, or $\dfrac{7\pi}{6}\notin[0,\pi]$. On cherche un angle de $[0,\pi]$ ayant le même cosinus, avec la parité :
 
-$$\cos\frac{7\pi}{6} = \cos\left(-\frac{7\pi}{6}\right) = \cos\left(-\frac{7\pi}{6}+2\pi\right) = \cos\frac{5\pi}{6}$$
+$$
+\cos\frac{7\pi}{6} = \cos\left(-\frac{7\pi}{6}\right) = \cos\left(-\frac{7\pi}{6}+2\pi\right) = \cos\frac{5\pi}{6}
+$$
 
 et $\dfrac{5\pi}{6}\in[0,\pi]$, donc
 
-$$\arccos\left(\cos\frac{7\pi}{6}\right) = \frac{5\pi}{6}$$
+$$
+\arccos\left(\cos\frac{7\pi}{6}\right) = \frac{5\pi}{6}
+$$
 
 **Second calcul.** $\arcsin$ renvoie dans $\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$, or $\dfrac{5\pi}{4}$ n'y est pas. On utilise $\sin(\pi-\theta) = \sin\theta$, donc $\sin\theta = \sin(\pi-\theta)$ avec $\theta = \dfrac{5\pi}{4}$ :
 
-$$\sin\frac{5\pi}{4} = \sin\left(\pi-\frac{5\pi}{4}\right) = \sin\left(-\frac{\pi}{4}\right)$$
+$$
+\sin\frac{5\pi}{4} = \sin\left(\pi-\frac{5\pi}{4}\right) = \sin\left(-\frac{\pi}{4}\right)
+$$
 
 et $-\dfrac{\pi}{4}\in\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]$, donc
 
-$$\arcsin\left(\sin\frac{5\pi}{4}\right) = -\frac{\pi}{4}$$
+$$
+\arcsin\left(\sin\frac{5\pi}{4}\right) = -\frac{\pi}{4}
+$$
 
 **Contrôle** : $\cos\dfrac{7\pi}{6} = -\dfrac{\sqrt3}{2} = \cos\dfrac{5\pi}{6}$, et $\sin\dfrac{5\pi}{4} = -\dfrac{\sqrt2}{2} = \sin\left(-\dfrac{\pi}{4}\right)$. Les deux réponses ont bien la bonne valeur, dans le bon intervalle.
 

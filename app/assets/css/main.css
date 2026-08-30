@@ -30,18 +30,13 @@
    --------------------------------------------------------------------------- */
 
 /* Les formules en bloc peuvent dépasser sur mobile : on les rend défilables
-   plutôt que de laisser la page entière défiler horizontalement. */
-.cours-body .katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-block: 0.25rem;
-}
+   plutôt que de laisser la page entière défiler horizontalement.
 
-/* Dans cette chaîne de rendu, une formule `$$ … $$` ressort en KaTeX « inline »
-   plutôt qu'en `.katex-display` : seule dans son paragraphe, elle joue pourtant
-   le rôle d'une formule en bloc. On lui applique donc le même traitement, sans
-   quoi une formule plus large que la colonne élargit la page sur mobile. */
-.cours-body p > .katex:only-child {
+   Attention à la syntaxe côté Markdown : `$$ … $$` sur une seule ligne est lu
+   comme une formule *en ligne* par remark-math. Une formule en bloc s'écrit
+   sur trois lignes — `$$`, la formule, `$$` — et c'est elle seule qui produit
+   un `.katex-display`. */
+.cours-body .katex-display {
   display: block;
   max-width: 100%;
   overflow-x: auto;
