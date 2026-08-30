@@ -394,17 +394,59 @@ $$
 
 D'où vient l'identité elle-même : c'est la symétrie du cercle par rapport à la diagonale $y=x$, qui échange abscisse et ordonnée donc cosinus et sinus. Le détail est dans le [guide de trigonométrie](/cours/a1/mathematiques/trigonometrie#_6-les-angles-associés-ou-les-quatre-symétries).
 
-**Première famille** — les arguments sont égaux modulo $2\pi$ :
+**Ce que la formule donne ici.** On applique $\cos A = \cos B$ avec $A = \dfrac{\pi}{2}-2x$ et $B = x+\dfrac{\pi}{6}$. Elle produit **deux** équations, et chacune est une banale équation du premier degré : on rassemble les $x$ d'un côté, les multiples de $\pi$ de l'autre, puis on isole $x$.
+
+**Première famille — $A = B+2k\pi$**, les arguments sont égaux modulo $2\pi$ :
 
 $$
-\frac{\pi}{2}-2x = x+\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{\pi}{3} = 3x+2k\pi \;\Longrightarrow\; x = \frac{\pi}{9}-\frac{2k\pi}{3}
+\frac{\pi}{2}-2x = x+\frac{\pi}{6}+2k\pi
 $$
 
-**Seconde famille** — les arguments sont opposés modulo $2\pi$ :
+On ajoute $2x$ des deux côtés pour vider le membre de gauche de ses $x$, et on retranche $\dfrac{\pi}{6}$ pour vider le membre de droite de sa constante :
 
 $$
-\frac{\pi}{2}-2x = -x-\frac{\pi}{6}+2k\pi \;\Longrightarrow\; \frac{2\pi}{3} = x+2k\pi \;\Longrightarrow\; x = \frac{2\pi}{3}-2k\pi
+\frac{\pi}{2}-\frac{\pi}{6} = 3x+2k\pi
 $$
+
+À gauche, même dénominateur : $\dfrac{\pi}{2} = \dfrac{3\pi}{6}$, donc $\dfrac{3\pi}{6}-\dfrac{\pi}{6} = \dfrac{2\pi}{6} = \dfrac{\pi}{3}$.
+
+$$
+\frac{\pi}{3} = 3x+2k\pi \qquad\Longrightarrow\qquad 3x = \frac{\pi}{3}-2k\pi
+$$
+
+Reste à diviser **tout** le membre de droite par $3$ — le $2k\pi$ compris, c'est là qu'on se trompe :
+
+$$
+x = \frac{\pi}{9}-\frac{2k\pi}{3} \qquad\text{soit}\qquad x = \frac{\pi}{9}+\frac{2k\pi}{3} \quad (k\in\mathbb{Z})
+$$
+
+Les deux écritures désignent le même ensemble : $k$ parcourt $\mathbb{Z}$, donc $-k$ aussi. Autant garder le signe $+$.
+
+**Seconde famille — $A = -B+2k\pi$**, les arguments sont opposés modulo $2\pi$. Le piège est le signe : $-B = -\left(x+\dfrac{\pi}{6}\right) = -x-\dfrac{\pi}{6}$, le moins se distribue sur les **deux** termes.
+
+$$
+\frac{\pi}{2}-2x = -x-\frac{\pi}{6}+2k\pi
+$$
+
+Même manœuvre : on ajoute $2x$ des deux côtés, puis $\dfrac{\pi}{6}$.
+
+$$
+\frac{\pi}{2}+\frac{\pi}{6} = x+2k\pi
+$$
+
+Et $\dfrac{3\pi}{6}+\dfrac{\pi}{6} = \dfrac{4\pi}{6} = \dfrac{2\pi}{3}$, d'où :
+
+$$
+x = \frac{2\pi}{3}+2k\pi \qquad (k\in\mathbb{Z})
+$$
+
+::rappel{titre="Pourquoi les deux familles n'ont pas le même pas" icone="i-lucide-ruler"}
+Première famille : $x = \dfrac{\pi}{9}+\dfrac{2k\pi}{3}$ — les solutions sont espacées de $\dfrac{2\pi}{3}$, il y en a **trois par tour**.
+
+Seconde famille : $x = \dfrac{2\pi}{3}+2k\pi$ — espacées de $2\pi$, **une seule par tour**.
+
+L'écart vient de la division par $3$ de la première famille, elle-même héritée du $2x$ de l'énoncé : le coefficient devant $x$ divise le pas. C'est l'erreur la plus fréquente au moment de lister les solutions d'un intervalle donné — on n'en trouve qu'une là où il y en a trois.
+::
 
 **Vérification sur un représentant de chaque famille.** Pour $x = \dfrac{\pi}{9}$ : $\sin\dfrac{2\pi}{9} = \sin 40° \approx 0{,}643$ et $\cos\left(\dfrac{\pi}{9}+\dfrac{\pi}{6}\right) = \cos 50°\approx 0{,}643$. Pour $x = \dfrac{2\pi}{3}$ : $\sin\dfrac{4\pi}{3} = -\dfrac{\sqrt3}{2}$ et $\cos\dfrac{5\pi}{6} = -\dfrac{\sqrt3}{2}$. Les deux familles conviennent.
 
