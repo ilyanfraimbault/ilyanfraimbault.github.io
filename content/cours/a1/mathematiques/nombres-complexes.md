@@ -19,6 +19,9 @@ icone: i-lucide-git-compare-arrows
 - **Forme exponentielle** : $z = re^{i\theta}$ avec $r = \lvert z \rvert > 0$.
 ::
 
+::carte-lien{to="/cours/a1/mathematiques/trigonometrie" titre="Guide : comprendre le cercle trigonométrique" description="L’argument d’un complexe est un angle du cercle : si sa lecture n’est pas automatique, le guide la reprend depuis le début" icone="i-lucide-compass" meta="Cercle interactif"}
+::
+
 :::fiche{titre="Fiche de révision — Nombres complexes" resume="Le cours en condensé, plus un exemple entièrement traité pour chaque type de question des exercices. Les exemples utilisent d'autres nombres que les énoncés : ils montrent la méthode sans livrer la réponse."}
 ### 1. La forme algébrique
 
@@ -185,6 +188,9 @@ $$\lvert z_1z_2\rvert = \lvert z_1\rvert\lvert z_2\rvert \qquad \left\lvert\frac
 $$\cos\theta = \frac{x}{\lvert z\rvert} \qquad \sin\theta = \frac{y}{\lvert z\rvert}$$
 
 puis reconnaître un angle remarquable. Les deux sont nécessaires : le cosinus seul laisse toujours deux angles possibles, c'est le signe du sinus qui tranche.
+
+::cercle-trigo{titre="Trouver un argument sur le cercle" resume="Le couple (signe du cosinus, signe du sinus) désigne un quadrant, et un seul : c’est ce qui départage les deux angles candidats." angle="120" modes="explorer"}
+::
 
 | $\theta$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ |
 |---|---|---|---|---|---|---|

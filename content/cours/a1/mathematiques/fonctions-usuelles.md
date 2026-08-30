@@ -23,6 +23,9 @@ icone: i-lucide-function-square
 
 ::
 
+::carte-lien{to="/cours/a1/mathematiques/trigonometrie" titre="Guide : comprendre le cercle trigonométrique" description="Les sections 5 et 6 ci-dessous supposent le cercle acquis. S’il ne l’est pas, tout y est repris depuis le début, figure manipulable à l’appui" icone="i-lucide-compass" meta="Cercle interactif"}
+::
+
 :::fiche{titre="Fiche de révision — Fonctions usuelles" resume="Le cours en condensé, plus un exemple entièrement traité pour chaque type de question des exercices. Les exemples portent sur d'autres fonctions que les énoncés : ils montrent la méthode sans livrer la réponse."}
 ### 1. Exponentielle
 
@@ -254,6 +257,11 @@ C'est aussi ce schéma qu'on applique lorsque l'énoncé demande de montrer qu'u
 
 Sur le cercle de rayon $1$, $\cos\alpha$ est l'**abscisse** du point et $\sin\alpha$ son **ordonnée**. D'où $\cos^2\alpha+\sin^2\alpha = 1$ et $-1\leqslant\cos,\sin\leqslant 1$.
 
+::cercle-trigo{titre="Le cercle, à garder sous les yeux" resume="Déplace le point : le segment horizontal est cos α, le vertical est sin α. L’onglet « Symétries » montre d’où viennent les formules d’angles associés." angle="60" modes="explorer,symetries,equations"}
+::
+
+Tout ce qui suit se lit sur cette figure. Le détail complet — radians, quadrants, méthode pour ramener un angle — est repris dans le [guide dédié](/cours/a1/mathematiques/trigonometrie).
+
 | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ | $\pi$ |
 |---|---|---|---|---|---|---|
 | $\cos x$ | $1$ | $\dfrac{\sqrt3}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac12$ | $0$ | $-1$ |
@@ -358,6 +366,9 @@ $\cos$, $\sin$ et $\tan$ ne sont pas bijectives sur $\mathbb{R}$ : on les **rest
 | $\tan$ | $\left]-\frac{\pi}{2},\frac{\pi}{2}\right[$ | $\arctan : \mathbb{R}\to$ | $\left]-\frac{\pi}{2},\frac{\pi}{2}\right[$ |
 
 **Dérivées** : $\arccos'x = \dfrac{-1}{\sqrt{1-x^2}}$, $\arcsin'x = \dfrac{1}{\sqrt{1-x^2}}$, $\arctan'x = \dfrac{1}{1+x^2}$.
+
+::cercle-trigo{titre="Pourquoi arccos(cos x) ne rend pas toujours x" resume="L’arc épais est l’intervalle où la réciproque a le droit d’atterrir. Déplace θ en dehors : le résultat change." angle="225" mode="reciproques" modes="reciproques"}
+::
 
 ::exemple{id="fu-arc-valeurs" titre="Calculer une valeur d'arccos, arcsin ou arctan" pour="Exercice 6 — la lecture inverse du tableau, dans le bon intervalle"}
 La phrase à se répéter : **$\arccos x$ est l'unique angle de $[0,\pi]$ dont le cosinus vaut $x$** — et de même pour les autres, chacun avec son intervalle.
@@ -992,6 +1003,9 @@ Résoudre les équations trigonométriques suivantes.
 $$\cos A = \cos B \iff A = B+2k\pi \;\text{ ou }\; A = -B+2k\pi \quad(k\in\mathbb{Z})$$
 
 et la formule des angles complémentaires pour convertir un sinus : $\sin\theta = \cos\!\left(\dfrac{\pi}{2}-\theta\right)$.
+
+::cercle-trigo{titre="D’où viennent les deux familles de solutions" resume="La droite coupe le cercle en deux points : d’où deux solutions par tour, et deux familles à écrire." mode="equations" modes="equations"}
+::
 
 ::question{label="1."}
 
