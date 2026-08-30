@@ -50,14 +50,18 @@ La ligne $x^\alpha$ contient toutes les lignes en puissances : c'est celle à re
 
 Une fonction est **continue** quand sa courbe se trace sans lever le crayon : ni saut, ni trou. La définition rigoureuse (Déf 1.1) demande que la limite à gauche, la limite à droite et la valeur coïncident :
 
-$$f \text{ continue en } x_0 \iff \lim_{x\to x_0^-}f(x) = \lim_{x\to x_0^+}f(x) = f(x_0)$$
+$$
+f \text{ continue en } x_0 \iff \lim_{x\to x_0^-}f(x) = \lim_{x\to x_0^+}f(x) = f(x_0)
+$$
 
 Sont continus (Prop 1.1) : les **polynômes** sur $\mathbb{R}$, les **fonctions rationnelles** sur leur domaine, la **racine carrée** sur $[0,+\infty[$ — ainsi que toute somme, produit, quotient à dénominateur non nul ou composée de fonctions continues (Prop 1.3, 1.4).
 
 ::exemple{id="fvr-continuite" titre="Vérifier la continuité d'une fonction définie par morceaux" pour="Le raccord entre deux morceaux : trois valeurs à comparer"}
 Soit $g$ définie par $g(x) = x+2$ si $x < 0$ et $g(x) = x^2$ si $x \geqslant 0$. Est-elle continue en $0$ ?
 
-$$\lim_{x\to 0^-}g(x) = 0+2 = 2 \qquad \lim_{x\to 0^+}g(x) = 0 \qquad g(0) = 0$$
+$$
+\lim_{x\to 0^-}g(x) = 0+2 = 2 \qquad \lim_{x\to 0^+}g(x) = 0 \qquad g(0) = 0
+$$
 
 La limite à gauche vaut $2$, celle à droite $0$ : elles diffèrent, la fonction fait un **saut**. Elle n'est **pas** continue en $0$.
 
@@ -75,7 +79,9 @@ Montrons que $x^3+x-1 = 0$ admet une solution dans $[0,1]$.
 
 On pose $f(x) = x^3+x-1$ : c'est un polynôme, donc $f$ est continue. On évalue aux bornes :
 
-$$f(0) = -1 < 0 \qquad f(1) = 1 > 0$$
+$$
+f(0) = -1 < 0 \qquad f(1) = 1 > 0
+$$
 
 $0$ est compris entre $-1$ et $1$ : le TVI garantit l'existence d'un $c\in[0,1]$ tel que $f(c) = 0$.
 
@@ -84,7 +90,9 @@ $0$ est compris entre $-1$ et $1$ : le TVI garantit l'existence d'un $c\in[0,1]$
 
 ### 3. Dérivabilité : la définition
 
-$$f'(a) = \lim_{h\to 0}\frac{f(a+h)-f(a)}{h} = \lim_{x\to a}\frac{f(x)-f(a)}{x-a}$$
+$$
+f'(a) = \lim_{h\to 0}\frac{f(a+h)-f(a)}{h} = \lim_{x\to a}\frac{f(x)-f(a)}{x-a}
+$$
 
 Le quotient $\dfrac{f(x)-f(a)}{x-a}$ est la **pente de la corde** entre les points d'abscisses $a$ et $x$. Quand $x$ se rapproche de $a$, la corde devient la tangente : $f'(a)$ est la **pente de la tangente** au point d'abscisse $a$.
 
@@ -96,11 +104,15 @@ Le quotient $\dfrac{f(x)-f(a)}{x-a}$ est la **pente de la corde** entre les poin
 ::exemple{id="fvr-definition-derivee" titre="Calculer une dérivée avec la définition" pour="Quand l'énoncé demande de revenir au taux d'accroissement"}
 Prenons $f(x) = (1-x)^2$ et calculons $f'(a)$ à la main.
 
-$$\frac{f(a+h)-f(a)}{h} = \frac{(1-a-h)^2-(1-a)^2}{h}$$
+$$
+\frac{f(a+h)-f(a)}{h} = \frac{(1-a-h)^2-(1-a)^2}{h}
+$$
 
 On reconnaît $A^2-B^2 = (A-B)(A+B)$ avec $A = 1-a-h$ et $B = 1-a$, donc $A-B = -h$ et $A+B = 2-2a-h$ :
 
-$$= \frac{-h\,(2-2a-h)}{h} = -(2-2a-h) \xrightarrow[h\to 0]{} -(2-2a) = 2a-2$$
+$$
+= \frac{-h\,(2-2a-h)}{h} = -(2-2a-h) \xrightarrow[h\to 0]{} -(2-2a) = 2a-2
+$$
 
 Donc $f'(a) = 2a-2$. On retrouve bien ce que donnerait la formule des composées : $\big((1-x)^2\big)' = 2(1-x)\times(-1) = 2x-2$.
 ::
@@ -129,22 +141,34 @@ La ligne $x^\alpha$ **contient** toutes les autres lignes en puissances : c'est 
 
 **Opérations** :
 
-$$(u+v)' = u'+v' \qquad (k\,u)' = k\,u' \qquad (uv)' = u'v+uv' \qquad \left(\frac{u}{v}\right)' = \frac{u'v-uv'}{v^2}$$
+$$
+(u+v)' = u'+v' \qquad (k\,u)' = k\,u' \qquad (uv)' = u'v+uv' \qquad \left(\frac{u}{v}\right)' = \frac{u'v-uv'}{v^2}
+$$
 
 ::exemple{id="fvr-somme" titre="Dériver une somme, terme à terme" pour="Exercice 1 — la lecture directe du tableau"}
 Soit $f(x) = 4x^3-6\sqrt{x}+\dfrac{7}{x}-9$. On traite **chaque terme séparément**, en sortant les coefficients :
 
-$$(4x^3)' = 4\times 3x^2 = 12x^2$$
+$$
+(4x^3)' = 4\times 3x^2 = 12x^2
+$$
 
-$$(-6\sqrt{x})' = -6\times\frac{1}{2\sqrt{x}} = -\frac{3}{\sqrt{x}}$$
+$$
+(-6\sqrt{x})' = -6\times\frac{1}{2\sqrt{x}} = -\frac{3}{\sqrt{x}}
+$$
 
-$$\left(\frac{7}{x}\right)' = 7\times\left(-\frac{1}{x^2}\right) = -\frac{7}{x^2}$$
+$$
+\left(\frac{7}{x}\right)' = 7\times\left(-\frac{1}{x^2}\right) = -\frac{7}{x^2}
+$$
 
-$$(-9)' = 0$$
+$$
+(-9)' = 0
+$$
 
 En sommant :
 
-$$f'(x) = 12x^2-\frac{3}{\sqrt{x}}-\frac{7}{x^2}$$
+$$
+f'(x) = 12x^2-\frac{3}{\sqrt{x}}-\frac{7}{x^2}
+$$
 
 Les deux erreurs classiques : **oublier le $\tfrac12$** de la dérivée de la racine, et croire qu'une constante additive laisse une trace — elle disparaît complètement.
 ::
@@ -154,11 +178,15 @@ Le tableau ne contient pas $\dfrac{1}{x^3}$ ni $\dfrac{1}{\sqrt x}$ tels quels. 
 
 **Cas $\dfrac{1}{x^3}$.** On écrit $x^{-3}$, donc
 
-$$\left(\frac{1}{x^3}\right)' = -3x^{-4} = -\frac{3}{x^4}$$
+$$
+\left(\frac{1}{x^3}\right)' = -3x^{-4} = -\frac{3}{x^4}
+$$
 
 **Cas $\dfrac{1}{\sqrt x}$.** On écrit $x^{-1/2}$, donc
 
-$$\left(\frac{1}{\sqrt x}\right)' = -\frac12 x^{-3/2} = -\frac{1}{2x\sqrt{x}}$$
+$$
+\left(\frac{1}{\sqrt x}\right)' = -\frac12 x^{-3/2} = -\frac{1}{2x\sqrt{x}}
+$$
 
 en utilisant $x^{3/2} = x\times x^{1/2} = x\sqrt{x}$ pour revenir à une écriture lisible.
 
@@ -170,13 +198,19 @@ La règle générale : dès qu'apparaît une racine ou un $x$ au dénominateur, 
 ::exemple{id="fvr-produit" titre="Dériver un produit avec la formule (uv)′ = u′v + uv′" pour="Exercice 2 — poser u et v, puis appliquer"}
 Soit $f(x) = (3x+1)(x^2-2)$. On pose les briques avant tout calcul :
 
-$$u = 3x+1,\quad u' = 3 \qquad v = x^2-2,\quad v' = 2x$$
+$$
+u = 3x+1,\quad u' = 3 \qquad v = x^2-2,\quad v' = 2x
+$$
 
-$$f'(x) = u'v+uv' = 3(x^2-2)+(3x+1)\times 2x$$
+$$
+f'(x) = u'v+uv' = 3(x^2-2)+(3x+1)\times 2x
+$$
 
 On développe puis on réduit :
 
-$$f'(x) = 3x^2-6+6x^2+2x = 9x^2+2x-6$$
+$$
+f'(x) = 3x^2-6+6x^2+2x = 9x^2+2x-6
+$$
 
 **Vérification par l'autre chemin** : en développant d'abord, $f(x) = 3x^3+x^2-6x-2$, dont la dérivée terme à terme vaut $9x^2+2x-6$. Les deux méthodes concordent — et sur un produit de deux polynômes courts, développer d'abord est souvent plus rapide.
 ::
@@ -190,9 +224,13 @@ Avant d'appliquer une formule, il faut toujours se demander si l'expression se s
 
 **Second cas.** $f(x) = \dfrac{x+1}{\sqrt{x}}$. Ce n'est pas un quotient à traiter comme tel : on sépare les deux termes.
 
-$$f(x) = \frac{x}{\sqrt x}+\frac{1}{\sqrt x} = \sqrt{x}+x^{-1/2}$$
+$$
+f(x) = \frac{x}{\sqrt x}+\frac{1}{\sqrt x} = \sqrt{x}+x^{-1/2}
+$$
 
-$$f'(x) = \frac{1}{2\sqrt{x}}-\frac{1}{2x\sqrt{x}}$$
+$$
+f'(x) = \frac{1}{2\sqrt{x}}-\frac{1}{2x\sqrt{x}}
+$$
 
 Une somme de deux fonctions du tableau, là où la formule du quotient aurait demandé un long calcul.
 ::
@@ -200,9 +238,13 @@ Une somme de deux fonctions du tableau, là où la formule du quotient aurait de
 ::exemple{id="fvr-puissance-n" titre="Dériver une puissance de fonction : (uⁿ)′ = n u′ uⁿ⁻¹" pour="Exercice 2 — une parenthèse élevée à une puissance"}
 Ne jamais développer une parenthèse élevée à une puissance : la **Prop 3.3** fait le travail.
 
-$$\big((2x+5)^4\big)' = 4\times \underbrace{2}_{u'}\times(2x+5)^3 = 8(2x+5)^3$$
+$$
+\big((2x+5)^4\big)' = 4\times \underbrace{2}_{u'}\times(2x+5)^3 = 8(2x+5)^3
+$$
 
-$$\big((x^2+1)^3\big)' = 3\times\underbrace{2x}_{u'}\times(x^2+1)^2 = 6x(x^2+1)^2$$
+$$
+\big((x^2+1)^3\big)' = 3\times\underbrace{2x}_{u'}\times(x^2+1)^2 = 6x(x^2+1)^2
+$$
 
 La structure est toujours la même : on **descend l'exposant**, on **abaisse la puissance de $1$**, et on **multiplie par la dérivée de l'intérieur**. C'est ce dernier facteur qu'on oublie le plus souvent.
 ::
@@ -211,7 +253,9 @@ La structure est toujours la même : on **descend l'exposant**, on **abaisse la 
 
 Toutes les formules ci-dessous sont un seul et même principe, la **dérivée en chaîne** (Prop 3.2) :
 
-$$(u\circ v)'(x) = v'(x)\times u'\big(v(x)\big)$$
+$$
+(u\circ v)'(x) = v'(x)\times u'\big(v(x)\big)
+$$
 
 autrement dit *dérivée de l'extérieur, évaluée en l'intérieur, multipliée par la dérivée de l'intérieur*. Le facteur $u'$ qui apparaît partout, c'est cette « dérivée de l'intérieur ».
 
@@ -232,11 +276,15 @@ Le schéma ne varie jamais : on nomme $u$ le dénominateur, on calcule $u'$, on 
 
 **Premier exemple.** $f(x) = \dfrac{1}{x^3+x}$, donc $u = x^3+x$ et $u' = 3x^2+1$ :
 
-$$f'(x) = -\frac{3x^2+1}{(x^3+x)^2}$$
+$$
+f'(x) = -\frac{3x^2+1}{(x^3+x)^2}
+$$
 
 **Deuxième exemple.** $f(x) = \dfrac{1}{2x-7}$, donc $u = 2x-7$ et $u' = 2$ :
 
-$$f'(x) = -\frac{2}{(2x-7)^2}$$
+$$
+f'(x) = -\frac{2}{(2x-7)^2}
+$$
 
 Trois points de vigilance : le **signe moins** est dans la formule et ne s'oublie pas ; le dénominateur est **au carré** ; et $u^2$ signifie bien $(u)^2$, parenthèses comprises — écrire $2x-7^2$ n'aurait aucun sens.
 ::
@@ -244,11 +292,15 @@ Trois points de vigilance : le **signe moins** est dans la formule et ne s'oubli
 ::exemple{id="fvr-inverse-racine" titre="Un inverse dont le dénominateur contient une racine" pour="Exercice 3 — quand u n'est pas un polynôme"}
 Soit $f(x) = \dfrac{1}{\sqrt{x}-2}$. La formule est la même, seul $u'$ demande un peu d'attention.
 
-$$u = \sqrt{x}-2 \qquad u' = \frac{1}{2\sqrt{x}}$$
+$$
+u = \sqrt{x}-2 \qquad u' = \frac{1}{2\sqrt{x}}
+$$
 
 La constante $-2$ disparaît en dérivant, et il ne reste que la dérivée de la racine. D'où
 
-$$f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x}}}{(\sqrt{x}-2)^2} = -\frac{1}{2\sqrt{x}\,(\sqrt{x}-2)^2}$$
+$$
+f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x}}}{(\sqrt{x}-2)^2} = -\frac{1}{2\sqrt{x}\,(\sqrt{x}-2)^2}
+$$
 
 La dernière étape est une simple division de fractions : diviser par $(\sqrt x-2)^2$ revient à le faire passer au dénominateur.
 
@@ -260,11 +312,15 @@ Une constante multiplicative sort de la dérivée. On écrit donc $\dfrac{k}{u} 
 
 **Premier exemple.** $f(x) = \dfrac{4}{x^2+3}$, avec $u = x^2+3$ et $u' = 2x$ :
 
-$$f'(x) = 4\times\left(-\frac{2x}{(x^2+3)^2}\right) = -\frac{8x}{(x^2+3)^2}$$
+$$
+f'(x) = 4\times\left(-\frac{2x}{(x^2+3)^2}\right) = -\frac{8x}{(x^2+3)^2}
+$$
 
 **Deuxième exemple, avec un signe.** $f(x) = -\dfrac{5}{2x+1}$, avec $u = 2x+1$ et $u' = 2$ :
 
-$$f'(x) = -5\times\left(-\frac{2}{(2x+1)^2}\right) = \frac{10}{(2x+1)^2}$$
+$$
+f'(x) = -5\times\left(-\frac{2}{(2x+1)^2}\right) = \frac{10}{(2x+1)^2}
+$$
 
 Les deux signes moins se compensent : la dérivée est **positive**. C'est le genre de détail qu'il faut poser calmement plutôt que de le traiter de tête.
 ::
@@ -272,13 +328,19 @@ Les deux signes moins se compensent : la dérivée est **positive**. C'est le ge
 ::exemple{id="fvr-quotient" titre="Dériver un quotient : (u/v)′ = (u′v − uv′)/v²" pour="Exercice 4 — la formule et l'ordre des termes"}
 Soit $f(x) = \dfrac{3x+2}{x-4}$. On pose les quatre ingrédients avant tout :
 
-$$u = 3x+2,\quad u' = 3 \qquad v = x-4,\quad v' = 1$$
+$$
+u = 3x+2,\quad u' = 3 \qquad v = x-4,\quad v' = 1
+$$
 
-$$f'(x) = \frac{u'v-uv'}{v^2} = \frac{3(x-4)-(3x+2)\times 1}{(x-4)^2}$$
+$$
+f'(x) = \frac{u'v-uv'}{v^2} = \frac{3(x-4)-(3x+2)\times 1}{(x-4)^2}
+$$
 
 On développe le numérateur **en gardant les parenthèses** jusqu'au bout :
 
-$$3x-12-3x-2 = -14 \qquad\text{donc}\qquad f'(x) = -\frac{14}{(x-4)^2}$$
+$$
+3x-12-3x-2 = -14 \qquad\text{donc}\qquad f'(x) = -\frac{14}{(x-4)^2}
+$$
 
 Deux réflexes : le numérateur commence par $u'$, **dans cet ordre** — écrire $uv'-u'v$ donne l'opposé ; et le signe moins doit être distribué sur **tout** le second produit, pas seulement sur son premier terme.
 ::
@@ -286,11 +348,15 @@ Deux réflexes : le numérateur commence par $u'$, **dans cet ordre** — écrir
 ::exemple{id="fvr-quotient-racine" titre="Un quotient contenant une racine" pour="Exercice 4 — nettoyer une fraction à étages"}
 Soit $f(x) = \dfrac{\sqrt{x}}{x+3}$, avec $u = \sqrt x$, $u' = \dfrac{1}{2\sqrt x}$, $v = x+3$, $v' = 1$.
 
-$$f'(x) = \frac{\dfrac{1}{2\sqrt x}(x+3)-\sqrt{x}}{(x+3)^2}$$
+$$
+f'(x) = \frac{\dfrac{1}{2\sqrt x}(x+3)-\sqrt{x}}{(x+3)^2}
+$$
 
 Cette écriture est correcte mais illisible : il reste une fraction dans la fraction. On **multiplie numérateur et dénominateur par $2\sqrt x$** pour la faire disparaître :
 
-$$f'(x) = \frac{(x+3)-2\sqrt{x}\times\sqrt{x}}{2\sqrt{x}\,(x+3)^2} = \frac{(x+3)-2x}{2\sqrt{x}\,(x+3)^2} = \frac{3-x}{2\sqrt{x}\,(x+3)^2}$$
+$$
+f'(x) = \frac{(x+3)-2\sqrt{x}\times\sqrt{x}}{2\sqrt{x}\,(x+3)^2} = \frac{(x+3)-2x}{2\sqrt{x}\,(x+3)^2} = \frac{3-x}{2\sqrt{x}\,(x+3)^2}
+$$
 
 en utilisant $\sqrt x\times\sqrt x = x$. C'est la manœuvre standard dès qu'une racine apparaît dans un quotient.
 ::
@@ -298,11 +364,15 @@ en utilisant $\sqrt x\times\sqrt x = x$. C'est la manœuvre standard dès qu'une
 ::exemple{id="fvr-quotient-signe" titre="Un dénominateur de la forme a − x : la source d'erreurs numéro un" pour="Exercice 4 — quand v′ vaut −1"}
 Soit $f(x) = \dfrac{x+2}{3-x}$. Ici $v = 3-x$, donc
 
-$$v' = -1$$
+$$
+v' = -1
+$$
 
 C'est là que tout se joue. En appliquant la formule :
 
-$$f'(x) = \frac{1\times(3-x)-(x+2)\times(-1)}{(3-x)^2} = \frac{3-x+x+2}{(3-x)^2} = \frac{5}{(3-x)^2}$$
+$$
+f'(x) = \frac{1\times(3-x)-(x+2)\times(-1)}{(3-x)^2} = \frac{3-x+x+2}{(3-x)^2} = \frac{5}{(3-x)^2}
+$$
 
 Le produit $-(x+2)\times(-1)$ donne $+(x+2)$ : **deux signes moins qui se compensent**. Poser $v'$ explicitement avant de substituer évite l'erreur presque à coup sûr.
 ::
@@ -310,15 +380,21 @@ Le produit $-(x+2)\times(-1)$ donne $+(x+2)$ : **deux signes moins qui se compen
 ::exemple{id="fvr-quotient-simplifier" titre="Un quotient dont le numérateur ressemble au dénominateur" pour="Exercice 4 — se ramener à une constante plus un inverse"}
 Soit $f(x) = \dfrac{x^2+3}{x^2+1}$. Numérateur et dénominateur ne diffèrent que d'une constante : on fait apparaître le dénominateur au numérateur.
 
-$$f(x) = \frac{(x^2+1)+2}{x^2+1} = 1+\frac{2}{x^2+1}$$
+$$
+f(x) = \frac{(x^2+1)+2}{x^2+1} = 1+\frac{2}{x^2+1}
+$$
 
 Il ne reste qu'un inverse à dériver, avec $u = x^2+1$ et $u' = 2x$ :
 
-$$f'(x) = 0+2\times\left(-\frac{2x}{(x^2+1)^2}\right) = -\frac{4x}{(x^2+1)^2}$$
+$$
+f'(x) = 0+2\times\left(-\frac{2x}{(x^2+1)^2}\right) = -\frac{4x}{(x^2+1)^2}
+$$
 
 **Vérification par la formule du quotient** :
 
-$$\frac{2x(x^2+1)-(x^2+3)\,2x}{(x^2+1)^2} = \frac{2x\big[(x^2+1)-(x^2+3)\big]}{(x^2+1)^2} = \frac{2x\times(-2)}{(x^2+1)^2} = -\frac{4x}{(x^2+1)^2}$$
+$$
+\frac{2x(x^2+1)-(x^2+3)\,2x}{(x^2+1)^2} = \frac{2x\big[(x^2+1)-(x^2+3)\big]}{(x^2+1)^2} = \frac{2x\times(-2)}{(x^2+1)^2} = -\frac{4x}{(x^2+1)^2}
+$$
 
 Même résultat — mais la première méthode donne la forme factorisée sans effort, et cette forme est bien plus commode pour étudier un signe.
 ::
@@ -326,11 +402,15 @@ Même résultat — mais la première méthode donne la forme factorisée sans e
 ::exemple{id="fvr-exp" titre="Dériver une exponentielle composée, et factoriser ensuite" pour="Exercice 6 — la forme e^u"}
 La formule est $(e^u)' = u'e^u$ : l'exponentielle reste intacte, et la dérivée de l'exposant vient devant.
 
-$$\big(e^{3x-1}\big)' = 3e^{3x-1} \qquad \big(e^{-3x}\big)' = -3e^{-3x} \qquad \big(e^{x^2+x}\big)' = (2x+1)e^{x^2+x}$$
+$$
+\big(e^{3x-1}\big)' = 3e^{3x-1} \qquad \big(e^{-3x}\big)' = -3e^{-3x} \qquad \big(e^{x^2+x}\big)' = (2x+1)e^{x^2+x}
+$$
 
 **En produit avec un polynôme.** Soit $f(x) = e^x(x^2-4x)$. On applique $(uv)' = u'v+uv'$ avec $u = e^x$ :
 
-$$f'(x) = e^x(x^2-4x)+e^x(2x-4) = e^x\big(x^2-4x+2x-4\big) = e^x(x^2-2x-4)$$
+$$
+f'(x) = e^x(x^2-4x)+e^x(2x-4) = e^x\big(x^2-4x+2x-4\big) = e^x(x^2-2x-4)
+$$
 
 **Le réflexe de rédaction** : toujours **factoriser par l'exponentielle** à la fin. Comme $e^x > 0$, le signe de $f'$ se lit alors directement sur le polynôme restant — c'est exactement ce dont on a besoin pour un tableau de variations.
 ::
@@ -338,7 +418,9 @@ $$f'(x) = e^x(x^2-4x)+e^x(2x-4) = e^x\big(x^2-4x+2x-4\big) = e^x(x^2-2x-4)$$
 ::exemple{id="fvr-ln" titre="Dériver un logarithme composé" pour="Exercice 6 — la forme ln u"}
 La formule est $(\ln u)' = \dfrac{u'}{u}$ : la dérivée de l'intérieur au numérateur, l'intérieur au dénominateur.
 
-$$\big(\ln(3x^2+2)\big)' = \frac{6x}{3x^2+2} \qquad \big(\ln(5x)\big)' = \frac{5}{5x} = \frac{1}{x}$$
+$$
+\big(\ln(3x^2+2)\big)' = \frac{6x}{3x^2+2} \qquad \big(\ln(5x)\big)' = \frac{5}{5x} = \frac{1}{x}
+$$
 
 Le second calcul mérite un mot : la dérivée de $\ln(5x)$ est **la même** que celle de $\ln x$. C'est cohérent, puisque $\ln(5x) = \ln 5+\ln x$ ne diffère de $\ln x$ que d'une constante.
 
@@ -348,21 +430,29 @@ Le second calcul mérite un mot : la dérivée de $\ln(5x)$ est **la même** que
 ::
 
 ::exemple{id="fvr-trigo" titre="Dériver un sinus ou un cosinus composé" pour="Exercice 6 — les formes sin(ax+b) et cos(ax+b)"}
-$$\big(\sin(3x)\big)' = 3\cos(3x) \qquad \big(\cos(4x+1)\big)' = -4\sin(4x+1)$$
+$$
+\big(\sin(3x)\big)' = 3\cos(3x) \qquad \big(\cos(4x+1)\big)' = -4\sin(4x+1)
+$$
 
 Le coefficient devant $x$ sort en facteur, et **seul le cosinus produit un signe moins** en étant dérivé.
 
 **En produit avec $x$.** Soit $f(x) = x\sin(3x+2)$, avec $u = x$ et $v = \sin(3x+2)$ :
 
-$$f'(x) = 1\times\sin(3x+2)+x\times 3\cos(3x+2) = \sin(3x+2)+3x\cos(3x+2)$$
+$$
+f'(x) = 1\times\sin(3x+2)+x\times 3\cos(3x+2) = \sin(3x+2)+3x\cos(3x+2)
+$$
 
 **En puissance.** $\big(\sin^3x\big)'$ se lit comme $(u^3)'$ avec $u = \sin x$ :
 
-$$\big(\sin^3 x\big)' = 3\times\cos x\times\sin^2x = 3\sin^2x\cos x$$
+$$
+\big(\sin^3 x\big)' = 3\times\cos x\times\sin^2x = 3\sin^2x\cos x
+$$
 ::
 
 ::exemple{id="fvr-racine-composee" titre="Dériver une racine composée : (√u)′ = u′/(2√u)" pour="Exercice 6 — la proposition 3.4"}
-$$\big(\sqrt{x^2+9}\big)' = \frac{2x}{2\sqrt{x^2+9}} = \frac{x}{\sqrt{x^2+9}} \qquad \big(\sqrt{3x-1}\big)' = \frac{3}{2\sqrt{3x-1}}$$
+$$
+\big(\sqrt{x^2+9}\big)' = \frac{2x}{2\sqrt{x^2+9}} = \frac{x}{\sqrt{x^2+9}} \qquad \big(\sqrt{3x-1}\big)' = \frac{3}{2\sqrt{3x-1}}
+$$
 
 Dans le premier cas, le $2$ du numérateur se simplifie avec celui du dénominateur : la simplification finale fait partie du travail attendu.
 
@@ -376,11 +466,15 @@ Soit $f(x) = \dfrac{1}{\sqrt{x+2}+3}$. On procède **de l'extérieur vers l'int�
 
 **Couche intérieure** : $u$ est une racine composée, à laquelle on applique la Prop 3.4 avec l'intérieur $x+2$, de dérivée $1$ :
 
-$$u' = \frac{1}{2\sqrt{x+2}}$$
+$$
+u' = \frac{1}{2\sqrt{x+2}}
+$$
 
 On assemble avec $\left(\dfrac1u\right)' = -\dfrac{u'}{u^2}$ :
 
-$$f'(x) = -\frac{\dfrac{1}{2\sqrt{x+2}}}{\big(\sqrt{x+2}+3\big)^2} = -\frac{1}{2\sqrt{x+2}\,\big(\sqrt{x+2}+3\big)^2}$$
+$$
+f'(x) = -\frac{\dfrac{1}{2\sqrt{x+2}}}{\big(\sqrt{x+2}+3\big)^2} = -\frac{1}{2\sqrt{x+2}\,\big(\sqrt{x+2}+3\big)^2}
+$$
 
 La méthode vaut pour tous les empilements : identifier la structure la plus extérieure, appliquer sa formule, et traiter $u'$ comme un sous-problème à part entière.
 ::
@@ -403,7 +497,9 @@ La réponse tient toujours en une ligne : on nomme la structure, puis la conditi
 
 **Le piège à ne pas manquer.** Pour $f(x) = \dfrac{1}{x^2+x+1}$, le réflexe « quotient, donc privé de quelque chose » est faux. On calcule le discriminant :
 
-$$\Delta = 1^2-4\times 1\times 1 = -3 < 0$$
+$$
+\Delta = 1^2-4\times 1\times 1 = -3 < 0
+$$
 
 Le dénominateur ne s'annule **jamais** : $f$ est dérivable sur $\mathbb{R}$ **tout entier**. Toujours vérifier le discriminant avant d'exclure des valeurs.
 ::
@@ -411,7 +507,9 @@ Le dénominateur ne s'annule **jamais** : $f$ est dérivable sur $\mathbb{R}$ **
 ::exemple{id="fvr-domaine-racine" titre="Racine carrée : définie en un point sans y être dérivable" pour="Exercice 5 — la distinction domaine de définition / domaine de dérivabilité"}
 $\sqrt{x}$ est parfaitement définie en $0$, et pourtant elle n'y est pas dérivable. Le taux d'accroissement le montre :
 
-$$\frac{\sqrt{h}-\sqrt{0}}{h} = \frac{\sqrt h}{h} = \frac{1}{\sqrt h} \xrightarrow[h\to 0^+]{} +\infty$$
+$$
+\frac{\sqrt{h}-\sqrt{0}}{h} = \frac{\sqrt h}{h} = \frac{1}{\sqrt h} \xrightarrow[h\to 0^+]{} +\infty
+$$
 
 La limite est infinie : pas de nombre dérivable en $0$, la tangente y est **verticale**. D'où la rédaction attendue :
 
@@ -424,18 +522,24 @@ La même distinction vaut pour $\sqrt{u}$ : par exemple $\sqrt{x-4}$ est défini
 
 **Théorème de la bijection (Théorème 6.1)** : si $f$ est **continue** et **strictement monotone** sur un intervalle $I$, alors $f$ réalise une bijection de $I$ sur $f(I)$ — chaque valeur est atteinte une fois et une seule, donc $f^{-1}$ existe. Et si $f'$ ne s'annule pas :
 
-$$\big(f^{-1}\big)'(y) = \frac{1}{f'\big(f^{-1}(y)\big)}$$
+$$
+\big(f^{-1}\big)'(y) = \frac{1}{f'\big(f^{-1}(y)\big)}
+$$
 
 ::exemple{id="fvr-bijection" titre="Dériver une fonction réciproque" pour="La formule appliquée à deux cas connus, pour la vérifier"}
 **Premier cas.** $f(x) = x^2$ sur $[0,+\infty[$ est continue et strictement croissante : c'est une bijection de $[0,+\infty[$ sur $[0,+\infty[$, de réciproque $f^{-1}(y) = \sqrt{y}$. La formule doit redonner la dérivée de la racine :
 
-$$\big(f^{-1}\big)'(y) = \frac{1}{f'(\sqrt y)} = \frac{1}{2\sqrt y}$$
+$$
+\big(f^{-1}\big)'(y) = \frac{1}{f'(\sqrt y)} = \frac{1}{2\sqrt y}
+$$
 
 C'est bien la dérivée connue de $\sqrt{y}$.
 
 **Second cas.** $\exp$ est une bijection de $\mathbb{R}$ sur $]0,+\infty[$, de réciproque $\ln$. Comme $\exp' = \exp$ :
 
-$$(\ln)'(y) = \frac{1}{e^{\ln y}} = \frac{1}{y}$$
+$$
+(\ln)'(y) = \frac{1}{e^{\ln y}} = \frac{1}{y}
+$$
 
 C'est exactement ainsi que le cours *Fonctions usuelles* construit le logarithme et sa dérivée.
 ::
@@ -471,7 +575,9 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Dérivation terme à terme : $(2x)' = 2$ et $(1)' = 0$, puisque la dérivée d'une constante est nulle.
 
-$$\boxed{f'(x) = 2}$$
+$$
+\boxed{f'(x) = 2}
+$$
 
 C'est cohérent : le graphe de $f$ est une droite de coefficient directeur $2$, et la pente d'une droite est la même en tout point.
 ::
@@ -487,7 +593,9 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Terme à terme, avec $(x^2)' = 2x$ et $(-3x)' = -3\times(x)' = -3$ :
 
-$$\boxed{f'(x) = 2x-3}$$
+$$
+\boxed{f'(x) = 2x-3}
+$$
 ::
 
 ::question{label="3."}
@@ -501,11 +609,15 @@ Le tableau est en tête de page, dans la boîte à outils. Et le même travail s
 #solution
 Deux fonctions élémentaires du tableau :
 
-$$(\sqrt{x})' = \frac{1}{2\sqrt{x}} \qquad\text{et}\qquad \left(\frac{1}{x}\right)' = -\frac{1}{x^2}$$
+$$
+(\sqrt{x})' = \frac{1}{2\sqrt{x}} \qquad\text{et}\qquad \left(\frac{1}{x}\right)' = -\frac{1}{x^2}
+$$
 
 D'où, en sommant :
 
-$$\boxed{f'(x) = \frac{1}{2\sqrt{x}}-\frac{1}{x^2}}$$
+$$
+\boxed{f'(x) = \frac{1}{2\sqrt{x}}-\frac{1}{x^2}}
+$$
 
 Le signe moins du second terme n'est pas une erreur de recopie : il vient de l'exposant $-1$ de $x^{-1}$.
 ::
@@ -521,9 +633,13 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Trois applications de $(x^\alpha)' = \alpha x^{\alpha-1}$ :
 
-$$(x^4)' = 4x^3, \qquad (x^3)' = 3x^2, \qquad (x^2)' = 2x$$
+$$
+(x^4)' = 4x^3, \qquad (x^3)' = 3x^2, \qquad (x^2)' = 2x
+$$
 
-$$\boxed{f'(x) = 4x^3+3x^2+2x}$$
+$$
+\boxed{f'(x) = 4x^3+3x^2+2x}
+$$
 ::
 
 ::question{label="5."}
@@ -537,9 +653,13 @@ Le même travail sur une autre somme, coefficients compris : :voir-exemple[déri
 #solution
 Les constantes multiplicatives « sortent » de la dérivée :
 
-$$\left(\frac{5}{x}\right)' = 5\times\left(-\frac{1}{x^2}\right) = -\frac{5}{x^2}, \qquad (3\sqrt{x})' = 3\times\frac{1}{2\sqrt{x}} = \frac{3}{2\sqrt{x}}$$
+$$
+\left(\frac{5}{x}\right)' = 5\times\left(-\frac{1}{x^2}\right) = -\frac{5}{x^2}, \qquad (3\sqrt{x})' = 3\times\frac{1}{2\sqrt{x}} = \frac{3}{2\sqrt{x}}
+$$
 
-$$\boxed{f'(x) = -\frac{5}{x^2}+\frac{3}{2\sqrt{x}}}$$
+$$
+\boxed{f'(x) = -\frac{5}{x^2}+\frac{3}{2\sqrt{x}}}
+$$
 
 *⚠️ La correction officielle imprime $\dfrac{3}{\sqrt{x}}$ pour le second terme : le facteur $\dfrac{1}{2}$ de $(\sqrt{x})' = \dfrac{1}{2\sqrt{x}}$ a été perdu — c'est bien $\dfrac{3}{2\sqrt{x}}$.*
 ::
@@ -555,17 +675,23 @@ La technique de réécriture, détaillée sur d'autres fonctions : :voir-exemple
 #solution
 **Premier terme** : $-\dfrac{2}{x} = -2\times\dfrac{1}{x}$, de dérivée
 
-$$-2\times\left(-\frac{1}{x^2}\right) = \frac{2}{x^2}$$
+$$
+-2\times\left(-\frac{1}{x^2}\right) = \frac{2}{x^2}
+$$
 
 Les deux signes moins se compensent, ce terme est donc positif.
 
 **Second terme** : on l'écrit en puissance, $\dfrac{2}{\sqrt{x}} = 2x^{-1/2}$, donc sa dérivée vaut
 
-$$2\times\left(-\frac{1}{2}\right)x^{-3/2} = -x^{-3/2} = -\frac{1}{x\sqrt{x}}$$
+$$
+2\times\left(-\frac{1}{2}\right)x^{-3/2} = -x^{-3/2} = -\frac{1}{x\sqrt{x}}
+$$
 
 car $x^{3/2} = x\times x^{1/2} = x\sqrt{x}$.
 
-$$\boxed{f'(x) = \frac{2}{x^2}-\frac{1}{x\sqrt{x}}}$$
+$$
+\boxed{f'(x) = \frac{2}{x^2}-\frac{1}{x\sqrt{x}}}
+$$
 ::
 :::
 
@@ -583,9 +709,13 @@ Deux chemins possibles : :voir-exemple[la formule du produit]{id="fvr-produit"} 
 #solution
 Produit avec $u = x$, $u' = 1$ et $v = x-2$, $v' = 1$ :
 
-$$f'(x) = u'v+uv' = 1\times(x-2)+x\times 1 = x-2+x$$
+$$
+f'(x) = u'v+uv' = 1\times(x-2)+x\times 1 = x-2+x
+$$
 
-$$\boxed{f'(x) = 2x-2}$$
+$$
+\boxed{f'(x) = 2x-2}
+$$
 
 *Vérification par l'autre chemin* : en développant, $f(x) = x^2-2x$, dont la dérivée est bien $2x-2$.
 ::
@@ -601,13 +731,19 @@ La formule déroulée sur un autre produit : :voir-exemple[dériver un produit]{
 #solution
 $u = 2x^2-3$, $u' = 4x$ ; $v = x+1$, $v' = 1$. La formule du produit donne :
 
-$$f'(x) = u'v+uv' = 4x(x+1)+(2x^2-3)\times 1$$
+$$
+f'(x) = u'v+uv' = 4x(x+1)+(2x^2-3)\times 1
+$$
 
 On développe :
 
-$$f'(x) = 4x^2+4x+2x^2-3$$
+$$
+f'(x) = 4x^2+4x+2x^2-3
+$$
 
-$$\boxed{f'(x) = 6x^2+4x-3}$$
+$$
+\boxed{f'(x) = 6x^2+4x-3}
+$$
 ::
 
 ::question{label="3."}
@@ -621,13 +757,19 @@ Le réflexe à avoir ici : :voir-exemple[simplifier avant de dériver]{id="fvr-s
 #solution
 **On simplifie avant de dériver.** En écrivant tout en puissances :
 
-$$f(x) = \sqrt{x}\times\frac{1}{x} = \frac{\sqrt{x}}{x} = \frac{1}{\sqrt{x}} = x^{-1/2}$$
+$$
+f(x) = \sqrt{x}\times\frac{1}{x} = \frac{\sqrt{x}}{x} = \frac{1}{\sqrt{x}} = x^{-1/2}
+$$
 
 Il ne reste plus qu'une règle à appliquer :
 
-$$f'(x) = -\frac{1}{2}x^{-3/2}$$
+$$
+f'(x) = -\frac{1}{2}x^{-3/2}
+$$
 
-$$\boxed{f'(x) = -\frac{1}{2x\sqrt{x}}}$$
+$$
+\boxed{f'(x) = -\frac{1}{2x\sqrt{x}}}
+$$
 
 *La correction officielle applique directement la formule du produit : $f'(x) = \dfrac{1}{2\sqrt{x}}\times\dfrac{1}{x}-\dfrac{\sqrt{x}}{x^2}$ — c'est le même résultat, car $\dfrac{1}{2x\sqrt{x}}-\dfrac{1}{x\sqrt{x}} = -\dfrac{1}{2x\sqrt{x}}$.*
 ::
@@ -643,17 +785,25 @@ La formule déroulée sur un autre produit : :voir-exemple[dériver un produit]{
 #solution
 $u = 2x+1$, $u' = 2$ ; $v = \sqrt{x}$, $v' = \dfrac{1}{2\sqrt{x}}$. Alors :
 
-$$f'(x) = u'v+uv' = 2\sqrt{x}+\frac{2x+1}{2\sqrt{x}}$$
+$$
+f'(x) = u'v+uv' = 2\sqrt{x}+\frac{2x+1}{2\sqrt{x}}
+$$
 
 On met tout au même dénominateur $2\sqrt{x}$. L'astuce est de remarquer que
 
-$$2\sqrt{x} = \frac{2\sqrt{x}\times 2\sqrt{x}}{2\sqrt{x}} = \frac{4x}{2\sqrt{x}}$$
+$$
+2\sqrt{x} = \frac{2\sqrt{x}\times 2\sqrt{x}}{2\sqrt{x}} = \frac{4x}{2\sqrt{x}}
+$$
 
 puisque $\sqrt{x}\times\sqrt{x} = x$. D'où :
 
-$$f'(x) = \frac{4x+2x+1}{2\sqrt{x}}$$
+$$
+f'(x) = \frac{4x+2x+1}{2\sqrt{x}}
+$$
 
-$$\boxed{f'(x) = \frac{6x+1}{2\sqrt{x}}}$$
+$$
+\boxed{f'(x) = \frac{6x+1}{2\sqrt{x}}}
+$$
 ::
 
 ::question{label="5."}
@@ -667,9 +817,13 @@ La formule sur d'autres parenthèses : :voir-exemple[dériver une puissance de f
 #solution
 C'est une **puissance** $u^n$ : on applique la **Prop 3.3**, $(u^n)' = n\,u'\,u^{n-1}$, avec $n = 2$, $u = x^2-3x-1$ et $u' = 2x-3$ :
 
-$$f'(x) = 2\,u'\,u^{1} = 2(2x-3)(x^2-3x-1)$$
+$$
+f'(x) = 2\,u'\,u^{1} = 2(2x-3)(x^2-3x-1)
+$$
 
-$$\boxed{f'(x) = 2(2x-3)(x^2-3x-1)}$$
+$$
+\boxed{f'(x) = 2(2x-3)(x^2-3x-1)}
+$$
 
 *Pourquoi ne pas développer le carré ? On pourrait, mais la Prop 3.3 est plus rapide et donne un résultat déjà factorisé — bien pratique pour étudier ensuite le signe de $f'$.*
 ::
@@ -685,11 +839,15 @@ Le réflexe à avoir ici : :voir-exemple[simplifier avant de dériver]{id="fvr-s
 #solution
 **On simplifie avant de dériver.** Multiplier par $\dfrac{1}{x}$ revient à diviser par $x$, puis on scinde la fraction :
 
-$$f(x) = \frac{x^2+1}{x} = \frac{x^2}{x}+\frac{1}{x} = x+\frac{1}{x}$$
+$$
+f(x) = \frac{x^2+1}{x} = \frac{x^2}{x}+\frac{1}{x} = x+\frac{1}{x}
+$$
 
 C'est maintenant une simple somme, avec $(x)' = 1$ et $\left(\dfrac{1}{x}\right)' = -\dfrac{1}{x^2}$ :
 
-$$\boxed{f'(x) = 1-\frac{1}{x^2}}$$
+$$
+\boxed{f'(x) = 1-\frac{1}{x^2}}
+$$
 ::
 :::
 
@@ -707,9 +865,13 @@ La formule déroulée sur d'autres inverses : :voir-exemple[dériver un inverse]
 #solution
 Forme $\dfrac{1}{u}$ avec $u = x^2+1$ et $u' = 2x$. La **Prop 3.5** donne :
 
-$$f'(x) = -\frac{u'}{u^2} = -\frac{2x}{(x^2+1)^2}$$
+$$
+f'(x) = -\frac{u'}{u^2} = -\frac{2x}{(x^2+1)^2}
+$$
 
-$$\boxed{f'(x) = -\frac{2x}{(x^2+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{2x}{(x^2+1)^2}}
+$$
 
 Remarque : $u = x^2+1$ ne s'annule jamais, $f$ est donc dérivable sur $\mathbb{R}$ tout entier.
 ::
@@ -725,15 +887,21 @@ Le même calcul avec une racine au dénominateur : :voir-exemple[inverse contena
 #solution
 Forme $\dfrac{1}{u}$ avec $u = \sqrt{x}+1$ (la racine ne porte que sur $x$). La dérivée du $1$ est nulle, donc
 
-$$u' = \frac{1}{2\sqrt{x}} \qquad \text{sur } ]0,+\infty[$$
+$$
+u' = \frac{1}{2\sqrt{x}} \qquad \text{sur } ]0,+\infty[
+$$
 
 La **Prop 3.5** donne alors :
 
-$$f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x}}}{(\sqrt{x}+1)^2}$$
+$$
+f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x}}}{(\sqrt{x}+1)^2}
+$$
 
 Une fraction au numérateur d'une fraction : on la « descend » au dénominateur.
 
-$$\boxed{f'(x) = -\frac{1}{2\sqrt{x}\,(\sqrt{x}+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{1}{2\sqrt{x}\,(\sqrt{x}+1)^2}}
+$$
 ::
 
 ::question{label="3."}
@@ -747,9 +915,13 @@ Le traitement de la constante, détaillé ailleurs : :voir-exemple[une constante
 #solution
 Forme $\dfrac{k}{u}$ avec $k = 3$, $u = 2x^2+1$ et $u' = 4x$ :
 
-$$f'(x) = -\frac{k\,u'}{u^2} = -\frac{3\times 4x}{(2x^2+1)^2}$$
+$$
+f'(x) = -\frac{k\,u'}{u^2} = -\frac{3\times 4x}{(2x^2+1)^2}
+$$
 
-$$\boxed{f'(x) = -\frac{12x}{(2x^2+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{12x}{(2x^2+1)^2}}
+$$
 ::
 
 ::question{label="4."}
@@ -763,11 +935,15 @@ Le traitement de la constante et des signes : :voir-exemple[une constante au num
 #solution
 Forme $\dfrac{k}{u}$ avec $k = -3$, $u = x-6$ et $u' = 1$ :
 
-$$f'(x) = -\frac{k\,u'}{u^2} = -\frac{(-3)\times 1}{(x-6)^2}$$
+$$
+f'(x) = -\frac{k\,u'}{u^2} = -\frac{(-3)\times 1}{(x-6)^2}
+$$
 
 Les deux signes moins se compensent :
 
-$$\boxed{f'(x) = \frac{3}{(x-6)^2}}$$
+$$
+\boxed{f'(x) = \frac{3}{(x-6)^2}}
+$$
 ::
 
 ::question{label="5."}
@@ -781,11 +957,15 @@ Le traitement de la constante et des signes : :voir-exemple[une constante au num
 #solution
 Forme $\dfrac{k}{u}$ avec $k = -2$, $u = x^2+x+1$ et $u' = 2x+1$ :
 
-$$f'(x) = -\frac{k\,u'}{u^2} = -\frac{(-2)(2x+1)}{(x^2+x+1)^2}$$
+$$
+f'(x) = -\frac{k\,u'}{u^2} = -\frac{(-2)(2x+1)}{(x^2+x+1)^2}
+$$
 
 Les deux signes moins se compensent :
 
-$$\boxed{f'(x) = \frac{2(2x+1)}{(x^2+x+1)^2}}$$
+$$
+\boxed{f'(x) = \frac{2(2x+1)}{(x^2+x+1)^2}}
+$$
 ::
 
 ::question{label="6."}
@@ -799,11 +979,15 @@ La formule déroulée sur d'autres inverses : :voir-exemple[dériver un inverse]
 #solution
 Forme $\dfrac{1}{u}$ avec $u = 3-5x$ et $u' = -5$ :
 
-$$f'(x) = -\frac{u'}{u^2} = -\frac{-5}{(3-5x)^2}$$
+$$
+f'(x) = -\frac{u'}{u^2} = -\frac{-5}{(3-5x)^2}
+$$
 
 Les deux signes moins se compensent :
 
-$$\boxed{f'(x) = \frac{5}{(3-5x)^2}}$$
+$$
+\boxed{f'(x) = \frac{5}{(3-5x)^2}}
+$$
 
 Le dénominateur étant un carré, $f'$ est strictement positive : $f$ est croissante sur chacun des deux intervalles de son domaine.
 ::
@@ -825,11 +1009,15 @@ $u = x-1$, $u' = 1$ ; $v = x+2$, $v' = 1$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = 1\times(x+2)-(x-1)\times 1 = x+2-x+1 = 3$$
+$$
+u'v-uv' = 1\times(x+2)-(x-1)\times 1 = x+2-x+1 = 3
+$$
 
 Le signe moins s'applique bien à **tout** le second terme, d'où le $+1$ et non $-1$. Les $x$ se simplifient et il reste une constante.
 
-$$\boxed{f'(x) = \frac{3}{(x+2)^2}}$$
+$$
+\boxed{f'(x) = \frac{3}{(x+2)^2}}
+$$
 ::
 
 ::question{label="2."}
@@ -845,15 +1033,21 @@ $u = \sqrt{x}$, $u' = \dfrac{1}{2\sqrt{x}}$ ; $v = x^2+1$, $v' = 2x$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = \frac{x^2+1}{2\sqrt{x}}-\sqrt{x}\times 2x$$
+$$
+u'v-uv' = \frac{x^2+1}{2\sqrt{x}}-\sqrt{x}\times 2x
+$$
 
 On met au même dénominateur $2\sqrt{x}$, en utilisant $\sqrt{x}\times 2x\times 2\sqrt{x} = 4x^2$ :
 
-$$\frac{x^2+1-4x^2}{2\sqrt{x}} = \frac{1-3x^2}{2\sqrt{x}}$$
+$$
+\frac{x^2+1-4x^2}{2\sqrt{x}} = \frac{1-3x^2}{2\sqrt{x}}
+$$
 
 Il reste à diviser par $v^2 = (x^2+1)^2$ :
 
-$$\boxed{f'(x) = \frac{1-3x^2}{2\sqrt{x}\,(x^2+1)^2}}$$
+$$
+\boxed{f'(x) = \frac{1-3x^2}{2\sqrt{x}\,(x^2+1)^2}}
+$$
 ::
 
 ::question{label="3."}
@@ -869,13 +1063,19 @@ $u = x^2$, $u' = 2x$ ; $v = x-1$, $v' = 1$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = 2x(x-1)-x^2\times 1 = 2x^2-2x-x^2 = x^2-2x$$
+$$
+u'v-uv' = 2x(x-1)-x^2\times 1 = 2x^2-2x-x^2 = x^2-2x
+$$
 
 On factorise par $x$ :
 
-$$x^2-2x = x(x-2)$$
+$$
+x^2-2x = x(x-2)
+$$
 
-$$\boxed{f'(x) = \frac{x(x-2)}{(x-1)^2}}$$
+$$
+\boxed{f'(x) = \frac{x(x-2)}{(x-1)^2}}
+$$
 
 Sous cette forme factorisée, on lit immédiatement que $f'$ s'annule en $0$ et en $2$.
 ::
@@ -893,9 +1093,13 @@ $u = 2x-3$, $u' = 2$ ; $v = 1-x$, $v' = -1$ — attention au signe, c'est le poi
 
 Numérateur de la formule :
 
-$$u'v-uv' = 2(1-x)-(2x-3)\times(-1) = 2-2x+2x-3 = -1$$
+$$
+u'v-uv' = 2(1-x)-(2x-3)\times(-1) = 2-2x+2x-3 = -1
+$$
 
-$$\boxed{f'(x) = -\frac{1}{(1-x)^2}}$$
+$$
+\boxed{f'(x) = -\frac{1}{(1-x)^2}}
+$$
 ::
 
 ::question{label="5."}
@@ -911,17 +1115,25 @@ $u = x^2+x+1$, $u' = 2x+1$ ; $v = x^2+1$, $v' = 2x$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = (2x+1)(x^2+1)-(x^2+x+1)(2x)$$
+$$
+u'v-uv' = (2x+1)(x^2+1)-(x^2+x+1)(2x)
+$$
 
 On développe chaque morceau séparément :
 
-$$(2x+1)(x^2+1) = 2x^3+2x+x^2+1 \qquad\text{et}\qquad (x^2+x+1)(2x) = 2x^3+2x^2+2x$$
+$$
+(2x+1)(x^2+1) = 2x^3+2x+x^2+1 \qquad\text{et}\qquad (x^2+x+1)(2x) = 2x^3+2x^2+2x
+$$
 
 Différence, les $2x^3$ et les $2x$ s'éliminant :
 
-$$2x^3+2x+x^2+1-2x^3-2x^2-2x = 1-x^2$$
+$$
+2x^3+2x+x^2+1-2x^3-2x^2-2x = 1-x^2
+$$
 
-$$\boxed{f'(x) = \frac{1-x^2}{(x^2+1)^2}}$$
+$$
+\boxed{f'(x) = \frac{1-x^2}{(x^2+1)^2}}
+$$
 
 *⚠️ La correction officielle écrit au numérateur $2x(x^2+1)-2x(x^2+x+1)$ : le $u' = 2x+1$ y est devenu $2x$ (coquille). Avec le bon $u'$, on retrouve bien $1-x^2$.*
 ::
@@ -939,13 +1151,19 @@ $u = 2x^2+1$, $u' = 4x$ ; $v = 2x^2-1$, $v' = 4x$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = 4x(2x^2-1)-(2x^2+1)(4x)$$
+$$
+u'v-uv' = 4x(2x^2-1)-(2x^2+1)(4x)
+$$
 
 Les deux termes ont $4x$ en facteur : on **factorise** au lieu de développer.
 
-$$4x\big[(2x^2-1)-(2x^2+1)\big] = 4x\times(-2) = -8x$$
+$$
+4x\big[(2x^2-1)-(2x^2+1)\big] = 4x\times(-2) = -8x
+$$
 
-$$\boxed{f'(x) = -\frac{8x}{(2x^2-1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{8x}{(2x^2-1)^2}}
+$$
 ::
 :::
 
@@ -969,7 +1187,9 @@ En effet, en $0$ le taux d'accroissement $\dfrac{\sqrt{h}-0}{h} = \dfrac{1}{\sqr
 
 Sur $]0,+\infty[$ :
 
-$$\boxed{f_1'(x) = \frac{1}{2\sqrt{x}}}$$
+$$
+\boxed{f_1'(x) = \frac{1}{2\sqrt{x}}}
+$$
 ::
 
 ::question{label="2."}
@@ -985,7 +1205,9 @@ Le dénominateur s'annule en $x = 0$ : $f_2$ est dérivable sur $\mathbb{R}^*$.
 
 En écrivant $f_2(x) = x^{-1}$, la règle $(x^\alpha)' = \alpha x^{\alpha-1}$ donne $-1\times x^{-2}$ :
 
-$$\boxed{f_2'(x) = -\frac{1}{x^2}}$$
+$$
+\boxed{f_2'(x) = -\frac{1}{x^2}}
+$$
 ::
 
 ::question{label="3."}
@@ -1001,7 +1223,9 @@ $f_3$ est un **polynôme**, donc dérivable sur $\mathbb{R}$.
 
 Dérivation terme à terme : $(x^2)' = 2x$, $(5x)' = 5$, $(-1)' = 0$.
 
-$$\boxed{f_3'(x) = 2x+5}$$
+$$
+\boxed{f_3'(x) = 2x+5}
+$$
 ::
 
 ::question{label="4."}
@@ -1015,9 +1239,13 @@ Les phrases de justification attendues : :voir-exemple[justifier un ensemble de 
 #solution
 $f_4$ est un **polynôme**, donc dérivable sur $\mathbb{R}$.
 
-$$(3x^3)' = 9x^2, \qquad (5x^2)' = 10x, \qquad (-2x)' = -2, \qquad (2)' = 0$$
+$$
+(3x^3)' = 9x^2, \qquad (5x^2)' = 10x, \qquad (-2x)' = -2, \qquad (2)' = 0
+$$
 
-$$\boxed{f_4'(x) = 9x^2+10x-2}$$
+$$
+\boxed{f_4'(x) = 9x^2+10x-2}
+$$
 ::
 
 ::question{label="5."}
@@ -1033,7 +1261,9 @@ Même dénominateur qu'en **2.** : $f_5$ est dérivable sur $\mathbb{R}^*$.
 
 C'est $3\times\dfrac{1}{x}$, donc sa dérivée est $3\times\left(-\dfrac{1}{x^2}\right)$ :
 
-$$\boxed{f_5'(x) = -\frac{3}{x^2}}$$
+$$
+\boxed{f_5'(x) = -\frac{3}{x^2}}
+$$
 ::
 
 ::question{label="6."}
@@ -1049,9 +1279,13 @@ $f_6$ est un **produit de polynômes**, donc un polynôme : dérivable sur $\mat
 
 Formule du produit avec $u = x+3$, $u' = 1$ et $v = x-2$, $v' = 1$ :
 
-$$f_6'(x) = u'v+uv' = (x-2)+(x+3) = 2x+1$$
+$$
+f_6'(x) = u'v+uv' = (x-2)+(x+3) = 2x+1
+$$
 
-$$\boxed{f_6'(x) = 2x+1}$$
+$$
+\boxed{f_6'(x) = 2x+1}
+$$
 
 *Vérification en développant : $f_6(x) = x^2+x-6$, de dérivée $2x+1$.*
 
@@ -1071,9 +1305,13 @@ $f_7$ est un **produit de polynômes**, donc dérivable sur $\mathbb{R}$.
 
 $u = 3x+5$, $u' = 3$ ; $v = 5x^2+1$, $v' = 10x$ :
 
-$$f_7'(x) = 3(5x^2+1)+(3x+5)(10x) = 15x^2+3+30x^2+50x$$
+$$
+f_7'(x) = 3(5x^2+1)+(3x+5)(10x) = 15x^2+3+30x^2+50x
+$$
 
-$$\boxed{f_7'(x) = 45x^2+50x+3}$$
+$$
+\boxed{f_7'(x) = 45x^2+50x+3}
+$$
 
 *⚠️ Même erreur de recopie dans la correction officielle, qui applique la formule du **quotient** $\dfrac{3x+5}{5x^2+1}$ ; pour le produit demandé, le résultat est $45x^2+50x+3$ — signe $+$ entre les deux termes, et pas de dénominateur.*
 ::
@@ -1091,9 +1329,13 @@ Le dénominateur s'annule en $x = 1$ : $f_8$ est dérivable sur $\mathbb{R}\setm
 
 $u = x+1$, $u' = 1$ ; $v = x-1$, $v' = 1$. Numérateur de la formule :
 
-$$u'v-uv' = (x-1)-(x+1) = x-1-x-1 = -2$$
+$$
+u'v-uv' = (x-1)-(x+1) = x-1-x-1 = -2
+$$
 
-$$\boxed{f_8'(x) = -\frac{2}{(x-1)^2}}$$
+$$
+\boxed{f_8'(x) = -\frac{2}{(x-1)^2}}
+$$
 
 $f_8'$ est toujours strictement négative : $f_8$ est décroissante sur chacun des deux intervalles.
 ::
@@ -1111,9 +1353,13 @@ Le dénominateur s'annule en $x = 5$ : $f_9$ est dérivable sur $\mathbb{R}\setm
 
 $u = 3x-4$, $u' = 3$ ; $v = 5-x$, $v' = -1$. Numérateur de la formule :
 
-$$u'v-uv' = 3(5-x)-(3x-4)\times(-1) = 15-3x+3x-4 = 11$$
+$$
+u'v-uv' = 3(5-x)-(3x-4)\times(-1) = 15-3x+3x-4 = 11
+$$
 
-$$\boxed{f_9'(x) = \frac{11}{(5-x)^2}}$$
+$$
+\boxed{f_9'(x) = \frac{11}{(5-x)^2}}
+$$
 ::
 
 ::question{label="10."}
@@ -1129,11 +1375,15 @@ $f_{10}$ est la somme d'un polynôme et d'un quotient dont le dénominateur vér
 
 Le premier terme donne $(x^2)' = 2x$. Pour le quotient, $u = x+1$, $u' = 1$ ; $v = x^2+1$, $v' = 2x$ :
 
-$$u'v-uv' = (x^2+1)-(x+1)(2x) = x^2+1-2x^2-2x = 1-2x-x^2$$
+$$
+u'v-uv' = (x^2+1)-(x+1)(2x) = x^2+1-2x^2-2x = 1-2x-x^2
+$$
 
 En sommant les deux contributions :
 
-$$\boxed{f_{10}'(x) = 2x+\frac{1-2x-x^2}{(x^2+1)^2}}$$
+$$
+\boxed{f_{10}'(x) = 2x+\frac{1-2x-x^2}{(x^2+1)^2}}
+$$
 ::
 :::
 
@@ -1151,7 +1401,9 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Fonction affine : $(3x)' = 3$ et $(2)' = 0$.
 
-$$\boxed{f'(x) = 3}$$
+$$
+\boxed{f'(x) = 3}
+$$
 ::
 
 ::question{label="2."}
@@ -1165,7 +1417,9 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Fonction affine, de coefficient directeur $-7$ : $(1)' = 0$ et $(-7x)' = -7$.
 
-$$\boxed{f'(x) = -7}$$
+$$
+\boxed{f'(x) = -7}
+$$
 ::
 
 ::question{label="3."}
@@ -1179,7 +1433,9 @@ Le même travail sur une autre somme, coefficients compris : :voir-exemple[déri
 #solution
 Fonction affine : $\dfrac{1}{7}$ est une constante, de dérivée nulle, et le coefficient directeur est $-\dfrac{5}{7}$.
 
-$$\boxed{f'(x) = -\dfrac{5}{7}}$$
+$$
+\boxed{f'(x) = -\dfrac{5}{7}}
+$$
 ::
 
 ::question{label="4."}
@@ -1193,7 +1449,9 @@ Le même travail sur une autre somme : :voir-exemple[dériver une somme terme à
 #solution
 Polynôme, dérivé terme à terme : $(x^2)' = 2x$, $(-x)' = -1$, $(1)' = 0$.
 
-$$\boxed{f'(x) = 2x-1}$$
+$$
+\boxed{f'(x) = 2x-1}
+$$
 ::
 
 ::question{label="5."}
@@ -1207,9 +1465,13 @@ Le même travail sur une autre somme, coefficients compris : :voir-exemple[déri
 #solution
 Polynôme. On dérive terme à terme en simplifiant les coefficients :
 
-$$\left(\frac{2}{3}x^3\right)' = \frac{2}{3}\times 3x^2 = 2x^2, \qquad \left(\frac{1}{2}x^2\right)' = \frac{1}{2}\times 2x = x, \qquad (x)' = 1$$
+$$
+\left(\frac{2}{3}x^3\right)' = \frac{2}{3}\times 3x^2 = 2x^2, \qquad \left(\frac{1}{2}x^2\right)' = \frac{1}{2}\times 2x = x, \qquad (x)' = 1
+$$
 
-$$\boxed{f'(x) = 2x^2-x+1}$$
+$$
+\boxed{f'(x) = 2x^2-x+1}
+$$
 
 *⚠️ La correction officielle imprime $2x-x+1$ : l'exposant du premier terme a sauté, il faut lire $2x^2-x+1$.*
 ::
@@ -1227,7 +1489,9 @@ Fonction élémentaire multipliée par une constante : $(2\sqrt{x})' = 2\times\d
 
 Les deux $2$ se simplifient :
 
-$$\boxed{f'(x) = \frac{1}{\sqrt{x}}}$$
+$$
+\boxed{f'(x) = \frac{1}{\sqrt{x}}}
+$$
 
 L'intervalle $\mathbb{R}_+^*$ est bien celui de dérivabilité : en $0$, la racine n'est pas dérivable.
 ::
@@ -1243,9 +1507,13 @@ La dérivée du logarithme, sur d'autres exemples : :voir-exemple[dériver un lo
 #solution
 Somme, avec $\ln'(x) = \dfrac{1}{x}$ (section 4) et le coefficient $2$ qui sort :
 
-$$(x)' = 1 \qquad\text{et}\qquad (2\ln x)' = 2\times\frac{1}{x} = \frac{2}{x}$$
+$$
+(x)' = 1 \qquad\text{et}\qquad (2\ln x)' = 2\times\frac{1}{x} = \frac{2}{x}
+$$
 
-$$\boxed{f'(x) = 1+\frac{2}{x}}$$
+$$
+\boxed{f'(x) = 1+\frac{2}{x}}
+$$
 
 L'intervalle $]0,+\infty[$ est imposé par le domaine du logarithme.
 ::
@@ -1261,15 +1529,21 @@ La technique de réécriture, détaillée : :voir-exemple[passer en puissance n�
 #solution
 **Première voie** — puissance : $f(x) = x^{-2}$, donc
 
-$$f'(x) = -2x^{-3} = -\frac{2}{x^3}$$
+$$
+f'(x) = -2x^{-3} = -\frac{2}{x^3}
+$$
 
 **Seconde voie** — Prop 3.5 avec $u = x^2$, $u' = 2x$ :
 
-$$f'(x) = -\frac{2x}{x^4} = -\frac{2}{x^3}$$
+$$
+f'(x) = -\frac{2x}{x^4} = -\frac{2}{x^3}
+$$
 
 Les deux méthodes concordent.
 
-$$\boxed{f'(x) = -\frac{2}{x^3}}$$
+$$
+\boxed{f'(x) = -\frac{2}{x^3}}
+$$
 ::
 
 ::question{label="9."}
@@ -1285,15 +1559,21 @@ Deux applications de la **Prop 3.5**.
 
 **Premier terme** : $u = \sin x$, $u' = \cos x$, d'où
 
-$$\left(\frac{1}{\sin x}\right)' = -\frac{\cos x}{\sin^2 x}$$
+$$
+\left(\frac{1}{\sin x}\right)' = -\frac{\cos x}{\sin^2 x}
+$$
 
 **Second terme** : $u = \cos x$, $u' = -\sin x$, d'où
 
-$$\left(\frac{1}{\cos x}\right)' = -\frac{-\sin x}{\cos^2 x} = +\frac{\sin x}{\cos^2 x}$$
+$$
+\left(\frac{1}{\cos x}\right)' = -\frac{-\sin x}{\cos^2 x} = +\frac{\sin x}{\cos^2 x}
+$$
 
 Les deux signes moins se compensent ici, ce qui explique la différence de signe entre les deux morceaux du résultat.
 
-$$\boxed{f'(x) = -\frac{\cos x}{\sin^2 x}+\frac{\sin x}{\cos^2 x}}$$
+$$
+\boxed{f'(x) = -\frac{\cos x}{\sin^2 x}+\frac{\sin x}{\cos^2 x}}
+$$
 
 *⚠️ L'énoncé écrit « sur $\mathbb{R}$ », mais il faut $\sin x \neq 0$ **et** $\cos x \neq 0$, c'est-à-dire $x \neq k\dfrac{\pi}{2}$, $k\in\mathbb{Z}$.*
 ::
@@ -1309,9 +1589,13 @@ La technique de réécriture, détaillée : :voir-exemple[passer en puissance n�
 #solution
 Somme. Le premier terme donne $(x)' = 1$. Pour le second, on passe en puissance :
 
-$$\frac{1}{\sqrt{x}} = x^{-1/2} \quad\Longrightarrow\quad \left(x^{-1/2}\right)' = -\frac{1}{2}x^{-3/2} = -\frac{1}{2x\sqrt{x}}$$
+$$
+\frac{1}{\sqrt{x}} = x^{-1/2} \quad\Longrightarrow\quad \left(x^{-1/2}\right)' = -\frac{1}{2}x^{-3/2} = -\frac{1}{2x\sqrt{x}}
+$$
 
-$$\boxed{f'(x) = 1-\frac{1}{2x\sqrt{x}}}$$
+$$
+\boxed{f'(x) = 1-\frac{1}{2x\sqrt{x}}}
+$$
 
 *⚠️ L'énoncé écrit « sur $\mathbb{R}$ », mais $\dfrac{1}{\sqrt{x}}$ exige $x > 0$ : le bon ensemble est $\mathbb{R}_+^*$.*
 ::
@@ -1327,13 +1611,19 @@ Deux ingrédients ici : :voir-exemple[une constante au numérateur]{id="fvr-cons
 #solution
 Forme $\dfrac{k}{u}$ avec $k = 5$, $u = x+e^x$ et, puisque $(e^x)' = e^x$ :
 
-$$u' = 1+e^x$$
+$$
+u' = 1+e^x
+$$
 
 La **Prop 3.5** donne :
 
-$$f'(x) = -\frac{k\,u'}{u^2} = -\frac{5(1+e^x)}{(x+e^x)^2}$$
+$$
+f'(x) = -\frac{k\,u'}{u^2} = -\frac{5(1+e^x)}{(x+e^x)^2}
+$$
 
-$$\boxed{f'(x) = -\frac{5(1+e^x)}{(x+e^x)^2}}$$
+$$
+\boxed{f'(x) = -\frac{5(1+e^x)}{(x+e^x)^2}}
+$$
 
 *⚠️ Il faut $x+e^x \neq 0$ : cela exclut un unique réel $x_0 \approx -0{,}567$, celui où $e^x = -x$.*
 ::
@@ -1349,11 +1639,15 @@ Deux chemins possibles : :voir-exemple[la formule du produit]{id="fvr-produit"} 
 #solution
 **On développe d'abord**, c'est plus court que la formule du produit :
 
-$$f(x) = x^3+3x$$
+$$
+f(x) = x^3+3x
+$$
 
 Puis dérivation terme à terme :
 
-$$\boxed{f'(x) = 3x^2+3}$$
+$$
+\boxed{f'(x) = 3x^2+3}
+$$
 
 *Par la formule du produit : $1\times(x^2+3)+x\times 2x = x^2+3+2x^2 = 3x^2+3$. Même résultat.*
 ::
@@ -1369,13 +1663,19 @@ Le même produit avec une exponentielle, et la factorisation finale : :voir-exem
 #solution
 Produit avec $u = e^x$, $u' = e^x$ ; $v = x^2+2x+5$, $v' = 2x+2$ :
 
-$$f'(x) = u'v+uv' = e^x(x^2+2x+5)+e^x(2x+2)$$
+$$
+f'(x) = u'v+uv' = e^x(x^2+2x+5)+e^x(2x+2)
+$$
 
 On **factorise par $e^x$** — réflexe systématique avec l'exponentielle — puis on regroupe les termes semblables :
 
-$$f'(x) = e^x\big[(x^2+2x+5)+(2x+2)\big] = e^x(x^2+4x+7)$$
+$$
+f'(x) = e^x\big[(x^2+2x+5)+(2x+2)\big] = e^x(x^2+4x+7)
+$$
 
-$$\boxed{f'(x) = e^x(x^2+4x+7)}$$
+$$
+\boxed{f'(x) = e^x(x^2+4x+7)}
+$$
 ::
 
 ::question{label="14."}
@@ -1391,13 +1691,19 @@ Produit dont le second facteur est un $\ln u$.
 
 **Le facteur logarithme d'abord** : avec $u = x^2+x+1$ et $u' = 2x+1$, le tableau de la section 5 donne
 
-$$\big(\ln(x^2+x+1)\big)' = \frac{2x+1}{x^2+x+1}$$
+$$
+\big(\ln(x^2+x+1)\big)' = \frac{2x+1}{x^2+x+1}
+$$
 
 **Puis le produit**, avec le premier facteur $x+1$ de dérivée $1$ :
 
-$$f'(x) = 1\times\ln(x^2+x+1)+(x+1)\times\frac{2x+1}{x^2+x+1}$$
+$$
+f'(x) = 1\times\ln(x^2+x+1)+(x+1)\times\frac{2x+1}{x^2+x+1}
+$$
 
-$$\boxed{f'(x) = \ln(x^2+x+1)+\frac{(x+1)(2x+1)}{x^2+x+1}}$$
+$$
+\boxed{f'(x) = \ln(x^2+x+1)+\frac{(x+1)(2x+1)}{x^2+x+1}}
+$$
 ::
 
 ::question{label="15."}
@@ -1413,13 +1719,19 @@ Produit avec $u = x$, $u' = 1$ ; $v = \cos(2x-1)$.
 
 Pour $v'$, on applique la formule de la section 5, $\big(\cos(ax+b)\big)' = -a\sin(ax+b)$, avec $a = 2$ et $b = -1$ :
 
-$$v' = -2\sin(2x-1)$$
+$$
+v' = -2\sin(2x-1)
+$$
 
 D'où :
 
-$$f'(x) = 1\times\cos(2x-1)+x\times\big(-2\sin(2x-1)\big)$$
+$$
+f'(x) = 1\times\cos(2x-1)+x\times\big(-2\sin(2x-1)\big)
+$$
 
-$$\boxed{f'(x) = \cos(2x-1)-2x\sin(2x-1)}$$
+$$
+\boxed{f'(x) = \cos(2x-1)-2x\sin(2x-1)}
+$$
 ::
 
 ::question{label="16."}
@@ -1435,11 +1747,15 @@ $u = 1-7x$, $u' = -7$ ; $v = 2x+1$, $v' = 2$.
 
 Numérateur de la formule :
 
-$$u'v-uv' = -7(2x+1)-(1-7x)\times 2 = -14x-7-2+14x = -9$$
+$$
+u'v-uv' = -7(2x+1)-(1-7x)\times 2 = -14x-7-2+14x = -9
+$$
 
 Les termes en $x$ s'éliminent.
 
-$$\boxed{f'(x) = -\frac{9}{(2x+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{9}{(2x+1)^2}}
+$$
 
 *⚠️ La correction officielle écrit $(2x-1)^2$ au dénominateur : coquille, le dénominateur de $f$ est $2x+1$, donc $v^2 = (2x+1)^2$.*
 ::
@@ -1459,7 +1775,9 @@ Forme $\dfrac{1}{u}$ avec $u = x^2+x+1$ et $u' = 2x+1$.
 
 La **Prop 3.5** donne :
 
-$$\boxed{f'(x) = -\frac{2x+1}{(x^2+x+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{2x+1}{(x^2+x+1)^2}}
+$$
 ::
 
 ::question{label="18."}
@@ -1473,9 +1791,13 @@ La formule sur d'autres exponentielles composées : :voir-exemple[dériver une e
 #solution
 Forme $e^u$ (section 5) avec $u = -x^2$, donc $u' = -2x$ :
 
-$$f'(x) = u'e^u = -2x\,e^{-x^2}$$
+$$
+f'(x) = u'e^u = -2x\,e^{-x^2}
+$$
 
-$$\boxed{f'(x) = -2x\,e^{-x^2}}$$
+$$
+\boxed{f'(x) = -2x\,e^{-x^2}}
+$$
 
 L'exponentielle n'est jamais modifiée par la dérivation : elle est simplement multipliée par $u'$.
 ::
@@ -1493,15 +1815,21 @@ Forme $\dfrac{1}{u}$ avec $u = \sqrt{x+1}+1$.
 
 **Calcul de $u'$** par la **Prop 3.4**, $(\sqrt{w})' = \dfrac{w'}{2\sqrt{w}}$, avec $w = x+1$ et $w' = 1$ :
 
-$$u' = \frac{1}{2\sqrt{x+1}}$$
+$$
+u' = \frac{1}{2\sqrt{x+1}}
+$$
 
 **Puis la Prop 3.5** :
 
-$$f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x+1}}}{(\sqrt{x+1}+1)^2}$$
+$$
+f'(x) = -\frac{u'}{u^2} = -\frac{\dfrac{1}{2\sqrt{x+1}}}{(\sqrt{x+1}+1)^2}
+$$
 
 On simplifie l'étage de fractions en faisant passer $2\sqrt{x+1}$ au dénominateur :
 
-$$\boxed{f'(x) = -\frac{1}{2\sqrt{x+1}\,(\sqrt{x+1}+1)^2}}$$
+$$
+\boxed{f'(x) = -\frac{1}{2\sqrt{x+1}\,(\sqrt{x+1}+1)^2}}
+$$
 
 La condition $x > -1$ garantit à la fois l'existence de la racine et sa dérivabilité.
 ::
