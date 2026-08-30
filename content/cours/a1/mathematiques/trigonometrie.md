@@ -268,8 +268,21 @@ $$
 1. **Uniformiser** : s'il y a un sinus d'un côté et un cosinus de l'autre, tout convertir avec $\sin\theta = \cos\!\left(\frac{\pi}{2}-\theta\right)$.
 2. **Reconnaître** l'angle de référence : quel angle usuel a ce cosinus (ou ce sinus) ?
 3. **Écrire les deux familles**, sans oublier le $+2k\pi$.
-4. **Sélectionner** celles qui tombent dans l'intervalle demandé, en faisant varier $k$ — la seconde famille exige souvent $k=1$.
-5. **Vérifier** un représentant de chaque famille dans l'équation de départ.
+4. **Résoudre chacune** — voir l'encadré ci-dessous : à ce stade il n'y a plus de trigonométrie du tout.
+5. **Sélectionner** celles qui tombent dans l'intervalle demandé, en faisant varier $k$ — la seconde famille exige souvent $k=1$.
+6. **Vérifier** un représentant de chaque famille dans l'équation de départ.
+::
+
+::rappel{titre="Résoudre une famille : c'est du premier degré, rien de plus" icone="i-lucide-calculator"}
+Une fois la famille écrite, $x$ n'apparaît plus que dans des sommes : c'est une **équation du premier degré**, et le $2k\pi$ se traite comme n'importe quelle constante. Sur l'exemple $\cos\!\left(\frac{\pi}{2}-2x\right) = \cos\!\left(x+\frac{\pi}{6}\right)$ :
+
+1. **Distribuer le signe** dans la famille « arguments opposés ». Si $B = x+\frac{\pi}{6}$, alors $-B = -x-\frac{\pi}{6}$ : le moins tombe sur les **deux** termes, pas seulement sur le premier.
+2. **Rassembler** : les $x$ d'un côté, les multiples de $\pi$ de l'autre.
+3. **Réduire au même dénominateur** les fractions de $\pi$ — c'est là que $\frac{\pi}{2}-\frac{\pi}{6}$ devient $\frac{\pi}{3}$, et $\frac{\pi}{2}+\frac{\pi}{6}$ devient $\frac{2\pi}{3}$.
+4. **Diviser par le coefficient de $x$** — et diviser **aussi** le $2k\pi$. C'est l'étape la plus souvent ratée : $3x = \frac{\pi}{3}-2k\pi$ donne $x = \frac{\pi}{9}-\frac{2k\pi}{3}$, pas $x = \frac{\pi}{9}-2k\pi$.
+5. **Le signe devant $k$ est libre** : $k$ parcourt $\mathbb{Z}$, donc $-\frac{2k\pi}{3}$ et $+\frac{2k\pi}{3}$ décrivent exactement le même ensemble. On écrit $+$ par convention.
+
+**Conséquence de l'étape 4 : les deux familles n'ont pas le même pas.** Si $x$ arrive avec un coefficient $3$, ses solutions sont espacées de $\frac{2\pi}{3}$ — trois par tour — alors qu'une famille où $x$ reste seul en a une seule par tour. Il faut y penser au moment de lister les solutions d'un intervalle.
 ::
 
 ## 9. Les fonctions réciproques : arccos, arcsin, arctan
