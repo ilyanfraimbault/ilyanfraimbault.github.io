@@ -37,6 +37,18 @@
   padding-block: 0.25rem;
 }
 
+/* Dans cette chaîne de rendu, une formule `$$ … $$` ressort en KaTeX « inline »
+   plutôt qu'en `.katex-display` : seule dans son paragraphe, elle joue pourtant
+   le rôle d'une formule en bloc. On lui applique donc le même traitement, sans
+   quoi une formule plus large que la colonne élargit la page sur mobile. */
+.cours-body p > .katex:only-child {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-block: 0.25rem;
+}
+
 .cours-body .katex {
   font-size: 1.05em;
 }
