@@ -733,7 +733,7 @@ $$\boxed{S = \left[3,+\infty\right[}$$
 
 :::
 
-:::exercice{titre="Exercice 3" theme="Études de fonctions"}
+::::exercice{titre="Exercice 3" theme="Études de fonctions"}
 
 Pour chacune des fonctions suivantes : déterminer le domaine de définition, calculer la dérivée et préciser le domaine de dérivabilité, étudier le signe de la dérivée, puis dresser le tableau de variations.
 
@@ -744,7 +744,7 @@ Pour chacune des fonctions suivantes : déterminer le domaine de définition, ca
 3. **Signe de $f'$** : on écarte les facteurs toujours positifs ($e^u > 0$ par Prop 1.3, une racine carrée, un carré…) et on étudie le signe du facteur restant. Si ce signe n'est pas évident, on étudie une **fonction auxiliaire**.
 4. **Limites aux bornes** (croissances comparées si besoin) et **tableau de variations**.
 
-::question{label="1."}
+:::question{label="1."}
 
 Étudier $f_1 : x \mapsto e^{\sqrt{x}}$
 
@@ -766,15 +766,23 @@ $$f_1'(x) = \frac{1}{2\sqrt{x}}\,e^{\sqrt{x}} \quad \text{sur } ]0,+\infty[$$
 
 **Limites et valeurs** : $f_1(0) = e^0 = 1$ ; quand $x\to+\infty$, $\sqrt{x}\to+\infty$ donc $e^{\sqrt{x}}\to+\infty$ (composition de limites).
 
-```
-x      | 0              +∞
-f₁'(x) |      +
-f₁     | 1   ↗          +∞
-```
-
+::tableau-variations
+---
+titre: Variations de f₁ sur [0 ; +∞[
+bornes: ['0', '+∞']
+lignes:
+  - nom: f₁′(x)
+    type: signe
+    entre: ['+']
+  - nom: f₁
+    type: variation
+    aux: ['1', '+∞']
+---
 ::
 
-::question{label="2."}
+:::
+
+:::question{label="2."}
 
 Étudier $f_2 : x \mapsto \ln(-x^2+3x-2)$
 
@@ -800,17 +808,26 @@ $$f_2'(x) = \frac{-2x+3}{-x^2+3x-2} \quad \text{sur } ]1,2[$$
 
 $$f_2\left(\tfrac{3}{2}\right) = \ln\left(-\tfrac{9}{4}+\tfrac{9}{2}-2\right) = \ln\tfrac{1}{4} = -2\ln 2$$
 
-```
-x      | 1           3/2           2
-f₂'(x) |      +       0      −
-f₂     | −∞  ↗     −2ln2    ↘     −∞
-```
+::tableau-variations
+---
+titre: Variations de f₂ sur ]1 ; 2[
+bornes: ['1', '3/2', '2']
+lignes:
+  - nom: f₂′(x)
+    type: signe
+    entre: ['+', '−']
+    aux: ['', '0', '']
+  - nom: f₂
+    type: variation
+    aux: ['−∞', '−2ln 2', '−∞']
+---
+::
 
 ⚠️ *Le tableau de la correction officielle affiche $\ln(3)$ comme maximum : c'est une coquille — $f_2\left(\frac{3}{2}\right) = \ln\frac{1}{4} = -2\ln 2$ (et $-x^2+3x-2$ ne dépasse jamais $\frac{1}{4}$, donc $\ln 3$ est impossible).*
 
-::
+:::
 
-::question{label="3."}
+:::question{label="3."}
 
 Étudier $f_3 : x \mapsto x\,e^{1/x}$
 
@@ -832,12 +849,25 @@ $$f_3'(x) = e^{1/x}+x\left(-\frac{1}{x^2}\right)e^{1/x} = e^{1/x}\left(1-\frac{1
 
 **Signe** : $e^{1/x} > 0$, donc $f_3'$ est du signe du quotient $\dfrac{x-1}{x}$ :
 
-```
-x        | −∞      0       1      +∞
-x−1      |    −    ‖   −   0   +
-x        |    −    ‖   +       +
-(x−1)/x  |    +    ‖   −   0   +
-```
+::tableau-variations
+---
+titre: Signe du quotient (x − 1)/x
+bornes: ['−∞', '0', '1', '+∞']
+barres: [1]
+lignes:
+  - nom: x − 1
+    type: signe
+    entre: ['−', '−', '+']
+    aux: ['', '', '0', '']
+  - nom: x
+    type: signe
+    entre: ['−', '+', '+']
+  - nom: (x − 1)/x
+    type: signe
+    entre: ['+', '−', '+']
+    aux: ['', '', '0', '']
+---
+::
 
 **Limites** (les 4 bornes) :
 
@@ -847,15 +877,25 @@ x        |    −    ‖   +       +
 - $x\to+\infty$ : $e^{1/x}\to 1$ donc $f_3(x)\to+\infty$.
 - Minimum local en $1$ : $f_3(1) = e$.
 
-```
-x      | −∞         0 ‖ 0          1         +∞
-f₃'(x) |      +       ‖      −     0    +
-f₃     | −∞  ↗  0⁻    ‖ +∞   ↘     e   ↗  +∞
-```
-
+::tableau-variations
+---
+titre: Variations de f₃ sur ℝ*
+bornes: ['−∞', '0', '1', '+∞']
+barres: [1]
+lignes:
+  - nom: f₃′(x)
+    type: signe
+    entre: ['+', '−', '+']
+    aux: ['', '', '0', '']
+  - nom: f₃
+    type: variation
+    aux: ['−∞', ['0⁻', '+∞'], 'e', '+∞']
+---
 ::
 
-::question{label="4."}
+:::
+
+:::question{label="4."}
 
 Étudier $f_4 : x \mapsto \dfrac{\sin x}{x}$
 
@@ -883,37 +923,73 @@ Aux bornes : $g(n\pi) = n\pi\cos(n\pi)-\sin(n\pi) = (-1)^n\,n\pi$. Sur chaque $[
 
 Pour $n$ **pair** :
 
-```
-x      | nπ         xₙ          (n+1)π
-g'(x)  | 0      −    ⋮      −      0
-g      | nπ   ↘      0      ↘   −(n+1)π
-```
+::tableau-variations
+---
+titre: Variations de g sur [nπ ; (n+1)π], n pair
+bornes: ['nπ', 'xₙ', '(n+1)π']
+lignes:
+  - nom: g′(x)
+    type: signe
+    entre: ['−', '−']
+    aux: ['0', '', '0']
+  - nom: g
+    type: variation
+    aux: ['nπ', '0', '−(n+1)π']
+---
+::
 
 Pour $n$ **impair** :
 
-```
-x      | nπ         xₙ          (n+1)π
-g'(x)  | 0      +    ⋮      +      0
-g      | −nπ  ↗      0      ↗    (n+1)π
-```
+::tableau-variations
+---
+titre: Variations de g sur [nπ ; (n+1)π], n impair
+bornes: ['nπ', 'xₙ', '(n+1)π']
+lignes:
+  - nom: g′(x)
+    type: signe
+    entre: ['+', '+']
+    aux: ['0', '', '0']
+  - nom: g
+    type: variation
+    aux: ['−nπ', '0', '(n+1)π']
+---
+::
 
 **Étape 4 — tableau de variations de $f_4$.** $f_4'$ est du signe de $g$, et $f_4(n\pi) = \dfrac{\sin(n\pi)}{n\pi} = 0$ à chaque borne :
 
 Pour $n$ **pair** :
 
-```
-x      | nπ         xₙ         (n+1)π
-g(x)   |      +      0      −
-f₄     | 0    ↗   f₄(xₙ)   ↘     0
-```
+::tableau-variations
+---
+titre: Variations de f₄ sur [nπ ; (n+1)π], n pair
+bornes: ['nπ', 'xₙ', '(n+1)π']
+lignes:
+  - nom: g(x)
+    type: signe
+    entre: ['+', '−']
+    aux: ['', '0', '']
+  - nom: f₄
+    type: variation
+    aux: ['0', 'f₄(xₙ)', '0']
+---
+::
 
 Pour $n$ **impair** :
 
-```
-x      | nπ         xₙ         (n+1)π
-g(x)   |      −      0      +
-f₄     | 0    ↘   f₄(xₙ)   ↗     0
-```
+::tableau-variations
+---
+titre: Variations de f₄ sur [nπ ; (n+1)π], n impair
+bornes: ['nπ', 'xₙ', '(n+1)π']
+lignes:
+  - nom: g(x)
+    type: signe
+    entre: ['−', '+']
+    aux: ['', '0', '']
+  - nom: f₄
+    type: variation
+    aux: ['0', 'f₄(xₙ)', '0']
+---
+::
 
 *(Cas particulier $n = 0$ : $g(0) = 0$ et $g$ strictement décroissante donnent $g < 0$ sur $]0,\pi]$, donc $x_0 = 0$ : $f_4$ est **strictement décroissante** sur $]0,\pi]$, de $1$ vers $0$.)*
 
@@ -922,9 +998,9 @@ f₄     | 0    ↘   f₄(xₙ)   ↗     0
 - $x\to 0$ : $\dfrac{\sin x}{x} = \dfrac{\sin x-\sin 0}{x-0} \to \sin'(0) = \cos(0) = 1$ *(c'est un taux d'accroissement : même argument que la Prop 1.8 du cours pour $\frac{e^x-1}{x}$)* — d'où le prolongement par continuité $f_4(0) = 1$.
 - $x\to+\infty$ : $\left\lvert\dfrac{\sin x}{x}\right\rvert \leqslant \dfrac{1}{x} \to 0$, donc $f_4 \to 0$ par **encadrement** ($f_4$ oscille en s'amortissant vers $0$, ses extrema étant les $f_4(x_n)$).
 
-::
+:::
 
-::question{label="5."}
+:::question{label="5."}
 
 Étudier $f_5 : x \mapsto \sqrt{x^2-5x+6}$
 
@@ -950,15 +1026,23 @@ $$f_5'(x) = \frac{2x-5}{2\sqrt{x^2-5x+6}} \quad \text{sur } ]-\infty,2[\,\cup\,]
 
 **Limites et valeurs** : $f_5(2) = 0$, $f_5(3) = 0$ ; en $\pm\infty$, $x^2-5x+6 \to +\infty$ donc $f_5 \to +\infty$.
 
-```
-x      | −∞        2 ‖ 3        +∞
-f₅'(x) |     −       ‖      +
-f₅     | +∞  ↘   0   ‖ 0   ↗  +∞
-```
-
+::tableau-variations
+---
+titre: Variations de f₅ sur ]−∞ ; 2] ∪ [3 ; +∞[
+bornes: ['−∞', '2', '3', '+∞']
+lignes:
+  - nom: f₅′(x)
+    type: signe
+    entre: ['−', '‖', '+']
+  - nom: f₅
+    type: variation
+    aux: ['+∞', '0', '0', '+∞']
+---
 ::
 
-::question{label="6."}
+:::
+
+:::question{label="6."}
 
 Étudier $f_6 : x \mapsto e^x\ln(x+1)$
 
@@ -984,15 +1068,23 @@ $h' < 0$ sur $]-1,0[$ et $h' > 0$ sur $]0,+\infty[$ : $h$ atteint son **minimum 
 
 **Limites** : quand $x\to -1^+$, $e^x \to e^{-1}$ (fini, positif) et $\ln(x+1)\to-\infty$, donc $f_6\to-\infty$. Quand $x\to+\infty$, les deux facteurs tendent vers $+\infty$, donc $f_6\to+\infty$.
 
-```
-x      | −1             +∞
-f₆'(x) |       +
-f₆     | −∞    ↗        +∞
-```
-
+::tableau-variations
+---
+titre: Variations de f₆ sur ]−1 ; +∞[
+bornes: ['−1', '+∞']
+lignes:
+  - nom: f₆′(x)
+    type: signe
+    entre: ['+']
+  - nom: f₆
+    type: variation
+    aux: ['−∞', '+∞']
+---
 ::
 
 :::
+
+::::
 
 :::exercice{titre="Exercice 4" theme="Équations trigonométriques"}
 

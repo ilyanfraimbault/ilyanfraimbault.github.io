@@ -633,3 +633,193 @@ body.cours-large {
     display: none !important;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Tableaux de variations et de signes (composant TableauVariations).
+   --------------------------------------------------------------------------- */
+
+/* Le tableau peut être plus large que la colonne de lecture sur mobile : il
+   défile alors sur place, comme les formules. */
+.tableau-variations {
+  /* Largeur d'un intervalle et hauteur d'une ligne de variation. Le rapport
+     entre les deux est repris tel quel par le viewBox des flèches : le modifier
+     ici sans le répercuter dans le composant déformerait les pointes. */
+  --tv-largeur: 5.5rem;
+  --tv-hauteur: 5rem;
+}
+
+/* Sur petit écran, on resserre — en gardant le même rapport 1,1 entre largeur
+   et hauteur, sans quoi les pointes de flèches se déformeraient. */
+@media (max-width: 40rem) {
+  .tableau-variations {
+    --tv-largeur: 4.4rem;
+    --tv-hauteur: 4rem;
+  }
+}
+
+/* Le cadre épouse le tableau : sans cela, les colonnes de bornes — qui sont
+   dimensionnées par leur contenu — se partageraient toute la largeur restante
+   et éloigneraient les valeurs de leurs flèches. */
+.tv-cadre {
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--ui-border);
+  background-color: var(--ui-bg);
+}
+
+.tv-grille {
+  display: grid;
+  min-width: max-content;
+  align-items: stretch;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Colonne des intitulés : elle porte la seule séparation verticale franche du
+   tableau, celle qui isole les noms de lignes du corps. */
+.tv-nom {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ui-text-highlighted);
+}
+
+.tv-borne,
+.tv-intervalle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding-inline: 0.25rem;
+}
+
+.tv-borne {
+  padding-inline: 0.5rem;
+}
+
+.tv-premiere {
+  border-left: 1px solid var(--ui-border);
+}
+
+.tv-separateur {
+  border-top: 1px solid var(--ui-border);
+}
+
+/* Les lignes de variation ont besoin de hauteur : c'est elle qui rend la
+   montée et la descente lisibles d'un coup d'œil. */
+.tv-haute {
+  height: var(--tv-hauteur);
+}
+
+/* Filet vertical passant par une borne, doublé quand la valeur est exclue du
+   domaine. */
+.tv-trait {
+  position: absolute;
+  inset-block: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background-color: var(--ui-border);
+}
+
+.tv-trait-double {
+  width: 5px;
+  background-color: transparent;
+  border-left: 1px solid var(--ui-border-accented);
+  border-right: 1px solid var(--ui-border-accented);
+}
+
+/* Sur un intervalle entier hors domaine, la double barre occupe toute la case. */
+.tv-trait-plein {
+  left: 50%;
+}
+
+.tv-etiquette {
+  position: relative;
+  padding-inline: 0.25rem;
+  background-color: var(--ui-bg);
+  font-weight: 600;
+  color: var(--ui-text-highlighted);
+}
+
+/* La hauteur d'une valeur code le rôle du point : en haut un maximum, en bas
+   un minimum, au milieu un simple point de passage sur une branche monotone.
+   Les 15 px de marge correspondent à celles du tracé SVG. */
+.tv-valeur {
+  position: absolute;
+  top: calc(0.9375rem + var(--tv-p) * (100% - 1.875rem));
+  padding-inline: 0.2rem;
+  background-color: var(--ui-bg);
+  white-space: nowrap;
+  color: var(--ui-text-highlighted);
+}
+
+/* Copie hors écran des valeurs : elle ne se voit pas et n'ajoute pas de
+   hauteur, mais elle donne à la colonne la largeur de son contenu réel. */
+.tv-gabarit {
+  display: flex;
+  align-items: center;
+  height: 0;
+  visibility: hidden;
+}
+
+.tv-gabarit > span {
+  padding-inline: 0.2rem;
+  white-space: nowrap;
+}
+
+.tv-gabarit-ecart {
+  width: 0.7rem;
+}
+
+.tv-valeur-centre {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tv-valeur-gauche {
+  right: calc(50% + 0.35rem);
+  transform: translateY(-50%);
+}
+
+.tv-valeur-droite {
+  left: calc(50% + 0.35rem);
+  transform: translateY(-50%);
+}
+
+.tv-signe {
+  position: relative;
+  font-weight: 600;
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.tv-signe-plus {
+  color: var(--ui-success);
+}
+
+.tv-signe-moins {
+  color: var(--ui-error);
+}
+
+.tv-fleche {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  fill: none;
+  stroke: var(--ui-primary);
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media print {
+  .tv-cadre {
+    overflow-x: visible;
+  }
+}
