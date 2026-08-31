@@ -50,7 +50,33 @@ function surClicAncre(event: MouseEvent) {
   if (cible && racine.value?.contains(cible)) ouvert.value = true
 }
 
-onMounted(() => document.addEventListener('click', surClicAncre, true))
+/**
+ * Même problème, mais à l'arrivée sur la page : un lien venu d'ailleurs — une
+ * fiche d'exercices qui renvoie vers la section de cours correspondante — vise
+ * une ancre qui se trouve à l'intérieur de la fiche repliée. Le navigateur ne
+ * peut pas défiler vers un élément masqué : on déplie donc avant de viser.
+ * Déplier insère ensuite des milliers de pixels au-dessus de la cible, d'où le
+ * recentrage répété, le temps que la mise en page se stabilise.
+ */
+async function suivreAncreInitiale() {
+  const ancre = window.location.hash?.slice(1)
+  if (!ancre) return
+
+  const cible = document.getElementById(decodeURIComponent(ancre))
+  if (!cible || !racine.value?.contains(cible)) return
+
+  ouvert.value = true
+  await nextTick()
+
+  const centrer = () => cible.scrollIntoView({ behavior: 'auto', block: 'start' })
+  centrer()
+  for (const delai of [16, 60, 150]) setTimeout(centrer, delai)
+}
+
+onMounted(() => {
+  document.addEventListener('click', surClicAncre, true)
+  suivreAncreInitiale()
+})
 onBeforeUnmount(() => document.removeEventListener('click', surClicAncre, true))
 </script>
 

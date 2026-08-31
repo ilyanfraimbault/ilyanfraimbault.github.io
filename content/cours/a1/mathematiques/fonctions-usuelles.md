@@ -26,6 +26,9 @@ icone: i-lucide-function-square
 ::carte-lien{to="/cours/a1/mathematiques/trigonometrie" titre="Guide : comprendre le cercle trigonométrique" description="Les sections 5 et 6 ci-dessous supposent le cercle acquis. S’il ne l’est pas, tout y est repris depuis le début, figure manipulable à l’appui" icone="i-lucide-compass" meta="Cercle interactif"}
 ::
 
+::carte-lien{to="/cours/a1/mathematiques/exercices-fonctions-usuelles" titre="Fiche d’entraînement progressive" description="Si les exercices ci-dessous démarrent trop haut : quinze questions en cinq paliers, des règles de calcul sur exp et ln jusqu’aux réciproques hyperboliques" icone="i-lucide-list-checks" meta="15 questions"}
+::
+
 :::fiche{titre="Fiche de révision — Fonctions usuelles" resume="Le cours en condensé, plus un exemple entièrement traité pour chaque type de question des exercices. Les exemples portent sur d'autres fonctions que les énoncés : ils montrent la méthode sans livrer la réponse."}
 ### 1. Exponentielle
 

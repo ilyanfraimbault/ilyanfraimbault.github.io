@@ -16,6 +16,7 @@ if (!page.value) {
 
 const { openAll, closeAll } = provideCoursReveal()
 provideCoursExemples()
+provideCoursExtraits()
 
 const parent = computed(() => {
   const segments = contentPath.value.split('/').filter(Boolean)
