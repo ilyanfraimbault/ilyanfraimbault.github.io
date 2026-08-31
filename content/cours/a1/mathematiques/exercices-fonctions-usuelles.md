@@ -236,7 +236,9 @@ $$
 #indice
 L'équation ne contient que des puissances de $e^x$ : en effet $e^{2x} = \left(e^x\right)^2$. En posant $X = e^x$, elle devient un simple trinôme du second degré en $X$.
 
-Un point à ne surtout pas oublier au retour : $X = e^x$ est **strictement positif**. Une racine négative ou nulle du trinôme devrait donc être écartée — ici il faudra vérifier que ce n'est pas le cas.
+Une fois ce changement fait, **il n'y a plus d'exponentielle du tout** : $X$ est un nombre inconnu comme un autre, et on résout avec $\Delta = b^2-4ac$ en lisant $a$, $b$, $c$ sur le trinôme en $X$ — pas sur l'équation de départ. L'exponentielle ne réapparaît qu'à la toute fin.
+
+Un point à ne surtout pas oublier à ce retour : $X = e^x$ est **strictement positif**. Une racine négative ou nulle du trinôme devrait donc être écartée — ici il faudra vérifier que ce n'est pas le cas.
 
 #exemple
 Résolution de $e^{2x}-e^x-6 = 0$.
@@ -247,7 +249,15 @@ $$
 X^2-X-6 = 0
 $$
 
-Discriminant : $\Delta = 1+24 = 25$, donc $\sqrt\Delta = 5$ et
+**À partir d'ici, il n'y a plus d'exponentielle.** Elle est rangée dans la lettre $X$, qui n'est plus qu'un nombre inconnu ordinaire : on résout un trinôme comme n'importe quel autre, et l'exponentielle ne reviendra qu'à l'étape « retour à $x$ ». C'est tout l'intérêt du changement de variable.
+
+On lit donc les coefficients sur $aX^2+bX+c = 0$ : $a = 1$ (rien devant $X^2$), $b = -1$ (rien devant $X$, mais un **signe moins**) et $c = -6$.
+
+$$
+\Delta = b^2-4ac = (-1)^2-4\times 1\times(-6) = 1+24 = 25
+$$
+
+Donc $\sqrt\Delta = 5$ et
 
 $$
 X = \frac{1-5}{2} = -2 \qquad\text{ou}\qquad X = \frac{1+5}{2} = 3
@@ -268,7 +278,13 @@ $$
 X^2-5X+6 = 0
 $$
 
-Discriminant : $\Delta = 25-24 = 1$, donc $\sqrt\Delta = 1$ et
+L'exponentielle est désormais rangée dans $X$ : ce qui reste est un trinôme ordinaire, d'inconnue $X$. On y lit $a = 1$, $b = -5$ et $c = 6$, puis
+
+$$
+\Delta = b^2-4ac = (-5)^2-4\times 1\times 6 = 25-24 = 1
+$$
+
+Donc $\sqrt\Delta = 1$ et
 
 $$
 X = \frac{5-1}{2} = 2 \qquad\text{ou}\qquad X = \frac{5+1}{2} = 3
@@ -345,7 +361,13 @@ $$
 x^2+2x-3 = 5 \iff x^2+2x-8 = 0
 $$
 
-Discriminant : $\Delta = 4+32 = 36$, donc $\sqrt\Delta = 6$ et
+Ici l'inconnue est directement $x$, et les logarithmes ont disparu à la ligne précédente. On lit $a = 1$, $b = 2$ et $c = -8$, puis
+
+$$
+\Delta = b^2-4ac = 2^2-4\times 1\times(-8) = 4+32 = 36
+$$
+
+Donc $\sqrt\Delta = 6$ et
 
 $$
 x = \frac{-2-6}{2} = -4 \qquad\text{ou}\qquad x = \frac{-2+6}{2} = 2
@@ -1199,10 +1221,16 @@ $$
 X^2-2xX-1 = 0
 $$
 
-Discriminant : $\Delta = 4x^2+4 = 4\left(x^2+1\right) > 0$, donc $\sqrt\Delta = 2\sqrt{x^2+1}$ et
+Attention à ce qui joue quel rôle : **l'inconnue est $X$, et $x$ n'est qu'un paramètre** — un nombre fixé, comme le serait un $2$ ou un $-6$. On lit donc $a = 1$, $b = -2x$ et $c = -1$. Le coefficient $b$ contient $x$ tout entier : c'est $-2x$ qu'il faut élever au carré, pas seulement le $2$.
 
 $$
-X = \frac{2x\pm 2\sqrt{x^2+1}}{2} = x\pm\sqrt{x^2+1}
+\Delta = b^2-4ac = (-2x)^2-4\times 1\times(-1) = 4x^2+4 = 4\left(x^2+1\right)
+$$
+
+Ce discriminant est strictement positif quel que soit $x$, donc $\sqrt\Delta = 2\sqrt{x^2+1}$ et
+
+$$
+X = \frac{-b\pm\sqrt\Delta}{2a} = \frac{2x\pm 2\sqrt{x^2+1}}{2} = x\pm\sqrt{x^2+1}
 $$
 
 **Choix de la racine.** Comme $x^2+1 > x^2$, on a $\sqrt{x^2+1} > \lvert x\rvert \geqslant x$, donc $x-\sqrt{x^2+1} < 0$ : cette racine est à **rejeter**, puisque $X = e^y > 0$. Il reste
@@ -1283,6 +1311,20 @@ Valeurs à connaître : $e^0 = 1$, $\ln 1 = 0$, $\ln e = 1$. Et une réécriture
 **Toujours commencer par les conditions d'existence**, avant le moindre calcul : elles serviront à trier les solutions à la fin.
 
 **Équation en $e^x$ à deux puissances.** On pose $X = e^x$ — en notant que $X>0$ — pour se ramener à un trinôme. Au retour, **toute racine négative ou nulle est à rejeter**.
+
+Ce que fait vraiment ce changement de variable : il **efface les exponentielles**. Une fois écrit $aX^2+bX+c = 0$, la lettre $X$ n'est plus « une exponentielle », c'est un nombre inconnu ordinaire. On applique donc $\Delta = b^2-4ac$ en lisant $a$, $b$, $c$ **sur le trinôme en $X$**, jamais sur l'équation de départ :
+
+$$
+e^{2x}-e^x-6 = 0 \ \longrightarrow \ X^2-X-6 = 0 \ \longrightarrow \ a = 1,\ b = -1,\ c = -6
+$$
+
+$$
+\Delta = (-1)^2-4\times 1\times(-6) = 1+24 = 25
+$$
+
+Deux réflexes de lecture des coefficients : un terme sans rien devant vaut $1$ (donc $X^2$ donne $a = 1$), et **le signe fait partie du coefficient** (donc $-X$ donne $b = -1$, et $b^2 = (-1)^2 = 1$).
+
+L'exponentielle ne revient qu'à l'étape « retour à $x$ », où l'on résout $e^x = X$ pour chaque racine gardée. Pendant toute la traversée, son seul souvenir est la contrainte $X>0$ — et c'est justement elle qui élimine les racines négatives.
 
 **Équation avec plusieurs logarithmes.** On regroupe en un seul logarithme par $\ln a+\ln b = \ln(ab)$, puis on utilise l'injectivité :
 
