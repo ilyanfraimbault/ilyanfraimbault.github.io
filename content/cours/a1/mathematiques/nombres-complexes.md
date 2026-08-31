@@ -22,6 +22,9 @@ icone: i-lucide-git-compare-arrows
 ::carte-lien{to="/cours/a1/mathematiques/trigonometrie" titre="Guide : comprendre le cercle trigonométrique" description="L’argument d’un complexe est un angle du cercle : si sa lecture n’est pas automatique, le guide la reprend depuis le début" icone="i-lucide-compass" meta="Cercle interactif"}
 ::
 
+::carte-lien{to="/cours/a1/mathematiques/exercices-nombres-complexes" titre="Fiche d’entraînement progressive" description="Si les exercices ci-dessous démarrent trop haut : quinze questions en cinq paliers, de « qu’est-ce que i » à la formule de Moivre" icone="i-lucide-list-checks" meta="15 questions"}
+::
+
 :::fiche{titre="Fiche de révision — Nombres complexes" resume="Le cours en condensé, plus un exemple entièrement traité pour chaque type de question des exercices. Les exemples utilisent d'autres nombres que les énoncés : ils montrent la méthode sans livrer la réponse."}
 ### 1. La forme algébrique
 
