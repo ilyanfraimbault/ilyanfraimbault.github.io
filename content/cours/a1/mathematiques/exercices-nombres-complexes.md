@@ -244,18 +244,22 @@ $$
 Calculer $z_1^2$. Calculer ensuite $(1+i)^2$, puis en déduire $(1+i)^4$ et $(1+i)^8$ **sans développer**.
 
 #indice
-Un carré de complexe se traite avec l'identité remarquable $(a+b)^2 = a^2+2ab+b^2$, sans rien changer à la formule. Le piège classique est le terme $b^2$ quand $b$ contient un coefficient : dans $(1-2i)^2$, c'est $(-2i)^2$ qu'il faut calculer, donc élever **à la fois** le $2$ et le $i$ au carré.
+Un carré de complexe se traite avec l'identité remarquable $(a+b)^2 = a^2+2ab+b^2$, sans rien changer à la formule. Il y a une soustraction dans $(1-2i)^2$ ? Alors **le signe moins fait partie de $b$** : on pose $b = -2i$ et on remplace $b$ par $-2i$ partout dans la formule, y compris dans le double produit et dans le carré.
+
+Deuxième piège, dans le terme $b^2$ : c'est $(-2i)^2$ qu'il faut calculer, donc élever **à la fois** le $2$ et le $i$ au carré.
 
 Pour la seconde partie, remarque que $4 = 2\times 2$ et $8 = 4\times 2$ : chaque puissance est le carré de la précédente. Le résultat de $(1+i)^2$ est particulièrement simple, ce qui rend la suite immédiate.
 
 #exemple
 Même travail sur $(3-i)^2$, puis sur les puissances de $1-i$.
 
-**Le carré**, avec $a = 3$ et $b = -i$ :
+**Le carré.** On applique $(a+b)^2 = a^2+2ab+b^2$ avec $a = 3$ et $b = -i$ — le signe moins est dans $b$, et on ne touche pas à la formule :
 
 $$
-(3-i)^2 = 3^2-2\times 3\times i+i^2 = 9-6i-1 = 8-6i
+(3-i)^2 = 3^2+2\times 3\times(-i)+(-i)^2 = 9-6i+i^2 = 9-6i-1 = 8-6i
 $$
+
+Le terme $(-i)^2$ vaut $(-1)^2\times i^2 = i^2 = -1$ : le carré efface le signe moins, mais pas le $i^2$.
 
 **Les puissances en cascade.** On commence par le carré :
 
@@ -278,17 +282,19 @@ $$
 L'idée générale : quand l'exposant est une puissance de $2$, on procède par carrés successifs.
 
 #solution
-**Le carré de $z_1$**, avec $a = 1$ et $b = -2i$ :
+**Le carré de $z_1$.** On applique $(a+b)^2 = a^2+2ab+b^2$ avec $a = 1$ et $b = -2i$. Le signe moins est **dans $b$** : la formule reste celle du $+$, et on remplace $b$ par $-2i$ partout.
 
 $$
-z_1^2 = (1-2i)^2 = 1^2-2\times 1\times 2i+(2i)^2
+z_1^2 = (1-2i)^2 = 1^2+2\times 1\times(-2i)+(-2i)^2
 $$
 
-Or $(2i)^2 = 4i^2 = -4$, d'où
+Le double produit vaut $-4i$, et $(-2i)^2 = (-2)^2\times i^2 = 4\times(-1) = -4$ : le carré efface le signe moins, mais pas le $i^2$. D'où
 
 $$
 z_1^2 = 1-4-4i = \boxed{-3-4i}
 $$
+
+⚠️ **Un mot sur les deux écritures possibles**, parce que c'est là qu'on se trompe. On peut aussi lire $(1-2i)^2$ comme $(a-b)^2 = a^2-2ab+b^2$ avec cette fois $b = +2i$, ce qui donne $1^2-2\times 1\times 2i+(2i)^2 = 1-4i-4$ : même résultat, même calcul. Ce qu'il ne faut **pas** faire, c'est mélanger les deux — annoncer $b = -2i$ puis écrire la formule en $-2ab$ compterait le signe moins **deux fois**, et le double produit ressortirait en $+4i$ au lieu de $-4i$.
 
 **Le carré de $1+i$** — un résultat à connaître par cœur, il revient sans cesse :
 
@@ -1076,11 +1082,21 @@ $$
 (a+bi)(c+di) = ac-bd+(ad+bc)i
 $$
 
-**Carré** — l'identité remarquable s'applique telle quelle, en n'oubliant pas d'élever coefficient **et** $i$ au carré dans le terme $b^2$ :
+**Carré** — l'identité remarquable $(a+b)^2 = a^2+2ab+b^2$ s'applique telle quelle, en n'oubliant pas d'élever coefficient **et** $i$ au carré dans le terme $b^2$. Une fois développée, elle donne
 
 $$
 (a+bi)^2 = a^2-b^2+2abi
 $$
+
+**Le cas d'une soustraction, où l'on se trompe le plus.** Pour $(1-2i)^2$, deux façons de faire, toutes deux justes :
+
+$$
+\underbrace{1^2+2\times 1\times(-2i)+(-2i)^2}_{(a+b)^2 \text{ avec } b = -2i}
+\qquad\text{ou}\qquad
+\underbrace{1^2-2\times 1\times 2i+(2i)^2}_{(a-b)^2 \text{ avec } b = +2i}
+$$
+
+Les deux donnent $1-4i-4 = -3-4i$. Ce qu'il ne faut **pas** faire, c'est les mélanger : poser $b = -2i$ **et** utiliser la formule en $-2ab$ compterait le signe moins deux fois. La règle simple : **soit le moins est dans $b$, soit il est dans la formule — jamais les deux.**
 
 Deux carrés à connaître par cœur, ils reviennent sans cesse :
 

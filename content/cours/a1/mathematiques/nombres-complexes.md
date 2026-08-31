@@ -79,11 +79,13 @@ Le terme $-2i^2$ **change de signe** en devenant $+2$ : c'est là que se joue to
 ::
 
 ::exemple{id="nc-carre" titre="Carré d'un complexe : identité remarquable" pour="Exercice 1 c) — élever au carré"}
-On applique $(a+b)^2 = a^2+2ab+b^2$ sans rien changer, puis $i^2 = -1$ :
+On applique $(a+b)^2 = a^2+2ab+b^2$ sans rien changer, puis $i^2 = -1$. Devant une soustraction, **le signe moins se met dans $b$** : ici $a = 3$ et $b = -i$, et la formule reste celle du $+$.
 
 $$
-(3-i)^2 = 3^2-2\times 3\times i+i^2 = 9-6i-1 = 8-6i
+(3-i)^2 = 3^2+2\times 3\times(-i)+(-i)^2 = 9-6i+i^2 = 9-6i-1 = 8-6i
 $$
+
+L'autre écriture est tout aussi juste : $(a-b)^2 = a^2-2ab+b^2$ avec $b = +i$ donne $3^2-2\times 3\times i+i^2$, le même calcul. Ce qu'il ne faut pas faire, c'est **mélanger les deux** — annoncer $b = -i$ puis utiliser la formule en $-2ab$ compterait le signe moins deux fois.
 
 Deux carrés à connaître par cœur, ils reviennent sans cesse :
 
