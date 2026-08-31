@@ -6,6 +6,8 @@ defineProps<{
   theme?: string
   /** Icône Lucide facultative. */
   icone?: string
+  /** Repère de difficulté affiché à côté du titre, par exemple « ★★☆☆☆ ». */
+  badge?: string
 }>()
 </script>
 
@@ -22,6 +24,14 @@ defineProps<{
       >
         {{ titre }}
       </h2>
+      <UBadge
+        v-if="badge"
+        color="neutral"
+        variant="subtle"
+        size="sm"
+        class="shrink-0 tracking-widest"
+        :label="badge"
+      />
     </div>
     <p
       v-if="theme"

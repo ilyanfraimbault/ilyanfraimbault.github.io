@@ -118,6 +118,25 @@
 }
 
 /* ---------------------------------------------------------------------------
+   Fiches d'exercices : indices, solutions et rappels de cours en overlay.
+   --------------------------------------------------------------------------- */
+
+/* Une modale ou un tiroir téléporte son contenu dans `<body>`, donc hors de
+   `.cours-body` : les règles ci-dessus qui rendent les formules en bloc
+   défilables ne s'appliqueraient plus, et une formule large ferait déborder
+   l'overlay. Les composants reportent donc la classe `cours-body` sur le
+   contenu de l'overlay lui-même ; les règles ci-dessous complètent le rendu. */
+.cours-overlay-corps {
+  max-width: 100%;
+}
+
+/* Les formules en bloc sont plus serrées qu'en pleine page : dans un panneau
+   étroit, l'espacement par défaut de KaTeX creuse des trous inutiles. */
+.cours-overlay-corps .katex-display {
+  margin-block: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------------
    Fiche de révision : bloc dépliable, exemples ciblables et renvois.
    --------------------------------------------------------------------------- */
 
