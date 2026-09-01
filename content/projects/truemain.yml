@@ -1,10 +1,32 @@
 slug: truemain
 title: TrueMain
-description: "Projet personnel autour de League of Legends : agréger et fiabiliser les statistiques de champions des meilleurs joueurs (top OTP, mains uniques) afin de proposer des recommandations de builds basées sur les vraies pratiques pro/high-elo plutôt que sur des moyennes globales. Développé en solo depuis février 2026, c'est l'occasion de monter une stack moderne complète : .NET 10, ASP.NET Core, un Worker Service pour ingérer en continu l'API Riot Games, PostgreSQL via Entity Framework Core, et un front Nuxt 4. Le tout conteneurisé avec Docker pour un déploiement simple."
-image: /images/projects/truemain/architecture.svg
-imageCaption: "Schéma d'architecture TrueMain : services externes (Riot API, DDragon CDN), bloc Docker Compose orchestrant le Worker .NET avec ses 7 processus, l'API ASP.NET Core en port 8080 (libs Core et Data partagées), PostgreSQL 17.2 et PgAdmin (dev/QA), et le frontend Nuxt 4 en port 3000 qui consomme l'API."
+description: "Site d'analyse League of Legends en ligne sur truemain.lol, développé seul depuis février 2026. Il répond à une question par champion : que font vraiment les joueurs qui le maîtrisent ? Là où les sites de stats moyennent toutes les parties, TrueMain identifie les « true mains » (rapport parties jouées / maîtrise) et ne calcule builds, runes, matchups et synergies qu'à partir de leurs parties classées. Derrière : une solution .NET 10 (API ASP.NET Core + Worker d'ingestion Riot), PostgreSQL via EF Core, MongoDB pour les logs et métriques, et deux frontends Nuxt 4 — le site public et un portail d'administration — conteneurisés et déployés en continu sur un VPS."
+image: /images/projects/truemain/truemain-accueil.webp
+imageCaption: "Page d'accueil de truemain.lol : recherche de champion ou de joueur, et les deux compteurs live alimentés par l'API (parties de mains analysées, truemains suivis)."
+gallery:
+  - src: /images/projects/truemain/architecture.svg
+    alt: Schéma d'architecture de TrueMain
+    caption: "Architecture : la Riot API alimente le Worker d'ingestion (20 processus séquencés, de la découverte des joueurs à la rétention des données), qui écrit dans PostgreSQL et MongoDB ; l'API ASP.NET Core sert les lectures publiques et les endpoints /ops ; les deux frontends Nuxt (site public et portail admin) passent par leur proxy Nitro, derrière Caddy qui est le seul point d'entrée public. CI/CD GitHub Actions vers GHCR, preprod automatique sur develop et prod sur publication de release."
+  - src: /images/projects/truemain/truemain-champion-build.webp
+    alt: Page champion d'Ahri avec ses builds, runes, ordre de compétences et arbre d'objets
+    caption: "Page champion (Ahri) : un onglet par build réellement joué, avec sorts d'invocateur, objets de départ, bottes, chemin d'objets, arbre de build et variations de runes — chaque ligne portant son taux de sélection et son taux de victoire. À droite, le même build résumé en toutes lettres (texte généré côté serveur, seul contenu de build présent dans le HTML rendu) et le classement des mains du champion."
+  - src: /images/projects/truemain/truemain-champion-analyse.webp
+    alt: Graphiques de tendance par patch, comparaison de deux patchs et panneau de matchups
+    caption: "Analyse temporelle de la même page : évolution du win rate, du pick rate et du ban rate sur les cinq derniers patchs, diff entre deux patchs (build, runes, ordre de sorts) et panneau de matchups classé sur des bornes de Wilson, avec la distinction entre victoire de voie (à 15 min) et victoire de partie."
+  - src: /images/projects/truemain/truemain-tierlist.webp
+    alt: Tier list des champions classés de S à D
+    caption: "Tier list calculée côté serveur : les champions sont notés sur un score pick / ban / win rate ajusté par la taille d'échantillon, puis rangés par percentile à l'intérieur de chaque voie. Un champion n'apparaît que sur ses deux voies dominantes, ce qui évite de le classer sur une voie qu'il ne joue pas."
+  - src: /images/projects/truemain/truemain-champions.webp
+    alt: Annuaire des champions avec filtres et build de consensus par ligne
+    caption: "Annuaire champion × voie : une ligne par couple (champion, voie) avec sa rune clé, son build de consensus, son tier et ses taux. Le patch servi par défaut est le plus récent qui remplit réellement l'annuaire, jamais simplement le dernier patch ingéré."
+  - src: /images/projects/truemain/truemain-matchup.webp
+    alt: Outil de matchup avec deux champions face à face et le build recommandé
+    caption: "Outil de matchup : on choisit son champion, son rôle et son adversaire direct, et le build est recalculé en direct à partir des parties où les deux se sont réellement affrontés. La bande de statistiques annonce l'échantillon utilisé, la similarité de draft, le win rate et l'issue de voie à 15 minutes avec ses écarts d'or et d'expérience."
+  - src: /images/projects/truemain/truemain-profil-joueur.webp
+    alt: Profil d'un joueur avec courbe de LP, grille d'activité et historique de parties
+    caption: "Profil joueur : courbe de LP sur 90 jours colorée par palier, grille d'activité (partie / jour / semaine / patch), score de dédication détaillé, champions mains et historique de parties groupé par jour, chaque ligne portant son score de performance."
 url: /projects/truemain
-tags: ["League of Legends", ".NET 10", "ASP.NET Core", "Worker Service", "Nuxt 4", "PostgreSQL", "Docker"]
+tags: ["League of Legends", ".NET 10", "ASP.NET Core", "Worker Service", "Nuxt 4", "PostgreSQL", "MongoDB", "Docker", "CI/CD"]
 date: "2026-02-01"
 stack:
   - .NET 10
@@ -12,43 +34,81 @@ stack:
   - Worker Service
   - Entity Framework Core
   - PostgreSQL
+  - MongoDB
   - Nuxt 4
+  - Vue 3
   - TypeScript
+  - Tailwind CSS
   - Docker
+  - Caddy
+  - GitHub Actions
 links:
+  - label: Voir le site
+    to: https://truemain.lol
+    icon: i-lucide-external-link
+    target: _blank
+    color: primary
   - label: Code source
     to: https://github.com/ilyanfraimbault/TrueMain
     icon: i-lucide-github
     target: _blank
     color: neutral
 highlights:
-  - "Architecture découpée : API ASP.NET Core (REST), Worker Service pour l'ingestion asynchrone et front Nuxt 4 pour la consultation."
-  - "Persistance PostgreSQL pilotée par Entity Framework Core (migrations, requêtes typées, indexation des matchs et builds)."
-  - "Conteneurisation Docker (API, Worker, base) pour un environnement reproductible en dev comme en déploiement."
+  - "En production sur truemain.lol : ≈ 430 000 parties de mains agrégées et 44 000 joueurs suivis, mis à jour en continu."
+  - "Cinq briques déployées séparément : API ASP.NET Core, Worker d'ingestion, PostgreSQL, MongoDB et deux frontends Nuxt 4 (public + admin)."
+  - "Pipeline d'ingestion de 20 processus ordonnés, du parcours des ladders Riot jusqu'à la rétention qui borne la taille de la base."
+  - "Livraison continue : build Release avec analyseurs bloquants, tests d'intégration sur un vrai PostgreSQL, images publiées sur GHCR, preprod automatique et prod sur publication de release."
 sections:
-  - title: Backend ASP.NET Core
+  - title: Pipeline d'ingestion (Worker .NET)
     items:
-      - "API REST pour exposer joueurs, champions, builds et statistiques agrégées."
-      - "Authentification et limites d'usage gérées proprement, documentation Swagger."
-  - title: Worker Service d'ingestion
+      - "BackgroundService .NET 10 qui enchaîne 20 processus dans un ordre imposé par leurs dépendances : parcours des ladders, découverte de joueurs, ingestion des parties classées et de leurs timelines, analyse des mains, puis les agrégations."
+      - "Chaque processus est enregistré individuellement (démarrage, heartbeat, succès/échec, résumé sérialisé) : un échec est compté et journalisé, jamais fatal pour la boucle."
+      - "Détection des « true mains » : un score qui croise le nombre de parties récentes sur le champion et le niveau de maîtrise, avec une politique de rétrogradation quand le joueur arrête de le jouer."
+      - "Agrégations par patch et par palier de rang : builds, pages de runes, ordres de compétences, matchups (avec l'issue de voie à 15 minutes et les écarts d'or/XP), synergies, bans et pics de puissance."
+      - "Étape de rétention finale qui purge les données brutes déjà agrégées, pour que la base reste bornée dans le temps."
+  - title: API ASP.NET Core
     items:
-      - "Consommation continue de l'API Riot Games avec respect des quotas (rate limiting)."
-      - "Pipeline de mise à jour incrémentale des matchs et de calcul des statistiques par champion."
-  - title: Front Nuxt 4
+      - "API REST qui expose les agrégats champion, le classement des mains, les profils joueurs et les endpoints /ops du portail d'administration, protégés par clé."
+      - "Les lectures ne passent pas par un repository générique : chaque parcours a son query service dédié qui projette un read-model taillé pour la question posée."
+      - "Filtres de portée validés strictement — un palier de rang inconnu renvoie une 400 plutôt que d'élargir silencieusement l'échantillon à toute la population."
+      - "Cache mémoire borné, rate limiting global par IP, sondes /healthz et /readyz, erreurs au format RFC 7807 avec identifiant de trace."
+  - title: Front public Nuxt 4
     items:
-      - "Pages de recherche de joueurs et de comparaison de builds par champion."
-      - "Composants typés en TypeScript, SSR pour le SEO."
+      - "Pages champion (builds, runes, ordre de compétences, arbre d'objets, pics de puissance, matchups, synergies duo et trio), tier list, annuaire champion × voie."
+      - "Outil de matchup : le build est recalculé en direct sur les parties où les deux champions se sont réellement affrontés, avec l'issue de voie à 15 minutes et son verdict."
+      - "Profils joueurs : courbe de LP sur 90 jours, grille d'activité à quatre granularités, score de dédication, historique de parties groupé par jour avec un score de performance par partie."
+      - "Aucun appel direct du navigateur vers le backend ou les CDN Riot : tout transite par le proxy Nitro, ce qui mutualise le cache et garde l'API privée."
+      - "SEO et partage : rendu serveur, sitemap, données structurées et cartes Open Graph générées dynamiquement pour les pages champion et joueur."
+  - title: Portail d'administration
+    items:
+      - "Application Nuxt séparée (domaine et déploiement distincts) pour piloter le pipeline, derrière une session scellée ; la clé d'accès aux endpoints /ops n'atteint jamais le navigateur."
+      - "Vue santé : un verdict global calculé côté serveur, puis les signaux triés par gravité (processus, qualité des données, retard d'ingestion, prévision de remplissage du disque)."
+      - "Cinq détecteurs de qualité de données automatisés, une page de couverture par patch qui dit si le patch courant est réellement servable, et l'explorateur de comptes qui retrace un joueur dans tout le pipeline."
+      - "Suivi de la consommation de l'API Riot par endpoint et par appelant, avec une estimation de la marge restante en nombre de comptes suivis."
   - title: Infrastructure
     items:
-      - "docker-compose pour orchestrer API + Worker + PostgreSQL."
-      - "Migrations EF Core versionnées et reproductibles."
+      - "Tout tourne en conteneurs Docker sur un seul hôte ; Caddy termine le TLS et reste le seul point d'entrée public, frontends et bases vivant sur un réseau interne."
+      - "Trois stacks compose : dev avec hot-reload, preprod et prod construites à partir d'images publiées."
+      - "Un environnement de préproduction complet, avec sa propre base et sa propre clé Riot, déployé automatiquement à chaque merge sur develop ; la prod ne bouge qu'à la publication d'une release."
+      - "Les migrations de schéma ne s'appliquent plus au démarrage applicatif : un job CI les joue hors-ligne avant de faire tourner les images, ce qui évite qu'une migration lourde fasse boucler l'API au boot."
+      - "Chaque déploiement pousse aussi un tag d'image immuable à côté du tag mobile, pour qu'un redéploiement ne relance jamais silencieusement l'image précédente."
   - title: Performance & rate limiting
     items:
-      - "Anticipation des quotas Riot Games (app rate limit + method rate limit) : mutualisation des appels, file d'attente, back-off exponentiel."
-      - "Estimation de la montée en charge sur l'ingestion : nombre de matchs / minute, taille moyenne du payload, capacité visée de la base."
-      - "Tableau de suivi des métriques d'ingestion (matchs traités/min, latence p95) pour piloter les ajustements."
+      - "Quotas Riot Games anticipés côté client HTTP : limiteur de débit, respect du Retry-After, back-off, disjoncteur et timeouts par tentative — les 429 réessayés sont comptés comme des appels réels."
+      - "Répartition du budget d'appels entre les régions par déficit de couverture plutôt que par quota fixe, avec report round-robin de la part non consommée."
+      - "Tableau de bord des métriques d'ingestion : parties ingérées par période, appels et retries par endpoint, profondeur des files, latence des étapes du funnel."
+      - "Estimation de marge : combien de comptes suivis supplémentaires le budget d'API absorbe, calculée sur les sept derniers jours."
+      - "Prévision de remplissage du disque à partir de snapshots quotidiens des tailles PostgreSQL et MongoDB, avec la date de saturation projetée — ou une explication quand l'historique est trop court pour la calculer."
   - title: Profilage & optimisation
     items:
-      - "Profilage des requêtes EF Core : analyse du SQL généré, ajout d'index ciblés (matchs par joueur, builds par champion)."
-      - "Mise en cache mémoire des appels lecture les plus chauds pour absorber les pics de trafic front."
-      - "Justification documentée des choix d'optimisation dans le README technique."
+      - "Dimensions de build dédupliquées par contenu et pages de runes normalisées : un même build cliqué dans un autre ordre ne crée plus deux lignes et ne divise plus son échantillon."
+      - "Agrégation par champion, morceau par morceau, pour borner la mémoire du Worker, et modèle EF Core compilé versionné dans le dépôt."
+      - "Cache mémoire côté API avec taille bornée et clés de cache distinctes par portée, doublé d'un cache serveur sur les données statiques Riot."
+      - "Icônes servies une seule fois en WebP 64 px via un helper unique, cache d'images borné en octets et purge indexée sur les patchs récents."
+      - "Chargement différé et hydratation à la visibilité des panneaux lourds, pour supprimer les à-coups de scroll sur la page champion."
+  - title: Qualité & CI
+    items:
+      - "Tests unitaires à chaque exécution et tests d'intégration sur un vrai PostgreSQL à chaque pull request, en plus du build des deux frontends."
+      - "Build backend en Release avec les analyseurs de style traités comme des erreurs — le code ne passe pas la CI s'il dérive des conventions."
+      - "Chaque pull request reçoit une revue de code automatisée avec verdict bloquant, en plus de la relecture manuelle."
+      - "Documentation vivante versionnée avec le code : inventaire des fonctionnalités livrées, journal des décisions d'architecture avec l'incident ou la mesure qui les justifie, et RFC pour les évolutions majeures du modèle de données."
