@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" font-family="Helvetica, Arial, sans-serif">
   <defs>
     <marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#5b8def"/>
@@ -7,88 +7,156 @@
     <marker id="arrow-ext" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0,0 L10,5 L0,10 z" fill="#d79b00"/>
     </marker>
+    <marker id="arrow-pub" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9673a6"/>
+    </marker>
   </defs>
 
+  <!-- Fond clair explicite : l'image est servie en <img>, donc currentColor ne suit pas
+       le thème de la page — un fond neutre garde le schéma lisible en clair comme en sombre. -->
+  <rect x="0" y="0" width="1000" height="820" rx="10" fill="#fbfcfd"/>
+
   <!-- Title -->
-  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="currentColor">TrueMain — Architecture</text>
+  <text x="500" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#3c4450">TrueMain — Architecture</text>
 
-  <!-- External services container -->
-  <rect x="40" y="60" width="820" height="100" rx="6" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-dasharray="6 4"/>
-  <text x="56" y="80" font-size="12" font-weight="bold" fill="currentColor" fill-opacity="0.7">External services</text>
+  <!-- ========== External services ========== -->
+  <rect x="40" y="56" width="920" height="96" rx="6" fill="none" stroke="#3c4450" stroke-opacity="0.35" stroke-dasharray="6 4"/>
+  <text x="56" y="76" font-size="12" font-weight="bold" fill="#3c4450" fill-opacity="0.7">Services externes</text>
 
-  <!-- Riot API -->
-  <rect x="120" y="95" width="240" height="55" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
-  <text x="240" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Riot Games API</text>
-  <text x="240" y="136" text-anchor="middle" font-size="11" fill="#7a4f00">match history, ranked, accounts</text>
+  <rect x="110" y="84" width="300" height="54" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="260" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Riot Games API</text>
+  <text x="260" y="124" text-anchor="middle" font-size="10.5" fill="#7a4f00">match-v5 · league-v4 · account-v1 · mastery</text>
 
-  <!-- DDragon -->
-  <rect x="540" y="95" width="240" height="55" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
-  <text x="660" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Riot DDragon CDN</text>
-  <text x="660" y="136" text-anchor="middle" font-size="11" fill="#7a4f00">images champions / patchs</text>
+  <rect x="560" y="84" width="300" height="54" rx="10" fill="#ffe6cc" stroke="#d79b00" stroke-width="1.5"/>
+  <text x="710" y="106" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a4f00">Data Dragon / CommunityDragon</text>
+  <text x="710" y="124" text-anchor="middle" font-size="10.5" fill="#7a4f00">icônes champions, items, runes</text>
 
-  <!-- Docker Compose container -->
-  <rect x="40" y="200" width="820" height="200" rx="6" fill="none" stroke="#5b8def" stroke-opacity="0.6" stroke-dasharray="6 4"/>
-  <text x="56" y="220" font-size="12" font-weight="bold" fill="#5b8def">Docker Compose</text>
+  <!-- ========== Host / Docker ========== -->
+  <rect x="40" y="180" width="860" height="500" rx="6" fill="none" stroke="#5b8def" stroke-opacity="0.6" stroke-dasharray="6 4"/>
+  <text x="56" y="200" font-size="12" font-weight="bold" fill="#5b8def">VPS — Docker Compose</text>
 
-  <!-- Worker -->
-  <rect x="80" y="245" width="220" height="80" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-  <text x="190" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">Ingestor (Worker)</text>
-  <text x="190" y="296" text-anchor="middle" font-size="12" fill="#1f3a5f">.NET 10</text>
-  <text x="190" y="313" text-anchor="middle" font-size="11" font-style="italic" fill="#1f3a5f">ingestion Riot API</text>
-
-  <!-- PostgreSQL cylinder -->
-  <g>
-    <ellipse cx="450" cy="265" rx="80" ry="14" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-    <path d="M370,265 L370,335 A80,14 0 0 0 530,335 L530,265" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-    <ellipse cx="450" cy="265" rx="80" ry="14" fill="none" stroke="#82b366" stroke-width="1.5"/>
-    <text x="450" y="305" text-anchor="middle" font-size="14" font-weight="bold" fill="#3a6a3a">PostgreSQL</text>
-    <text x="450" y="324" text-anchor="middle" font-size="11" fill="#3a6a3a">truemain_db</text>
-  </g>
+  <!-- Ingestor -->
+  <rect x="70" y="215" width="240" height="88" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="190" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">Ingestor</text>
+  <text x="190" y="262" text-anchor="middle" font-size="11.5" fill="#1f3a5f">Worker Service .NET 10</text>
+  <text x="190" y="280" text-anchor="middle" font-size="10.5" font-style="italic" fill="#1f3a5f">20 processus séquencés — découverte,</text>
+  <text x="190" y="295" text-anchor="middle" font-size="10.5" font-style="italic" fill="#1f3a5f">ingestion, agrégation, rétention</text>
 
   <!-- API -->
-  <rect x="600" y="245" width="220" height="80" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-  <text x="710" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">API REST</text>
-  <text x="710" y="296" text-anchor="middle" font-size="12" fill="#1f3a5f">ASP.NET Core 10 + EF Core</text>
-  <text x="710" y="313" text-anchor="middle" font-size="11" font-style="italic" fill="#1f3a5f">lecture des stats agrégées</text>
+  <rect x="630" y="215" width="240" height="88" rx="10" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+  <text x="750" y="242" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3a5f">API</text>
+  <text x="750" y="262" text-anchor="middle" font-size="11.5" fill="#1f3a5f">ASP.NET Core 10 + EF Core</text>
+  <text x="750" y="280" text-anchor="middle" font-size="10.5" font-style="italic" fill="#1f3a5f">lecture publique (champions, joueurs)</text>
+  <text x="750" y="295" text-anchor="middle" font-size="10.5" font-style="italic" fill="#1f3a5f">+ endpoints /ops protégés</text>
 
-  <!-- Frontend -->
-  <rect x="320" y="430" width="260" height="70" rx="10" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-  <text x="450" y="458" text-anchor="middle" font-size="14" font-weight="bold" fill="#7a5d1d">Frontend</text>
-  <text x="450" y="478" text-anchor="middle" font-size="12" fill="#7a5d1d">Nuxt 4 · Vue 3 · TypeScript</text>
+  <!-- PostgreSQL -->
+  <g>
+    <ellipse cx="350" cy="350" rx="95" ry="16" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <path d="M255,350 L255,425 A95,16 0 0 0 445,425 L445,350" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <ellipse cx="350" cy="350" rx="95" ry="16" fill="none" stroke="#82b366" stroke-width="1.5"/>
+    <text x="350" y="385" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#3a6a3a">PostgreSQL</text>
+    <text x="350" y="403" text-anchor="middle" font-size="10.5" fill="#3a6a3a">matchs, agrégats champion,</text>
+    <text x="350" y="418" text-anchor="middle" font-size="10.5" fill="#3a6a3a">mains, matchups, snapshots de rang</text>
+  </g>
 
-  <!-- Edges -->
-  <!-- Riot API → Worker -->
-  <line x1="240" y1="150" x2="190" y2="245" stroke="#d79b00" stroke-width="1.8" marker-end="url(#arrow-ext)"/>
-  <!-- DDragon → Frontend -->
-  <line x1="660" y1="150" x2="555" y2="430" stroke="#d79b00" stroke-width="1.8" marker-end="url(#arrow-ext)"/>
+  <!-- MongoDB -->
+  <g>
+    <ellipse cx="610" cy="350" rx="85" ry="15" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <path d="M525,350 L525,425 A85,15 0 0 0 695,425 L695,350" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+    <ellipse cx="610" cy="350" rx="85" ry="15" fill="none" stroke="#82b366" stroke-width="1.5"/>
+    <text x="610" y="385" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#3a6a3a">MongoDB</text>
+    <text x="610" y="403" text-anchor="middle" font-size="10.5" fill="#3a6a3a">logs, crashs, audit,</text>
+    <text x="610" y="418" text-anchor="middle" font-size="10.5" fill="#3a6a3a">métriques Riot, runs de process</text>
+  </g>
 
-  <!-- Worker → Postgres (writes) -->
-  <line x1="300" y1="285" x2="370" y2="285" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
-  <text x="335" y="278" text-anchor="middle" font-size="10" fill="#5b8def">écrit</text>
+  <!-- admin front -->
+  <rect x="120" y="470" width="250" height="80" rx="10" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="245" y="496" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7a5d1d">admin — Nuxt 4</text>
+  <text x="245" y="515" text-anchor="middle" font-size="11" fill="#7a5d1d">admin.truemain.lol</text>
+  <text x="245" y="533" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5d1d">pilotage du pipeline, santé, qualité des données</text>
 
-  <!-- API → Postgres (reads) -->
-  <line x1="600" y1="285" x2="530" y2="285" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
-  <text x="565" y="278" text-anchor="middle" font-size="10" fill="#5b8def">lit</text>
+  <!-- public front -->
+  <rect x="570" y="470" width="250" height="80" rx="10" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+  <text x="695" y="496" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7a5d1d">web — Nuxt 4</text>
+  <text x="695" y="515" text-anchor="middle" font-size="11" fill="#7a5d1d">truemain.lol</text>
+  <text x="695" y="533" text-anchor="middle" font-size="10.5" font-style="italic" fill="#7a5d1d">builds, tier list, matchup, profils joueurs</text>
 
-  <!-- Frontend → API -->
-  <line x1="510" y1="430" x2="690" y2="325" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
-  <text x="620" y="385" text-anchor="middle" font-size="10" fill="#5b8def">REST / JSON</text>
+  <!-- Caddy -->
+  <rect x="350" y="600" width="240" height="58" rx="10" fill="#e1d5e7" stroke="#9673a6" stroke-width="1.5"/>
+  <text x="470" y="624" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#5c3d6b">Caddy</text>
+  <text x="470" y="643" text-anchor="middle" font-size="10.5" fill="#5c3d6b">TLS Let's Encrypt · seul point d'entrée public</text>
 
-  <!-- Legend -->
-  <g transform="translate(40, 430)">
-    <rect width="240" height="70" fill="none" stroke="currentColor" stroke-opacity="0.25"/>
-    <text x="10" y="18" font-size="11" font-weight="bold" fill="currentColor" fill-opacity="0.7">Légende</text>
+  <!-- Browser -->
+  <rect x="380" y="722" width="180" height="48" rx="10" fill="none" stroke="#3c4450" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="470" y="752" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#3c4450" fill-opacity="0.8">Navigateur</text>
+
+  <!-- ========== Edges ========== -->
+  <!-- Riot API → Ingestor -->
+  <line x1="240" y1="138" x2="200" y2="215" stroke="#d79b00" stroke-width="1.8" marker-end="url(#arrow-ext)"/>
+  <text x="196" y="171" text-anchor="end" font-size="10" fill="#d79b00">collecte (quotas + retry)</text>
+
+  <!-- DDragon → web (proxy Nitro) -->
+  <path d="M860,111 H950 V510 H820" fill="none" stroke="#d79b00" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow-ext)"/>
+  <text x="944" y="330" text-anchor="middle" font-size="10" fill="#d79b00" transform="rotate(-90 944 330)">statics proxifiés côté serveur</text>
+
+  <!-- Ingestor → PostgreSQL -->
+  <line x1="290" y1="303" x2="322" y2="336" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="268" y="330" text-anchor="middle" font-size="10" fill="#5b8def">écrit</text>
+
+  <!-- Ingestor → MongoDB -->
+  <line x1="310" y1="295" x2="545" y2="341" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+
+  <!-- API → PostgreSQL -->
+  <line x1="630" y1="278" x2="430" y2="338" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="520" y="290" text-anchor="middle" font-size="10" fill="#5b8def">lit (query services, AsNoTracking)</text>
+
+  <!-- API → MongoDB -->
+  <line x1="680" y1="303" x2="640" y2="338" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+
+  <!-- web → API -->
+  <line x1="700" y1="470" x2="700" y2="305" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="710" y="398" font-size="10" fill="#5b8def">proxy Nitro</text>
+
+  <!-- admin → API /ops -->
+  <path d="M370,505 H460 V450 H850 V305" fill="none" stroke="#5b8def" stroke-width="1.8" marker-end="url(#arrow-data)"/>
+  <text x="655" y="464" text-anchor="middle" font-size="10" fill="#5b8def">/ops — clé injectée côté serveur</text>
+
+  <!-- Caddy → fronts -->
+  <line x1="400" y1="600" x2="300" y2="552" stroke="#9673a6" stroke-width="1.8" marker-end="url(#arrow-pub)"/>
+  <line x1="540" y1="600" x2="640" y2="552" stroke="#9673a6" stroke-width="1.8" marker-end="url(#arrow-pub)"/>
+
+  <!-- Browser → Caddy -->
+  <line x1="470" y1="722" x2="470" y2="660" stroke="#9673a6" stroke-width="1.8" marker-end="url(#arrow-pub)"/>
+  <text x="486" y="700" font-size="10" fill="#9673a6">HTTPS</text>
+
+  <!-- ========== Legend ========== -->
+  <g transform="translate(40, 700)">
+    <rect width="290" height="86" rx="4" fill="none" stroke="#3c4450" stroke-opacity="0.25"/>
+    <text x="10" y="18" font-size="11" font-weight="bold" fill="#3c4450" fill-opacity="0.7">Légende</text>
 
     <rect x="14" y="28" width="14" height="10" rx="2" fill="#dae8fc" stroke="#6c8ebf"/>
-    <text x="36" y="37" font-size="10" fill="currentColor" fill-opacity="0.8">.NET (Worker / API)</text>
+    <text x="36" y="37" font-size="10" fill="#3c4450" fill-opacity="0.8">.NET (Ingestor / API)</text>
 
-    <rect x="14" y="44" width="14" height="10" rx="2" fill="#fff2cc" stroke="#d6b656"/>
-    <text x="36" y="53" font-size="10" fill="currentColor" fill-opacity="0.8">Frontend (Nuxt)</text>
+    <rect x="14" y="46" width="14" height="10" rx="2" fill="#fff2cc" stroke="#d6b656"/>
+    <text x="36" y="55" font-size="10" fill="#3c4450" fill-opacity="0.8">Frontends Nuxt</text>
 
-    <rect x="130" y="28" width="14" height="10" rx="2" fill="#d5e8d4" stroke="#82b366"/>
-    <text x="152" y="37" font-size="10" fill="currentColor" fill-opacity="0.8">PostgreSQL</text>
+    <rect x="14" y="64" width="14" height="10" rx="2" fill="#e1d5e7" stroke="#9673a6"/>
+    <text x="36" y="73" font-size="10" fill="#3c4450" fill-opacity="0.8">Reverse proxy</text>
 
-    <rect x="130" y="44" width="14" height="10" rx="2" fill="#ffe6cc" stroke="#d79b00"/>
-    <text x="152" y="53" font-size="10" fill="currentColor" fill-opacity="0.8">Service externe</text>
+    <rect x="170" y="28" width="14" height="10" rx="2" fill="#d5e8d4" stroke="#82b366"/>
+    <text x="192" y="37" font-size="10" fill="#3c4450" fill-opacity="0.8">Bases de données</text>
+
+    <rect x="170" y="46" width="14" height="10" rx="2" fill="#ffe6cc" stroke="#d79b00"/>
+    <text x="192" y="55" font-size="10" fill="#3c4450" fill-opacity="0.8">Service externe</text>
+  </g>
+
+  <!-- ========== CI/CD ========== -->
+  <g transform="translate(620, 700)">
+    <rect width="340" height="86" rx="4" fill="none" stroke="#3c4450" stroke-opacity="0.25" stroke-dasharray="5 4"/>
+    <text x="12" y="20" font-size="11" font-weight="bold" fill="#3c4450" fill-opacity="0.7">CI/CD — GitHub Actions</text>
+    <text x="12" y="38" font-size="10" fill="#3c4450" fill-opacity="0.8">build Release (analyseurs bloquants) + tests unitaires</text>
+    <text x="12" y="53" font-size="10" fill="#3c4450" fill-opacity="0.8">et d'intégration sur PostgreSQL réel → images GHCR</text>
+    <text x="12" y="68" font-size="10" fill="#3c4450" fill-opacity="0.8">preprod auto sur develop · prod sur publication de release</text>
+    <text x="12" y="80" font-size="10" fill="#3c4450" fill-opacity="0.8">migrations SQL appliquées hors du démarrage applicatif</text>
   </g>
 </svg>
