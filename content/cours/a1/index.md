@@ -5,5 +5,5 @@ annee: A1
 icone: i-lucide-graduation-cap
 ---
 
-::carte-lien{to="/cours/a1/mathematiques" titre="Mathématiques" description="Remise à niveau : fonctions, fonctions usuelles et nombres complexes" icone="i-lucide-sigma" meta="3 chapitres"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths" titre="Remise à niveau en maths" description="Quatre chapitres, chacun en trois pages : le cours, les exercices du TD corrigés, et une fiche d'entraînement progressive" icone="i-lucide-sigma" meta="4 chapitres"}
 ::

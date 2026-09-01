@@ -55,7 +55,7 @@ export default defineNuxtConfig({
         // ensuite le relais pour tout ce qui est lié depuis ces pages.
         '/cours',
         '/cours/a1',
-        '/cours/a1/mathematiques'
+        '/cours/a1/remise-a-niveau-maths'
       ],
       crawlLinks: true
     }

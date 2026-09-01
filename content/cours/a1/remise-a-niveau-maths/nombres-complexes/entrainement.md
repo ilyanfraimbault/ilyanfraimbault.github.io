@@ -1,9 +1,10 @@
 ---
 title: Nombres complexes — fiche d'entraînement
 description: Quinze questions en cinq paliers, de « qu'est-ce que i » à la formule de Moivre. Chaque question donne un indice avec un exemple similaire traité, une solution détaillée et le rappel de cours correspondant.
+type: entrainement
 annee: A1
-matiere: Mathématiques
-ordre: 4
+matiere: Remise à niveau en maths
+ordre: 3
 icone: i-lucide-list-checks
 ---
 
@@ -19,7 +20,10 @@ Sous chaque question, trois boutons :
 Le bon réflexe : chercher cinq minutes, puis l'indice, puis l'exemple, et la solution en dernier.
 ::
 
-::carte-lien{to="/cours/a1/mathematiques/nombres-complexes" titre="Le chapitre : cours et exercices du TD" description="La fiche de révision complète et les quatre exercices corrigés du programme" icone="i-lucide-git-compare-arrows" meta="Cours + 4 exercices"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, forme exponentielle" type="cours" meta="6 sections"}
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/exercices" titre="Les exercices du TD" description="Les quatre exercices du programme, corrigés — à faire une fois les cinq paliers passés" type="exercices" meta="4 exercices"}
 ::
 
 :::exercice{titre="Palier 1 — Apprivoiser i" theme="Reconnaître un nombre complexe, calculer ses puissances, identifier deux écritures" badge="★☆☆☆☆" icone="i-lucide-sprout"}
@@ -1037,7 +1041,7 @@ Le nombre de départ retrouve son propre argument : c'est normal, $2026$ et $1$ 
 
 Ces tiroirs s'ouvrent aussi depuis le bouton **Cours** de chaque question. Ils sont regroupés ici pour permettre une relecture d'ensemble.
 
-::extrait-cours{id="xnc-forme-algebrique" titre="Forme algébrique, partie réelle et partie imaginaire" source="/cours/a1/mathematiques/nombres-complexes#_1-la-forme-algébrique"}
+::extrait-cours{id="xnc-forme-algebrique" titre="Forme algébrique, partie réelle et partie imaginaire" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_1-la-forme-algébrique"}
 On admet l'existence d'un nombre $i$ tel que $i^2 = -1$. Tout nombre complexe s'écrit alors de façon **unique**
 
 $$
@@ -1051,7 +1055,7 @@ où $a$ et $b$ sont **réels**. C'est la forme algébrique.
 - **Égalité** : $z = z'$ si et seulement si les parties réelles **et** les parties imaginaires coïncident. Une égalité complexe vaut donc pour deux égalités réelles — c'est le principe de l'identification.
 ::
 
-::extrait-cours{id="xnc-puissances-i" titre="Les puissances de i" source="/cours/a1/mathematiques/nombres-complexes#_2-les-opérations"}
+::extrait-cours{id="xnc-puissances-i" titre="Les puissances de i" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_2-les-opérations"}
 Tout découle de $i^2 = -1$ :
 
 $$
@@ -1067,7 +1071,7 @@ $$
 En pratique : diviser l'exposant par $4$, ne regarder que le **reste**, et lire $1$, $i$, $-1$, $-i$ pour un reste de $0$, $1$, $2$, $3$.
 ::
 
-::extrait-cours{id="xnc-operations" titre="Somme, produit et carré" source="/cours/a1/mathematiques/nombres-complexes#_2-les-opérations"}
+::extrait-cours{id="xnc-operations" titre="Somme, produit et carré" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_2-les-opérations"}
 La règle du jeu tient en une phrase : **on calcule comme en algèbre ordinaire**, $i$ jouant le rôle d'une variable, et on remplace $i^2$ par $-1$ dès qu'il apparaît.
 
 **Somme et différence** — composante par composante :
@@ -1105,7 +1109,7 @@ $$
 $$
 ::
 
-::extrait-cours{id="xnc-conjugue-quotient" titre="Conjugué et quotient" source="/cours/a1/mathematiques/nombres-complexes#_2-les-opérations"}
+::extrait-cours{id="xnc-conjugue-quotient" titre="Conjugué et quotient" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_2-les-opérations"}
 Le **conjugué** de $z = a+bi$ est $\bar z = a-bi$ : on change le signe de la partie imaginaire. Sa propriété décisive :
 
 $$
@@ -1123,7 +1127,7 @@ $$
 On termine toujours en **séparant la fraction en deux**, pour faire apparaître la forme $a+bi$.
 ::
 
-::extrait-cours{id="xnc-second-degre" titre="Équation du second degré à coefficients réels" source="/cours/a1/mathematiques/nombres-complexes#_3-équation-du-second-degré"}
+::extrait-cours{id="xnc-second-degre" titre="Équation du second degré à coefficients réels" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_3-équation-du-second-degré"}
 Pour $az^2+bz+c = 0$ avec $a$, $b$, $c$ réels et $a\neq 0$, on calcule $\Delta = b^2-4ac$ comme dans $\mathbb{R}$.
 
 - Si $\Delta \geq 0$ : les racines réelles habituelles.
@@ -1138,7 +1142,7 @@ $$
 Les coefficients étant réels, les racines sont toujours conjuguées l'une de l'autre : c'est une vérification gratuite. On peut aussi contrôler par $S = -\dfrac{b}{a}$ et $P = \dfrac{c}{a}$.
 ::
 
-::extrait-cours{id="xnc-affixes" titre="Affixes, distances et milieu" source="/cours/a1/mathematiques/nombres-complexes#_4-points-vecteurs-et-affixes"}
+::extrait-cours{id="xnc-affixes" titre="Affixes, distances et milieu" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_4-points-vecteurs-et-affixes"}
 Le plan est muni d'un repère orthonormé direct. Au point $M(x;y)$ — comme au vecteur $\vec w\,(x;y)$ — on associe son **affixe** $z = x+yi$.
 
 $$
@@ -1154,7 +1158,7 @@ Le **module** $\lvert z\rvert = \sqrt{x^2+y^2}$ est la distance $OM$ : c'est tou
 Pour la **nature d'un triangle**, on calcule les trois longueurs : deux égales donnent un triangle isocèle, et la réciproque du théorème de Pythagore décide s'il est rectangle.
 ::
 
-::extrait-cours{id="xnc-ensembles" titre="Ensembles de points définis par un module" source="/cours/a1/mathematiques/nombres-complexes#_4-points-vecteurs-et-affixes"}
+::extrait-cours{id="xnc-ensembles" titre="Ensembles de points définis par un module" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_4-points-vecteurs-et-affixes"}
 Toute la méthode tient dans une lecture : $\lvert z-z_A\rvert$ **est la distance** $AM$, où $A$ est le point d'affixe $z_A$ et $M$ celui d'affixe $z$.
 
 Il faut donc d'abord **ranger** l'expression sous la forme $z-z_A$, en surveillant les signes : $z+3-2i$ s'écrit $z-(-3+2i)$.
@@ -1172,7 +1176,7 @@ $$
 En cas de doute, on peut toujours poser $z = x+iy$ et élever les deux membres au carré : on retombe sur l'équation cartésienne du cercle ou de la droite.
 ::
 
-::extrait-cours{id="xnc-module-argument" titre="Module et argument" source="/cours/a1/mathematiques/nombres-complexes#_5-module-et-argument"}
+::extrait-cours{id="xnc-module-argument" titre="Module et argument" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_5-module-et-argument"}
 Pour $z = x+yi$ non nul :
 
 $$
@@ -1186,7 +1190,7 @@ L'argument exige **cosinus et sinus**. Le cosinus seul laisse deux angles en con
 L'argument n'est défini qu'**à $2\pi$ près**, d'où la mention « mod $2\pi$ ».
 ::
 
-::extrait-cours{id="xnc-exponentielle" titre="Forme exponentielle, produit, quotient et Moivre" source="/cours/a1/mathematiques/nombres-complexes#_6-forme-exponentielle"}
+::extrait-cours{id="xnc-exponentielle" titre="Forme exponentielle, produit, quotient et Moivre" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_6-forme-exponentielle"}
 Tout complexe non nul s'écrit
 
 $$
