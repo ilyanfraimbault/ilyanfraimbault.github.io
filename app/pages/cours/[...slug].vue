@@ -15,7 +15,6 @@ if (!page.value) {
 }
 
 const { openAll, closeAll } = provideCoursReveal()
-provideCoursExemples()
 provideCoursExtraits()
 
 const parent = computed(() => {
@@ -24,6 +23,10 @@ const parent = computed(() => {
 })
 
 const tocLinks = computed(() => page.value?.body?.toc?.links ?? [])
+
+// Cours, exercices du TD et fiche d'entraînement ne se lisent pas de la même
+// façon : la pastille rappelle sur quelle sorte de page on vient d'arriver.
+const typeInfo = computed(() => coursTypeInfo(page.value?.type))
 
 // Le conteneur qui borne la largeur vient du gabarit, au-dessus de cette page :
 // on élargit donc la variable depuis le body plutôt que depuis la page.
@@ -52,6 +55,15 @@ useSeoMeta({
         </ULink>
 
         <div class="mt-8 flex flex-col gap-3">
+          <UBadge
+            v-if="typeInfo"
+            :color="typeInfo.couleur"
+            variant="subtle"
+            size="md"
+            class="self-start"
+            :icon="typeInfo.icone"
+            :label="typeInfo.label"
+          />
           <h1 class="text-3xl sm:text-4xl font-medium text-highlighted">
             {{ page.title }}
           </h1>

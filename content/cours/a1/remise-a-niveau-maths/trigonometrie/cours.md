@@ -2,16 +2,20 @@
 title: Trigonométrie — comprendre le cercle
 description: Le cercle trigonométrique expliqué de zéro, avec une figure interactive — radians, lecture de cos et sin, valeurs remarquables, angles associés, équations et fonctions réciproques.
 interactif: true
+type: cours
 annee: A1
-matiere: Mathématiques
-ordre: 0
+matiere: Remise à niveau en maths
+ordre: 1
 icone: i-lucide-compass
 ---
 
 ::rappel{titre="À quoi sert cette page" icone="i-lucide-compass"}
 La trigonométrie du programme tient dans **une seule figure** : le cercle de rayon $1$. Tout le reste — les valeurs remarquables, les formules d'angles associés, les deux familles de solutions d'une équation, le comportement bizarre de $\arccos(\cos x)$ — se lit dessus.
 
-Cette page reprend donc tout depuis le début, chaque notion étant accompagnée du cercle **manipulable** : déplace le point, la figure et les valeurs suivent. Les chapitres [Fonctions usuelles](/cours/a1/mathematiques/fonctions-usuelles) et [Nombres complexes](/cours/a1/mathematiques/nombres-complexes) s'appuient ensuite sur ce qui est expliqué ici.
+Cette page reprend donc tout depuis le début, chaque notion étant accompagnée du cercle **manipulable** : déplace le point, la figure et les valeurs suivent. Les chapitres [Fonctions usuelles](/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours) et [Nombres complexes](/cours/a1/remise-a-niveau-maths/nombres-complexes/cours) s'appuient ensuite sur ce qui est expliqué ici.
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/entrainement" titre="La fiche d’entraînement" description="Une fois le guide lu : quinze questions en cinq paliers, du radian jusqu’aux fonctions réciproques" type="entrainement" meta="15 questions"}
 ::
 
 ## 1. Du triangle rectangle au cercle

@@ -1,9 +1,10 @@
 ---
 title: Fonctions usuelles — fiche d'entraînement
 description: Quinze questions en cinq paliers, des règles de calcul sur exp et ln jusqu'aux réciproques hyperboliques. Chaque question donne un indice avec un exemple similaire traité, une solution détaillée et le rappel de cours correspondant.
+type: entrainement
 annee: A1
-matiere: Mathématiques
-ordre: 5
+matiere: Remise à niveau en maths
+ordre: 3
 icone: i-lucide-list-checks
 ---
 
@@ -17,7 +18,10 @@ Sous chaque question, trois boutons :
 - **Cours** — un tiroir avec le rappel de cours utile à cette question précise, et le lien vers la section complète du chapitre.
 ::
 
-::carte-lien{to="/cours/a1/mathematiques/fonctions-usuelles" titre="Le chapitre : cours et exercices du TD" description="La fiche de révision complète et les dix exercices corrigés du programme" icone="i-lucide-function-square" meta="Cours + 10 exercices"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours" titre="Le cours du chapitre" description="Exponentielle, logarithme, équations et limites, trigonométrie, réciproques et fonctions hyperboliques" type="cours" meta="8 sections"}
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/exercices" titre="Les exercices du TD" description="Les dix exercices du programme, corrigés — à faire une fois les cinq paliers passés" type="exercices" meta="10 exercices"}
 ::
 
 :::exercice{titre="Palier 1 — Domaines et règles de calcul" theme="Où une expression a un sens, et comment la simplifier" badge="★☆☆☆☆" icone="i-lucide-sprout"}
@@ -1267,7 +1271,7 @@ $$
 
 Ces tiroirs s'ouvrent aussi depuis le bouton **Cours** de chaque question. Ils sont regroupés ici pour permettre une relecture d'ensemble.
 
-::extrait-cours{id="xfu-domaines" titre="Où une expression est définie" source="/cours/a1/mathematiques/fonctions-usuelles#_2-logarithme-népérien"}
+::extrait-cours{id="xfu-domaines" titre="Où une expression est définie" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_2-logarithme-népérien"}
 Trois contraintes, et trois seulement :
 
 - **Sous un logarithme** : l'argument doit être **strictement positif**. $\ln u$ existe si et seulement si $u>0$.
@@ -1285,7 +1289,7 @@ e^a = e^b \iff a = b \qquad\text{et}\qquad \ln a = \ln b \iff a = b \quad (a,b>0
 $$
 ::
 
-::extrait-cours{id="xfu-regles" titre="Règles de calcul sur exp et ln" source="/cours/a1/mathematiques/fonctions-usuelles#_1-exponentielle"}
+::extrait-cours{id="xfu-regles" titre="Règles de calcul sur exp et ln" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_1-exponentielle"}
 Les deux fonctions sont **réciproques** l'une de l'autre :
 
 $$
@@ -1307,7 +1311,7 @@ $$
 Valeurs à connaître : $e^0 = 1$, $\ln 1 = 0$, $\ln e = 1$. Et une réécriture qui sert sans cesse : $\sqrt t = t^{1/2}$, donc $\ln\sqrt t = \dfrac12\ln t$.
 ::
 
-::extrait-cours{id="xfu-equations" titre="Équations avec exp et ln" source="/cours/a1/mathematiques/fonctions-usuelles#_3-équations-et-inéquations-avec-ln-et-exp"}
+::extrait-cours{id="xfu-equations" titre="Équations avec exp et ln" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_3-équations-et-inéquations-avec-ln-et-exp"}
 **Toujours commencer par les conditions d'existence**, avant le moindre calcul : elles serviront à trier les solutions à la fin.
 
 **Équation en $e^x$ à deux puissances.** On pose $X = e^x$ — en notant que $X>0$ — pour se ramener à un trinôme. Au retour, **toute racine négative ou nulle est à rejeter**.
@@ -1335,7 +1339,7 @@ $$
 Les racines obtenues doivent ensuite être confrontées aux conditions d'existence : c'est là que se perdent la plupart des points.
 ::
 
-::extrait-cours{id="xfu-inequations" titre="Inéquations avec exp et ln" source="/cours/a1/mathematiques/fonctions-usuelles#_3-équations-et-inéquations-avec-ln-et-exp"}
+::extrait-cours{id="xfu-inequations" titre="Inéquations avec exp et ln" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_3-équations-et-inéquations-avec-ln-et-exp"}
 $\exp$ et $\ln$ sont **strictement croissantes** : composer une inégalité par l'une ou l'autre **conserve son sens**.
 
 $$
@@ -1350,7 +1354,7 @@ Deux pièges :
 - **Multiplier ou diviser par un nombre négatif inverse l'inégalité** — c'est l'erreur classique de la dernière ligne, quand il reste un $-x$ à isoler.
 ::
 
-::extrait-cours{id="xfu-derivees" titre="Dérivées composées" source="/cours/a1/mathematiques/fonctions-usuelles#_1-exponentielle"}
+::extrait-cours{id="xfu-derivees" titre="Dérivées composées" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_1-exponentielle"}
 Les deux formules de base, toujours sous forme composée :
 
 $$
@@ -1368,7 +1372,7 @@ $$
 **Toujours factoriser le résultat** : c'est sous forme factorisée qu'on lit le signe de la dérivée. Une exponentielle en facteur est toujours strictement positive, elle ne contribue donc jamais au signe.
 ::
 
-::extrait-cours{id="xfu-limites" titre="Croissances comparées" source="/cours/a1/mathematiques/fonctions-usuelles#_4-limites-et-croissances-comparées"}
+::extrait-cours{id="xfu-limites" titre="Croissances comparées" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_4-limites-et-croissances-comparées"}
 La phrase à retenir : **l'exponentielle l'emporte sur toute puissance, et toute puissance l'emporte sur le logarithme.**
 
 En $+\infty$, pour tout $n>0$ :
@@ -1386,7 +1390,7 @@ $$
 Ces limites ne s'appliquent que sur les formes « $\dfrac{\infty}{\infty}$ » et « $0\times\infty$ ». Pour une forme « $\infty-\infty$ », le geste standard est de **factoriser par le terme dominant** afin de faire apparaître un quotient dont on connaît la limite.
 ::
 
-::extrait-cours{id="xfu-etude" titre="Étude de fonction et théorème des valeurs intermédiaires" source="/cours/a1/mathematiques/fonctions-usuelles#_4-limites-et-croissances-comparées"}
+::extrait-cours{id="xfu-etude" titre="Étude de fonction et théorème des valeurs intermédiaires" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_4-limites-et-croissances-comparées"}
 **Le plan d'une étude** : domaine, limites aux bornes, dérivée, signe de la dérivée (après factorisation ou mise au même dénominateur), tableau de variations avec les valeurs aux extremums.
 
 **Théorème des valeurs intermédiaires, version bijection.** Si $f$ est **continue** et **strictement monotone** sur un intervalle $\left[a;b\right]$, alors pour tout $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet une **unique** solution dans $\left[a;b\right]$.
@@ -1398,7 +1402,7 @@ Les trois hypothèses se citent explicitement dans la rédaction, et les bornes 
 Les valeurs approchées se cherchent ensuite par balayage à la calculatrice.
 ::
 
-::extrait-cours{id="xfu-equations-trigo" titre="Équations trigonométriques" source="/cours/a1/mathematiques/fonctions-usuelles#_5-trigonométrie"}
+::extrait-cours{id="xfu-equations-trigo" titre="Équations trigonométriques" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_5-trigonométrie"}
 Une droite coupe le cercle en **deux** points : il y a donc **deux familles** de solutions, jamais une seule.
 
 $$
@@ -1416,7 +1420,7 @@ Si le coefficient de $x$ vaut $n$ après résolution, les solutions d'une même 
 Pour passer d'un sinus à un cosinus, on utilise $\sin\theta = \cos\left(\dfrac{\pi}{2}-\theta\right)$.
 ::
 
-::extrait-cours{id="xfu-reciproques" titre="Arccos, arcsin, arctan" source="/cours/a1/mathematiques/fonctions-usuelles#_6-fonctions-trigonométriques-réciproques"}
+::extrait-cours{id="xfu-reciproques" titre="Arccos, arcsin, arctan" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_6-fonctions-trigonométriques-réciproques"}
 Chaque réciproque a **son** intervalle d'arrivée, et c'est lui qui décide de tout :
 
 | | définie sur | à valeurs dans |
@@ -1438,7 +1442,7 @@ Pour simplifier $\cos(\arcsin x)$ ou $\sin(\arccos x)$, on pose $\theta$ égal �
 Enfin, pour montrer qu'une combinaison de ces fonctions est constante, on montre que **sa dérivée est nulle sur un intervalle**, puis on évalue en un point bien choisi.
 ::
 
-::extrait-cours{id="xfu-hyperboliques" titre="Cosinus, sinus et tangente hyperboliques" source="/cours/a1/mathematiques/fonctions-usuelles#_7-fonctions-hyperboliques"}
+::extrait-cours{id="xfu-hyperboliques" titre="Cosinus, sinus et tangente hyperboliques" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_7-fonctions-hyperboliques"}
 Ce ne sont que des combinaisons d'exponentielles :
 
 $$
@@ -1466,7 +1470,7 @@ $$
 Enfin $\mathrm{ch}\,x \geqslant 1$ pour tout réel : $\mathrm{ch}$ ne s'annule jamais, ce qui rend $\mathrm{th}$ définie sur $\mathbb{R}$.
 ::
 
-::extrait-cours{id="xfu-hyperboliques-reciproques" titre="Argsh, argch, argth" source="/cours/a1/mathematiques/fonctions-usuelles#_8-fonctions-hyperboliques-réciproques"}
+::extrait-cours{id="xfu-hyperboliques-reciproques" titre="Argsh, argch, argth" source="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours#_8-fonctions-hyperboliques-réciproques"}
 **La méthode**, toujours la même, pour obtenir l'expression logarithmique d'une réciproque : on résout l'équation $\mathrm{sh}\,y = x$ (ou $\mathrm{ch}$, ou $\mathrm{th}$) d'inconnue $y$.
 
 1. Revenir aux exponentielles et multiplier par $e^y$ pour chasser les exposants négatifs.
