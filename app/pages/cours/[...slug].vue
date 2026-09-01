@@ -15,7 +15,6 @@ if (!page.value) {
 }
 
 const { openAll, closeAll } = provideCoursReveal()
-provideCoursExemples()
 provideCoursExtraits()
 
 const parent = computed(() => {

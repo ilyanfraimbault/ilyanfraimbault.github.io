@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const props = defineProps<{
-  /** Identifiant stable, cible des renvois depuis les indices. */
+defineProps<{
+  /** Identifiant stable, qui sert d'ancre à l'exemple dans la page. */
   id: string
   /** Intitulé de l'exemple (texte simple, pas de LaTeX : c'est un attribut). */
   titre: string
@@ -10,20 +10,6 @@ const props = defineProps<{
 
 const uid = useId()
 const ouvert = ref(false)
-
-const exemples = useCoursExemples()
-const ouvrirFiche = inject(coursFicheKey, null)
-
-function ouvrir() {
-  ouvrirFiche?.()
-  ouvert.value = true
-}
-
-onMounted(() => exemples?.enregistrer(props.id, ouvrir))
-onBeforeUnmount(() => exemples?.oublier(props.id))
-
-const enEvidence = computed(() => exemples?.flash.value === props.id)
-const retourPossible = computed(() => exemples?.retour.value?.exemple === props.id)
 
 const reveal = useCoursReveal()
 
@@ -41,7 +27,6 @@ if (reveal) {
   <div
     :id="`exemple-${id}`"
     class="cours-exemple scroll-mt-24"
-    :class="enEvidence && 'cours-exemple-cible'"
   >
     <button
       type="button"
@@ -76,16 +61,6 @@ if (reveal) {
       <div class="cours-panel-body">
         <slot />
       </div>
-      <UButton
-        v-if="retourPossible"
-        class="mt-3"
-        size="xs"
-        color="neutral"
-        variant="ghost"
-        icon="i-lucide-corner-down-left"
-        label="Revenir à la question"
-        @click="exemples?.revenir()"
-      />
     </div>
   </div>
 </template>
