@@ -1,8 +1,8 @@
 seo:
-  title: "Ilyan Fraimbault - Développeur fullstack (BUT 3)"
-  description: "Portfolio Nuxt UI d'Ilyan Fraimbault, étudiant en 3e année de BUT Informatique à Montpellier. APIs ASP.NET, front Vue/Angular et projets personnels."
-title: "Salut, je suis Ilyan Fraimbault"
-description: "Développeur fullstack en 3e année de BUT Informatique à Montpellier. J'aime transformer des besoins métier en APIs fiables (ASP.NET) et en interfaces web claires (Vue/Angular)."
+  title: "Ilyan Fraimbault - Développeur fullstack (élève ingénieur)"
+  description: "Portfolio Nuxt UI d'Ilyan Fraimbault, élève ingénieur en Informatique et Réseaux à IMT Mines Alès (parcours Développement logiciel). APIs ASP.NET, front Vue/Angular et projets personnels."
+title: "Ilyan Fraimbault"
+description: "Développeur fullstack en 1re année du cycle ingénieur Informatique et Réseaux à IMT Mines Alès (parcours Développement logiciel). J'aime transformer des besoins métier en APIs fiables (ASP.NET) et en interfaces web claires (Vue/Angular)."
 hero:
   links:
     - label: "Télécharger mon CV"
@@ -38,35 +38,52 @@ hero:
 about:
   title: "À propos"
   description: |
-    Passionné de backend et de frontend, je construis des APIs en ASP.NET et des interfaces web modernes (Vue/Angular). Après deux ans de projets encadrés, je suis maintenant en 3e année de BUT Informatique à Montpellier où j'alterne entre cours, projets d'équipe et missions en entreprise.
+    Passionné de backend et de frontend, je construis des APIs en ASP.NET et des interfaces web modernes (Vue/Angular). Après un BUT Informatique, je suis maintenant en 1re année du cycle ingénieur Informatique et Réseaux à IMT Mines Alès, en alternance chez EFICAD, où j'alterne entre cours, projets d'équipe et missions en entreprise.
     J'aime relier la technique au besoin métier : clarifier le problème, prototyper vite, livrer avec des tests et documenter pour l'équipe.
+education:
+  title: Formation
+  items:
+    - position: "Cycle ingénieur Informatique et Réseaux – parcours Développement logiciel"
+      date: "Depuis septembre 2026"
+      organization:
+        name: IMT Mines Alès
+        logo: "/icons/imt-mines-ales.svg"
+        url: "https://www.imt-mines-ales.fr/"
+        color: "#00bbd6"
+    - position: "BUT Informatique – parcours RACDV"
+      date: "2023 – 2026"
+      organization:
+        name: IUT de Montpellier-Sète
+        logo: "i-lucide-graduation-cap"
+        url: "https://iut-montpellier-sete.edu.umontpellier.fr/"
+        color: "#c8102e"
 experience:
   title: Expériences professionnelles
   items:
     - position: "Stage d'observation"
       date: "Janvier 2019"
-      company:
+      organization:
         name: IBM Montpellier
         logo: "/icons/ibm.png"
         url: "https://www.ibm.com/fr-fr"
         color: "#0f62fe"
     - position: "Stage développeur web full stack"
       date: "Juin – Août 2025"
-      company:
+      organization:
         name: EFICAD
         logo: "/icons/eficad.png"
         url: "https://www.eficad.com/"
         color: "#0f766e"
     - position: "Alternance développeur web full stack"
-      date: "Septembre 2025 – Août 2026"
-      company:
+      date: "Septembre 2025 – Août 2029"
+      organization:
         name: EFICAD
         logo: "/icons/eficad.png"
         url: "https://www.eficad.com/"
         color: "#0ea5e9"
 projects:
   title: Projets personnels et SAE
-  description: "Sélection de projets menés pendant le BUT et sur mon temps libre : APIs, outils web et expériences utilisateurs."
+  description: "Sélection de projets menés pendant mes études et sur mon temps libre : APIs, outils web et expériences utilisateurs."
   links:
     - label: "Voir tous les projets"
       to: /projects
@@ -80,7 +97,7 @@ faq:
       questions:
         - label: Es-tu en alternance ou en stage ?
           content: |
-            Je suis en 3e année de BUT Informatique. Après un stage API chez EFICAD (juin-août 2025), je poursuis en alternance dans la même équipe jusqu'en août 2026.
+            Je suis en alternance chez EFICAD depuis septembre 2025 : d'abord pendant mon BUT Informatique, puis en 1re année du cycle ingénieur Informatique et Réseaux à IMT Mines Alès.
         - label: Quels sujets te motivent le plus ?
           content: |
             Concevoir des APIs propres (ASP.NET), synchroniser des données entre services (Salesforce/Dynamics), et construire des interfaces claires en Vue ou Angular.

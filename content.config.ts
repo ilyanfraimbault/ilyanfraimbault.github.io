@@ -30,6 +30,19 @@ const createAuthorSchema = () => z.object({
   avatar: createImageSchema().optional()
 })
 
+const createTimelineSchema = () => createBaseSchema().extend({
+  items: z.array(z.object({
+    date: z.string(),
+    position: z.string(),
+    organization: z.object({
+      name: z.string(),
+      url: z.string(),
+      logo: z.string().editor({ input: 'icon' }),
+      color: z.string()
+    })
+  }))
+})
+
 const createTestimonialSchema = () => z.object({
   quote: z.string(),
   author: createAuthorSchema()
@@ -46,18 +59,8 @@ export default defineContentConfig({
           images: z.array(createImageSchema())
         }),
         about: createBaseSchema(),
-        experience: createBaseSchema().extend({
-          items: z.array(z.object({
-            date: z.string(),
-            position: z.string(),
-            company: z.object({
-              name: z.string(),
-              url: z.string(),
-              logo: z.string().editor({ input: 'icon' }),
-              color: z.string()
-            })
-          }))
-        }),
+        education: createTimelineSchema(),
+        experience: createTimelineSchema(),
         projects: createBaseSchema().extend({
           links: z.array(createButtonSchema()).optional()
         }),
