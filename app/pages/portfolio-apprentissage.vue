@@ -349,13 +349,13 @@ const projets: ProjectBlock[] = [
   {
     slug: 'truemain',
     title: 'Mission 3 — TrueMain (projet personnel)',
-    context: 'Projet personnel solo démarré en février 2026 - agrégation de stats League of Legends sur stack .NET 10 / Nuxt 4 / PostgreSQL / Docker.',
+    context: 'Projet personnel solo démarré en février 2026, aujourd\'hui en production sur truemain.lol - agrégation de stats League of Legends sur stack .NET 10 / Nuxt 4 / PostgreSQL / MongoDB / Docker, déployée en continu.',
     to: '/projects/truemain',
     activities: [
       {
         number: 1,
         title: 'Conception de l\'architecture multi-services',
-        description: 'Architecture API REST + Worker Service pour l\'ingestion + front Nuxt 4 + PostgreSQL, le tout orchestré par Docker Compose. Libs partagées (Core domain, Data EF Core) pour éviter la duplication.',
+        description: 'Architecture API REST + Worker Service d\'ingestion + PostgreSQL + MongoDB + deux frontends Nuxt 4 (site public et portail d\'administration), orchestrés par Docker Compose derrière Caddy. Libs partagées (Core domain, Data EF Core) pour éviter la duplication entre le côté écriture et le côté lecture.',
         entries: [
           {
             type: 'CE',
@@ -390,7 +390,7 @@ const projets: ProjectBlock[] = [
       {
         number: 2,
         title: 'Ingestion Riot API et anticipation des métriques',
-        description: 'Worker Service avec respect des quotas Riot Games (rate limiting app + method), file d\'attente, back-off exponentiel et suivi des métriques d\'ingestion (matchs/min, latence p95).',
+        description: 'Worker Service de 20 processus ordonnés, avec respect des quotas Riot Games (limiteur de débit, Retry-After, back-off, disjoncteur), répartition du budget d\'appels entre régions par déficit de couverture, et suivi des métriques dans le portail d\'administration : parties ingérées par période, appels et retries par endpoint, marge restante en comptes suivis, prévision de remplissage du disque.',
         entries: [
           {
             type: 'CE',
@@ -418,7 +418,7 @@ const projets: ProjectBlock[] = [
       {
         number: 3,
         title: 'Profilage et optimisation BDD',
-        description: 'Analyse du SQL généré par EF Core, ajout d\'index ciblés (matchs par joueur, builds par champion), mise en cache mémoire des appels lecture les plus chauds. Choix justifiés dans le README technique.',
+        description: 'Lectures reprises en query services dédiés plutôt qu\'en repository générique, modèle EF Core compilé, déduplication par contenu des dimensions de build, agrégation par morceaux pour borner la mémoire du Worker, caches bornés côté API et côté images. Chaque choix est justifié dans un journal de décisions versionné avec le code, avec la mesure ou l\'incident qui l\'a déclenché.',
         entries: [
           {
             type: 'CE',
