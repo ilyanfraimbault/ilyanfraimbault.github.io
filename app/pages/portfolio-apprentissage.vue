@@ -483,7 +483,7 @@ const reflexion: FaqItem[] = [
   },
   {
     label: 'Quel est mon projet post-BUT ?',
-    content: 'À la rentrée prochaine j\'intègre **IMT Mines Alès, parcours ingénieur Développement Logiciel**. Mon objectif est de continuer à approfondir le génie logiciel (architecture, qualité, DevOps) tout en gardant un pied dans le concret avec des projets en entreprise — idéalement en **alternance**.'
+    content: 'J\'ai intégré à la rentrée **IMT Mines Alès, parcours ingénieur Développement Logiciel**. Mon objectif est de continuer à approfondir le génie logiciel (architecture, qualité, DevOps) tout en gardant un pied dans le concret avec des projets en entreprise — ce que me permet l\'**alternance**.'
   },
   {
     label: 'Dans quelle mesure cette formation a-t-elle fait évoluer mon projet ?',
