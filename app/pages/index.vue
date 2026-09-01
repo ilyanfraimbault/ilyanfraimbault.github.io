@@ -27,7 +27,16 @@ useSeoMeta({
       }"
     >
       <LandingAbout :page />
-      <LandingWorkExperience :page />
+      <div class="flex flex-col gap-8">
+        <LandingTimeline
+          :title="page.education.title"
+          :items="page.education.items"
+        />
+        <LandingTimeline
+          :title="page.experience.title"
+          :items="page.experience.items"
+        />
+      </div>
     </UPageSection>
     <LandingProjects :page />
     <LandingFAQ :page />

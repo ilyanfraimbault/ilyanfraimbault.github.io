@@ -1,14 +1,24 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+interface TimelineItem {
+  date: string
+  position: string
+  organization: {
+    name: string
+    url: string
+    logo: string
+    color: string
+  }
+}
 
 defineProps<{
-  page: IndexCollectionItem
+  title: string
+  items: TimelineItem[]
 }>()
 </script>
 
 <template>
   <UPageSection
-    :title="page.experience.title"
+    :title="title"
     :ui="{
       container: '!p-0 gap-4 sm:gap-4',
       title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
@@ -18,7 +28,7 @@ defineProps<{
     <template #description>
       <div class="flex flex-col gap-2">
         <Motion
-          v-for="(experience, index) in page.experience.items"
+          v-for="(item, index) in items"
           :key="index"
           :initial="{ opacity: 0, transform: 'translateY(20px)' }"
           :while-in-view="{ opacity: 1, transform: 'translateY(0)' }"
@@ -27,28 +37,28 @@ defineProps<{
           class="flex flex-col gap-2 border-b border-muted/30 pb-4 last:border-b-0 items-start text-right sm:items-end"
         >
           <p class="text-xs sm:text-sm text-muted">
-            {{ experience.date }}
+            {{ item.date }}
           </p>
           <ULink
             class="flex flex-col gap-1 text-right text-muted hover:text-muted items-start sm:items-end"
-            :to="experience.company.url"
+            :to="item.organization.url"
             target="_blank"
           >
-            <span class="text-sm text-foreground">{{ experience.position }}</span>
+            <span class="text-sm text-foreground">{{ item.position }}</span>
             <div
               class="inline-flex items-center gap-2 text-sm justify-end"
             >
-              <span class="font-medium">{{ experience.company.name }}</span>
-              <template v-if="experience.company.logo?.startsWith('/')">
+              <span class="font-medium">{{ item.organization.name }}</span>
+              <template v-if="item.organization.logo?.startsWith('/')">
                 <NuxtImg
-                  :src="experience.company.logo"
-                  :alt="experience.company.name"
+                  :src="item.organization.logo"
+                  :alt="item.organization.name"
                   class="h-4 w-auto shrink-0"
                 />
               </template>
               <template v-else>
                 <UIcon
-                  :name="experience.company.logo"
+                  :name="item.organization.logo"
                   class="shrink-0 text-muted"
                 />
               </template>
@@ -59,7 +69,3 @@ defineProps<{
     </template>
   </UPageSection>
 </template>
-
-<style scoped>
-
-</style>
