@@ -1,6 +1,6 @@
 ---
 title: Remise à niveau en maths
-description: Quatre chapitres, chacun en trois pages — le cours, les exercices du TD corrigés, et une fiche d'entraînement progressive.
+description: Quatre chapitres — le cours, les exercices du TD corrigés, et une fiche d'entraînement progressive pour chacun.
 annee: A1
 matiere: Remise à niveau en maths
 icone: i-lucide-sigma
@@ -12,7 +12,7 @@ Chaque chapitre se lit en trois pages, et chaque lien ci-dessous porte une pasti
 - **Exercices** — les exercices du TD, dans l'ordre du sujet. Sous chaque question, trois boutons qui ouvrent une fenêtre sans quitter l'énoncé : un **indice**, la **solution** détaillée, et le **rappel de cours** utile à cette question précise.
 - **Entraînement** — quinze questions en cinq paliers de difficulté croissante, qui partent de zéro et mènent au niveau du TD. Mêmes trois boutons, plus un exemple similaire entièrement traité, glissé dans la fenêtre d'indice.
 
-La trigonométrie fait exception : elle n'a pas de TD, et son cours est un guide suivi construit autour d'un **cercle manipulable** que l'on retrouve ensuite dans les autres chapitres. C'est par là qu'il vaut mieux commencer.
+Deux chapitres s'écartent de ce plan. Les fonctions d'une variable réelle ont une **seconde** page d'exercices, les révisions dérivées, où les types de fonctions sont volontairement mélangés. Et la trigonométrie n'a pas de TD : son cours est un guide suivi construit autour d'un **cercle manipulable** que l'on retrouve ensuite dans les autres chapitres. C'est par là qu'il vaut mieux commencer.
 
 Les résultats ont été vérifiés par calcul formel puis confrontés aux éléments de correction officiels ; les rares écarts sont signalés directement dans la solution concernée.
 
@@ -30,6 +30,9 @@ Les résultats ont été vérifiés par calcul formel puis confrontés aux élé
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/exercices" titre="Fonctions d'une variable réelle" description="Les six exercices du TD et leurs 53 dérivées : sommes, produits, inverses, quotients, ensembles de dérivabilité" type="exercices" meta="6 exercices"}
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/revisions" titre="Révisions dérivées" description="Trente-quatre dérivées dans le désordre des types : le vrai exercice est de reconnaître la structure avant de dériver" type="exercices" meta="34 dérivées"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/entrainement" titre="Fonctions d'une variable réelle" description="Du taux d'accroissement jusqu'aux formes composées empilées, en cinq paliers" type="entrainement" meta="15 questions"}

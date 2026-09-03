@@ -4,7 +4,7 @@ description: Quinze questions en cinq paliers, du tableau des dérivées jusqu'�
 type: entrainement
 annee: A1
 matiere: Remise à niveau en maths
-ordre: 3
+ordre: 4
 icone: i-lucide-list-checks
 ---
 
@@ -24,6 +24,9 @@ Un réflexe à prendre dès le palier 1 : **écrire $u$, $v$, $u'$ et $v'$ à pa
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/exercices" titre="Les exercices du TD" description="Les six exercices du programme et leurs 53 dérivées — à faire une fois les cinq paliers passés" type="exercices" meta="6 exercices"}
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/revisions" titre="Révisions dérivées" description="Trente-quatre dérivées dans le désordre des types : le vrai exercice est de reconnaître la structure avant de dériver" type="exercices" meta="34 dérivées"}
 ::
 
 :::exercice{titre="Palier 1 — Dériver terme à terme" theme="Le tableau des dérivées usuelles, et le réflexe de réécriture" badge="★☆☆☆☆" icone="i-lucide-sprout"}

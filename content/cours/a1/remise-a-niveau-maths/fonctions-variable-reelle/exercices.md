@@ -21,6 +21,9 @@ Le bon réflexe : chercher, puis l'indice, puis le cours, et la solution en dern
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/cours" titre="Le cours du chapitre" description="Continuité, TVI, dérivabilité, tableau des dérivées usuelles, formes composées et bijections" type="cours" meta="7 sections"}
 ::
 
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/revisions" titre="Révisions dérivées" description="Trente-quatre dérivées dans le désordre des types : le vrai exercice est de reconnaître la structure avant de dériver" type="exercices" meta="34 dérivées"}
+::
+
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/entrainement" titre="La fiche d’entraînement" description="Si ces exercices démarrent trop haut : quinze questions en cinq paliers, du taux d’accroissement aux formes composées empilées" type="entrainement" meta="15 questions"}
 ::
 
