@@ -18,7 +18,7 @@ Les exercices du TD, dans l'ordre du sujet. Sous chaque question, trois boutons 
 Le bon réflexe : chercher, puis l'indice, puis le cours, et la solution en dernier.
 ::
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, forme exponentielle" type="cours" meta="6 sections"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, formes trigonométrique et exponentielle, ensembles de points" type="cours" meta="8 sections"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/entrainement" titre="La fiche d’entraînement" description="Si ces exercices démarrent trop haut : quinze questions en cinq paliers, de « qu’est-ce que i » à la formule de Moivre" type="entrainement" meta="15 questions"}

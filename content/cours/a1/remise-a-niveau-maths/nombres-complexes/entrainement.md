@@ -20,7 +20,7 @@ Sous chaque question, trois boutons :
 Le bon réflexe : chercher cinq minutes, puis l'indice, puis l'exemple, et la solution en dernier.
 ::
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, forme exponentielle" type="cours" meta="6 sections"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, formes trigonométrique et exponentielle, ensembles de points" type="cours" meta="8 sections"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/exercices" titre="Les exercices du TD" description="Les quatre exercices du programme, corrigés — à faire une fois les cinq paliers passés" type="exercices" meta="4 exercices"}
@@ -1190,7 +1190,7 @@ L'argument exige **cosinus et sinus**. Le cosinus seul laisse deux angles en con
 L'argument n'est défini qu'**à $2\pi$ près**, d'où la mention « mod $2\pi$ ».
 ::
 
-::extrait-cours{id="xnc-exponentielle" titre="Forme exponentielle, produit, quotient et Moivre" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_6-forme-exponentielle"}
+::extrait-cours{id="xnc-exponentielle" titre="Forme exponentielle, produit, quotient et Moivre" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_7-forme-exponentielle"}
 Tout complexe non nul s'écrit
 
 $$

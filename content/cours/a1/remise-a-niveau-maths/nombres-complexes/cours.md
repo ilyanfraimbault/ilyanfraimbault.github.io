@@ -1,6 +1,6 @@
 ---
 title: Nombres complexes — le cours
-description: Forme algébrique, opérations, second degré dans C, affixes, module et argument, forme exponentielle. Chaque notion est suivie d'un exemple entièrement traité.
+description: Forme algébrique, opérations, second degré dans C, affixes, module et argument, formes trigonométrique et exponentielle, ensembles de points. Chaque notion est suivie d'un exemple entièrement traité.
 interactif: true
 type: cours
 annee: A1
@@ -273,7 +273,72 @@ Si l'on n'avait regardé que $\cos\theta = -\dfrac12$, on aurait hésité entre 
 **Quand le rapport ne se lit pas directement.** Par exemple $\dfrac{2}{2\sqrt2}$ : on multiplie haut et bas par $\sqrt2$, ce qui donne $\dfrac{2\sqrt2}{4} = \dfrac{\sqrt2}{2}$, cette fois reconnaissable dans le tableau.
 ::
 
-## 6. Forme exponentielle
+## 6. La forme trigonométrique
+
+Le module et l'argument suffisent à reconstituer le nombre : $x = r\cos\theta$ et $y = r\sin\theta$ sont les coordonnées du point $M$ lues sur le cercle de rayon $r$. D'où la **forme trigonométrique**
+
+$$
+z = r\left(\cos\theta+i\sin\theta\right) \qquad (r = \lvert z\rvert > 0,\ \theta = \arg z)
+$$
+
+que les sujets abrègent souvent en $[r\,;\theta]$. ⚠️ Ce n'est **pas** un couple de coordonnées : le premier nombre est une longueur, le second un angle.
+
+**Les deux sens de conversion**, à ne pas confondre :
+
+| Sens | Ce qu'on connaît | Ce qu'on calcule |
+|---|---|---|
+| Trigonométrique → algébrique | $r$ et $\theta$ | $a = r\cos\theta$ et $b = r\sin\theta$, puis $z = a+bi$ |
+| Algébrique → trigonométrique | $a$ et $b$ | $r = \sqrt{a^2+b^2}$, puis $\cos\theta = \dfrac{a}{r}$ **et** $\sin\theta = \dfrac{b}{r}$ |
+
+Le premier sens est purement mécanique : deux valeurs à lire dans le tableau des angles remarquables. Le second demande l'étape d'identification de l'angle, avec le piège habituel — les deux rapports sont nécessaires.
+
+::exemple{id="nc-trigo-vers-algebrique" titre="De la forme trigonométrique à la forme algébrique" pour="Le sens facile : deux lectures dans le tableau"}
+Écrivons $z = \left[6\,;\dfrac{5\pi}{6}\right]$ sous forme algébrique.
+
+$$
+a = 6\cos\frac{5\pi}{6} = 6\times\left(-\frac{\sqrt3}{2}\right) = -3\sqrt3
+$$
+
+$$
+b = 6\sin\frac{5\pi}{6} = 6\times\frac12 = 3
+$$
+
+$$
+z = -3\sqrt3+3i
+$$
+
+**Contrôle.** $\dfrac{5\pi}{6}$ est dans le deuxième quadrant, où l'abscisse est négative et l'ordonnée positive : les signes obtenus concordent.
+
+Cas particuliers à connaître par cœur, ils reviennent tout le temps : $[r\,;0] = r$, $\left[r\,;\dfrac\pi2\right] = ri$, $[r\,;\pi] = -r$, $\left[r\,;-\dfrac\pi2\right] = -ri$.
+::
+
+::exemple{id="nc-algebrique-vers-trigo" titre="De la forme algébrique à la forme trigonométrique" pour="Le sens exigeant : module, puis les deux rapports"}
+Écrivons $z = -2-2i\sqrt3$ sous forme trigonométrique.
+
+**Module.**
+
+$$
+r = \sqrt{(-2)^2+\left(-2\sqrt3\right)^2} = \sqrt{4+12} = 4
+$$
+
+**Les deux rapports.**
+
+$$
+\cos\theta = \frac{-2}{4} = -\frac12 \qquad \sin\theta = \frac{-2\sqrt3}{4} = -\frac{\sqrt3}{2}
+$$
+
+Cosinus **et** sinus négatifs : troisième quadrant. L'angle remarquable qui a ces deux valeurs est $-\dfrac{2\pi}{3}$.
+
+$$
+z = 4\left(\cos\left(-\frac{2\pi}{3}\right)+i\sin\left(-\frac{2\pi}{3}\right)\right) = \left[4\,;-\frac{2\pi}{3}\right]
+$$
+
+**Vérification systématique** : on redéveloppe. $4\times\left(-\dfrac12\right) = -2$ et $4\times\left(-\dfrac{\sqrt3}{2}\right) = -2\sqrt3$, on retombe bien sur l'énoncé.
+
+**Quand l'angle n'est pas remarquable**, comme pour $z = 5+3i$ : le module vaut $\sqrt{34}$, et l'argument ne se lit dans aucun tableau. On donne alors une valeur approchée en radians, $\theta = \arctan\dfrac35 \approx 0{,}540$ — l'arc tangente convenant directement ici parce que $z$ est dans le premier quadrant.
+::
+
+## 7. Forme exponentielle
 
 En notant $\cos\theta+i\sin\theta = e^{i\theta}$, tout complexe non nul s'écrit
 
@@ -315,11 +380,75 @@ $$
 ⚠️ La forme exponentielle exige $r > 0$. Une écriture comme $-2e^{i\theta}$ n'en est pas une : il faut la corriger en $2e^{i(\theta+\pi)}$.
 ::
 
+## 8. Ensembles de points et transformations
+
+Un module est une **distance** : $\lvert z_B-z_A\rvert = AB$. Toute condition écrite avec des modules se relit donc comme une condition de distance, et décrit une figure du plan.
+
+| Condition sur $z$ | Ensemble des points $M$ |
+|---|---|
+| $\lvert z-z_A\rvert = r$ | le **cercle** de centre $A$ et de rayon $r$ |
+| $\lvert z-z_A\rvert \leqslant r$ | le **disque** fermé de centre $A$ et de rayon $r$ |
+| $\lvert z-z_A\rvert = \lvert z-z_B\rvert$ | la **médiatrice** du segment $[AB]$ |
+
+⚠️ Le premier réflexe est de **faire apparaître la forme $\lvert z-z_A\rvert$**, quitte à factoriser un signe. Par exemple $\lvert z+2-i\rvert$ s'écrit $\lvert z-(-2+i)\rvert$ : le centre est le point d'affixe $-2+i$, et non $2-i$.
+
+**L'autre méthode, quand les modules ne suffisent pas** : poser $z = x+iy$ avec $x$ et $y$ réels, puis séparer partie réelle et partie imaginaire. C'est le passage obligé dès qu'apparaît $\bar z$, ou une condition du type « $Z$ est réel ».
+
+$$
+Z \text{ est réel} \iff \mathcal{I}m(Z) = 0 \qquad Z \text{ est imaginaire pur} \iff \mathcal{R}e(Z) = 0
+$$
+
+::exemple{id="nc-ensembles" titre="Reconnaître un cercle, un disque, une médiatrice" pour="Traduire une condition sur les modules en figure"}
+**Un cercle.** $\lvert z-1+3i\rvert = 4$. On réécrit l'intérieur sous la forme $z-z_A$ :
+
+$$
+\lvert z-(1-3i)\rvert = 4
+$$
+
+C'est le cercle de centre le point d'affixe $1-3i$, soit $(1\,;-3)$, et de rayon $4$.
+
+**Une médiatrice.** $\lvert z-2\rvert = \lvert z+i\rvert$ se relit $\lvert z-2\rvert = \lvert z-(-i)\rvert$, donc $AM = BM$ avec $A(2\,;0)$ et $B(0\,;-1)$ : c'est la médiatrice de $[AB]$.
+
+**Contrôle par le calcul**, si le doute subsiste. Avec $z = x+iy$, la condition $\lvert z-2\rvert = \lvert z+i\rvert$ s'élève au carré :
+
+$$
+(x-2)^2+y^2 = x^2+(y+1)^2
+$$
+
+$$
+-4x+4 = 2y+1 \quad\Longrightarrow\quad 4x+2y-3 = 0
+$$
+
+Une équation du premier degré en $x$ et $y$ : c'est bien une droite.
+::
+
+::exemple{id="nc-reel-imaginaire-pur" titre="Quand un quotient est-il réel, quand est-il imaginaire pur ?" pour="La méthode z = x+iy, appliquée à un quotient"}
+Soit $Z = \dfrac{z+1}{z-i}$, avec $z = x+iy$ et $z \neq i$.
+
+**On multiplie par le conjugué du dénominateur**, exactement comme pour une forme algébrique ordinaire :
+
+$$
+Z = \frac{\left(x+1+iy\right)\left(x-i(y-1)\right)}{x^2+(y-1)^2}
+$$
+
+Seul le numérateur demande du travail. On développe et on regroupe :
+
+$$
+\mathcal{R}e = x(x+1)+y(y-1) \qquad \mathcal{I}m = xy-(x+1)(y-1)
+$$
+
+**$Z$ est réel** quand la partie imaginaire s'annule, **$Z$ est imaginaire pur** quand c'est la partie réelle. Chacune de ces deux équations décrit une figure — ici une droite dans le premier cas, un cercle dans le second, puisque $x^2+y^2$ y apparaît.
+
+⚠️ **Ne jamais oublier d'exclure les points interdits** : celui qui annule le dénominateur, et — pour « imaginaire pur » — celui qui annule $Z$ tout entier, $0$ n'étant pas un imaginaire pur.
+::
+
 ## Les pièges à retenir
 
 - $\mathcal{I}m(3-2i) = -2$ : la partie imaginaire est un réel, sans le $i$.
 - Ne jamais écrire $\sqrt{-3}$ ; quand $\Delta < 0$, c'est $i\sqrt3$ qui apparaît.
 - L'argument exige cosinus **et** sinus : $\cos\theta = \dfrac12$ seul laisse $\pm\dfrac{\pi}{3}$ en concurrence.
 - La forme exponentielle impose $r > 0$.
+- $[r\,;\theta]$ n'est pas un couple de coordonnées : $r$ est une longueur, $\theta$ un angle.
+- $\lvert z-a\rvert = r$ est un **cercle**, $\lvert z-a\rvert \leqslant r$ un **disque**.
 - Affixe de $\overrightarrow{AB}$ : $z_B-z_A$, extrémité moins origine.
 - Un quotient n'est pas terminé tant qu'il reste un $i$ au dénominateur.
