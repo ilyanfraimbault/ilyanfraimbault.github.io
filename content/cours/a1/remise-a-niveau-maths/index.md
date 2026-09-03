@@ -16,6 +16,11 @@ Deux chapitres ont une **seconde** page d'exercices. Les fonctions d'une variabl
 
 Les résultats ont été vérifiés par calcul formel puis confrontés aux éléments de correction officiels ; les rares écarts sont signalés directement dans la solution concernée.
 
+## QCM et révision
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm" titre="QCM et plan de révision" description="Six QCM de vingt questions, dont une rafale entièrement consacrée aux dérivées, et un plan de sept jours pour arriver prêt" icone="i-lucide-circle-check-big" meta="6 QCM · 120 questions"}
+::
+
 ## Trigonométrie
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Comprendre le cercle trigonométrique" description="Le cercle expliqué de zéro, figure interactive à l'appui : radians, valeurs remarquables, angles associés, équations, arccos et arcsin" type="cours" meta="10 sections + 7 questions"}
