@@ -100,6 +100,30 @@
   margin-top: 0.625rem;
 }
 
+/* Une proposition de QCM tient sur une ligne de bouton : le paragraphe que MDC
+   génère autour ne doit pas y apporter les marges verticales de la prose. Et une
+   formule trop large défile dans sa proposition plutôt que d'élargir la page. */
+.cours-qcm-choix > * {
+  margin-block: 0;
+}
+
+.cours-qcm-choix {
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.cours-qcm-choix .katex-display {
+  margin-block: 0;
+  text-align: left;
+}
+
+/* Les propositions sont des boutons : une fois la copie rendue elles sont
+   désactivées, mais leur contenu doit rester parfaitement lisible. */
+.cours-qcm-question button[disabled] {
+  cursor: default;
+  opacity: 1;
+}
+
 .cours-reveal-enter-active,
 .cours-reveal-leave-active {
   transition: opacity 0.18s ease, transform 0.18s ease;

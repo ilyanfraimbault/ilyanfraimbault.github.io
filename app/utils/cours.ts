@@ -1,9 +1,9 @@
 /**
- * Nature d'une page de la section « cours ». Une matière mélange trois sortes de
- * pages qui ne se lisent pas de la même façon : on les distingue par une
+ * Nature d'une page de la section « cours ». Une matière mélange plusieurs sortes
+ * de pages qui ne se lisent pas de la même façon : on les distingue par une
  * pastille, dans les listes de liens comme en tête de la page elle-même.
  */
-export type CoursType = 'cours' | 'exercices' | 'entrainement'
+export type CoursType = 'cours' | 'exercices' | 'entrainement' | 'qcm'
 
 export interface CoursTypeInfo {
   label: string
@@ -31,6 +31,12 @@ export const coursTypes: Record<CoursType, CoursTypeInfo> = {
     icone: 'i-lucide-list-checks',
     couleur: 'success',
     aide: 'Des questions en paliers de difficulté croissante, à faire dans l\'ordre.'
+  },
+  qcm: {
+    label: 'QCM',
+    icone: 'i-lucide-circle-check-big',
+    couleur: 'warning',
+    aide: 'Vingt questions à choix unique : on répond à tout, puis on corrige d\'un coup.'
   }
 }
 
