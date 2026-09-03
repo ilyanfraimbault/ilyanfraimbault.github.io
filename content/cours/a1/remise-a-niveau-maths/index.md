@@ -12,9 +12,14 @@ Chaque chapitre se lit en trois pages, et chaque lien ci-dessous porte une pasti
 - **Exercices** — les exercices du TD, dans l'ordre du sujet. Sous chaque question, trois boutons qui ouvrent une fenêtre sans quitter l'énoncé : un **indice**, la **solution** détaillée, et le **rappel de cours** utile à cette question précise.
 - **Entraînement** — quinze questions en cinq paliers de difficulté croissante, qui partent de zéro et mènent au niveau du TD. Mêmes trois boutons, plus un exemple similaire entièrement traité, glissé dans la fenêtre d'indice.
 
-Deux chapitres s'écartent de ce plan. Les fonctions d'une variable réelle ont une **seconde** page d'exercices, les révisions dérivées, où les types de fonctions sont volontairement mélangés. Et la trigonométrie n'a pas de TD : son cours est un guide suivi construit autour d'un **cercle manipulable** que l'on retrouve ensuite dans les autres chapitres. C'est par là qu'il vaut mieux commencer.
+Deux chapitres ont une **seconde** page d'exercices. Les fonctions d'une variable réelle avec les révisions dérivées, où les types de fonctions sont volontairement mélangés ; les nombres complexes avec les révisions, qui vont bien plus loin que le TD. Et la trigonométrie n'a pas de TD : son cours est un guide suivi construit autour d'un **cercle manipulable** que l'on retrouve ensuite dans les autres chapitres. C'est par là qu'il vaut mieux commencer.
 
 Les résultats ont été vérifiés par calcul formel puis confrontés aux éléments de correction officiels ; les rares écarts sont signalés directement dans la solution concernée.
+
+## QCM et révision
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm" titre="QCM et plan de révision" description="Six QCM de vingt questions, dont une rafale entièrement consacrée aux dérivées, et un plan de sept jours pour arriver prêt" icone="i-lucide-circle-check-big" meta="6 QCM · 120 questions"}
+::
 
 ## Trigonométrie
 
@@ -51,10 +56,13 @@ Les résultats ont été vérifiés par calcul formel puis confrontés aux élé
 
 ## Nombres complexes
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Nombres complexes" description="Forme algébrique, opérations, second degré dans C, affixes, module et argument, forme exponentielle" type="cours" meta="6 sections"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Nombres complexes" description="Forme algébrique, opérations, second degré dans C, affixes, module et argument, formes trigonométrique et exponentielle, ensembles de points" type="cours" meta="8 sections"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/exercices" titre="Nombres complexes" description="Les quatre exercices du TD : formes algébriques, second degré, lecture graphique et forme exponentielle" type="exercices" meta="4 exercices"}
+::
+
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/revisions" titre="Révisions nombres complexes" description="Les trois écritures d’un complexe, puis la géométrie du plan : conversions, opérations en forme exponentielle, ensembles de points et transformations" type="exercices" meta="87 questions"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/entrainement" titre="Nombres complexes" description="De « qu'est-ce que i » à la formule de Moivre, en cinq paliers" type="entrainement" meta="15 questions"}

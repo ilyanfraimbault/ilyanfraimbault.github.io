@@ -152,7 +152,7 @@ export default defineContentConfig({
         interactif: z.boolean().optional(),
         // Nature de la page, affichée en pastille : cours, exercices du TD, ou
         // fiche d'entraînement progressive. Absente sur les pages de sommaire.
-        type: z.enum(['cours', 'exercices', 'entrainement']).optional(),
+        type: z.enum(['cours', 'exercices', 'entrainement', 'qcm']).optional(),
         annee: z.string().optional(),
         matiere: z.string().optional(),
         ordre: z.number().optional(),

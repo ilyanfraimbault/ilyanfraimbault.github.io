@@ -295,14 +295,14 @@ Rien ne se factorise ici : la forme obtenue est la forme finale. Dérivable sur 
 
 ::exo-question{label="10." cours="cours-reecriture"}
 $$
-f(x) = -\frac{4}{x^3}
+f(x) = \frac{4}{x^3}
 $$
 
 #indice
 Inutile de sortir la formule de l'inverse : le dénominateur est une simple puissance de $x$. On **réécrit** :
 
 $$
--\frac{4}{x^3} = -4x^{-3}
+\frac{4}{x^3} = 4x^{-3}
 $$
 
 et la ligne $\left(x^\alpha\right)' = \alpha x^{\alpha-1}$ s'applique telle quelle. Attention, l'exposant **descend** : de $-3$ on passe à $-4$.
@@ -311,18 +311,18 @@ et la ligne $\left(x^\alpha\right)' = \alpha x^{\alpha-1}$ s'applique telle quel
 On réécrit en puissance négative :
 
 $$
-f(x) = -4x^{-3}
+f(x) = 4x^{-3}
 $$
 
 $$
-f'(x) = -4\times(-3)x^{-4} = 12x^{-4}
+f'(x) = 4\times(-3)x^{-4} = -12x^{-4}
 $$
 
 $$
-\boxed{f'(x) = \frac{12}{x^4}}
+\boxed{f'(x) = -\frac{12}{x^4}}
 $$
 
-Le double signe moins — celui de la constante et celui de l'exposant — se compense : la dérivée est **positive**. C'est cohérent, $f$ est croissante sur chacun des deux intervalles de son domaine $\mathbb{R}^*$.
+C'est l'exposant qui apporte le signe moins : la dérivée est **négative** partout où elle existe. Cohérent, $f$ est décroissante sur chacun des deux intervalles de son domaine $\mathbb{R}^*$.
 ::
 
 ::exo-question{label="11." cours="cours-inverse"}
