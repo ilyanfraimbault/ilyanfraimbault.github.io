@@ -18,7 +18,7 @@ Les résultats ont été vérifiés par calcul formel puis confrontés aux élé
 
 ## QCM et révision
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm" titre="QCM et plan de révision" description="Six QCM de vingt questions, dont une rafale entièrement consacrée aux dérivées, et un plan de sept jours pour arriver prêt" icone="i-lucide-circle-check-big" meta="6 QCM · 120 questions"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm" titre="QCM et plan de révision" description="Six QCM de vingt questions, dont une rafale entièrement consacrée aux dérivées, et un plan de six jours pour arriver prêt" icone="i-lucide-circle-check-big" meta="6 QCM · 120 questions"}
 ::
 
 ## Trigonométrie

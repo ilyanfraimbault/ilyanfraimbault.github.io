@@ -1,6 +1,6 @@
 ---
 title: QCM et plan de révision
-description: Six QCM de vingt questions couvrant les quatre chapitres, dont une rafale entièrement consacrée aux dérivées, et un plan de sept jours pour arriver prêt au QCM du vendredi 11 septembre.
+description: Six QCM de vingt questions couvrant les quatre chapitres, dont une rafale entièrement consacrée aux dérivées, et un plan de six jours pour arriver prêt au QCM du vendredi 11 septembre.
 annee: A1
 matiere: Remise à niveau en maths
 icone: i-lucide-circle-check-big
@@ -40,22 +40,20 @@ C'est **beaucoup**. Une dérivée composée se calcule en trente secondes ; il t
 **Si tu finis en trente minutes, tu n'as pas fini.** Tu as le temps de reprendre les vingt questions une seconde fois — et c'est là que se gagnent les deux ou trois points qui séparent une bonne note d'une très bonne.
 ::
 
-## Le plan des sept jours
+## Le plan des six jours
 
-Le QCM tombe le **vendredi 11 septembre**. Il reste sept jours pleins, du vendredi 4 au jeudi 10.
+Le QCM tombe le **vendredi 11 septembre**. Rien n'a encore été révisé : le plan démarre **samedi 5**, ce qui laisse six jours pleins jusqu'au jeudi 10 — un de moins que l'idéal, donc chaque journée est plus chargée et le diagnostic se fait le premier matin plutôt que la veille au calme.
 
-Le plan n'est pas réparti à parts égales, et c'est volontaire. La trigonométrie occupe **deux jours sur sept** parce que c'est le point faible annoncé, mais aussi parce qu'elle est le socle d'un second chapitre : la section 5 des fonctions usuelles est entièrement trigonométrique, et la section 6 traite d'arccos et d'arcsin. Une journée investie en trigonométrie rapporte donc deux fois.
+Le plan n'est pas réparti à parts égales, et c'est volontaire. La trigonométrie occupe **deux jours sur six** parce que c'est le point faible annoncé, mais aussi parce qu'elle est le socle d'un second chapitre : la section 5 des fonctions usuelles est entièrement trigonométrique, et la section 6 traite d'arccos et d'arcsin. Une journée investie en trigonométrie rapporte donc deux fois. En contrepartie, la dernière journée regroupe fonctions usuelles et répétition générale : c'est la plus longue du plan, à commencer tôt.
 
 | Jour | Date | Thème | Travail |
 |---|---|---|---|
-| **J0** | ce soir, jeudi 3 | Diagnostic | QCM 1 à froid, sans réviser. Le but n'est pas la note, c'est de savoir où ça casse. |
-| **J1** | vendredi 4 | Trigonométrie, le socle | Cours §1 à §6, le cercle manipulable en main. Puis QCM 1. |
-| **J2** | samedi 5 | Trigonométrie, la suite | Cours §7 à §10 : tangente, équations, réciproques, **dérivées**. Refaire QCM 1, puis QCM 5. |
-| **J3** | dimanche 6 | Complexes, le calcul | Cours §1 à §3 : formes algébriques, conjugué, quotient, second degré. |
-| **J4** | lundi 7 | Complexes, la géométrie | Cours §4 à §8 : affixes, module, argument, formes trigonométrique et exponentielle. Puis QCM 4. |
-| **J5** | mardi 8 | Dérivation | Tableau, produit, quotient, formes composées, domaines. QCM 2, puis **refaire QCM 5**. |
-| **J6** | mercredi 9 | Fonctions usuelles | exp, ln, limites et croissances comparées, réciproques, hyperboliques. Puis QCM 3. |
-| **J7** | jeudi 10 | Répétition générale | QCM 6 blanc en conditions : **une heure pleine**, comme le jour J. Puis reprise des seules erreurs. |
+| **J1** | samedi 5 | Diagnostic + Trigonométrie, le socle | QCM 1 à froid, sans réviser, pour savoir où ça casse. Puis cours §1 à §6, le cercle manipulable en main. |
+| **J2** | dimanche 6 | Trigonométrie, la suite | Cours §7 à §10 : tangente, équations, réciproques, **dérivées**. Refaire QCM 1, puis QCM 5. |
+| **J3** | lundi 7 | Complexes, le calcul | Cours §1 à §3 : formes algébriques, conjugué, quotient, second degré. |
+| **J4** | mardi 8 | Complexes, la géométrie | Cours §4 à §8 : affixes, module, argument, formes trigonométrique et exponentielle. Puis QCM 4. |
+| **J5** | mercredi 9 | Dérivation | Tableau, produit, quotient, formes composées, domaines. QCM 2, puis **refaire QCM 5**. |
+| **J6** | jeudi 10 | Fonctions usuelles + Répétition générale | Cours : exp, ln, limites et croissances comparées, réciproques, hyperboliques. QCM 3. Puis QCM 6 blanc en conditions, **une heure pleine**, comme le jour J, et reprise des seules erreurs. |
 
 **Le QCM 5 revient deux fois**, et c'est volontaire : les dérivées de sinus, cosinus, tangente, arcsin et arccos sont ce qui tombe le plus lourdement, et ce sont des réflexes — ils ne s'acquièrent qu'en repassant sur les mêmes formes à quelques jours d'intervalle. Une seule séance ne suffit pas.
 
