@@ -19,7 +19,7 @@ Cliquer une seconde fois sur une proposition la désélectionne, si tu préfère
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Le cours de trigonométrie" description="Le cercle expliqué de zéro, figure interactive à l'appui : radians, valeurs remarquables, angles associés, équations, arccos et arcsin" type="cours" meta="10 sections"}
 ::
 
-:::qcm{titre="QCM 1 — Trigonométrie" theme="Du radian aux fonctions réciproques, dans l'ordre du cours" duree="25 min" icone="i-lucide-compass"}
+:::qcm{titre="QCM 1 — Trigonométrie" theme="Du radian aux fonctions réciproques, dans l'ordre du cours" duree="1 h" icone="i-lucide-compass"}
 
 ::qcm-question{label="1." bonne="a" cours="qcm-radian"}
 Combien vaut $150°$ en radians ?

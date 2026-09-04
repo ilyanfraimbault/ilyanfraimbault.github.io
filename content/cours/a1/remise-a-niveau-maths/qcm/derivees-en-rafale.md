@@ -19,10 +19,12 @@ $$
 
 Les deux erreurs qui coûtent presque toutes les questions, et qui se cumulent volontiers : **oublier le signe moins** du cosinus, et **oublier de dériver l'intérieur**. Avant de valider une réponse, deux vérifications de trois secondes — le signe est-il le bon ? le facteur $u'$ est-il là ?
 
+**Une nuance de rythme pour celui-ci.** L'épreuve laisse trois minutes par question, mais ce QCM-là n'est pas une simulation : c'est un entraînement au réflexe. Vise **vingt minutes au premier passage**, sans t'attarder — l'objectif est de savoir lesquelles viennent immédiatement et lesquelles demandent à réfléchir. Ce sont les secondes qui indiquent quoi relire.
+
 On répond à tout, puis on clique sur **Corriger**.
 ::
 
-:::qcm{titre="QCM 5 — Dérivées en rafale" theme="Trigonométrie, fonctions réciproques et hyperboliques, sous toutes leurs formes composées" duree="20 min" icone="i-lucide-zap"}
+:::qcm{titre="QCM 5 — Dérivées en rafale" theme="Trigonométrie, fonctions réciproques et hyperboliques, sous toutes leurs formes composées" duree="1 h" icone="i-lucide-zap"}
 
 ::qcm-question{label="1." bonne="c" cours="qcm-der-trigo"}
 La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin(2x)$ a pour dérivée :

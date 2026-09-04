@@ -19,7 +19,7 @@ C'est ce diagnostic, et non le calcul, qui départage les bonnes et les mauvaise
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/cours" titre="Le cours du chapitre" description="Continuité, TVI, dérivabilité, tableau des dérivées usuelles, formes composées et bijections" type="cours" meta="7 sections"}
 ::
 
-:::qcm{titre="QCM 2 — Dérivation" theme="Du tableau des dérivées usuelles aux formes composées et aux ensembles de dérivabilité" duree="25 min" icone="i-lucide-trending-up"}
+:::qcm{titre="QCM 2 — Dérivation" theme="Du tableau des dérivées usuelles aux formes composées et aux ensembles de dérivabilité" duree="1 h" icone="i-lucide-trending-up"}
 
 ::qcm-question{label="1." bonne="b" cours="qcm-fvr-tableau"}
 Pour tout réel $\alpha$, la dérivée de $x\mapsto x^{\alpha}$ est :

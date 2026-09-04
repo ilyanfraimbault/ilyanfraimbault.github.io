@@ -17,14 +17,17 @@ C'est là toute la difficulté, et c'est ce qui manque aux cinq QCM précédents
 
 **Le mode d'emploi**, pour que la note veuille dire quelque chose :
 
-- **25 minutes, chronomètre lancé.** C'est un peu plus d'une minute par question.
-- On répond à **tout**, même en devinant — une question blanche ne t'apprend rien, une erreur si.
+- **Une heure pleine, chronomètre lancé** — la durée réelle de l'épreuve, soit trois minutes par question.
+- On répond à **tout**, même en devinant : une question blanche ne t'apprend rien, une erreur si.
 - On ne consulte **rien** avant d'avoir cliqué sur Corriger.
+- **On ne rend pas avant la fin de l'heure.** Le premier passage prend une trentaine de minutes ; le second sert à vérifier, et c'est lui qui rapporte.
+
+⚠️ **Terminer vite n'est pas une performance.** Avec trois minutes par question, la seule erreur qui coûte vraiment est celle qu'on n'a pas relue : un $u'$ oublié, un signe perdu, un $i^2$ resté en place. Chaque réponse doit passer le contrôle de structure, et les moins sûres un contrôle indépendant — une valeur particulière, ou un second chemin de calcul.
 
 À réserver pour le jeudi 10, la veille. Le faire trop tôt gâche le seul instrument de mesure fiable dont tu disposes.
 ::
 
-:::qcm{titre="QCM 6 — Le QCM blanc" theme="Vingt questions mélangées sur les quatre chapitres, en conditions" duree="25 min" icone="i-lucide-clipboard-check"}
+:::qcm{titre="QCM 6 — Le QCM blanc" theme="Vingt questions mélangées sur les quatre chapitres, en conditions" duree="1 h" icone="i-lucide-clipboard-check"}
 
 ::qcm-question{label="1." bonne="b" cours="qcm-b-derivees"}
 La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin\left(2x-\dfrac{\pi}{2}\right)$ a pour dérivée :

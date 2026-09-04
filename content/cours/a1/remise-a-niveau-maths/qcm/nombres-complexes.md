@@ -19,7 +19,7 @@ Un conseil propre à ce chapitre : la moitié des erreurs de QCM sur les complex
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours" titre="Le cours du chapitre" description="Forme algébrique, opérations, second degré, affixes, module et argument, formes trigonométrique et exponentielle, ensembles de points" type="cours" meta="8 sections"}
 ::
 
-:::qcm{titre="QCM 4 — Nombres complexes" theme="De la forme algébrique aux ensembles de points, dans l'ordre du cours" duree="25 min" icone="i-lucide-git-compare-arrows"}
+:::qcm{titre="QCM 4 — Nombres complexes" theme="De la forme algébrique aux ensembles de points, dans l'ordre du cours" duree="1 h" icone="i-lucide-git-compare-arrows"}
 
 ::qcm-question{label="1." bonne="c" cours="qcm-nc-algebrique"}
 La partie imaginaire de $z = 3-2i$ est :

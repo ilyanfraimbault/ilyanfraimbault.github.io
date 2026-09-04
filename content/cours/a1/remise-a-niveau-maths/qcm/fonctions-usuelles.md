@@ -19,7 +19,7 @@ Deux points de vigilance dans tout ce QCM : les **conditions d'existence** ($\ln
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours" titre="Le cours du chapitre" description="Exponentielle, logarithme, équations et limites, trigonométrie, fonctions réciproques et hyperboliques" type="cours" meta="8 sections"}
 ::
 
-:::qcm{titre="QCM 3 — Fonctions usuelles" theme="exp et ln, limites, réciproques et fonctions hyperboliques" duree="25 min" icone="i-lucide-function-square"}
+:::qcm{titre="QCM 3 — Fonctions usuelles" theme="exp et ln, limites, réciproques et fonctions hyperboliques" duree="1 h" icone="i-lucide-function-square"}
 
 ::qcm-question{label="1." bonne="b" cours="qcm-fu-exp-ln"}
 Pour tous réels $a$ et $b$, $e^{a+b}$ vaut :
