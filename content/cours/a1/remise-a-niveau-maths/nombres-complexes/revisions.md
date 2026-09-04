@@ -446,6 +446,10 @@ $$
 :::exercice{titre="Exercice 3" theme="Équations du premier degré et équations produit" icone="i-lucide-equal"}
 Résoudre dans $\mathbb{C}$ les équations suivantes. Donner la solution sous forme algébrique.
 
+Une équation du premier degré se résout dans $\mathbb{C}$ **exactement comme dans $\mathbb{R}$**, en trois temps : on trie les termes, on factorise par $z$, on divise. La seule différence est qu'à la fin, le quotient obtenu se traite par la méthode de l'exercice 2.
+
+⚠️ **Trier, c'est déplacer — et déplacer, c'est changer de signe.** Tout terme qui traverse le signe égal change de signe ; ceux qui restent de leur côté n'y touchent pas. C'est là que se perdent la plupart des points.
+
 ::exo-question{label="1." cours="cours-equations"}
 $$
 (1+i)z = 3-i
@@ -483,10 +487,20 @@ $$
 Il y a des $z$ des deux côtés : on les rassemble d'un côté, les constantes de l'autre, puis on **factorise $z$**. Le coefficient obtenu, $2-i$, n'est pas réel, mais cela ne change rien à la méthode.
 
 #solution
-On regroupe :
+**On trie les termes.** Ceux qui contiennent $z$ vont à gauche, les constantes à droite. Trois termes doivent donc traverser le signe égal, et chacun change de signe en le faisant :
+
+- $iz$ était à droite → il passe à gauche en $-iz$ ;
+- $+1$ était à gauche → il passe à droite en $-1$ ;
+- $-i$ était à gauche → il passe à droite en $+i$.
 
 $$
-2z-iz = 2-1+i \quad\Longrightarrow\quad (2-i)z = 1+i
+2z-iz = 2-1+i
+$$
+
+Le membre de droite se réduit, $2-1 = 1$. On **factorise** ensuite le membre de gauche par $z$ :
+
+$$
+(2-i)z = 1+i
 $$
 
 $$
@@ -537,16 +551,39 @@ $$
 Commence par écarter la valeur interdite : le dénominateur ne doit pas être nul, donc $z \neq 1$. Multiplie ensuite les deux membres par $z-1$ pour retomber sur une équation du premier degré, et rassemble les $z$.
 
 #solution
-Pour $z \neq 1$, on multiplie par $z-1$ :
+Pour $z \neq 1$, on multiplie les deux membres par $z-1$ :
 
 $$
-z+1 = 2i(z-1) = 2iz-2i
+z+1 = 2i(z-1)
 $$
 
-On rassemble les $z$ à gauche, les constantes à droite :
+On distribue le $2i$ à droite — il multiplie **les deux** termes de la parenthèse :
 
 $$
-z-2iz = -2i-1 \quad\Longrightarrow\quad (1-2i)z = -1-2i
+z+1 = 2iz-2i
+$$
+
+**On trie maintenant les termes.** Il y a un terme à déplacer de chaque côté :
+
+| Terme | Où il est | Ce qu'il devient |
+|---|---|---|
+| $z$ | à gauche | il y reste, inchangé |
+| $+1$ | à gauche | passe à droite en $-1$ |
+| $2iz$ | à droite | passe à gauche en $-2iz$ |
+| $-2i$ | à droite | il y reste, inchangé |
+
+Autrement dit, on retranche $2iz$ aux deux membres, puis $1$ aux deux membres :
+
+$$
+z+1-2iz = -2i \qquad\text{puis}\qquad z-2iz = -2i-1
+$$
+
+Le $-1$ qui apparaît à droite n'est rien d'autre que le $+1$ qui était à gauche : **en traversant le signe égal, il a changé de signe**. Le $-2i$, lui, n'a pas bougé — il était déjà du bon côté, et garde donc son signe.
+
+On **factorise** enfin le membre de gauche par $z$ :
+
+$$
+(1-2i)z = -1-2i
 $$
 
 $$
@@ -2307,7 +2344,13 @@ $$
 ::
 
 ::extrait-cours{id="cours-equations" titre="Équations dans C" source="/cours/a1/remise-a-niveau-maths/nombres-complexes/cours#_3-équation-du-second-degré"}
-**Premier degré.** $az+b = c$ se résout comme dans $\mathbb{R}$ : on isole $z$, puis on rend le dénominateur réel. Si des $z$ figurent des deux côtés, on les rassemble et on **factorise**.
+**Premier degré.** $az+b = c$ se résout comme dans $\mathbb{R}$, en trois temps.
+
+1. **Trier** : les termes contenant $z$ à gauche, les constantes à droite.
+2. **Factoriser** par $z$ : on obtient $(\ldots)z = \ldots$, le facteur pouvant être un complexe.
+3. **Diviser**, puis rendre le dénominateur réel avec le conjugué.
+
+⚠️ **Trier, c'est déplacer — et déplacer, c'est changer de signe.** Tout terme qui traverse le signe égal change de signe ; ceux qui restent de leur côté n'y touchent pas. Sur $z+1 = 2iz-2i$, le $+1$ part à droite en $-1$ et le $2iz$ part à gauche en $-2iz$, ce qui donne $z-2iz = -2i-1$, tandis que le $-2i$ ne bouge pas.
 
 **Équation produit.** Un produit est nul si et seulement si l'un de ses facteurs l'est — la règle vaut dans $\mathbb{C}$ comme dans $\mathbb{R}$. Chaque facteur donne une solution.
 
