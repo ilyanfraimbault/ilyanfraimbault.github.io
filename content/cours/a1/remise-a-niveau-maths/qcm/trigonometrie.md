@@ -19,7 +19,7 @@ Cliquer une seconde fois sur une proposition la désélectionne, si tu préfère
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Le cours de trigonométrie" description="Le cercle expliqué de zéro, figure interactive à l'appui : radians, valeurs remarquables, angles associés, équations, arccos et arcsin" type="cours" meta="10 sections"}
 ::
 
-:::qcm{titre="QCM 1 — Trigonométrie" theme="Du radian aux fonctions réciproques, dans l'ordre du cours" duree="25 min" icone="i-lucide-compass"}
+:::qcm{titre="QCM 1 — Trigonométrie" theme="Du radian aux fonctions réciproques, dans l'ordre du cours" duree="1 h" icone="i-lucide-compass"}
 
 ::qcm-question{label="1." bonne="a" cours="qcm-radian"}
 Combien vaut $150°$ en radians ?
@@ -628,19 +628,19 @@ La proposition **a** est l'ensemble d'arrivée d'$\arccos$, la **d** son ensembl
 ::
 
 ::qcm-question{label="19." bonne="c" cours="qcm-derivees"}
-La dérivée de $x \mapsto \cos(3x)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \cos(3x)$ a pour dérivée :
 
 #a
-$-\sin(3x)$
+$f'(x) = -\sin(3x)$
 
 #b
-$3\sin(3x)$
+$f'(x) = 3\sin(3x)$
 
 #c
-$-3\sin(3x)$
+$f'(x) = -3\sin(3x)$
 
 #d
-$3\cos(3x)$
+$f'(x) = 3\cos(3x)$
 
 #indice
 Deux choses arrivent en même temps, et il faut les deux : le cosinus se dérive en $-\sin$, **et** la forme composée fait sortir la dérivée de l'intérieur.
@@ -673,19 +673,19 @@ $$
 ::
 
 ::qcm-question{label="20." bonne="a" cours="qcm-derivees"}
-La dérivée de $\arctan$ est :
+La fonction $f = \arctan$, définie et dérivable sur $\mathbb{R}$, a pour dérivée :
 
 #a
-$\dfrac{1}{1+x^2}$
+$f'(x) = \dfrac{1}{1+x^2}$
 
 #b
-$-\dfrac{1}{1+x^2}$
+$f'(x) = -\dfrac{1}{1+x^2}$
 
 #c
-$\dfrac{1}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{1}{\sqrt{1-x^2}}$
 
 #d
-$-\dfrac{1}{\sqrt{1-x^2}}$
+$f'(x) = -\dfrac{1}{\sqrt{1-x^2}}$
 
 #indice
 Deux des propositions comportent une racine : ce sont les dérivées d'$\arcsin$ et d'$\arccos$, définies seulement sur $]-1\,;1[$.

@@ -19,7 +19,7 @@ C'est ce diagnostic, et non le calcul, qui départage les bonnes et les mauvaise
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-variable-reelle/cours" titre="Le cours du chapitre" description="Continuité, TVI, dérivabilité, tableau des dérivées usuelles, formes composées et bijections" type="cours" meta="7 sections"}
 ::
 
-:::qcm{titre="QCM 2 — Dérivation" theme="Du tableau des dérivées usuelles aux formes composées et aux ensembles de dérivabilité" duree="25 min" icone="i-lucide-trending-up"}
+:::qcm{titre="QCM 2 — Dérivation" theme="Du tableau des dérivées usuelles aux formes composées et aux ensembles de dérivabilité" duree="1 h" icone="i-lucide-trending-up"}
 
 ::qcm-question{label="1." bonne="b" cours="qcm-fvr-tableau"}
 Pour tout réel $\alpha$, la dérivée de $x\mapsto x^{\alpha}$ est :
@@ -56,19 +56,19 @@ $$
 ::
 
 ::qcm-question{label="2." bonne="c" cours="qcm-fvr-tableau"}
-La dérivée de $x\mapsto\sqrt x$ sur $]0\,;+\infty[$ est :
+La fonction $f$ définie sur $]0\,;+\infty[$ par $f(x) = \sqrt x$ a pour dérivée :
 
 #a
-$\dfrac{1}{\sqrt x}$
+$f'(x) = \dfrac{1}{\sqrt x}$
 
 #b
-$2\sqrt x$
+$f'(x) = 2\sqrt x$
 
 #c
-$\dfrac{1}{2\sqrt x}$
+$f'(x) = \dfrac{1}{2\sqrt x}$
 
 #d
-$\dfrac{\sqrt x}{2}$
+$f'(x) = \dfrac{\sqrt x}{2}$
 
 #indice
 Réécris $\sqrt x$ en puissance : $x^{1/2}$. Applique ensuite la règle de la question précédente, puis repasse en racine.
@@ -84,19 +84,19 @@ $$
 ::
 
 ::qcm-question{label="3." bonne="b" cours="qcm-fvr-tableau"}
-La dérivée de $x\mapsto\dfrac1x$ sur $\mathbb{R}^*$ est :
+La fonction $f$ définie sur $\mathbb{R}^*$ par $f(x) = \dfrac1x$ a pour dérivée :
 
 #a
-$\dfrac{1}{x^2}$
+$f'(x) = \dfrac{1}{x^2}$
 
 #b
-$-\dfrac{1}{x^2}$
+$f'(x) = -\dfrac{1}{x^2}$
 
 #c
-$\ln\lvert x\rvert$
+$f'(x) = \ln\lvert x\rvert$
 
 #d
-$-\dfrac{1}{2x^2}$
+$f'(x) = -\dfrac{1}{2x^2}$
 
 #indice
 Même méthode : $\dfrac1x = x^{-1}$. L'exposant $-1$ descend en facteur, ce qui apporte le signe.
@@ -176,19 +176,19 @@ La proposition **d** aurait donné $+\dfrac{1}{x^2}$, ce qui contredit la décro
 ::
 
 ::qcm-question{label="6." bonne="b" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto(3x+1)^5$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = (3x+1)^5$ a pour dérivée :
 
 #a
-$5(3x+1)^4$
+$f'(x) = 5(3x+1)^4$
 
 #b
-$15(3x+1)^4$
+$f'(x) = 15(3x+1)^4$
 
 #c
-$5(3x+1)^6$
+$f'(x) = 5(3x+1)^6$
 
 #d
-$3(3x+1)^4$
+$f'(x) = 3(3x+1)^4$
 
 #indice
 C'est une puissance de fonction : $\left(u^n\right)' = n\,u'\,u^{n-1}$.
@@ -212,19 +212,19 @@ $$
 ::
 
 ::qcm-question{label="7." bonne="a" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto\dfrac{1}{2-x}$ est :
+La fonction $f$ définie sur $\mathbb{R}\setminus\{2\}$ par $f(x) = \dfrac{1}{2-x}$ a pour dérivée :
 
 #a
-$\dfrac{1}{(2-x)^2}$
+$f'(x) = \dfrac{1}{(2-x)^2}$
 
 #b
-$-\dfrac{1}{(2-x)^2}$
+$f'(x) = -\dfrac{1}{(2-x)^2}$
 
 #c
-$\dfrac{1}{(2-x)}$
+$f'(x) = \dfrac{1}{(2-x)}$
 
 #d
-$-\dfrac{1}{2-x^2}$
+$f'(x) = -\dfrac{1}{2-x^2}$
 
 #indice
 $\left(\dfrac1u\right)' = -\dfrac{u'}{u^2}$. Ici $u = 2-x$, donc $u' = -1$ — et **pas** $+1$.
@@ -246,19 +246,19 @@ Les deux signes moins se compensent : la dérivée est **positive**.
 ::
 
 ::qcm-question{label="8." bonne="c" cours="qcm-fvr-produit"}
-La dérivée de $x\mapsto\dfrac{x^2+1}{x-1}$ sur $\mathbb{R}\setminus\{1\}$ est :
+La fonction $f$ définie sur $\mathbb{R}\setminus\{1\}$ par $f(x) = \dfrac{x^2+1}{x-1}$ a pour dérivée :
 
 #a
-$\dfrac{2x}{1}$
+$f'(x) = \dfrac{2x}{1}$
 
 #b
-$\dfrac{x^2-2x+1}{(x-1)^2}$
+$f'(x) = \dfrac{x^2-2x+1}{(x-1)^2}$
 
 #c
-$\dfrac{x^2-2x-1}{(x-1)^2}$
+$f'(x) = \dfrac{x^2-2x-1}{(x-1)^2}$
 
 #d
-$\dfrac{x^2+2x-1}{(x-1)^2}$
+$f'(x) = \dfrac{x^2+2x-1}{(x-1)^2}$
 
 #indice
 Formule du quotient, avec $u = x^2+1$, $u' = 2x$, $v = x-1$, $v' = 1$.
@@ -284,19 +284,19 @@ Le distracteur **b** correspond à l'oubli du signe sur le $+1$ : on écrit $-x^
 ::
 
 ::qcm-question{label="9." bonne="b" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto\sqrt{x^2+1}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sqrt{x^2+1}$ a pour dérivée :
 
 #a
-$\dfrac{1}{2\sqrt{x^2+1}}$
+$f'(x) = \dfrac{1}{2\sqrt{x^2+1}}$
 
 #b
-$\dfrac{x}{\sqrt{x^2+1}}$
+$f'(x) = \dfrac{x}{\sqrt{x^2+1}}$
 
 #c
-$\dfrac{2x}{\sqrt{x^2+1}}$
+$f'(x) = \dfrac{2x}{\sqrt{x^2+1}}$
 
 #d
-$2x\sqrt{x^2+1}$
+$f'(x) = 2x\sqrt{x^2+1}$
 
 #indice
 $\left(\sqrt u\right)' = \dfrac{u'}{2\sqrt u}$. Ici $u = x^2+1$, donc $u' = 2x$ — et le $2$ va se simplifier avec celui du dénominateur.
@@ -314,19 +314,19 @@ Le distracteur **a** oublie complètement $u'$ : c'est la dérivée de $\sqrt x$
 ::
 
 ::qcm-question{label="10." bonne="c" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto e^{-x^2}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = e^{-x^2}$ a pour dérivée :
 
 #a
-$e^{-x^2}$
+$f'(x) = e^{-x^2}$
 
 #b
-$-e^{-x^2}$
+$f'(x) = -e^{-x^2}$
 
 #c
-$-2x\,e^{-x^2}$
+$f'(x) = -2x\,e^{-x^2}$
 
 #d
-$-2x\,e^{-2x}$
+$f'(x) = -2x\,e^{-2x}$
 
 #indice
 $\left(e^u\right)' = u'e^u$ : l'exponentielle **se reproduit**, et la dérivée de l'exposant sort en facteur.
@@ -346,19 +346,19 @@ $$
 ::
 
 ::qcm-question{label="11." bonne="a" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto\ln\left(3x^2+2\right)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \ln\left(3x^2+2\right)$ a pour dérivée :
 
 #a
-$\dfrac{6x}{3x^2+2}$
+$f'(x) = \dfrac{6x}{3x^2+2}$
 
 #b
-$\dfrac{1}{3x^2+2}$
+$f'(x) = \dfrac{1}{3x^2+2}$
 
 #c
-$\dfrac{6x}{\ln(3x^2+2)}$
+$f'(x) = \dfrac{6x}{\ln(3x^2+2)}$
 
 #d
-$6x\ln\left(3x^2+2\right)$
+$f'(x) = 6x\ln\left(3x^2+2\right)$
 
 #indice
 $\left(\ln u\right)' = \dfrac{u'}{u}$ : la fonction passe au **dénominateur**, sa dérivée au numérateur. Le logarithme disparaît complètement du résultat.
@@ -378,19 +378,19 @@ Ici $3x^2+2 > 0$ toujours : la fonction est définie et dérivable sur $\mathbb{
 ::
 
 ::qcm-question{label="12." bonne="b" cours="qcm-fvr-produit"}
-La dérivée de $x\mapsto x\ln x$ sur $]0\,;+\infty[$ est :
+La fonction $f$ définie sur $]0\,;+\infty[$ par $f(x) = x\ln x$ a pour dérivée :
 
 #a
-$1$
+$f'(x) = 1$
 
 #b
-$\ln x+1$
+$f'(x) = \ln x+1$
 
 #c
-$\dfrac1x$
+$f'(x) = \dfrac1x$
 
 #d
-$\ln x+x$
+$f'(x) = \ln x+x$
 
 #indice
 C'est un **produit** : $u = x$ et $v = \ln x$. Applique $(uv)' = u'v+uv'$, et surveille la simplification du second terme.
@@ -594,19 +594,19 @@ Une seule idée, sept écritures.
 ::
 
 ::qcm-question{label="18." bonne="b" cours="qcm-fvr-produit"}
-La dérivée de $x\mapsto x\sin x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x\sin x$ a pour dérivée :
 
 #a
-$\cos x$
+$f'(x) = \cos x$
 
 #b
-$\sin x+x\cos x$
+$f'(x) = \sin x+x\cos x$
 
 #c
-$x\cos x$
+$f'(x) = x\cos x$
 
 #d
-$\sin x-x\cos x$
+$f'(x) = \sin x-x\cos x$
 
 #indice
 Produit, avec $u = x$ et $v = \sin x$. Les deux termes de la formule apportent chacun quelque chose : ni l'un ni l'autre ne disparaît.
@@ -624,19 +624,19 @@ $$
 ::
 
 ::qcm-question{label="19." bonne="c" cours="qcm-fvr-composees"}
-La dérivée de $x\mapsto\dfrac{1}{x^2+x+1}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \dfrac{1}{x^2+x+1}$ a pour dérivée :
 
 #a
-$\dfrac{2x+1}{\left(x^2+x+1\right)^2}$
+$f'(x) = \dfrac{2x+1}{\left(x^2+x+1\right)^2}$
 
 #b
-$-\dfrac{1}{\left(x^2+x+1\right)^2}$
+$f'(x) = -\dfrac{1}{\left(x^2+x+1\right)^2}$
 
 #c
-$-\dfrac{2x+1}{\left(x^2+x+1\right)^2}$
+$f'(x) = -\dfrac{2x+1}{\left(x^2+x+1\right)^2}$
 
 #d
-$-\dfrac{2x+1}{x^2+x+1}$
+$f'(x) = -\dfrac{2x+1}{x^2+x+1}$
 
 #indice
 $\left(\dfrac1u\right)' = -\dfrac{u'}{u^2}$. Trois choses doivent apparaître : le signe moins, la dérivée de $u$ au numérateur, et $u$ **au carré** au dénominateur.

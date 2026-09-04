@@ -13,62 +13,76 @@ Vingt questions **mélangées**, sans indication de thème et sans regroupement 
 
 C'est là toute la difficulté, et c'est ce qui manque aux cinq QCM précédents : le vrai travail n'est plus de calculer, mais de **reconnaître de quoi on te parle** avant de choisir la formule.
 
+**La composition reprend celle du QCM de test**, avec le poids des complexes relevé : neuf questions de dérivation, six de nombres complexes, trois de trigonométrie, deux de fonctions usuelles. Les énoncés sont rédigés dans la formulation du sujet — « la fonction $f$ définie sur tel ensemble par $f(x) = \ldots$ a pour dérivée », suivie de quatre propositions $f'(x) = \ldots$ dont trois correspondent chacune à une erreur précise.
+
 **Le mode d'emploi**, pour que la note veuille dire quelque chose :
 
-- **25 minutes, chronomètre lancé.** C'est un peu plus d'une minute par question.
-- On répond à **tout**, même en devinant — une question blanche ne t'apprend rien, une erreur si.
+- **Une heure pleine, chronomètre lancé** — la durée réelle de l'épreuve, soit trois minutes par question.
+- On répond à **tout**, même en devinant : une question blanche ne t'apprend rien, une erreur si.
 - On ne consulte **rien** avant d'avoir cliqué sur Corriger.
+- **On ne rend pas avant la fin de l'heure.** Le premier passage prend une trentaine de minutes ; le second sert à vérifier, et c'est lui qui rapporte.
+
+⚠️ **Terminer vite n'est pas une performance.** Avec trois minutes par question, la seule erreur qui coûte vraiment est celle qu'on n'a pas relue : un $u'$ oublié, un signe perdu, un $i^2$ resté en place. Chaque réponse doit passer le contrôle de structure, et les moins sûres un contrôle indépendant — une valeur particulière, ou un second chemin de calcul.
 
 À réserver pour le jeudi 10, la veille. Le faire trop tôt gâche le seul instrument de mesure fiable dont tu disposes.
 ::
 
-:::qcm{titre="QCM 6 — Le QCM blanc" theme="Vingt questions mélangées sur les quatre chapitres, en conditions" duree="25 min" icone="i-lucide-clipboard-check"}
+:::qcm{titre="QCM 6 — Le QCM blanc" theme="Vingt questions mélangées sur les quatre chapitres, en conditions" duree="1 h" icone="i-lucide-clipboard-check"}
 
-::qcm-question{label="1." bonne="b" cours="qcm-b-trigo"}
-$\sin\dfrac{\pi}{6} = $
+::qcm-question{label="1." bonne="b" cours="qcm-b-derivees"}
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin\left(2x-\dfrac{\pi}{2}\right)$ a pour dérivée :
 
 #a
-$\dfrac{\sqrt3}{2}$
+$f'(x) = \cos\left(2x-\dfrac{\pi}{2}\right)$
 
 #b
-$\dfrac12$
+$f'(x) = 2\cos\left(2x-\dfrac{\pi}{2}\right)$
 
 #c
-$\dfrac{\sqrt2}{2}$
+$f'(x) = -2\cos\left(2x-\dfrac{\pi}{2}\right)$
 
 #d
-$1$
+$f'(x) = 2\sin\left(2x-\dfrac{\pi}{2}\right)$
 
 #indice
-Le repère : plus l'angle est **petit**, plus le sinus est petit. $\dfrac{\pi}{6}$ est le plus petit des angles remarquables non nuls.
+$\left(\sin u\right)' = u'\cos u$ : le sinus devient cosinus **sans** signe moins, et la dérivée de l'intérieur sort en facteur.
+
+Ici l'intérieur est $u = 2x-\dfrac{\pi}{2}$. Que vaut $u'$ ? Le $-\dfrac{\pi}{2}$ est une constante : il ne contribue pas.
 
 #solution
+Avec $u = 2x-\dfrac{\pi}{2}$ et $u' = 2$ :
+
 $$
-\sin\frac{\pi}{6} = \frac12 \qquad \cos\frac{\pi}{6} = \frac{\sqrt3}{2}
+f'(x) = 2\cos\left(2x-\frac{\pi}{2}\right)
 $$
 
-⚠️ **La confusion numéro un du chapitre** est d'échanger les valeurs de $\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$. Le moyen de trancher sans hésiter : à $\dfrac{\pi}{6}$, tout proche de $0$, le **sinus** doit être **petit** et le **cosinus grand**.
+**Les distracteurs :** **a** oublie le facteur $u' = 2$ — l'erreur numéro un —, **c** ajoute un signe moins qui appartient au cosinus et non au sinus, **d** ne change pas la fonction.
 
-| $\theta$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
-|---|---|---|---|---|---|
-| $\cos\theta$ | $1$ | $\dfrac{\sqrt3}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{1}{2}$ | $0$ |
-| $\sin\theta$ | $0$ | $\dfrac{1}{2}$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{\sqrt3}{2}$ | $1$ |
+**La vérification qui vaut pour toutes ces questions**, en deux secondes : la fonction a-t-elle changé ($\sin \to \cos$) ? le facteur $u'$ est-il là ?
+
+**Et un contrôle indépendant**, avec l'angle associé :
+
+$$
+\sin\left(2x-\frac{\pi}{2}\right) = -\cos(2x) \quad\text{donc}\quad f'(x) = 2\sin(2x)
+$$
+
+Or $2\cos\left(2x-\dfrac{\pi}{2}\right) = 2\sin(2x)$ : les deux chemins donnent bien la même dérivée.
 ::
 
 ::qcm-question{label="2." bonne="c" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto\tan\left(x^2\right)$ est :
+La fonction $f$ définie par $f(x) = \tan\left(x^2\right)$ a pour dérivée, là où elle est dérivable :
 
 #a
-$\dfrac{1}{\cos^2\left(x^2\right)}$
+$f'(x) = \dfrac{1}{\cos^2\left(x^2\right)}$
 
 #b
-$\dfrac{2x}{\cos^2(x)}$
+$f'(x) = \dfrac{2x}{\cos^2(x)}$
 
 #c
-$\dfrac{2x}{\cos^2\left(x^2\right)}$
+$f'(x) = \dfrac{2x}{\cos^2\left(x^2\right)}$
 
 #d
-$2x\tan\left(x^2\right)$
+$f'(x) = 2x\tan\left(x^2\right)$
 
 #indice
 $\left(\tan u\right)' = \dfrac{u'}{\cos^2u}$, avec $u = x^2$.
@@ -185,52 +199,56 @@ $$
 Et « forme indéterminée » n'est jamais une réponse finale : c'est le signal qu'il faut appliquer la hiérarchie.
 ::
 
-::qcm-question{label="6." bonne="c" cours="qcm-b-trigo"}
-$\arcsin\dfrac12 = $
+::qcm-question{label="6." bonne="c" cours="qcm-b-complexes"}
+La forme algébrique du nombre complexe $z = \left(1+i\sqrt3\right)^2$ est :
 
 #a
-$\dfrac{\pi}{3}$
+$4+2i\sqrt3$
 
 #b
-$\dfrac{\pi}{4}$
+$-2-2i\sqrt3$
 
 #c
-$\dfrac{\pi}{6}$
+$-2+2i\sqrt3$
 
 #d
-$\dfrac{5\pi}{6}$
+$-2$
 
 #indice
-$\arcsin x$ est l'unique angle de $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ dont le **sinus** vaut $x$.
+C'est une identité remarquable : $(a+b)^2 = a^2+2ab+b^2$, avec $b = i\sqrt3$.
 
-Une des propositions sort de cet intervalle : elle est éliminable sans calcul.
+Le piège est dans $b^2 = \left(i\sqrt3\right)^2$ : le $i$ **et** le $\sqrt3$ passent au carré.
 
 #solution
-On cherche l'angle de $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ dont le sinus vaut $\dfrac12$. C'est $\dfrac{\pi}{6}$.
+On développe, puis on remplace $i^2$ par $-1$ :
 
 $$
-\boxed{\arcsin\frac12 = \frac{\pi}{6}}
+\left(1+i\sqrt3\right)^2 = 1+2i\sqrt3+\left(i\sqrt3\right)^2 = 1+2i\sqrt3+i^2\times 3 = 1-3+2i\sqrt3
 $$
 
-**Les distracteurs :** **a** est $\arccos\dfrac12$ — la confusion sinus/cosinus —, **d** a bien pour sinus $\dfrac12$ mais **dépasse $\dfrac{\pi}{2}$**, donc n'appartient pas à l'intervalle d'arrivée.
+$$
+\boxed{z = -2+2i\sqrt3}
+$$
 
-**Le contrôle final, systématique** : le résultat est-il dans $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ ? Cette seule vérification élimine **d**.
+**Les distracteurs, et l'erreur derrière chacun :** **a** oublie que $i^2 = -1$ et ajoute $3$ au lieu de le retrancher, **b** se trompe de signe sur le double produit, **d** oublie purement et simplement le double produit — l'erreur classique du carré d'une somme.
+
+⚠️ **Le réflexe** : dès qu'un $i^2$ apparaît, on le remplace **immédiatement** par $-1$ avant de regrouper. Reporter ce remplacement à plus tard est la meilleure façon de l'oublier.
 ::
 
 ::qcm-question{label="7." bonne="b" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto e^{2x}\cos x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = e^{2x}\cos x$ a pour dérivée :
 
 #a
-$2e^{2x}\sin x$
+$f'(x) = 2e^{2x}\sin x$
 
 #b
-$e^{2x}\left(2\cos x-\sin x\right)$
+$f'(x) = e^{2x}\left(2\cos x-\sin x\right)$
 
 #c
-$e^{2x}\left(2\cos x+\sin x\right)$
+$f'(x) = e^{2x}\left(2\cos x+\sin x\right)$
 
 #d
-$-2e^{2x}\sin x$
+$f'(x) = -2e^{2x}\sin x$
 
 #indice
 C'est un **produit** de deux formes composées. Pose $u = e^{2x}$ et $v = \cos x$, calcule $u'$ et $v'$ à part, puis factorise par $e^{2x}$.
@@ -330,19 +348,19 @@ $$
 ::
 
 ::qcm-question{label="10." bonne="b" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto\ln\left(x^2+1\right)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \ln\left(x^2+1\right)$ a pour dérivée :
 
 #a
-$\dfrac{1}{x^2+1}$
+$f'(x) = \dfrac{1}{x^2+1}$
 
 #b
-$\dfrac{2x}{x^2+1}$
+$f'(x) = \dfrac{2x}{x^2+1}$
 
 #c
-$\dfrac{2x}{\ln\left(x^2+1\right)}$
+$f'(x) = \dfrac{2x}{\ln\left(x^2+1\right)}$
 
 #d
-$2x\ln\left(x^2+1\right)$
+$f'(x) = 2x\ln\left(x^2+1\right)$
 
 #indice
 $\left(\ln u\right)' = \dfrac{u'}{u}$ : la fonction passe au dénominateur, sa dérivée au numérateur.
@@ -399,48 +417,64 @@ $$
 **La méthode qui marche à tous les coups** pour une identité hyperbolique : remplacer chaque $\mathrm{ch}$ et chaque $\mathrm{sh}$ par sa définition, développer, simplifier.
 ::
 
-::qcm-question{label="12." bonne="b" cours="qcm-b-trigo"}
-$\tan\dfrac{\pi}{4} = $
+::qcm-question{label="12." bonne="b" cours="qcm-b-complexes"}
+Une forme trigonométrique du nombre complexe $z = -1+i$ est :
 
 #a
-$\dfrac{\sqrt2}{2}$
+$\sqrt2\left(\cos\dfrac{\pi}{4}+i\sin\dfrac{\pi}{4}\right)$
 
 #b
-$1$
+$\sqrt2\left(\cos\dfrac{3\pi}{4}+i\sin\dfrac{3\pi}{4}\right)$
 
 #c
-$\sqrt2$
+$2\left(\cos\dfrac{3\pi}{4}+i\sin\dfrac{3\pi}{4}\right)$
 
 #d
-$\dfrac{\sqrt3}{3}$
+$\sqrt2\left(\cos\dfrac{3\pi}{4}-i\sin\dfrac{3\pi}{4}\right)$
 
 #indice
-$\tan = \dfrac{\sin}{\cos}$, et en $\dfrac{\pi}{4}$ le sinus et le cosinus sont **égaux**.
+Deux choses à calculer, dans cet ordre : le module $\rho = \sqrt{a^2+b^2}$, puis l'angle $\theta$ par les **deux** rapports $\cos\theta = \dfrac{a}{\rho}$ et $\sin\theta = \dfrac{b}{\rho}$.
+
+Le point d'affixe $-1+i$ est en haut à gauche : dans quel quadrant, donc dans quel intervalle tombe $\theta$ ?
 
 #solution
+**Le module d'abord :**
+
 $$
-\tan\frac{\pi}{4} = \frac{\sin\frac{\pi}{4}}{\cos\frac{\pi}{4}} = \frac{\frac{\sqrt2}{2}}{\frac{\sqrt2}{2}} = 1
+\rho = \sqrt{(-1)^2+1^2} = \sqrt2
 $$
 
-**C'est la valeur pivot de la tangente**, et le meilleur repère de contrôle du chapitre : la tangente croît de $0$ à $+\infty$ sur $\left[0\,;\dfrac{\pi}{2}\right[$ en passant par $1$ en $\dfrac{\pi}{4}$.
+**Puis les deux rapports**, jamais un seul :
 
-D'où deux vérifications instantanées : tout angle **inférieur** à $\dfrac{\pi}{4}$ a une tangente **inférieure à $1$** ($\tan\dfrac{\pi}{6} = \dfrac{\sqrt3}{3} \approx 0{,}58$), et tout angle supérieur a une tangente supérieure à $1$ ($\tan\dfrac{\pi}{3} = \sqrt3 \approx 1{,}73$).
+$$
+\cos\theta = \frac{-1}{\sqrt2} = -\frac{\sqrt2}{2} \qquad \sin\theta = \frac{1}{\sqrt2} = \frac{\sqrt2}{2}
+$$
+
+Cosinus négatif et sinus positif : $\theta$ est dans le **deuxième quadrant**, et c'est $\dfrac{3\pi}{4}$.
+
+$$
+\boxed{z = \sqrt2\left(\cos\frac{3\pi}{4}+i\sin\frac{3\pi}{4}\right) = \sqrt2\,e^{i\frac{3\pi}{4}}}
+$$
+
+**Les distracteurs, un par erreur :** **a** perd le signe du cosinus et place le point dans le mauvais quadrant, **c** confond le module avec $a^2+b^2 = 2$ au lieu de sa racine, **d** change le signe devant le sinus — ce qui décrit $\bar z = -1-i$, pas $z$.
+
+⚠️ **Le cosinus seul ne suffit jamais.** $\cos\theta = -\dfrac{\sqrt2}{2}$ laisse deux angles possibles, $\dfrac{3\pi}{4}$ et $-\dfrac{3\pi}{4}$ ; c'est le **signe du sinus** qui tranche entre les deux.
 ::
 
 ::qcm-question{label="13." bonne="a" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto\arccos(3x)$ est :
+La fonction $f$ définie et dérivable sur $\left]-\dfrac13\,;\dfrac13\right[$ par $f(x) = \arccos(3x)$ a pour dérivée :
 
 #a
-$\dfrac{-3}{\sqrt{1-9x^2}}$
+$f'(x) = \dfrac{-3}{\sqrt{1-9x^2}}$
 
 #b
-$\dfrac{3}{\sqrt{1-9x^2}}$
+$f'(x) = \dfrac{3}{\sqrt{1-9x^2}}$
 
 #c
-$\dfrac{-3}{\sqrt{1-3x^2}}$
+$f'(x) = \dfrac{-3}{\sqrt{1-3x^2}}$
 
 #d
-$\dfrac{-1}{\sqrt{1-9x^2}}$
+$f'(x) = \dfrac{-1}{\sqrt{1-9x^2}}$
 
 #indice
 $\left(\arccos u\right)' = \dfrac{-u'}{\sqrt{1-u^2}}$. Trois éléments doivent être justes en même temps : le signe moins, le facteur $u' = 3$, et le carré $(3x)^2 = 9x^2$.
@@ -494,19 +528,19 @@ $$
 ::
 
 ::qcm-question{label="15." bonne="d" cours="qcm-b-derivees"}
-La dérivée **seconde** de $x\mapsto\sin x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin x$ a pour dérivée **seconde** :
 
 #a
-$\sin x$
+$f''(x) = \sin x$
 
 #b
-$\cos x$
+$f''(x) = \cos x$
 
 #c
-$-\cos x$
+$f''(x) = -\cos x$
 
 #d
-$-\sin x$
+$f''(x) = -\sin x$
 
 #indice
 On dérive **deux fois** de suite. La première dérivation donne le cosinus ; c'est la seconde qui apporte le signe.
@@ -530,19 +564,19 @@ Il faut donc quatre dérivations pour revenir au point de départ. C'est aussi l
 ::
 
 ::qcm-question{label="16." bonne="b" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto\dfrac{x}{1+x^2}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \dfrac{x}{1+x^2}$ a pour dérivée :
 
 #a
-$\dfrac{1}{1+x^2}$
+$f'(x) = \dfrac{1}{1+x^2}$
 
 #b
-$\dfrac{1-x^2}{\left(1+x^2\right)^2}$
+$f'(x) = \dfrac{1-x^2}{\left(1+x^2\right)^2}$
 
 #c
-$\dfrac{1+x^2}{\left(1+x^2\right)^2}$
+$f'(x) = \dfrac{1+x^2}{\left(1+x^2\right)^2}$
 
 #d
-$\dfrac{x^2-1}{\left(1+x^2\right)^2}$
+$f'(x) = \dfrac{x^2-1}{\left(1+x^2\right)^2}$
 
 #indice
 Formule du quotient, avec $u = x$ et $v = 1+x^2$. Le numérateur donne $1\times(1+x^2)-x\times 2x$ : deux termes en $x^2$ qui vont se combiner.
@@ -605,44 +639,42 @@ $$
 **Une conséquence utile** : pour un nombre de module $1$, le conjugué et l'inverse **coïncident**, puisque $e^{i\theta}\times e^{-i\theta} = e^0 = 1$.
 ::
 
-::qcm-question{label="18." bonne="c" cours="qcm-b-usuelles"}
-$\displaystyle\lim_{x\to 0}\frac{\sin x}{x}$ vaut :
+::qcm-question{label="18." bonne="c" cours="qcm-b-derivees"}
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x^2e^{-x}$ a pour dérivée :
 
 #a
-$0$
+$f'(x) = 2xe^{-x}$
 
 #b
-$+\infty$
+$f'(x) = -2xe^{-x}$
 
 #c
-$1$
+$f'(x) = \left(2x-x^2\right)e^{-x}$
 
 #d
-la limite n'existe pas
+$f'(x) = \left(2x+x^2\right)e^{-x}$
 
 #indice
-Ce n'est pas une croissance comparée mais un **taux d'accroissement**. Reconnais $\dfrac{f(x)-f(0)}{x-0}$ pour une fonction bien connue, sachant que $\sin 0 = 0$.
+C'est un **produit** : $(uv)' = u'v+uv'$, avec $u = x^2$ et $v = e^{-x}$.
+
+Le point délicat est $v'$ : l'exposant est $-x$, dont la dérivée vaut $-1$. Ce $-1$ ne disparaît pas.
 
 #solution
-$$
-\frac{\sin x}{x} = \frac{\sin x-\sin 0}{x-0}
-$$
-
-C'est le taux d'accroissement de $\sin$ entre $0$ et $x$ : sa limite est le nombre dérivé $\sin'(0)$.
+Avec $u = x^2$, $u' = 2x$, $v = e^{-x}$ et $v' = -e^{-x}$ :
 
 $$
-\lim_{x\to 0}\frac{\sin x}{x} = \cos 0 = 1
+f'(x) = 2x\,e^{-x}+x^2\times\left(-e^{-x}\right) = \left(2x-x^2\right)e^{-x}
 $$
 
-**Le réflexe général** : devant une forme $\dfrac00$ où l'on reconnaît $\dfrac{f(x)-f(a)}{x-a}$, la limite est $f'(a)$ — aucun calcul supplémentaire.
-
-**Deux limites de la même famille**, à connaître ensemble :
-
 $$
-\lim_{x\to 0}\frac{\sin x}{x} = 1 \qquad \lim_{x\to 0}\frac{e^x-1}{x} = 1
+\boxed{f'(x) = x(2-x)e^{-x}}
 $$
 
-⚠️ La première **suppose $x$ en radians**. En degrés, elle vaudrait $\dfrac{\pi}{180}$ — c'est la raison profonde pour laquelle toute l'analyse travaille en radians.
+**Les distracteurs :** **a** ne dérive que le premier facteur et oublie tout le second terme, **b** dérive le mauvais facteur, **d** est **l'erreur de loin la plus fréquente** : oublier le signe moins apporté par $\left(e^{-x}\right)' = -e^{-x}$.
+
+⚠️ **Un exposant en $-x$, un dénominateur en $a-x$ : même piège.** La dérivée de l'intérieur vaut $-1$, et ce $-1$ retourne le signe de tout le terme. Chaque fois qu'un $-x$ apparaît quelque part, on vérifie le signe du résultat avant de valider.
+
+**Le contrôle de bon sens** : $f$ est positive, nulle en $0$, et tend vers $0$ en $+\infty$ — elle passe donc par un maximum. Sa dérivée doit s'annuler quelque part, ici en $x = 0$ et $x = 2$. La proposition **d**, qui ne s'annule qu'en $0$ et $-2$, ne décrit pas cette courbe.
 ::
 
 ::qcm-question{label="19." bonne="b" cours="qcm-b-trigo"}
@@ -688,19 +720,19 @@ $$
 ::
 
 ::qcm-question{label="20." bonne="c" cours="qcm-b-derivees"}
-La dérivée de $x\mapsto\sqrt{1+e^x}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sqrt{1+e^x}$ a pour dérivée :
 
 #a
-$\dfrac{1}{2\sqrt{1+e^x}}$
+$f'(x) = \dfrac{1}{2\sqrt{1+e^x}}$
 
 #b
-$\dfrac{e^x}{\sqrt{1+e^x}}$
+$f'(x) = \dfrac{e^x}{\sqrt{1+e^x}}$
 
 #c
-$\dfrac{e^x}{2\sqrt{1+e^x}}$
+$f'(x) = \dfrac{e^x}{2\sqrt{1+e^x}}$
 
 #d
-$\dfrac{e^x}{2\sqrt{1+e^x}}+e^x$
+$f'(x) = \dfrac{e^x}{2\sqrt{1+e^x}}+e^x$
 
 #indice
 $\left(\sqrt u\right)' = \dfrac{u'}{2\sqrt u}$, avec $u = 1+e^x$ donc $u' = e^x$.

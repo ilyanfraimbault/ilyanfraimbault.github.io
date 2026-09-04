@@ -19,7 +19,7 @@ Deux points de vigilance dans tout ce QCM : les **conditions d'existence** ($\ln
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/fonctions-usuelles/cours" titre="Le cours du chapitre" description="Exponentielle, logarithme, équations et limites, trigonométrie, fonctions réciproques et hyperboliques" type="cours" meta="8 sections"}
 ::
 
-:::qcm{titre="QCM 3 — Fonctions usuelles" theme="exp et ln, limites, réciproques et fonctions hyperboliques" duree="25 min" icone="i-lucide-function-square"}
+:::qcm{titre="QCM 3 — Fonctions usuelles" theme="exp et ln, limites, réciproques et fonctions hyperboliques" duree="1 h" icone="i-lucide-function-square"}
 
 ::qcm-question{label="1." bonne="b" cours="qcm-fu-exp-ln"}
 Pour tous réels $a$ et $b$, $e^{a+b}$ vaut :
@@ -481,19 +481,19 @@ $$
 ::
 
 ::qcm-question{label="13." bonne="a" cours="qcm-fu-hyperboliques"}
-La dérivée de $\mathrm{ch}$ est :
+La fonction $f = \mathrm{ch}$, définie et dérivable sur $\mathbb{R}$, a pour dérivée :
 
 #a
-$\mathrm{sh}$
+$f'(x) = \mathrm{sh}\,x$
 
 #b
-$-\mathrm{sh}$
+$f'(x) = -\mathrm{sh}\,x$
 
 #c
-$\mathrm{ch}$
+$f'(x) = \mathrm{ch}\,x$
 
 #d
-$\dfrac{1}{\mathrm{sh}}$
+$f'(x) = \dfrac{1}{\mathrm{sh}\,x}$
 
 #indice
 Dérive directement la définition $\dfrac{e^x+e^{-x}}{2}$ : le second terme apporte un $-1$ par la règle de chaîne, ce qui transforme le plus en moins.
@@ -561,19 +561,19 @@ La proposition **b** est $\mathrm{argth}$, définie sur $]-1\,;1[$.
 ::
 
 ::qcm-question{label="15." bonne="b" cours="qcm-fu-hyperboliques"}
-La dérivée de $\mathrm{argth}$ sur $]-1\,;1[$ est :
+La fonction $f = \mathrm{argth}$, définie et dérivable sur $]-1\,;1[$, a pour dérivée :
 
 #a
-$\dfrac{1}{1+x^2}$
+$f'(x) = \dfrac{1}{1+x^2}$
 
 #b
-$\dfrac{1}{1-x^2}$
+$f'(x) = \dfrac{1}{1-x^2}$
 
 #c
-$\dfrac{1}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{1}{\sqrt{1-x^2}}$
 
 #d
-$\dfrac{1}{\sqrt{x^2+1}}$
+$f'(x) = \dfrac{1}{\sqrt{x^2+1}}$
 
 #indice
 Attention aux quatre propositions : deux ont une racine, deux n'en ont pas ; deux ont $1+x^2$, deux ont $1-x^2$.

@@ -19,25 +19,27 @@ $$
 
 Les deux erreurs qui coûtent presque toutes les questions, et qui se cumulent volontiers : **oublier le signe moins** du cosinus, et **oublier de dériver l'intérieur**. Avant de valider une réponse, deux vérifications de trois secondes — le signe est-il le bon ? le facteur $u'$ est-il là ?
 
+**Une nuance de rythme pour celui-ci.** L'épreuve laisse trois minutes par question, mais ce QCM-là n'est pas une simulation : c'est un entraînement au réflexe. Vise **vingt minutes au premier passage**, sans t'attarder — l'objectif est de savoir lesquelles viennent immédiatement et lesquelles demandent à réfléchir. Ce sont les secondes qui indiquent quoi relire.
+
 On répond à tout, puis on clique sur **Corriger**.
 ::
 
-:::qcm{titre="QCM 5 — Dérivées en rafale" theme="Trigonométrie, fonctions réciproques et hyperboliques, sous toutes leurs formes composées" duree="20 min" icone="i-lucide-zap"}
+:::qcm{titre="QCM 5 — Dérivées en rafale" theme="Trigonométrie, fonctions réciproques et hyperboliques, sous toutes leurs formes composées" duree="1 h" icone="i-lucide-zap"}
 
 ::qcm-question{label="1." bonne="c" cours="qcm-der-trigo"}
-La dérivée de $x\mapsto\sin(2x)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin(2x)$ a pour dérivée :
 
 #a
-$\cos(2x)$
+$f'(x) = \cos(2x)$
 
 #b
-$-2\cos(2x)$
+$f'(x) = -2\cos(2x)$
 
 #c
-$2\cos(2x)$
+$f'(x) = 2\cos(2x)$
 
 #d
-$2\sin(2x)$
+$f'(x) = 2\sin(2x)$
 
 #indice
 $\left(\sin u\right)' = u'\cos u$. Le sinus devient cosinus **sans** signe moins, et la dérivée de l'intérieur sort en facteur.
@@ -55,19 +57,19 @@ $$
 ::
 
 ::qcm-question{label="2." bonne="b" cours="qcm-der-trigo"}
-La dérivée de $x\mapsto\cos(3x+1)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \cos(3x+1)$ a pour dérivée :
 
 #a
-$-\sin(3x+1)$
+$f'(x) = -\sin(3x+1)$
 
 #b
-$-3\sin(3x+1)$
+$f'(x) = -3\sin(3x+1)$
 
 #c
-$3\sin(3x+1)$
+$f'(x) = 3\sin(3x+1)$
 
 #d
-$-3\cos(3x+1)$
+$f'(x) = -3\cos(3x+1)$
 
 #indice
 Deux choses à ne pas rater en même temps : le signe moins du cosinus, **et** le facteur $u' = 3$.
@@ -90,19 +92,19 @@ $$
 ::
 
 ::qcm-question{label="3." bonne="a" cours="qcm-der-trigo"}
-La dérivée de $\tan$ est :
+La fonction $f = \tan$ a pour dérivée, sur tout intervalle où elle est définie :
 
 #a
-$1+\tan^2$
+$f'(x) = 1+\tan^2x$
 
 #b
-$\dfrac{1}{\sin^2}$
+$f'(x) = \dfrac{1}{\sin^2x}$
 
 #c
-$-\dfrac{1}{\cos^2}$
+$f'(x) = -\dfrac{1}{\cos^2x}$
 
 #d
-$\dfrac{1}{1+\tan^2}$
+$f'(x) = \dfrac{1}{1+\tan^2x}$
 
 #indice
 Deux écritures équivalentes existent, et les deux sont au programme. Retrouve-les en dérivant le quotient $\dfrac{\sin}{\cos}$ et en te servant de $\cos^2+\sin^2 = 1$.
@@ -130,19 +132,19 @@ $$
 ::
 
 ::qcm-question{label="4." bonne="c" cours="qcm-der-composees"}
-La dérivée de $x\mapsto\sin^3x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin^3x$ a pour dérivée :
 
 #a
-$3\sin^2x$
+$f'(x) = 3\sin^2x$
 
 #b
-$\cos^3x$
+$f'(x) = \cos^3x$
 
 #c
-$3\sin^2x\cos x$
+$f'(x) = 3\sin^2x\cos x$
 
 #d
-$3\cos^2x\sin x$
+$f'(x) = 3\cos^2x\sin x$
 
 #indice
 $\sin^3x$ signifie $\left(\sin x\right)^3$ : c'est une **puissance de fonction**, donc $\left(u^n\right)' = n\,u'\,u^{n-1}$ avec $u = \sin x$.
@@ -162,19 +164,19 @@ $$
 ::
 
 ::qcm-question{label="5." bonne="b" cours="qcm-der-produit"}
-La dérivée de $x\mapsto x\cos x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x\cos x$ a pour dérivée :
 
 #a
-$\cos x+x\sin x$
+$f'(x) = \cos x+x\sin x$
 
 #b
-$\cos x-x\sin x$
+$f'(x) = \cos x-x\sin x$
 
 #c
-$-\sin x$
+$f'(x) = -\sin x$
 
 #d
-$-x\sin x$
+$f'(x) = -x\sin x$
 
 #indice
 Produit, avec $u = x$ et $v = \cos x$. Les deux termes de $(uv)' = u'v+uv'$ apportent quelque chose, et le signe moins vient de $\cos' = -\sin$.
@@ -192,19 +194,19 @@ $$
 ::
 
 ::qcm-question{label="6." bonne="a" cours="qcm-der-produit"}
-La dérivée de $x\mapsto\dfrac{\sin x}{x}$ sur $\mathbb{R}^*$ est :
+La fonction $f$ définie sur $\mathbb{R}^*$ par $f(x) = \dfrac{\sin x}{x}$ a pour dérivée :
 
 #a
-$\dfrac{x\cos x-\sin x}{x^2}$
+$f'(x) = \dfrac{x\cos x-\sin x}{x^2}$
 
 #b
-$\dfrac{\cos x}{1}$
+$f'(x) = \dfrac{\cos x}{1}$
 
 #c
-$\dfrac{\sin x-x\cos x}{x^2}$
+$f'(x) = \dfrac{\sin x-x\cos x}{x^2}$
 
 #d
-$\dfrac{x\cos x+\sin x}{x^2}$
+$f'(x) = \dfrac{x\cos x+\sin x}{x^2}$
 
 #indice
 Formule du quotient, avec $u = \sin x$ et $v = x$. L'ordre compte : $u'v$ vient **en premier**, donc $x\cos x$ avant $\sin x$.
@@ -222,19 +224,19 @@ $$
 ::
 
 ::qcm-question{label="7." bonne="c" cours="qcm-der-composees"}
-La dérivée de $x\mapsto\cos^2x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \cos^2x$ a pour dérivée :
 
 #a
-$2\cos x$
+$f'(x) = 2\cos x$
 
 #b
-$2\cos x\sin x$
+$f'(x) = 2\cos x\sin x$
 
 #c
-$-2\cos x\sin x$
+$f'(x) = -2\cos x\sin x$
 
 #d
-$-2\sin x$
+$f'(x) = -2\sin x$
 
 #indice
 Puissance de fonction avec $u = \cos x$, donc $u' = -\sin x$. Le signe moins vient de là, et de nulle part ailleurs.
@@ -256,19 +258,19 @@ $$
 ::
 
 ::qcm-question{label="8." bonne="b" cours="qcm-der-arc"}
-La dérivée de $x\mapsto\arctan(2x)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \arctan(2x)$ a pour dérivée :
 
 #a
-$\dfrac{1}{1+4x^2}$
+$f'(x) = \dfrac{1}{1+4x^2}$
 
 #b
-$\dfrac{2}{1+4x^2}$
+$f'(x) = \dfrac{2}{1+4x^2}$
 
 #c
-$\dfrac{2}{1+2x^2}$
+$f'(x) = \dfrac{2}{1+2x^2}$
 
 #d
-$\dfrac{2}{(1+2x)^2}$
+$f'(x) = \dfrac{2}{(1+2x)^2}$
 
 #indice
 $\left(\arctan u\right)' = \dfrac{u'}{1+u^2}$. Deux endroits où le $2$ intervient, et ils ne jouent pas le même rôle : $u' = 2$ au numérateur, et $u^2 = (2x)^2$ au dénominateur.
@@ -286,19 +288,19 @@ $$
 ::
 
 ::qcm-question{label="9." bonne="d" cours="qcm-der-arc"}
-La dérivée de $x\mapsto\arcsin\left(x^2\right)$ est :
+La fonction $f$ définie et dérivable sur $]-1\,;1[$ par $f(x) = \arcsin\left(x^2\right)$ a pour dérivée :
 
 #a
-$\dfrac{1}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{1}{\sqrt{1-x^2}}$
 
 #b
-$\dfrac{2x}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{2x}{\sqrt{1-x^2}}$
 
 #c
-$\dfrac{1}{\sqrt{1-x^4}}$
+$f'(x) = \dfrac{1}{\sqrt{1-x^4}}$
 
 #d
-$\dfrac{2x}{\sqrt{1-x^4}}$
+$f'(x) = \dfrac{2x}{\sqrt{1-x^4}}$
 
 #indice
 $\left(\arcsin u\right)' = \dfrac{u'}{\sqrt{1-u^2}}$. Ici $u = x^2$, donc $u' = 2x$ **et** $u^2 = x^4$.
@@ -318,19 +320,19 @@ $$
 ::
 
 ::qcm-question{label="10." bonne="a" cours="qcm-der-arc"}
-La dérivée de $x\mapsto\arccos x+\arcsin x$ sur $]-1\,;1[$ est :
+La fonction $f$ définie et dérivable sur $]-1\,;1[$ par $f(x) = \arccos x+\arcsin x$ a pour dérivée :
 
 #a
-$0$
+$f'(x) = 0$
 
 #b
-$\dfrac{2}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{2}{\sqrt{1-x^2}}$
 
 #c
-$\dfrac{1}{1+x^2}$
+$f'(x) = \dfrac{1}{1+x^2}$
 
 #d
-$\dfrac{-2}{\sqrt{1-x^2}}$
+$f'(x) = \dfrac{-2}{\sqrt{1-x^2}}$
 
 #indice
 Les dérivées d'$\arccos$ et d'$\arcsin$ ne diffèrent que par un signe. Que se passe-t-il quand on les additionne ?
@@ -358,19 +360,19 @@ Cette méthode — dérivée nulle plus un point — est celle qui démontre tou
 ::
 
 ::qcm-question{label="11." bonne="b" cours="qcm-der-composees"}
-La dérivée de $x\mapsto e^{\sin x}$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = e^{\sin x}$ a pour dérivée :
 
 #a
-$e^{\cos x}$
+$f'(x) = e^{\cos x}$
 
 #b
-$\cos x\,e^{\sin x}$
+$f'(x) = \cos x\,e^{\sin x}$
 
 #c
-$e^{\sin x}$
+$f'(x) = e^{\sin x}$
 
 #d
-$\sin x\,e^{\cos x}$
+$f'(x) = \sin x\,e^{\cos x}$
 
 #indice
 $\left(e^u\right)' = u'e^u$ : l'exponentielle reste **rigoureusement identique**, exposant compris. Seul un facteur apparaît devant.
@@ -390,19 +392,19 @@ La proposition **c** oublie le facteur $u'$, l'erreur habituelle des formes comp
 ::
 
 ::qcm-question{label="12." bonne="c" cours="qcm-der-composees"}
-La dérivée de $x\mapsto\ln(\cos x)$ est :
+La fonction $f$ définie et dérivable sur $\left]-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right[$ par $f(x) = \ln(\cos x)$ a pour dérivée :
 
 #a
-$\dfrac{1}{\cos x}$
+$f'(x) = \dfrac{1}{\cos x}$
 
 #b
-$\tan x$
+$f'(x) = \tan x$
 
 #c
-$-\tan x$
+$f'(x) = -\tan x$
 
 #d
-$-\dfrac{1}{\sin x}$
+$f'(x) = -\dfrac{1}{\sin x}$
 
 #indice
 $\left(\ln u\right)' = \dfrac{u'}{u}$, avec $u = \cos x$ donc $u' = -\sin x$.
@@ -424,19 +426,19 @@ La proposition **a** oublie $u'$ purement et simplement.
 ::
 
 ::qcm-question{label="13." bonne="a" cours="qcm-der-composees"}
-La dérivée de $x\mapsto\sqrt{\sin x}$, là où elle est définie, est :
+La fonction $f$ définie par $f(x) = \sqrt{\sin x}$ a pour dérivée, là où elle est dérivable :
 
 #a
-$\dfrac{\cos x}{2\sqrt{\sin x}}$
+$f'(x) = \dfrac{\cos x}{2\sqrt{\sin x}}$
 
 #b
-$\dfrac{1}{2\sqrt{\sin x}}$
+$f'(x) = \dfrac{1}{2\sqrt{\sin x}}$
 
 #c
-$\dfrac{\cos x}{\sqrt{\sin x}}$
+$f'(x) = \dfrac{\cos x}{\sqrt{\sin x}}$
 
 #d
-$\dfrac{-\cos x}{2\sqrt{\sin x}}$
+$f'(x) = \dfrac{-\cos x}{2\sqrt{\sin x}}$
 
 #indice
 $\left(\sqrt u\right)' = \dfrac{u'}{2\sqrt u}$. Avec $u = \sin x$, le numérateur devient $\cos x$ — et il n'y a **rien** à simplifier avec le $2$, contrairement au cas $u = x^2$.
@@ -456,19 +458,19 @@ $$
 ::
 
 ::qcm-question{label="14." bonne="c" cours="qcm-der-trigo"}
-La dérivée de $x\mapsto\tan(3x)$ est :
+La fonction $f$ définie par $f(x) = \tan(3x)$ a pour dérivée, là où elle est dérivable :
 
 #a
-$\dfrac{1}{\cos^2(3x)}$
+$f'(x) = \dfrac{1}{\cos^2(3x)}$
 
 #b
-$3\tan^2(3x)$
+$f'(x) = 3\tan^2(3x)$
 
 #c
-$\dfrac{3}{\cos^2(3x)}$
+$f'(x) = \dfrac{3}{\cos^2(3x)}$
 
 #d
-$1+\tan^2(3x)$
+$f'(x) = 1+\tan^2(3x)$
 
 #indice
 $\left(\tan u\right)' = \dfrac{u'}{\cos^2u} = u'\left(1+\tan^2u\right)$. Le facteur $u' = 3$ doit apparaître, comme pour toute forme composée.
@@ -488,19 +490,19 @@ La proposition **b** confond $3\left(1+\tan^2\right)$ avec $3\tan^2$ — la cons
 ::
 
 ::qcm-question{label="15." bonne="b" cours="qcm-der-hyper"}
-La dérivée de $x\mapsto\mathrm{sh}(2x)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \mathrm{sh}(2x)$ a pour dérivée :
 
 #a
-$2\,\mathrm{sh}(2x)$
+$f'(x) = 2\,\mathrm{sh}(2x)$
 
 #b
-$2\,\mathrm{ch}(2x)$
+$f'(x) = 2\,\mathrm{ch}(2x)$
 
 #c
-$-2\,\mathrm{ch}(2x)$
+$f'(x) = -2\,\mathrm{ch}(2x)$
 
 #d
-$\mathrm{ch}(2x)$
+$f'(x) = \mathrm{ch}(2x)$
 
 #indice
 $\mathrm{sh}' = \mathrm{ch}$, **sans aucun signe moins** — c'est là toute la différence avec la trigonométrie circulaire. Et la forme composée fait sortir $u' = 2$.
@@ -522,19 +524,19 @@ $$
 ::
 
 ::qcm-question{label="16." bonne="a" cours="qcm-der-hyper"}
-La dérivée de $x\mapsto\mathrm{ch}^2x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \mathrm{ch}^2x$ a pour dérivée :
 
 #a
-$2\,\mathrm{ch}\,x\,\mathrm{sh}\,x$
+$f'(x) = 2\,\mathrm{ch}\,x\,\mathrm{sh}\,x$
 
 #b
-$-2\,\mathrm{ch}\,x\,\mathrm{sh}\,x$
+$f'(x) = -2\,\mathrm{ch}\,x\,\mathrm{sh}\,x$
 
 #c
-$2\,\mathrm{ch}\,x$
+$f'(x) = 2\,\mathrm{ch}\,x$
 
 #d
-$2\,\mathrm{sh}\,x$
+$f'(x) = 2\,\mathrm{sh}\,x$
 
 #indice
 Puissance de fonction, avec $u = \mathrm{ch}\,x$ donc $u' = \mathrm{sh}\,x$ — sans signe moins, contrairement au cosinus circulaire.
@@ -560,19 +562,19 @@ Même structure, signes opposés — parce que $\cos' = -\sin$ alors que $\mathr
 ::
 
 ::qcm-question{label="17." bonne="c" cours="qcm-der-hyper"}
-La dérivée de $\mathrm{th}$ est :
+La fonction $f = \mathrm{th}$, définie et dérivable sur $\mathbb{R}$, a pour dérivée :
 
 #a
-$1+\mathrm{th}^2$
+$f'(x) = 1+\mathrm{th}^2x$
 
 #b
-$-\dfrac{1}{\mathrm{ch}^2}$
+$f'(x) = -\dfrac{1}{\mathrm{ch}^2x}$
 
 #c
-$1-\mathrm{th}^2$
+$f'(x) = 1-\mathrm{th}^2x$
 
 #d
-$\dfrac{1}{\mathrm{sh}^2}$
+$f'(x) = \dfrac{1}{\mathrm{sh}^2x}$
 
 #indice
 Même calcul que pour $\tan'$, mais avec l'identité hyperbolique $\mathrm{ch}^2-\mathrm{sh}^2 = 1$ au lieu de $\cos^2+\sin^2 = 1$.
@@ -606,19 +608,19 @@ La proposition **a** est exactement l'erreur de transposition.
 ::
 
 ::qcm-question{label="18." bonne="b" cours="qcm-der-arc"}
-La dérivée de $x\mapsto\mathrm{argsh}(3x)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \mathrm{argsh}(3x)$ a pour dérivée :
 
 #a
-$\dfrac{3}{\sqrt{1-9x^2}}$
+$f'(x) = \dfrac{3}{\sqrt{1-9x^2}}$
 
 #b
-$\dfrac{3}{\sqrt{9x^2+1}}$
+$f'(x) = \dfrac{3}{\sqrt{9x^2+1}}$
 
 #c
-$\dfrac{1}{\sqrt{9x^2+1}}$
+$f'(x) = \dfrac{1}{\sqrt{9x^2+1}}$
 
 #d
-$\dfrac{3}{\sqrt{3x^2+1}}$
+$f'(x) = \dfrac{3}{\sqrt{3x^2+1}}$
 
 #indice
 $\left(\mathrm{argsh}\,u\right)' = \dfrac{u'}{\sqrt{u^2+1}}$. Attention à deux choses : le **$+1$** sous la racine (côté hyperbolique, pas $1-u^2$), et le carré qui porte sur $3x$ tout entier.
@@ -642,19 +644,19 @@ Les circulaires ont $1-x^2$ — d'où leur domaine borné $]-1\,;1[$ — les hyp
 ::
 
 ::qcm-question{label="19." bonne="c" cours="qcm-der-produit"}
-La dérivée de $x\mapsto x\arctan x$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = x\arctan x$ a pour dérivée :
 
 #a
-$\arctan x$
+$f'(x) = \arctan x$
 
 #b
-$\dfrac{1}{1+x^2}$
+$f'(x) = \dfrac{1}{1+x^2}$
 
 #c
-$\arctan x+\dfrac{x}{1+x^2}$
+$f'(x) = \arctan x+\dfrac{x}{1+x^2}$
 
 #d
-$\arctan x+\dfrac{1}{1+x^2}$
+$f'(x) = \arctan x+\dfrac{1}{1+x^2}$
 
 #indice
 Produit, avec $u = x$ et $v = \arctan x$. Le second terme est $u\times v'$ : il faut donc **garder le $x$** en facteur devant la dérivée d'arctan.
@@ -674,19 +676,19 @@ Les propositions **a** et **b** ne gardent qu'un seul des deux termes.
 ::
 
 ::qcm-question{label="20." bonne="b" cours="qcm-der-composees"}
-La dérivée de $x\mapsto\sin\left(x^2\right)$ est :
+La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \sin\left(x^2\right)$ a pour dérivée :
 
 #a
-$\cos\left(x^2\right)$
+$f'(x) = \cos\left(x^2\right)$
 
 #b
-$2x\cos\left(x^2\right)$
+$f'(x) = 2x\cos\left(x^2\right)$
 
 #c
-$2x\sin\left(x^2\right)$
+$f'(x) = 2x\sin\left(x^2\right)$
 
 #d
-$\cos\left(2x\right)$
+$f'(x) = \cos\left(2x\right)$
 
 #indice
 Ne pas confondre avec la question 4 : ici l'exposant est **à l'intérieur** du sinus, c'est donc $u = x^2$ et non $u = \sin x$.
