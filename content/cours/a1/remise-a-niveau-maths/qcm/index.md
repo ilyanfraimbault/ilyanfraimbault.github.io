@@ -8,6 +8,22 @@ icone: i-lucide-circle-check-big
 
 Six QCM de vingt questions : un par chapitre, une **rafale de dérivées** — le format qui est tombé le plus lourdement au QCM de test —, et un QCM blanc qui mélange tout. On répond à **tout**, on clique sur **Corriger**, et seulement là chaque question ratée ouvre son indice, sa solution détaillée et le rappel de cours exact qui manquait. Rien ne se révèle avant : c'est ce qui rend la note honnête.
 
+::rappel{titre="À quoi ressemble le sujet" icone="i-lucide-file-text"}
+Le QCM de test donne la forme de l'épreuve, et elle est **très stéréotypée**. Sur vingt questions, une bonne douzaine tenaient dans une seule phrase :
+
+> La fonction $f$ définie sur $\mathbb{R}$ par $f(x) = \ldots$ a pour dérivée :
+
+suivie de quatre propositions $f'(x) = \ldots$, sans un mot de commentaire. Le reste se répartissait entre trois questions de nombres complexes — forme algébrique, forme trigonométrique —, deux équations à résoudre, et une question de type « parmi les propositions suivantes, laquelle est exacte ».
+
+Trois conséquences concrètes :
+
+1. **La dérivation pèse plus que tout le reste réuni.** C'est ce qui justifie le QCM 5 et sa reprise le mardi.
+2. **L'ensemble de définition est écrit dans l'énoncé**, et il n'est pas décoratif : sur $\arcsin$, $\arccos$ ou un logarithme, c'est lui qui désigne la bonne réponse.
+3. **Les quatre propositions se ressemblent volontairement.** Elles ne sont pas au hasard : chacune correspond à une erreur identifiée — un $u'$ oublié, un signe moins perdu, une fonction non transformée. Reconnaître l'erreur derrière un distracteur vaut mieux que recalculer.
+
+Les six QCM de cette page reprennent cette formulation mot pour mot, et **relèvent la part des complexes**, qui devrait être plus fournie que dans le test.
+::
+
 ## Le plan des sept jours
 
 Le QCM tombe le **vendredi 11 septembre**. Il reste sept jours pleins, du vendredi 4 au jeudi 10.
@@ -56,7 +72,7 @@ Trois questions ratées deux fois de suite sur le même thème valent mieux qu'u
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/derivees-en-rafale" titre="QCM 5 — Dérivées en rafale" description="Vingt dérivées et rien d'autre : sinus, cosinus, tangente, arcsin, arccos, arctan, hyperboliques, et toutes leurs formes composées" type="qcm" meta="20 questions · 20 min"}
 ::
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/blanc" titre="QCM 6 — Le QCM blanc" description="Vingt questions mélangées sur les quatre chapitres, sans indication de thème — à garder pour la veille" type="qcm" meta="20 questions · 25 min"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/blanc" titre="QCM 6 — Le QCM blanc" description="Vingt questions mélangées, dans la composition et la formulation du sujet de test — à garder pour la veille" type="qcm" meta="20 questions · 25 min"}
 ::
 
 ## Ce que le QCM va tester, chapitre par chapitre
