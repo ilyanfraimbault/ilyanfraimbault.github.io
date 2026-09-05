@@ -554,16 +554,15 @@ $$
 
 Deux axes, deux réponses indépendantes : cela fait exactement trois cas non triviaux, et ce sont les trois premières symétries. La quatrième est d'une autre nature — elle ne change aucun signe, elle **échange** les deux coordonnées.
 
-::cercle-trigo{titre="Les quatre symétries" resume="Coche ou décoche une symétrie pour voir où atterrit le point, et quelle formule elle produit." angle="30" mode="symetries" modes="explorer,symetries"}
-::
+Les quatre cas sont détaillés un par un ci-dessous, **chacun avec sa propre figure** : un seul point image à la fois, plutôt que quatre superposés. **Le tableau récapitulatif est à la fin** — il ne sert à rien tant que le mécanisme n'est pas acquis, et devient inutile une fois qu'il l'est.
 
-Les quatre cas sont détaillés un par un ci-dessous. **Le tableau récapitulatif est à la fin** : il ne sert à rien tant que le mécanisme n'est pas acquis, et il devient inutile une fois qu'il l'est.
-
-Dans les quatre exemples, on part du même angle $\theta = \dfrac{\pi}{3}$, pour lequel
+Dans les quatre cas, on part du même angle $\theta = \dfrac{\pi}{3}$, soit $60°$, pour lequel
 
 $$
 \cos\frac{\pi}{3} = \frac12 \qquad\qquad \sin\frac{\pi}{3} = \frac{\sqrt3}{2}
 $$
+
+Sur chaque figure, **$M$ est le point de départ et $M'$ son image**. Fais glisser le point : la figure et les valeurs suivent, et la relation reste vraie quel que soit l'angle.
 
 ### Symétrie 1 — l'angle opposé, le miroir horizontal
 
@@ -580,6 +579,9 @@ $$
 $$
 \cos\left(-\frac{\pi}{3}\right) = \frac12 \qquad\qquad \sin\left(-\frac{\pi}{3}\right) = -\frac{\sqrt3}{2}
 $$
+
+::cercle-trigo{titre="Le miroir horizontal, sur un exemple" resume="θ vaut π/3, soit 60°. Le point image est à la même distance de l’axe horizontal, mais dessous : même abscisse, ordonnée opposée." angle="60" mode="symetries" modes="symetries" symetries="oppose"}
+::
 
 C'est la **parité** vue à la section 5 : le cosinus est pair, le sinus est impair.
 
@@ -599,6 +601,9 @@ $$
 \cos\frac{2\pi}{3} = -\frac12 \qquad\qquad \sin\frac{2\pi}{3} = \frac{\sqrt3}{2}
 $$
 
+::cercle-trigo{titre="Le miroir vertical, sur un exemple" resume="θ vaut π/3, soit 60° ; son image est en 2π/3. Les deux points sont à la même hauteur, de part et d’autre de l’axe vertical." angle="60" mode="symetries" modes="symetries" symetries="supplementaire"}
+::
+
 ⚠️ **C'est cette symétrie qui produit la seconde famille de solutions** de l'équation $\sin A = \sin B$ : deux angles ont le même sinus lorsqu'ils sont **supplémentaires**, pas seulement lorsqu'ils sont égaux.
 
 ### Symétrie 3 — le demi-tour
@@ -614,6 +619,9 @@ $$
 $$
 \cos\frac{4\pi}{3} = -\frac12 \qquad\qquad \sin\frac{4\pi}{3} = -\frac{\sqrt3}{2}
 $$
+
+::cercle-trigo{titre="Le demi-tour, sur un exemple" resume="θ vaut π/3, soit 60° ; son image est en 4π/3. Le point est passé de l’autre côté du centre, donc des deux axes à la fois." angle="60" mode="symetries" modes="symetries" symetries="antipode"}
+::
 
 Rien à apprendre ici non plus : c'est la symétrie 1 suivie de la symétrie 2, donc les deux effets se cumulent.
 
@@ -636,6 +644,9 @@ $$
 $$
 \cos\frac{\pi}{6} = \frac{\sqrt3}{2} = \sin\frac{\pi}{3} \qquad\qquad \sin\frac{\pi}{6} = \frac12 = \cos\frac{\pi}{3}
 $$
+
+::cercle-trigo{titre="Le miroir diagonal, sur un exemple" resume="θ vaut π/3, soit 60° ; son image est en π/6. Compare les deux couples de coordonnées : ce sont les mêmes, échangées." angle="60" mode="symetries" modes="symetries" symetries="complementaire"}
+::
 
 Les valeurs de $\dfrac{\pi}{6}$ et de $\dfrac{\pi}{3}$ sont bien les mêmes, **croisées**. C'est d'ailleurs la vraie raison pour laquelle ces deux angles se confondent si facilement.
 

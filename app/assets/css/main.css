@@ -293,6 +293,37 @@ body.cours-large {
   text-anchor: middle;
 }
 
+/* Fractions dessinées en SVG : la barre reprend la couleur du texte voisin,
+   que « currentColor » ne donnerait pas puisque ces textes sont peints en fill. */
+.ct-remarquables .ct-frac-barre {
+  stroke: var(--ui-text-muted);
+  stroke-width: 0.7;
+}
+
+.ct-texte-solution .ct-frac-barre {
+  stroke: var(--ui-primary);
+  stroke-width: 0.9;
+}
+
+/* Fractions en HTML, pour les pastilles et les libellés sous la figure. */
+.ct-frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: -0.42em;
+  line-height: 1.08;
+  font-variant-numeric: tabular-nums;
+}
+
+.ct-frac-haut {
+  padding-inline: 1px;
+}
+
+.ct-frac-bas {
+  border-top: 1px solid currentColor;
+  padding-inline: 1px;
+}
+
 .ct-secteur {
   fill: color-mix(in oklch, var(--ct-angle) 18%, transparent);
   stroke: none;
