@@ -13,6 +13,9 @@ const props = defineProps<{
   mode?: string
   /** Onglets à conserver, séparés par des virgules. Tous par défaut. */
   modes?: string
+  /** Symétries cochées au chargement, séparées par des virgules : « oppose »,
+   * « supplementaire », « antipode », « complementaire ». Toutes par défaut. */
+  symetries?: string
 }>()
 
 const uid = useId()
@@ -50,15 +53,40 @@ function pgcd(a: number, b: number): number {
   return b === 0 ? a : pgcd(b, a % b)
 }
 
-/** « 0 », « π/3 », « 5π/6 », « 3π/2 »… pour un angle entier en degrés. */
-function enRadians(d: number): string {
+/** Numérateur et dénominateur d'un angle exprimé en fraction de π. `bas` vaut
+ *  null quand l'angle est un multiple entier de π, donc sans dénominateur. */
+function enRadiansParts(d: number): { haut: string, bas: string | null } {
   const v = normaliser(d)
-  if (v === 0) return '0'
+  if (v === 0) return { haut: '0', bas: null }
   const g = pgcd(v, 180)
   const num = v / g
   const den = 180 / g
   const haut = num === 1 ? 'π' : `${num}π`
-  return den === 1 ? haut : `${haut}/${den}`
+  return { haut, bas: den === 1 ? null : String(den) }
+}
+
+/** « 0 », « π/3 », « 5π/6 », « 3π/2 »… en une seule ligne, pour les textes
+ *  lus par les lecteurs d'écran, où la barre de fraction n'aurait pas de sens. */
+function enRadians(d: number): string {
+  const { haut, bas } = enRadiansParts(d)
+  return bas ? `${haut}/${bas}` : haut
+}
+
+/** Géométrie d'une fraction dessinée en SVG, centrée sur (x, y). La largeur de
+ *  la barre est estimée d'après le nombre de caractères : mesurer un texte SVG
+ *  demanderait un accès au DOM, hors de portée pendant le rendu serveur. */
+function fracSvg(x: number, y: number, p: { haut: string, bas: string | null }, taille = 8.5) {
+  const n = Math.max(p.haut.length, (p.bas ?? '').length)
+  const demi = (n * taille * 0.56 + 2) / 2
+  return {
+    haut: p.haut,
+    bas: p.bas,
+    hy: y - taille * 0.28,
+    by: y + taille * 0.95,
+    x1: x - demi,
+    x2: x + demi,
+    ly: y + taille * 0.2
+  }
 }
 
 const EXACTS = [
@@ -96,6 +124,16 @@ function angleCourt(a: number): string {
   const v = arrondiAngle(a)
   if (!Number.isInteger(v)) return `${nombre(v, 1)}°`
   return v < 0 ? `−${enRadians(-v)}` : enRadians(v)
+}
+
+/** Même chose, décomposé pour l'affichage en fraction. Le signe reste au
+ *  numérateur : −5π/6 s'écrit bien « −5π » sur « 6 ». */
+function angleCourtParts(a: number): { haut: string, bas: string | null } {
+  const v = arrondiAngle(a)
+  if (!Number.isInteger(v)) return { haut: `${nombre(v, 1)}°`, bas: null }
+  if (v >= 0) return enRadiansParts(v)
+  const p = enRadiansParts(-v)
+  return { haut: `−${p.haut}`, bas: p.bas }
 }
 
 function angleTexte(a: number): string {
@@ -230,7 +268,14 @@ const SYMETRIES = [
   }
 ]
 
-const symetriesActives = ref(SYMETRIES.map(s => s.id))
+const symetriesDemandees = (props.symetries ?? '')
+  .split(',')
+  .map(s => s.trim())
+  .filter(s => SYMETRIES.some(x => x.id === s))
+
+const symetriesActives = ref(
+  symetriesDemandees.length ? symetriesDemandees : SYMETRIES.map(s => s.id)
+)
 
 function basculerSymetrie(id: string) {
   const i = symetriesActives.value.indexOf(id)
@@ -572,11 +617,30 @@ const descriptionA11y = computed(
                 :cy="pt(r).y"
                 r="2.5"
               />
-              <text
-                v-if="!anglesOccultes.has(r)"
-                :x="pt(r, 123).x"
-                :y="pt(r, 123).y + 3"
-              >{{ enRadians(r) }}</text>
+              <template v-if="!anglesOccultes.has(r)">
+                <text
+                  v-if="!enRadiansParts(r).bas"
+                  :x="pt(r, 123).x"
+                  :y="pt(r, 123).y + 3"
+                >{{ enRadiansParts(r).haut }}</text>
+                <g v-else>
+                  <text
+                    :x="pt(r, 123).x"
+                    :y="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).hy"
+                  >{{ enRadiansParts(r).haut }}</text>
+                  <line
+                    class="ct-frac-barre"
+                    :x1="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).x1"
+                    :x2="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).x2"
+                    :y1="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).ly"
+                    :y2="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).ly"
+                  />
+                  <text
+                    :x="pt(r, 123).x"
+                    :y="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).by"
+                  >{{ enRadiansParts(r).bas }}</text>
+                </g>
+              </template>
             </template>
           </g>
 
@@ -767,11 +831,34 @@ const descriptionA11y = computed(
                 r="5"
               />
               <text
+                v-if="!angleCourtParts(s).bas"
                 class="ct-texte-solution"
                 :x="pt(s, 140).x"
                 :y="pt(s, 140).y + 4"
                 text-anchor="middle"
-              >{{ angleCourt(s) }}</text>
+              >{{ angleCourtParts(s).haut }}</text>
+              <g
+                v-else
+                class="ct-texte-solution"
+              >
+                <text
+                  :x="pt(s, 140).x"
+                  :y="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).hy"
+                  text-anchor="middle"
+                >{{ angleCourtParts(s).haut }}</text>
+                <line
+                  class="ct-frac-barre"
+                  :x1="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).x1"
+                  :x2="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).x2"
+                  :y1="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).ly"
+                  :y2="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).ly"
+                />
+                <text
+                  :x="pt(s, 140).x"
+                  :y="fracSvg(pt(s, 140).x, pt(s, 140).y + 1, angleCourtParts(s), 10).by"
+                  text-anchor="middle"
+                >{{ angleCourtParts(s).bas }}</text>
+              </g>
             </template>
           </g>
 
@@ -877,8 +964,9 @@ const descriptionA11y = computed(
               max="359"
               step="1"
             >
-            <output class="w-24 shrink-0 text-right text-xs tabular-nums text-highlighted">
-              {{ enRadians(deg) }} · {{ deg }}°
+            <output class="flex w-24 shrink-0 items-center justify-end gap-1 text-xs tabular-nums text-highlighted">
+              <FractionRadian v-bind="enRadiansParts(deg)" />
+              <span>· {{ deg }}°</span>
             </output>
           </div>
 
@@ -889,9 +977,10 @@ const descriptionA11y = computed(
               type="button"
               class="ct-puce"
               :class="deg === r && 'ct-puce-active'"
+              :aria-label="enRadians(r)"
               @click="deg = r"
             >
-              {{ enRadians(r) }}
+              <FractionRadian v-bind="enRadiansParts(r)" />
             </button>
           </div>
         </div>
@@ -931,7 +1020,7 @@ const descriptionA11y = computed(
       <div class="ct-lecture min-w-0">
         <template v-if="actif === 'explorer' || actif === 'symetries'">
           <p class="ct-titre-lecture">
-            θ = {{ enRadians(deg) }} <span class="text-dimmed">({{ deg }}°)</span>
+            θ = <FractionRadian v-bind="enRadiansParts(deg)" /> <span class="text-dimmed">({{ deg }}°)</span>
           </p>
           <dl class="ct-valeurs">
             <dt class="ct-texte-cos">
@@ -987,7 +1076,7 @@ const descriptionA11y = computed(
                 />
                 <span class="min-w-0 flex-1">
                   <span class="block font-medium text-highlighted">
-                    {{ s.titre }} = {{ enRadians(s.image) }}
+                    {{ s.titre }} = <FractionRadian v-bind="enRadiansParts(s.image)" />
                     <span class="text-dimmed">({{ s.image }}°)</span>
                   </span>
                   <span class="block text-xs text-dimmed">{{ s.miroir }}</span>
@@ -1073,7 +1162,15 @@ const descriptionA11y = computed(
             </p>
             <p class="ct-note">
               Dans [0, 2π[ :
-              <strong class="text-highlighted">{{ eqSolutions.map(angleCourt).join('  et  ') }}</strong>
+              <strong class="inline-flex items-center gap-2 text-highlighted">
+                <template
+                  v-for="(s, i) in eqSolutions"
+                  :key="s"
+                >
+                  <span v-if="i">et</span>
+                  <FractionRadian v-bind="angleCourtParts(s)" />
+                </template>
+              </strong>
             </p>
             <p class="ct-note">
               Toutes les solutions, avec k ∈ ℤ :
@@ -1109,7 +1206,7 @@ const descriptionA11y = computed(
             l’arc épais sur le cercle. C’est le seul moyen d’en faire une vraie fonction.
           </p>
           <p class="ct-titre-lecture">
-            θ = {{ enRadians(deg) }} <span class="text-dimmed">({{ deg }}°)</span>
+            θ = <FractionRadian v-bind="enRadiansParts(deg)" /> <span class="text-dimmed">({{ deg }}°)</span>
           </p>
           <dl class="ct-valeurs">
             <dt v-if="recFonction === 'arccos'">
