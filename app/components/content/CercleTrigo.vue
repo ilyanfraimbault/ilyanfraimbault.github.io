@@ -382,6 +382,7 @@ const recPoint = computed(() => recResultat.value === null ? null : pt(recResult
 const recEtiquette = computed(() => recResultat.value === null ? null : pt(recResultat.value, 140))
 
 const recTexte = computed(() => recResultat.value === null ? '' : angleCourt(recResultat.value))
+const recParts = computed(() => recResultat.value === null ? null : angleCourtParts(recResultat.value))
 
 const recIdentique = computed(() => recResultat.value !== null
   && normaliser(recResultat.value) === deg.value)
@@ -623,7 +624,11 @@ const descriptionA11y = computed(
                   :x="pt(r, 123).x"
                   :y="pt(r, 123).y + 3"
                 >{{ enRadiansParts(r).haut }}</text>
-                <g v-else>
+                <g
+                  v-else
+                  role="img"
+                  :aria-label="enRadians(r)"
+                >
                   <text
                     :x="pt(r, 123).x"
                     :y="fracSvg(pt(r, 123).x, pt(r, 123).y, enRadiansParts(r)).hy"
@@ -840,6 +845,8 @@ const descriptionA11y = computed(
               <g
                 v-else
                 class="ct-texte-solution"
+                role="img"
+                :aria-label="angleCourt(s)"
               >
                 <text
                   :x="pt(s, 140).x"
@@ -906,13 +913,39 @@ const descriptionA11y = computed(
                 :cy="recPoint.y"
                 r="5.5"
               />
-              <text
-                v-if="recEtiquette"
-                class="ct-texte-solution"
-                :x="recEtiquette.x"
-                :y="recEtiquette.y + 4"
-                text-anchor="middle"
-              >{{ recTexte }}</text>
+              <template v-if="recEtiquette && recParts">
+                <text
+                  v-if="!recParts.bas"
+                  class="ct-texte-solution"
+                  :x="recEtiquette.x"
+                  :y="recEtiquette.y + 4"
+                  text-anchor="middle"
+                >{{ recParts.haut }}</text>
+                <g
+                  v-else
+                  class="ct-texte-solution"
+                  role="img"
+                  :aria-label="recTexte"
+                >
+                  <text
+                    :x="recEtiquette.x"
+                    :y="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).hy"
+                    text-anchor="middle"
+                  >{{ recParts.haut }}</text>
+                  <line
+                    class="ct-frac-barre"
+                    :x1="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).x1"
+                    :x2="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).x2"
+                    :y1="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).ly"
+                    :y2="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).ly"
+                  />
+                  <text
+                    :x="recEtiquette.x"
+                    :y="fracSvg(recEtiquette.x, recEtiquette.y + 1, recParts, 10).by"
+                    text-anchor="middle"
+                  >{{ recParts.bas }}</text>
+                </g>
+              </template>
             </template>
           </g>
 
