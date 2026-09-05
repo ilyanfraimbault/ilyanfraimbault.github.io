@@ -1,12 +1,12 @@
 ---
 title: QCM et plan de révision
-description: Six QCM de vingt questions couvrant les quatre chapitres, dont une rafale entièrement consacrée aux dérivées, et un plan de six jours pour arriver prêt au QCM du vendredi 11 septembre.
+description: Six QCM de vingt questions couvrant les quatre chapitres, dont deux qui mélangent tout et une rafale consacrée aux dérivées, et un plan de six jours pour arriver prêt au QCM du vendredi 11 septembre.
 annee: A1
 matiere: Remise à niveau en maths
 icone: i-lucide-circle-check-big
 ---
 
-Six QCM de vingt questions : un par chapitre, une **rafale de dérivées** — le format qui est tombé le plus lourdement au QCM de test —, et un QCM blanc qui mélange tout. On répond à **tout**, on clique sur **Corriger**, et seulement là chaque question ratée ouvre son indice, sa solution détaillée et le rappel de cours exact qui manquait. Rien ne se révèle avant : c'est ce qui rend la note honnête.
+Six QCM de vingt questions : **deux qui mélangent tout** — le diagnostic du départ et le blanc de la veille —, trois qui reprennent un chapitre à la fois pour la révision, et une **rafale de dérivées**, le format qui est tombé le plus lourdement au QCM de test. On répond à **tout**, on clique sur **Corriger**, et seulement là chaque question ratée ouvre son indice, sa solution détaillée et le rappel de cours exact qui manquait. Rien ne se révèle avant : c'est ce qui rend la note honnête.
 
 ::rappel{titre="À quoi ressemble le sujet" icone="i-lucide-file-text"}
 Le QCM de test donne la forme de l'épreuve, et elle est **très stéréotypée**. Sur vingt questions, une bonne douzaine tenaient dans une seule phrase :
@@ -44,16 +44,18 @@ C'est **beaucoup**. Une dérivée composée se calcule en trente secondes ; il t
 
 Le QCM tombe le **vendredi 11 septembre**. Rien n'a encore été révisé : le plan démarre **samedi 5**, ce qui laisse six jours pleins jusqu'au jeudi 10 — un de moins que l'idéal, donc chaque journée est plus chargée et le diagnostic se fait le premier matin plutôt que la veille au calme.
 
-Le plan n'est pas réparti à parts égales, et c'est volontaire. La trigonométrie occupe **deux jours sur six** parce que c'est le point faible annoncé, mais aussi parce qu'elle est le socle d'un second chapitre : la section 5 des fonctions usuelles est entièrement trigonométrique, et la section 6 traite d'arccos et d'arcsin. Une journée investie en trigonométrie rapporte donc deux fois. En contrepartie, la dernière journée regroupe fonctions usuelles et répétition générale : c'est la plus longue du plan, à commencer tôt.
+**La trigonométrie n'a pas de journée à elle, et c'est volontaire.** Elle n'arrive jamais seule au QCM : elle se présente sous forme d'une dérivée de $\sin(3x)$ à calculer, d'un argument de nombre complexe à trouver, d'un $\arcsin$ à dériver. La réviser isolément, c'est s'entraîner à un exercice qui ne tombera pas.
+
+Elle est donc **répartie sur trois journées**, chaque fois dans le contexte où elle sert — le socle et les dérivées dès le premier jour, les symétries et les équations avec les complexes, les réciproques avec les fonctions usuelles. Le cours de trigonométrie est d'ailleurs organisé en [quatre étapes](/cours/a1/remise-a-niveau-maths/trigonometrie/cours) qui suivent exactement ce découpage.
 
 | Jour | Date | Thème | Travail |
 |---|---|---|---|
-| **J1** | samedi 5 | Diagnostic + Trigonométrie, le socle | QCM 1 à froid, sans réviser, pour savoir où ça casse. Puis cours §1 à §6, le cercle manipulable en main. |
-| **J2** | dimanche 6 | Trigonométrie, la suite | Cours §7 à §10 : tangente, équations, réciproques, **dérivées**. Refaire QCM 1, puis QCM 5. |
-| **J3** | lundi 7 | Complexes, le calcul | Cours §1 à §3 : formes algébriques, conjugué, quotient, second degré. |
-| **J4** | mardi 8 | Complexes, la géométrie | Cours §4 à §8 : affixes, module, argument, formes trigonométrique et exponentielle. Puis QCM 4. |
-| **J5** | mercredi 9 | Dérivation | Tableau, produit, quotient, formes composées, domaines. QCM 2, puis **refaire QCM 5**. |
-| **J6** | jeudi 10 | Fonctions usuelles + Répétition générale | Cours : exp, ln, limites et croissances comparées, réciproques, hyperboliques. QCM 3. Puis QCM 6 blanc en conditions, **une heure pleine**, comme le jour J, et reprise des seules erreurs. |
+| **J1** | samedi 5 | Diagnostic + le socle | QCM 1 à froid, sans rien réviser : il mélange les quatre chapitres et dit où ça casse. Puis cours de trigonométrie, **étapes 1 et 4** — le cercle, les valeurs remarquables, et les six dérivées. |
+| **J2** | dimanche 6 | Dérivation | Tableau, produit, quotient, formes composées, ensembles de dérivabilité. QCM 2, puis QCM 5. |
+| **J3** | lundi 7 | Complexes, le calcul | Cours §1 à §3 : formes algébriques, conjugué, quotient, second degré. Puis trigonométrie **étape 2** : périodicité, parité, les quatre symétries. |
+| **J4** | mardi 8 | Complexes, la géométrie | Cours §4 à §8 : affixes, module, argument, formes trigonométrique et exponentielle. QCM 4. La trigonométrie se révise ici **en contexte** : un argument, c'est un cosinus et un sinus à lire. |
+| **J5** | mercredi 9 | Fonctions usuelles | exp, ln, équations, croissances comparées, réciproques, hyperboliques. QCM 3, puis **refaire QCM 5**. Trigonométrie **étape 3** : les équations et leurs deux familles. |
+| **J6** | jeudi 10 | Répétition générale | Refaire QCM 1 — la note se compare à celle du premier jour. Puis QCM 6 blanc en conditions, **une heure pleine**, comme le jour J, et reprise des seules erreurs. |
 
 **Le QCM 5 revient deux fois**, et c'est volontaire : les dérivées de sinus, cosinus, tangente, arcsin et arccos sont ce qui tombe le plus lourdement, et ce sont des réflexes — ils ne s'acquièrent qu'en repassant sur les mêmes formes à quelques jours d'intervalle. Une seule séance ne suffit pas.
 
@@ -71,7 +73,7 @@ Trois questions ratées deux fois de suite sur le même thème valent mieux qu'u
 
 ## Les six QCM
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/trigonometrie" titre="QCM 1 — Trigonométrie" description="Radians, lecture du cercle, valeurs remarquables, angles associés, tangente, équations, arccos et arcsin" type="qcm" meta="20 questions · 1 h"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/general" titre="QCM 1 — Un peu de tout" description="Vingt questions mélangées sur les quatre chapitres, sans annonce de thème — le diagnostic, à faire en premier sans rien réviser" type="qcm" meta="20 questions · 1 h"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/qcm/derivation" titre="QCM 2 — Dérivation" description="Tableau des dérivées, produits, quotients, formes composées, ensembles de dérivabilité, continuité et TVI" type="qcm" meta="20 questions · 1 h"}
@@ -93,9 +95,11 @@ Trois questions ratées deux fois de suite sur le même thème valent mieux qu'u
 
 L'analyse des quatre cours donne trente-trois sections. Toutes ne pèsent pas le même poids dans un QCM : voici ce qui se prête au format et ce qui tombe donc le plus probablement.
 
-### Trigonométrie — le socle, et le point faible
+### Trigonométrie — jamais seule, mais partout
 
-Le chapitre compte dix sections, mais **quatre idées** portent tout le reste :
+C'est le chapitre le plus mal compris de la liste, et pour une raison de forme : **il ne tombe pas en tant que tel**. Aucune question du QCM de test ne demandait de placer un point sur un cercle. En revanche, la trigonométrie était présente dans une dérivée sur deux, dans les deux questions de forme trigonométrique d'un complexe, et dans les questions d'$\arcsin$ et d'$\arccos$.
+
+Le chapitre compte onze sections, mais **quatre idées** portent tout le reste :
 
 - le point du cercle a pour coordonnées $(\cos\theta\ ;\sin\theta)$ — cosinus horizontal, sinus vertical ;
 - l'identité $\cos^2\theta+\sin^2\theta = 1$ ;
@@ -103,6 +107,8 @@ Le chapitre compte dix sections, mais **quatre idées** portent tout le reste :
 - une équation trigonométrique a **deux** familles de solutions, jamais une.
 
 En QCM, les erreurs se logent presque toujours au même endroit : confondre $\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$, oublier le signe moins de $\cos'$, oublier de dériver l'intérieur d'une composée, et n'écrire qu'une famille de solutions sur deux.
+
+La section [Ce qu'il faut savoir par cœur](/cours/a1/remise-a-niveau-maths/trigonometrie/cours#ce-quil-faut-savoir-par-cœur) du cours sépare les **six** choses qui s'apprennent de tout le reste, qui se relit sur la figure. C'est le raccourci le plus rentable du chapitre si le temps manque.
 
 ### Nombres complexes — le second point faible
 
@@ -115,7 +121,7 @@ Six notions reviennent sans cesse :
 - la forme exponentielle, qui exige $r > 0$ ;
 - l'affixe d'un vecteur, extrémité moins origine.
 
-La bonne nouvelle : **le module et l'argument sont de la trigonométrie déguisée**. Les deux jours de trigonométrie du début du plan servent directement ici.
+La bonne nouvelle : **le module et l'argument sont de la trigonométrie déguisée**. Chercher un argument, c'est lire un cosinus et un sinus sur le cercle — la trigonométrie révisée ailleurs dans le plan se rentabilise donc ici, sans travail supplémentaire.
 
 ### Les dérivées — le format qui tombe le plus
 

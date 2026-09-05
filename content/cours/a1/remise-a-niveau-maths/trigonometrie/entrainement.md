@@ -20,7 +20,7 @@ Sous chaque question, trois boutons :
 Un conseil propre à ce chapitre : **garder le cercle du guide ouvert à côté**. Presque toutes les réponses se lisent dessus avant de se calculer.
 ::
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Le cours du chapitre" description="Le cercle expliqué de zéro, avec une figure manipulable : radians, valeurs remarquables, angles associés, équations et réciproques" type="cours" meta="10 sections"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Le cours du chapitre" description="Le cercle expliqué de zéro, avec une figure manipulable : radians, valeurs remarquables, angles associés, équations et réciproques" type="cours" meta="11 sections"}
 ::
 
 :::exercice{titre="Palier 1 — Le radian et le tour du cercle" theme="Convertir, placer un angle, reconnaître son quadrant" badge="★☆☆☆☆" icone="i-lucide-sprout"}
