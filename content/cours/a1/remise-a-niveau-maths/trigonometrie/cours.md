@@ -1,6 +1,6 @@
 ---
 title: Trigonométrie — comprendre le cercle
-description: Le cercle trigonométrique expliqué de zéro, avec une figure interactive — radians, lecture de cos et sin, valeurs remarquables, angles associés, équations et fonctions réciproques.
+description: Le cercle trigonométrique expliqué de zéro, en quatre étapes et avec une figure interactive — radians, valeurs remarquables, angles associés, équations, réciproques, formules d'addition, et la liste de ce qu'il faut réellement savoir par cœur.
 interactif: true
 type: cours
 annee: A1
@@ -16,6 +16,26 @@ Cette page reprend donc tout depuis le début, chaque notion étant accompagnée
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/entrainement" titre="La fiche d’entraînement" description="Une fois le guide lu : quinze questions en cinq paliers, du radian jusqu’aux fonctions réciproques" type="entrainement" meta="15 questions"}
+::
+
+::rappel{titre="Par où commencer, si tu pars de zéro" icone="i-lucide-footprints"}
+Le chapitre se lit dans l'ordre, mais il se **travaille en quatre étapes**, et chacune ne sert à rien tant que la précédente n'est pas acquise. Ne passe à la suivante que si tu réponds à son test de passage **sans regarder**.
+
+**Étape 1 — le socle (§1 à §4).** Le cercle, le radian, et la seule phrase qui porte tout le chapitre : *le cosinus est une abscisse, le sinus une ordonnée*. Plus les cinq valeurs remarquables.
+→ *Test de passage :* écris de mémoire le tableau des $\cos$ et $\sin$ pour $0$, $\dfrac{\pi}{6}$, $\dfrac{\pi}{4}$, $\dfrac{\pi}{3}$, $\dfrac{\pi}{2}$.
+
+**Étape 2 — se déplacer sur le cercle (§5 et §6).** Périodicité, parité, et les quatre symétries. Ce ne sont **pas** des formules à apprendre : ce sont quatre façons de regarder la même figure.
+→ *Test de passage :* calcule $\cos\dfrac{11\pi}{6}$ et $\sin\dfrac{3\pi}{4}$ en expliquant chaque étape.
+
+**Étape 3 — calculer (§7, §8 et §11).** La tangente, les équations et leurs **deux** familles de solutions, puis les formules d'addition.
+→ *Test de passage :* résous $\cos x = -\dfrac12$ sur $[0\,;2\pi]$, et trouve les **deux** solutions.
+
+**Étape 4 — l'analyse (§9 et §10).** Les réciproques et les dérivées. C'est court, et **c'est ce qui tombe le plus au QCM** : à ne surtout pas garder pour la fin si le temps manque.
+→ *Test de passage :* donne les dérivées de $\sin$, $\cos$, $\tan$, $\arcsin$, $\arccos$ et $\arctan$.
+
+**Si tu n'as qu'une heure devant toi**, fais l'étape 1 puis l'étape 4, et reviens aux étapes 2 et 3 ensuite. C'est le seul ordre qui rapporte des points immédiatement : une dérivée de $\sin(3x)$ se calcule sans rien savoir des symétries.
+
+La section [Ce qu'il faut savoir par cœur](#ce-quil-faut-savoir-par-cœur), en fin de page, sépare le peu qui s'apprend du beaucoup qui se relit sur la figure.
 ::
 
 ## 1. Du triangle rectangle au cercle
@@ -330,6 +350,131 @@ $$
 
 Le seul point de vigilance est le **signe moins** de la dérivée du cosinus. Il se retrouve sur la figure : quand $\theta$ augmente à partir de $0$, le point part vers la gauche, donc son abscisse — le cosinus — **diminue**. Une fonction qui décroît a bien une dérivée négative.
 
+## 11. Les formules d'addition et de duplication
+
+Ces formules ne servent presque jamais seules : elles servent **dans les autres chapitres**. C'est la duplication qui transforme $\big(\mathrm{sh}^2x\big)'$ en $\mathrm{sh}(2x)$, et c'est l'addition qui fait marcher la multiplication des nombres complexes sous forme exponentielle.
+
+**Les quatre formules d'addition :**
+
+$$
+\cos(a+b) = \cos a\cos b-\sin a\sin b \qquad \cos(a-b) = \cos a\cos b+\sin a\sin b
+$$
+
+$$
+\sin(a+b) = \sin a\cos b+\cos a\sin b \qquad \sin(a-b) = \sin a\cos b-\cos a\sin b
+$$
+
+**Le moyen de ne pas les confondre**, en deux lignes :
+
+- le **cosinus** garde les fonctions **ensemble** ($\cos\cos$, puis $\sin\sin$) et **retourne** le signe ;
+- le **sinus** **mélange** les fonctions ($\sin\cos$, puis $\cos\sin$) et **garde** le signe.
+
+**La duplication** n'est que le cas $b = a$ :
+
+$$
+\sin(2a) = 2\sin a\cos a \qquad \cos(2a) = \cos^2a-\sin^2a
+$$
+
+En remplaçant $\sin^2a$ par $1-\cos^2a$, puis $\cos^2a$ par $1-\sin^2a$, la deuxième prend deux autres visages — les trois sont utiles :
+
+$$
+\cos(2a) = \cos^2a-\sin^2a = 2\cos^2a-1 = 1-2\sin^2a
+$$
+
+**Et la linéarisation** s'en déduit en isolant le carré. Elle sert dès qu'on veut dériver ou intégrer un $\cos^2$ :
+
+$$
+\cos^2a = \frac{1+\cos(2a)}{2} \qquad\qquad \sin^2a = \frac{1-\cos(2a)}{2}
+$$
+
+::rappel{titre="Tu peux les retrouver au lieu de les apprendre" icone="i-lucide-refresh-cw"}
+Les formules d'addition **sont** la multiplication des nombres complexes de module $1$. Développe le produit et compare :
+
+$$
+\left(\cos a+i\sin a\right)\left(\cos b+i\sin b\right) = \underbrace{\cos a\cos b-\sin a\sin b}_{\text{partie réelle}}+i\underbrace{\left(\sin a\cos b+\cos a\sin b\right)}_{\text{partie imaginaire}}
+$$
+
+Or ce produit vaut $e^{ia}\times e^{ib} = e^{i(a+b)} = \cos(a+b)+i\sin(a+b)$. En identifiant partie réelle et partie imaginaire, les **deux** formules d'addition tombent d'un coup.
+
+**Le contrôle en trois secondes**, si tu hésites sur un signe : prends $a = b = 0$. Toute formule correcte doit donner $\cos 0 = 1$ et $\sin 0 = 0$. Puis prends $a = b = \dfrac{\pi}{2}$ : $\cos\pi$ doit valoir $-1$, ce que seule la version avec le **moins** produit.
+::
+
+**Les angles associés de la section 6 en sont des cas particuliers.** Avec $b = \pi$, la première formule donne $\cos(a+\pi) = \cos a\times(-1)-\sin a\times 0 = -\cos a$ — exactement la ligne du tableau. Il n'y a donc pas vingt formules à retenir dans ce chapitre, mais **une seule**, dont tout le reste se déduit.
+
+## Ce qu'il faut savoir par cœur
+
+Le chapitre paraît immense parce qu'il contient une trentaine de formules. En réalité **six choses s'apprennent**, et tout le reste se relit sur la figure ou se redémontre en dix secondes. Voici la séparation, classée par rapport de points au QCM.
+
+### Les six choses à savoir
+
+**1. Les six dérivées.** C'est ce qui tombe le plus lourdement, et c'est purement de la mémoire.
+
+$$
+\sin' = \cos \qquad \cos' = -\sin \qquad \tan' = 1+\tan^2 = \frac{1}{\cos^2}
+$$
+
+$$
+\arcsin'x = \frac{1}{\sqrt{1-x^2}} \qquad \arccos'x = \frac{-1}{\sqrt{1-x^2}} \qquad \arctan'x = \frac{1}{1+x^2}
+$$
+
+Deux repères qui évitent les quatre erreurs classiques : **seuls $\cos$ et $\arccos$ portent un signe moins**, et **les deux « arc » en racine vont ensemble**, opposés l'un de l'autre, tandis qu'$\arctan$ est le seul sans racine.
+
+**2. La ligne des valeurs remarquables.** Une seule suite à retenir, celle des cosinus :
+
+$$
+\frac{\sqrt4}{2},\quad \frac{\sqrt3}{2},\quad \frac{\sqrt2}{2},\quad \frac{\sqrt1}{2},\quad \frac{\sqrt0}{2} \qquad\text{pour}\qquad 0,\ \frac{\pi}{6},\ \frac{\pi}{4},\ \frac{\pi}{3},\ \frac{\pi}{2}
+$$
+
+Les sinus sont la même suite **lue à l'envers**. Rien d'autre n'est à mémoriser : $\tan$ s'obtient en divisant.
+
+**3. Le cosinus est une abscisse, le sinus une ordonnée.** Ce n'est pas une formule, c'est la phrase qui permet de reconstruire les signes, l'encadrement, les symétries et les arguments de complexes.
+
+**4. L'identité de Pythagore.**
+
+$$
+\cos^2\theta+\sin^2\theta = 1
+$$
+
+**5. Les intervalles d'arrivée des trois réciproques.** C'est ce que le QCM vérifie en écrivant l'ensemble de définition dans l'énoncé.
+
+| Réciproque | définie sur | à valeurs dans |
+|---|---|---|
+| $\arccos$ | $[-1\,;1]$ | $[0\,;\pi]$ |
+| $\arcsin$ | $[-1\,;1]$ | $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ |
+| $\arctan$ | $\mathbb{R}$ | $\left]-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right[$ |
+
+**6. Les deux formules d'équation**, avec leurs **deux** familles :
+
+$$
+\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi
+$$
+
+$$
+\sin A = \sin B \iff A = B+2k\pi \ \text{ ou }\ A = \pi-B+2k\pi
+$$
+
+### Ce qui ne s'apprend pas
+
+Tout ce qui suit se **relit** ou se **redémontre**, et vouloir l'apprendre par cœur est le meilleur moyen de le confondre :
+
+- **les signes par quadrant** — à gauche de l'axe vertical le cosinus est négatif, sous l'axe horizontal le sinus l'est ;
+- **les quatre symétries** de la section 6 — chacune est une réflexion du cercle, et la ligne du tableau s'écrit en regardant où atterrit le point ;
+- **les valeurs de la tangente** — c'est $\dfrac{\sin}{\cos}$, une division ;
+- **les formules d'addition** — le produit $e^{ia}e^{ib}$ les redonne, comme montré à la section 11 ;
+- **la périodicité et la parité** — un tour complet ramène au même point, et $-\theta$ est le symétrique par rapport à l'axe horizontal.
+
+::rappel{titre="Le test de cinq minutes, à refaire tous les deux jours" icone="i-lucide-timer"}
+Feuille blanche, rien sous les yeux :
+
+1. le tableau des $\cos$ et $\sin$ pour les cinq angles remarquables ;
+2. les six dérivées ;
+3. les intervalles d'arrivée d'$\arccos$, $\arcsin$ et $\arctan$.
+
+Ces trois points sont **tout** ce qui doit être en mémoire immédiate. S'ils sortent sans hésitation, la trigonométrie du QCM est acquise — le reste se lit sur une figure que tu peux redessiner en dix secondes au brouillon.
+
+C'est aussi la raison pour laquelle ce chapitre n'a pas de QCM à lui : au QCM, la trigonométrie n'arrive jamais seule. Elle arrive **dans** une dérivée à calculer, **dans** l'argument d'un nombre complexe, **dans** une fonction réciproque à dériver. C'est là qu'il faut savoir la reconnaître.
+::
+
 ## Les pièges à retenir
 
 - **Une équation trigonométrique a deux familles de solutions**, pas une. La droite coupe le cercle en deux points.
@@ -338,6 +483,8 @@ Le seul point de vigilance est le **signe moins** de la dérivée du cosinus. Il
 - **$\arccos(\cos x) = x$ est faux en général** — vrai uniquement sur $[0,\pi]$.
 - **Les formules de dérivation supposent des radians.**
 - $\tan$ est $\pi$-périodique, alors que $\cos$ et $\sin$ sont $2\pi$-périodiques.
+- **Dans $\cos(a+b)$ le signe se retourne**, alors qu'il se conserve dans $\sin(a+b)$. C'est l'inverse de ce que l'intuition suggère.
+- **Six formules s'apprennent, pas trente** — voir la section précédente. Confondre les deux listes coûte du temps de révision, pas des points.
 
 :::exercice{titre="S'entraîner" theme="Sept questions pour vérifier que la figure est bien lue"}
 

@@ -23,7 +23,7 @@ Les résultats ont été vérifiés par calcul formel puis confrontés aux élé
 
 ## Trigonométrie
 
-::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Comprendre le cercle trigonométrique" description="Le cercle expliqué de zéro, figure interactive à l'appui : radians, valeurs remarquables, angles associés, équations, arccos et arcsin" type="cours" meta="10 sections + 7 questions"}
+::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/cours" titre="Comprendre le cercle trigonométrique" description="Le cercle expliqué de zéro, figure interactive à l'appui : radians, valeurs remarquables, angles associés, équations, arccos et arcsin — avec la liste de ce qu'il faut réellement savoir par cœur" type="cours" meta="11 sections + 7 questions"}
 ::
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/trigonometrie/entrainement" titre="Trigonométrie" description="Du radian aux équations et aux fonctions réciproques, en cinq paliers" type="entrainement" meta="15 questions"}
