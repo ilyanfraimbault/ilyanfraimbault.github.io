@@ -535,29 +535,149 @@ $$
 
 ## 6. Les angles associés, ou les quatre symétries
 
-C'est le point qui coûte le plus de temps quand on l'apprend par cœur — et le plus rapide quand on le lit sur la figure. Les quatre formules ne sont **rien d'autre** que quatre symétries du cercle.
+Il n'y a pas huit formules à retenir dans cette section. Il y a **une seule question** à se poser, toujours la même :
+
+::rappel{titre="La question qui remplace les huit formules" icone="i-lucide-key"}
+**Où atterrit le point, et qu'arrive-t-il à ses deux coordonnées ?**
+
+Comme l'abscisse **est** le cosinus et l'ordonnée **est** le sinus, répondre à cette question, c'est écrire la formule. Il n'y a rien de plus.
+::
+
+Et la réponse suit une règle unique pour les trois premières symétries :
+
+$$
+\boxed{\text{une coordonnée change de signe si, et seulement si, le point traverse l'axe correspondant}}
+$$
+
+- le point traverse l'axe **horizontal** → l'ordonnée change de signe → **le sinus** change de signe ;
+- le point traverse l'axe **vertical** → l'abscisse change de signe → **le cosinus** change de signe.
+
+Deux axes, deux réponses indépendantes : cela fait exactement trois cas non triviaux, et ce sont les trois premières symétries. La quatrième est d'une autre nature — elle ne change aucun signe, elle **échange** les deux coordonnées.
 
 ::cercle-trigo{titre="Les quatre symétries" resume="Coche ou décoche une symétrie pour voir où atterrit le point, et quelle formule elle produit." angle="30" mode="symetries" modes="explorer,symetries"}
 ::
 
-| Angle | Symétrie | Cosinus | Sinus |
+Les quatre cas sont détaillés un par un ci-dessous. **Le tableau récapitulatif est à la fin** : il ne sert à rien tant que le mécanisme n'est pas acquis, et il devient inutile une fois qu'il l'est.
+
+Dans les quatre exemples, on part du même angle $\theta = \dfrac{\pi}{3}$, pour lequel
+
+$$
+\cos\frac{\pi}{3} = \frac12 \qquad\qquad \sin\frac{\pi}{3} = \frac{\sqrt3}{2}
+$$
+
+### Symétrie 1 — l'angle opposé, le miroir horizontal
+
+**L'angle est $-\theta$.** Le point bascule **sous** l'axe horizontal, à la verticale de sa position de départ. Il traverse donc l'axe horizontal, et lui seul.
+
+Son abscisse ne bouge pas, son ordonnée devient l'opposée :
+
+$$
+\cos(-\theta) = \cos\theta \qquad\qquad \sin(-\theta) = -\sin\theta
+$$
+
+**Sur l'exemple**, avec $-\dfrac{\pi}{3}$ :
+
+$$
+\cos\left(-\frac{\pi}{3}\right) = \frac12 \qquad\qquad \sin\left(-\frac{\pi}{3}\right) = -\frac{\sqrt3}{2}
+$$
+
+C'est la **parité** vue à la section 5 : le cosinus est pair, le sinus est impair.
+
+### Symétrie 2 — l'angle supplémentaire, le miroir vertical
+
+**L'angle est $\pi-\theta$.** Le point bascule **à gauche** de l'axe vertical, à la même hauteur. Il traverse l'axe vertical, et lui seul.
+
+Son ordonnée ne bouge pas, son abscisse devient l'opposée :
+
+$$
+\cos(\pi-\theta) = -\cos\theta \qquad\qquad \sin(\pi-\theta) = \sin\theta
+$$
+
+**Sur l'exemple**, avec $\pi-\dfrac{\pi}{3} = \dfrac{2\pi}{3}$ :
+
+$$
+\cos\frac{2\pi}{3} = -\frac12 \qquad\qquad \sin\frac{2\pi}{3} = \frac{\sqrt3}{2}
+$$
+
+⚠️ **C'est cette symétrie qui produit la seconde famille de solutions** de l'équation $\sin A = \sin B$ : deux angles ont le même sinus lorsqu'ils sont **supplémentaires**, pas seulement lorsqu'ils sont égaux.
+
+### Symétrie 3 — le demi-tour
+
+**L'angle est $\pi+\theta$.** Le point part de l'autre côté du centre. Il traverse **les deux** axes, donc les deux coordonnées changent de signe :
+
+$$
+\cos(\pi+\theta) = -\cos\theta \qquad\qquad \sin(\pi+\theta) = -\sin\theta
+$$
+
+**Sur l'exemple**, avec $\pi+\dfrac{\pi}{3} = \dfrac{4\pi}{3}$ :
+
+$$
+\cos\frac{4\pi}{3} = -\frac12 \qquad\qquad \sin\frac{4\pi}{3} = -\frac{\sqrt3}{2}
+$$
+
+Rien à apprendre ici non plus : c'est la symétrie 1 suivie de la symétrie 2, donc les deux effets se cumulent.
+
+### Symétrie 4 — l'angle complémentaire, le miroir diagonal
+
+**L'angle est $\dfrac{\pi}{2}-\theta$.** Celle-ci est **d'une autre nature**, et c'est la seule qu'il faut regarder à part. Le miroir est la diagonale $y = x$, et réfléchir un point dans cette diagonale revient à **échanger son abscisse et son ordonnée** :
+
+$$
+M\left(\cos\theta\ ;\sin\theta\right) \longmapsto M'\left(\sin\theta\ ;\cos\theta\right)
+$$
+
+Aucun signe ne change. Ce sont les **rôles** de $\cos$ et $\sin$ qui s'échangent :
+
+$$
+\cos\left(\frac{\pi}{2}-\theta\right) = \sin\theta \qquad\qquad \sin\left(\frac{\pi}{2}-\theta\right) = \cos\theta
+$$
+
+**Sur l'exemple**, avec $\dfrac{\pi}{2}-\dfrac{\pi}{3} = \dfrac{\pi}{6}$ :
+
+$$
+\cos\frac{\pi}{6} = \frac{\sqrt3}{2} = \sin\frac{\pi}{3} \qquad\qquad \sin\frac{\pi}{6} = \frac12 = \cos\frac{\pi}{3}
+$$
+
+Les valeurs de $\dfrac{\pi}{6}$ et de $\dfrac{\pi}{3}$ sont bien les mêmes, **croisées**. C'est d'ailleurs la vraie raison pour laquelle ces deux angles se confondent si facilement.
+
+::rappel{titre="Pourquoi celle-là échange, au lieu de changer les signes" icone="i-lucide-help-circle"}
+La démonstration la plus courte tient dans un triangle rectangle. Ses deux angles aigus valent **ensemble** $\dfrac{\pi}{2}$ : si l'un vaut $\theta$, l'autre vaut $\dfrac{\pi}{2}-\theta$. On dit qu'ils sont **complémentaires**.
+
+Or le côté **opposé** au premier angle est le côté **adjacent** au second. Donc « opposé sur hypoténuse » pour l'un — c'est-à-dire le sinus — est exactement « adjacent sur hypoténuse » pour l'autre — c'est-à-dire le cosinus.
+
+$$
+\sin\theta = \cos\left(\frac{\pi}{2}-\theta\right)
+$$
+
+**C'est la plus utile des quatre en pratique** : c'est elle qui convertit un sinus en cosinus, ce dont on a besoin dès qu'une équation mélange les deux.
+::
+
+### Le tableau, une fois le mécanisme compris
+
+| Angle | Le point… | Cosinus | Sinus |
 |---|---|---|---|
-| $-\theta$ | par rapport à l'axe **horizontal** | $\cos(-\theta) = \cos\theta$ | $\sin(-\theta) = -\sin\theta$ |
-| $\pi-\theta$ | par rapport à l'axe **vertical** | $\cos(\pi-\theta) = -\cos\theta$ | $\sin(\pi-\theta) = \sin\theta$ |
-| $\pi+\theta$ | par rapport au **centre $O$** | $\cos(\pi+\theta) = -\cos\theta$ | $\sin(\pi+\theta) = -\sin\theta$ |
-| $\dfrac{\pi}{2}-\theta$ | par rapport à la **diagonale** $y=x$ | $\cos\!\left(\dfrac{\pi}{2}-\theta\right) = \sin\theta$ | $\sin\!\left(\dfrac{\pi}{2}-\theta\right) = \cos\theta$ |
+| $-\theta$ | traverse l'axe **horizontal** | $\cos(-\theta) = \cos\theta$ | $\sin(-\theta) = -\sin\theta$ |
+| $\pi-\theta$ | traverse l'axe **vertical** | $\cos(\pi-\theta) = -\cos\theta$ | $\sin(\pi-\theta) = \sin\theta$ |
+| $\pi+\theta$ | traverse **les deux** | $\cos(\pi+\theta) = -\cos\theta$ | $\sin(\pi+\theta) = -\sin\theta$ |
+| $\dfrac{\pi}{2}-\theta$ | **échange** ses coordonnées | $\cos\!\left(\dfrac{\pi}{2}-\theta\right) = \sin\theta$ | $\sin\!\left(\dfrac{\pi}{2}-\theta\right) = \cos\theta$ |
 
-**Comment retrouver une ligne sans l'avoir apprise.** Prends $\pi-\theta$ : le symétrique de $M$ par rapport à l'axe vertical a la même hauteur mais l'abscisse opposée. Or l'abscisse, c'est le cosinus, et la hauteur, c'est le sinus. Donc le cosinus change de signe et le sinus non. La ligne du tableau est écrite.
-
-La quatrième, dite des **angles complémentaires**, est la plus utile en pratique : c'est elle qui permet de convertir un sinus en cosinus, indispensable dès qu'une équation mélange les deux.
+Une cinquième ligne s'obtient en remplaçant $\theta$ par $-\theta$ dans la quatrième — elle n'est pas à apprendre, seulement à savoir retrouver :
 
 $$
-\sin\theta = \cos\!\left(\frac{\pi}{2}-\theta\right)
+\cos\left(\frac{\pi}{2}+\theta\right) = -\sin\theta \qquad\qquad \sin\left(\frac{\pi}{2}+\theta\right) = \cos\theta
 $$
 
-**Pourquoi cette symétrie-là échange cosinus et sinus.** Réfléchir un point par rapport à la diagonale $y=x$ revient à **échanger son abscisse et son ordonnée** : le point $M(\cos\theta\,;\ \sin\theta)$ devient $M'(\sin\theta\,;\ \cos\theta)$. Et cette réflexion envoie l'angle $\theta$ sur l'angle $\frac{\pi}{2}-\theta$ — décoche puis recoche la symétrie sur la figure ci-dessus pour le voir. Donc l'abscisse du point d'angle $\frac{\pi}{2}-\theta$, c'est-à-dire $\cos\!\left(\frac{\pi}{2}-\theta\right)$, vaut l'ordonnée du point d'angle $\theta$, c'est-à-dire $\sin\theta$.
+### Reconnaître laquelle utiliser
 
-Dans un triangle rectangle, c'est encore plus court : les deux angles aigus valent ensemble $\frac{\pi}{2}$, donc si l'un vaut $\theta$, l'autre vaut $\frac{\pi}{2}-\theta$. Or le côté **opposé** au premier est le côté **adjacent** au second : « opposé sur hypoténuse » pour l'un est exactement « adjacent sur hypoténuse » pour l'autre.
+C'est le seul vrai réflexe à installer. On regarde **comment l'angle est écrit** :
+
+| L'angle ressemble à… | Symétrie à employer | Exemple |
+|---|---|---|
+| $\pi - \ldots$ | le miroir vertical | $\dfrac{5\pi}{6} = \pi-\dfrac{\pi}{6}$ |
+| $\pi + \ldots$ | le demi-tour | $\dfrac{7\pi}{6} = \pi+\dfrac{\pi}{6}$ |
+| $-\ldots$ ou $2\pi - \ldots$ | le miroir horizontal | $\dfrac{11\pi}{6} = 2\pi-\dfrac{\pi}{6}$ |
+| un sinus à convertir en cosinus | le miroir diagonal | $\sin\dfrac{\pi}{3} = \cos\!\left(\dfrac{\pi}{2}-\dfrac{\pi}{3}\right) = \cos\dfrac{\pi}{6}$ |
+
+**Les trois premières lignes servent à calculer une valeur** : on réécrit l'angle inconnu en fonction d'un angle **du tableau des valeurs remarquables**, puis on applique la symétrie. La quatrième sert à autre chose : elle ne simplifie pas un angle, elle **change de fonction**, et c'est ce qu'on lui demande dans les équations.
 
 ::rappel{titre="Le point qui bloque le plus souvent : θ n'est pas forcément un angle « nu »" icone="i-lucide-key"}
 Ces formules sont des **identités** : elles sont vraies pour *tout* $\theta$. On a donc le droit de remplacer $\theta$ par n'importe quelle expression — à condition de la remplacer **partout**.
@@ -574,23 +694,20 @@ $$
 \sin\!\left(x+\frac{\pi}{3}\right) = \cos\!\left(\frac{\pi}{2}-\left(x+\frac{\pi}{3}\right)\right) = \cos\!\left(\frac{\pi}{6}-x\right)
 $$
 
+⚠️ **Le piège est dans la parenthèse.** Le signe moins porte sur **toute** l'expression : $-\left(x+\dfrac{\pi}{3}\right)$ vaut $-x-\dfrac{\pi}{3}$, et non $-x+\dfrac{\pi}{3}$.
+
 C'est le mécanisme exact de la conversion utilisée pour résoudre une équation qui mélange sinus et cosinus. On ne « transforme » pas l'équation : on réécrit un sinus en cosinus pour que les deux membres soient écrits avec la même fonction.
 ::
 
-Une cinquième s'en déduit, en remplaçant $\theta$ par $-\theta$ :
-
-$$
-\cos\!\left(\frac{\pi}{2}+\theta\right) = -\sin\theta \qquad\qquad \sin\!\left(\frac{\pi}{2}+\theta\right) = \cos\theta
-$$
-
 ::rappel{titre="La méthode générale pour un angle quelconque" icone="i-lucide-list-ordered"}
 1. **Périodicité** : ajouter ou retirer des $2\pi$ pour ramener l'angle dans $[0,2\pi[$ — ou dans $]-\pi,\pi]$, souvent plus commode.
-2. **Symétrie** : utiliser une ligne du tableau ci-dessus pour ramener l'angle dans le premier quadrant $\left[0,\frac{\pi}{2}\right]$.
+2. **Symétrie** : reconnaître l'écriture — voir le tableau ci-dessus — pour ramener l'angle dans le premier quadrant $\left[0,\frac{\pi}{2}\right]$.
 3. **Table** : lire la valeur dans le tableau des valeurs remarquables.
 4. **Signe** : le remettre d'après le quadrant de départ.
 
 Exemple complet : $\cos\dfrac{11\pi}{6}$. On a $\dfrac{11\pi}{6} = 2\pi-\dfrac{\pi}{6}$, donc c'est $\cos\!\left(-\dfrac{\pi}{6}\right) = \cos\dfrac{\pi}{6} = \dfrac{\sqrt3}{2}$. Contrôle : $\dfrac{11\pi}{6}$ est dans le 4ᵉ quadrant, où le cosinus est positif. Cohérent.
 ::
+
 
 :::qcm{titre="Contrôle express — les angles associés" icone="i-lucide-circle-check-big" compact}
 
@@ -618,26 +735,26 @@ $$
 **Il n'y a rien à apprendre ici** : on regarde où atterrit le point, et la ligne du tableau s'écrit toute seule.
 ::
 
-::qcm-question{label="2." bonne="a"}
-Pour tout réel $\theta$, $\sin(\pi-\theta) = $
+::qcm-question{label="2." bonne="c"}
+L'angle $\pi+\theta$ envoie le point de l'autre côté du centre, donc de l'autre côté des **deux** axes. Par conséquent :
 
 #a
-$\sin\theta$
+seul le cosinus change de signe
 
 #b
-$-\sin\theta$
+seul le sinus change de signe
 
 #c
-$\cos\theta$
+le cosinus et le sinus changent tous les deux de signe
 
 #solution
-Même symétrie, autre coordonnée : par rapport à l'axe vertical, la **hauteur ne change pas**.
+La règle unique de la section : **une coordonnée change de signe si, et seulement si, le point traverse l'axe correspondant.** Ici il les traverse tous les deux.
 
 $$
-\sin(\pi-\theta) = \sin\theta
+\cos(\pi+\theta) = -\cos\theta \qquad\qquad \sin(\pi+\theta) = -\sin\theta
 $$
 
-**C'est cette identité qui produit la seconde famille de solutions** de l'équation $\sin A = \sin B$ : deux angles ont le même sinus lorsqu'ils sont **supplémentaires**, et pas seulement lorsqu'ils sont égaux.
+**a** décrit le miroir vertical $\pi-\theta$, **b** le miroir horizontal $-\theta$. Les trois premières symétries ne sont que les trois combinaisons possibles de ces deux traversées — il n'y a donc rien à apprendre, seulement à regarder où va le point.
 ::
 
 ::qcm-question{label="3." bonne="b"}
