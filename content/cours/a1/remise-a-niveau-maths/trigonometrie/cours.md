@@ -1,6 +1,6 @@
 ---
 title: Trigonométrie — comprendre le cercle
-description: Le cercle trigonométrique expliqué de zéro, en quatre étapes et avec une figure interactive — radians, valeurs remarquables, angles associés, équations, réciproques, formules d'addition, et la liste de ce qu'il faut réellement savoir par cœur.
+description: Le cercle trigonométrique expliqué de zéro, en quatre étapes, avec une figure interactive et un contrôle express de trois questions à la fin de chaque section — radians, valeurs remarquables, angles associés, équations, réciproques, formules d'addition, et la liste de ce qu'il faut réellement savoir par cœur.
 interactif: true
 type: cours
 annee: A1
@@ -32,6 +32,10 @@ Le chapitre se lit dans l'ordre, mais il se **travaille en quatre étapes**, et 
 
 **Étape 4 — l'analyse (§9 et §10).** Les réciproques et les dérivées. C'est court, et **c'est ce qui tombe le plus au QCM** : à ne surtout pas garder pour la fin si le temps manque.
 → *Test de passage :* donne les dérivées de $\sin$, $\cos$, $\tan$, $\arcsin$, $\arccos$ et $\arctan$.
+
+**Chaque section se termine par un contrôle express de trois questions.** Il se fait en une minute, juste après avoir lu la section, et il sert à une seule chose : savoir si on peut passer à la suivante. Une réponse fausse, et on relit les quelques lignes juste au-dessus — c'est le moment où ça coûte le moins cher.
+
+Les tests de passage ci-dessus restent plus exigeants que ces contrôles, et c'est voulu : écrire de mémoire est un exercice plus dur que reconnaître parmi trois propositions. Fais le contrôle pour vérifier que tu as compris, le test de passage pour vérifier que tu as **retenu**.
 
 **Si tu n'as qu'une heure devant toi**, fais l'étape 1 puis l'étape 4, et reviens aux étapes 2 et 3 ensuite. C'est le seul ordre qui rapporte des points immédiatement : une dérivée de $\sin(3x)$ se calcule sans rien savoir des symétries.
 
@@ -76,6 +80,69 @@ Le gain est immédiat : le point peut maintenant tourner **sans limite**, dans l
 - On part **de l'axe horizontal, à droite** (le point $(1;0)$), c'est-à-dire de l'angle $0$.
 - On tourne dans le **sens direct**, c'est-à-dire **anti-horaire**. Un angle négatif se lit donc dans le sens des aiguilles d'une montre.
 
+:::qcm{titre="Contrôle express — la figure" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="b"}
+Sur le cercle de rayon $1$, le point $M$ repéré par l'angle $\theta$ a pour coordonnées :
+
+#a
+$\left(\sin\theta\ ;\cos\theta\right)$
+
+#b
+$\left(\cos\theta\ ;\sin\theta\right)$
+
+#c
+$\left(\tan\theta\ ;\cos\theta\right)$
+
+#solution
+**Le cosinus est l'abscisse, le sinus l'ordonnée** — dans cet ordre, et c'est la phrase qui porte tout le chapitre.
+
+Le moyen de ne jamais l'inverser : dans un repère on écrit toujours $(x\ ;y)$, et $\cos$ vient avant $\sin$ dans l'alphabet comme $x$ vient avant $y$.
+::
+
+::qcm-question{label="2." bonne="c"}
+Sur le cercle, on compte les angles :
+
+#a
+dans le sens des aiguilles d'une montre
+
+#b
+dans le sens des aiguilles d'une montre si $\theta > 0$, dans l'autre sinon
+
+#c
+dans le sens inverse des aiguilles d'une montre
+
+#solution
+Le **sens direct** est le sens inverse des aiguilles d'une montre, toujours. Un angle négatif ne change pas cette convention : il signifie simplement qu'on parcourt le cercle **à rebours** du sens direct.
+
+C'est ce qui rend $\cos(-\theta) = \cos\theta$ lisible : partir dans l'autre sens amène au point symétrique par rapport à l'axe horizontal, qui a la même abscisse.
+::
+
+::qcm-question{label="3." bonne="a"}
+Pourquoi fixe-t-on le rayon du cercle à $1$ ?
+
+#a
+pour que $\cos\theta$ et $\sin\theta$ soient directement les coordonnées du point
+
+#b
+pour que le périmètre du cercle vaille $\pi$
+
+#c
+parce que le sinus ne peut pas dépasser $1$
+
+#solution
+Dans un triangle rectangle, $\cos\alpha = \dfrac{\text{adjacent}}{\text{hypoténuse}}$. En fixant l'hypoténuse à $1$, le quotient **disparaît** : le côté adjacent *est* le cosinus.
+
+$$
+\cos\alpha = \frac{\text{adjacent}}{1} = \text{adjacent}
+$$
+
+**b** est faux — le périmètre vaut $2\pi$. **c** inverse cause et conséquence : le sinus est borné **parce que** le point reste sur le cercle, ce n'est pas la raison du choix du rayon.
+::
+
+:::
+
+
 ## 2. Le radian, ou pourquoi π traîne partout
 
 Un angle peut se mesurer en degrés — un tour complet vaut $360°$ — mais en analyse on le mesure en **radians** : la mesure d'un angle est alors **la longueur de l'arc qu'il découpe** sur le cercle de rayon $1$.
@@ -104,6 +171,77 @@ $$
 ::rappel{titre="Pourquoi s'embêter avec les radians ?" icone="i-lucide-help-circle"}
 Parce que les formules de dérivation n'y sont vraies qu'en radians. $\sin' = \cos$ **suppose** que $x$ est en radians ; en degrés, la dérivée vaudrait $\frac{\pi}{180}\cos x$, et toutes les formules du chapitre se traîneraient ce facteur. Le radian est le choix qui rend l'analyse propre — c'est sa seule raison d'être.
 ::
+
+:::qcm{titre="Contrôle express — le radian" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="b"}
+$60°$ valent, en radians :
+
+#a
+$\dfrac{\pi}{6}$
+
+#b
+$\dfrac{\pi}{3}$
+
+#c
+$\dfrac{\pi}{4}$
+
+#solution
+On multiplie par $\dfrac{\pi}{180}$ :
+
+$$
+60\times\frac{\pi}{180} = \frac{\pi}{3}
+$$
+
+**Le repère sans calcul** : $60°$ est le **sixième** d'un tour, et un tour vaut $2\pi$, donc $\dfrac{2\pi}{6} = \dfrac{\pi}{3}$.
+
+⚠️ Ne pas lire « $60$ » et écrire « $\dfrac{\pi}{6}$ » par réflexe : $\dfrac{\pi}{6}$ correspond à $30°$.
+::
+
+::qcm-question{label="2." bonne="c"}
+Un tour complet vaut :
+
+#a
+$\pi$ radians
+
+#b
+$360$ radians
+
+#c
+$2\pi$ radians
+
+#solution
+Le radian mesure un angle par la **longueur de l'arc** découpé sur le cercle de rayon $1$. Le périmètre de ce cercle valant $2\pi$, un tour complet mesure $2\pi$ radians.
+
+**a** est le demi-tour, l'angle plat. **b** confond les deux unités : $360$ est la mesure du tour **en degrés**.
+::
+
+::qcm-question{label="3." bonne="b"}
+Pourquoi l'analyse travaille-t-elle en radians plutôt qu'en degrés ?
+
+#a
+parce que c'est plus précis
+
+#b
+parce que $\sin' = \cos$ n'est vrai qu'en radians
+
+#c
+c'est une convention sans conséquence sur les calculs
+
+#solution
+C'est la seule raison d'être du radian. En degrés, la dérivée du sinus vaudrait
+
+$$
+\frac{\pi}{180}\cos x
+$$
+
+et **toutes** les formules du programme traîneraient ce facteur. Le radian est l'unité qui rend l'analyse propre.
+
+⚠️ Conséquence pratique : une calculatrice en mode « degré » donne des dérivées et des limites fausses.
+::
+
+:::
+
 
 ## 3. Lire un cosinus et un sinus sur le cercle
 
@@ -138,6 +276,77 @@ Ce tableau **n'est pas à apprendre** : il se relit sur la figure en une seconde
 Le couple **(signe du cosinus, signe du sinus)** désigne un quadrant, et un seul. C'est exactement ce qui permet de trancher un argument de nombre complexe : $\cos\theta = -\frac12$ laisse hésiter entre $\frac{2\pi}{3}$ et $-\frac{2\pi}{3}$, mais ajouter $\sin\theta > 0$ ne laisse plus qu'une possibilité.
 ::
 
+:::qcm{titre="Contrôle express — lire le cercle" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="a"}
+Pour tout réel $\theta$, $\cos^2\theta+\sin^2\theta$ vaut :
+
+#a
+$1$
+
+#b
+$\theta$
+
+#c
+$2$
+
+#solution
+C'est **l'identité de Pythagore**, la formule la plus utilisée du programme. Elle dit simplement que le point $M\left(\cos\theta\ ;\sin\theta\right)$ est à distance $1$ de l'origine :
+
+$$
+OM^2 = x_M^2+y_M^2 = \cos^2\theta+\sin^2\theta = 1
+$$
+
+Elle est vraie pour **tout** $\theta$, sans exception ni condition.
+::
+
+::qcm-question{label="2." bonne="b"}
+Si $\theta$ place le point dans le deuxième quadrant, en haut à gauche, alors :
+
+#a
+$\cos\theta > 0$ et $\sin\theta > 0$
+
+#b
+$\cos\theta < 0$ et $\sin\theta > 0$
+
+#c
+$\cos\theta < 0$ et $\sin\theta < 0$
+
+#solution
+Rien à apprendre : **à gauche de l'axe vertical, l'abscisse est négative**, donc le cosinus aussi ; **au-dessus de l'axe horizontal, l'ordonnée est positive**, donc le sinus aussi.
+
+$$
+\cos\theta < 0 \qquad \sin\theta > 0
+$$
+
+**Le réflexe qui sert partout ailleurs** : le couple (signe du cosinus, signe du sinus) désigne un quadrant et un seul. C'est exactement ce qui permet de trancher l'argument d'un nombre complexe.
+::
+
+::qcm-question{label="3." bonne="c"}
+Laquelle de ces affirmations est vraie pour **tout** réel $\theta$ ?
+
+#a
+$\cos\theta \geqslant 0$
+
+#b
+$\cos\theta \leqslant \sin\theta$
+
+#c
+$-1 \leqslant \cos\theta \leqslant 1$
+
+#solution
+Le point reste sur le cercle de rayon $1$ : son abscisse comme son ordonnée sont comprises entre $-1$ et $1$.
+
+$$
+-1 \leqslant \cos\theta \leqslant 1 \qquad\qquad -1 \leqslant \sin\theta \leqslant 1
+$$
+
+**a** est faux dès que le point passe à gauche de l'axe vertical, par exemple en $\theta = \pi$. **b** est faux en $\theta = 0$, où $\cos 0 = 1$ et $\sin 0 = 0$.
+::
+
+:::
+
+
 ## 4. Les valeurs remarquables
 
 Cinq angles suffisent, les autres s'y ramènent (section 6).
@@ -160,6 +369,81 @@ Les entiers descendent de $4$ à $0$, et la ligne des sinus est la même **lue �
 ::cercle-trigo{titre="Placer les angles usuels" resume="Clique sur une étiquette du cercle, ou sur une pastille sous la figure : les valeurs exactes s’affichent à droite." angle="30" modes="explorer"}
 ::
 
+:::qcm{titre="Contrôle express — les valeurs remarquables" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="c"}
+$\cos\dfrac{\pi}{6} = $
+
+#a
+$\dfrac12$
+
+#b
+$\dfrac{\sqrt2}{2}$
+
+#c
+$\dfrac{\sqrt3}{2}$
+
+#solution
+$$
+\cos\frac{\pi}{6} = \frac{\sqrt3}{2} \qquad \sin\frac{\pi}{6} = \frac12
+$$
+
+⚠️ **La confusion numéro un du chapitre** est d'échanger $\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$. Le moyen de trancher sans hésiter : $\dfrac{\pi}{6}$ est un **petit** angle, tout proche de $0$ — le point est donc presque à droite du cercle, avec une **grande** abscisse et une **petite** ordonnée. Grand cosinus, petit sinus.
+::
+
+::qcm-question{label="2." bonne="a"}
+$\sin\dfrac{\pi}{3} = $
+
+#a
+$\dfrac{\sqrt3}{2}$
+
+#b
+$\dfrac12$
+
+#c
+$\dfrac{\sqrt2}{2}$
+
+#solution
+$$
+\sin\frac{\pi}{3} = \frac{\sqrt3}{2} \qquad \cos\frac{\pi}{3} = \frac12
+$$
+
+$\dfrac{\pi}{3}$ est le **grand** angle des deux : le point est presque en haut du cercle, donc le sinus est grand et le cosinus petit. C'est l'exact miroir de la question précédente.
+
+**La suite unique à retenir**, celle des cosinus de $0$ à $\dfrac{\pi}{2}$ :
+
+$$
+\frac{\sqrt4}{2},\quad \frac{\sqrt3}{2},\quad \frac{\sqrt2}{2},\quad \frac{\sqrt1}{2},\quad \frac{\sqrt0}{2}
+$$
+
+Les sinus sont la même suite lue à l'envers.
+::
+
+::qcm-question{label="3." bonne="b"}
+Quand $\theta$ passe de $0$ à $\dfrac{\pi}{2}$ :
+
+#a
+le cosinus et le sinus croissent tous les deux
+
+#b
+le cosinus décroît et le sinus croît
+
+#c
+le cosinus croît et le sinus décroît
+
+#solution
+Le point part de $(1\ ;0)$ et monte vers $(0\ ;1)$ : il se déplace **vers la gauche** — l'abscisse, donc le cosinus, **décroît** de $1$ à $0$ — et **vers le haut** — l'ordonnée, donc le sinus, **croît** de $0$ à $1$.
+
+$$
+\cos : 1 \longrightarrow 0 \qquad\qquad \sin : 0 \longrightarrow 1
+$$
+
+**C'est le contrôle à faire sur son propre tableau** : s'il dit le contraire, les deux lignes ont été inversées.
+::
+
+:::
+
+
 ## 5. Périodicité et parité
 
 **Périodicité.** Ajouter un tour complet ramène au même point. Donc, pour tout $k\in\mathbb{Z}$ :
@@ -175,6 +459,79 @@ C'est ce qui permet de **ramener n'importe quel angle dans $[0,2\pi[$** avant de
 $$
 \cos(-\theta) = \cos\theta \quad \text{(cos est \textbf{paire})} \qquad\qquad \sin(-\theta) = -\sin\theta \quad \text{(sin est \textbf{impaire})}
 $$
+
+:::qcm{titre="Contrôle express — périodicité et parité" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="b"}
+Pour tout réel $\theta$, $\cos(-\theta) = $
+
+#a
+$-\cos\theta$
+
+#b
+$\cos\theta$
+
+#c
+$\sin\theta$
+
+#solution
+Tourner de $-\theta$ amène au **symétrique par rapport à l'axe horizontal** : l'abscisse ne bouge pas, seule l'ordonnée change de signe.
+
+$$
+\cos(-\theta) = \cos\theta \qquad \text{le cosinus est \textbf{pair}}
+$$
+::
+
+::qcm-question{label="2." bonne="a"}
+Pour tout réel $\theta$, $\sin(-\theta) = $
+
+#a
+$-\sin\theta$
+
+#b
+$\sin\theta$
+
+#c
+$-\cos\theta$
+
+#solution
+Même symétrie que ci-dessus, mais c'est l'ordonnée qu'on lit cette fois — et c'est elle qui change de signe.
+
+$$
+\sin(-\theta) = -\sin\theta \qquad \text{le sinus est \textbf{impair}}
+$$
+
+**Les deux se retiennent ensemble** : une seule des deux fonctions porte le signe moins, et c'est le sinus.
+::
+
+::qcm-question{label="3." bonne="c"}
+$\cos\dfrac{13\pi}{6}$ est égal à :
+
+#a
+$-\cos\dfrac{\pi}{6}$
+
+#b
+$\cos\dfrac{\pi}{3}$
+
+#c
+$\cos\dfrac{\pi}{6}$
+
+#solution
+On retire un tour complet, ce qui ramène au même point du cercle :
+
+$$
+\frac{13\pi}{6} = \frac{\pi}{6}+\frac{12\pi}{6} = \frac{\pi}{6}+2\pi
+$$
+
+$$
+\cos\frac{13\pi}{6} = \cos\frac{\pi}{6} = \frac{\sqrt3}{2}
+$$
+
+**C'est toujours la première étape** devant un angle inhabituel : ajouter ou retirer des $2\pi$ pour se ramener dans $[0\,;2\pi[$, avant même de chercher une symétrie.
+::
+
+:::
+
 
 ## 6. Les angles associés, ou les quatre symétries
 
@@ -235,6 +592,81 @@ $$
 Exemple complet : $\cos\dfrac{11\pi}{6}$. On a $\dfrac{11\pi}{6} = 2\pi-\dfrac{\pi}{6}$, donc c'est $\cos\!\left(-\dfrac{\pi}{6}\right) = \cos\dfrac{\pi}{6} = \dfrac{\sqrt3}{2}$. Contrôle : $\dfrac{11\pi}{6}$ est dans le 4ᵉ quadrant, où le cosinus est positif. Cohérent.
 ::
 
+:::qcm{titre="Contrôle express — les angles associés" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="c"}
+Pour tout réel $\theta$, $\cos(\pi-\theta) = $
+
+#a
+$\cos\theta$
+
+#b
+$\sin\theta$
+
+#c
+$-\cos\theta$
+
+#solution
+$\pi-\theta$ est le symétrique de $\theta$ **par rapport à l'axe vertical**. Le point garde sa hauteur mais son abscisse devient l'opposée.
+
+Or l'abscisse, c'est le cosinus :
+
+$$
+\cos(\pi-\theta) = -\cos\theta
+$$
+
+**Il n'y a rien à apprendre ici** : on regarde où atterrit le point, et la ligne du tableau s'écrit toute seule.
+::
+
+::qcm-question{label="2." bonne="a"}
+Pour tout réel $\theta$, $\sin(\pi-\theta) = $
+
+#a
+$\sin\theta$
+
+#b
+$-\sin\theta$
+
+#c
+$\cos\theta$
+
+#solution
+Même symétrie, autre coordonnée : par rapport à l'axe vertical, la **hauteur ne change pas**.
+
+$$
+\sin(\pi-\theta) = \sin\theta
+$$
+
+**C'est cette identité qui produit la seconde famille de solutions** de l'équation $\sin A = \sin B$ : deux angles ont le même sinus lorsqu'ils sont **supplémentaires**, et pas seulement lorsqu'ils sont égaux.
+::
+
+::qcm-question{label="3." bonne="b"}
+$\sin(2x)$ peut aussi s'écrire :
+
+#a
+$\cos\left(\dfrac{\pi}{2}-x\right)$
+
+#b
+$\cos\left(\dfrac{\pi}{2}-2x\right)$
+
+#c
+$\cos\left(\pi-2x\right)$
+
+#solution
+L'identité des **angles complémentaires** est $\sin\theta = \cos\left(\dfrac{\pi}{2}-\theta\right)$. C'est une identité : elle vaut pour **tout** $\theta$, donc aussi pour $\theta = 2x$ — à condition de remplacer $\theta$ **partout**.
+
+$$
+\sin(2x) = \cos\left(\frac{\pi}{2}-2x\right)
+$$
+
+**a** n'a remplacé $\theta$ qu'à moitié : il reste un $x$ là où il faudrait $2x$. **c** utilise la mauvaise symétrie — $\cos(\pi-2x)$ vaut $-\cos(2x)$, ce qui n'a rien à voir.
+
+⚠️ **C'est le mécanisme exact** qui permet de résoudre une équation mêlant sinus et cosinus : on ne transforme pas l'équation, on réécrit un sinus en cosinus pour que les deux membres parlent la même langue.
+::
+
+:::
+
+
 ## 7. La tangente
 
 $$
@@ -260,6 +692,77 @@ Les valeurs remarquables s'en déduisent par simple division :
 | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
 |---|---|---|---|---|---|
 | $\tan x$ | $0$ | $\dfrac{\sqrt3}{3}$ | $1$ | $\sqrt3$ | non définie |
+
+:::qcm{titre="Contrôle express — la tangente" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="b"}
+$\tan\theta$ est définie à condition que :
+
+#a
+$\sin\theta \neq 0$
+
+#b
+$\cos\theta \neq 0$
+
+#c
+$\theta \neq 0$
+
+#solution
+$\tan\theta = \dfrac{\sin\theta}{\cos\theta}$ : c'est le **dénominateur** qui doit être non nul.
+
+$$
+\cos\theta \neq 0 \iff \theta \neq \frac{\pi}{2}+k\pi
+$$
+
+Sur la figure, c'est le moment où le rayon devient **parallèle** à la droite verticale d'abscisse $1$ : il ne la coupe plus, et la tangente n'existe pas.
+::
+
+::qcm-question{label="2." bonne="a"}
+La fonction tangente est périodique de période :
+
+#a
+$\pi$
+
+#b
+$2\pi$
+
+#c
+$\dfrac{\pi}{2}$
+
+#solution
+Le point diamétralement opposé à $M$ donne le **même** point d'intersection avec la droite verticale : la tangente reprend donc la même valeur au bout d'un **demi-tour**.
+
+$$
+\tan(\theta+k\pi) = \tan\theta
+$$
+
+⚠️ **C'est la seule des trois fonctions à ne pas être $2\pi$-périodique.** Conséquence directe : l'équation $\tan A = \tan B$ n'a qu'**une** famille de solutions, $A = B+k\pi$, là où $\cos$ et $\sin$ en donnent deux.
+::
+
+::qcm-question{label="3." bonne="c"}
+$\tan\dfrac{\pi}{4} = $
+
+#a
+$\dfrac{\sqrt2}{2}$
+
+#b
+$\sqrt3$
+
+#c
+$1$
+
+#solution
+En $\dfrac{\pi}{4}$, le sinus et le cosinus sont **égaux**, donc leur quotient vaut $1$ :
+
+$$
+\tan\frac{\pi}{4} = \frac{\frac{\sqrt2}{2}}{\frac{\sqrt2}{2}} = 1
+$$
+
+**C'est la valeur pivot**, et le meilleur repère de contrôle du chapitre : tout angle inférieur à $\dfrac{\pi}{4}$ a une tangente inférieure à $1$, tout angle supérieur une tangente supérieure à $1$.
+::
+
+:::
+
 
 ## 8. Résoudre une équation trigonométrique
 
@@ -309,6 +812,81 @@ Une fois la famille écrite, $x$ n'apparaît plus que dans des sommes : c'est un
 **Conséquence de l'étape 4 : les deux familles n'ont pas le même pas.** Si $x$ arrive avec un coefficient $3$, ses solutions sont espacées de $\frac{2\pi}{3}$ — trois par tour — alors qu'une famille où $x$ reste seul en a une seule par tour. Il faut y penser au moment de lister les solutions d'un intervalle.
 ::
 
+:::qcm{titre="Contrôle express — les équations" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="c"}
+$\cos A = \cos B$ équivaut à :
+
+#a
+$A = B+2k\pi$
+
+#b
+$A = B+k\pi$
+
+#c
+$A = B+2k\pi$ ou $A = -B+2k\pi$
+
+#solution
+Deux angles ont le même **cosinus** lorsqu'ils sont **opposés** : ce sont les deux points où la droite verticale d'abscisse $\cos B$ coupe le cercle, symétriques par rapport à l'axe horizontal.
+
+$$
+\cos A = \cos B \iff A = B+2k\pi \ \text{ ou }\ A = -B+2k\pi
+$$
+
+⚠️ **C'est là qu'on perd le plus de points de tout le chapitre** : n'écrire que la première famille donne un ensemble de solutions faux, même si les angles trouvés sont justes.
+::
+
+::qcm-question{label="2." bonne="b"}
+Sur $[0\,;2\pi]$, l'équation $\cos x = \dfrac12$ a :
+
+#a
+une solution
+
+#b
+deux solutions
+
+#c
+aucune solution
+
+#solution
+La droite verticale d'abscisse $\dfrac12$ coupe le cercle en **deux** points, symétriques par rapport à l'axe horizontal :
+
+$$
+x = \frac{\pi}{3} \qquad\text{et}\qquad x = -\frac{\pi}{3}+2\pi = \frac{5\pi}{3}
+$$
+
+Les deux appartiennent bien à $[0\,;2\pi]$.
+
+**Le raisonnement général** : tant que $-1 < k < 1$, la droite coupe le cercle en deux points, donc $\cos x = k$ a **toujours** deux solutions par tour.
+::
+
+::qcm-question{label="3." bonne="a"}
+Si $3x = \dfrac{\pi}{3}+2k\pi$, alors :
+
+#a
+$x = \dfrac{\pi}{9}+\dfrac{2k\pi}{3}$
+
+#b
+$x = \dfrac{\pi}{9}+2k\pi$
+
+#c
+$x = \pi+\dfrac{2k\pi}{3}$
+
+#solution
+On divise **tout** par $3$, le terme en $k$ compris :
+
+$$
+x = \frac{\pi}{9}+\frac{2k\pi}{3}
+$$
+
+⚠️ **C'est l'étape la plus souvent ratée du chapitre.** Le $2k\pi$ n'est pas une décoration qu'on recopie : c'est un terme de l'équation, et il se divise comme les autres.
+
+**La conséquence à voir** : les solutions sont espacées de $\dfrac{2\pi}{3}$, soit **trois par tour** et non une. Il faut y penser au moment de lister celles d'un intervalle donné.
+::
+
+:::
+
+
 ## 9. Les fonctions réciproques : arccos, arcsin, arctan
 
 $\cos$, $\sin$ et $\tan$ prennent chaque valeur une infinité de fois : elles ne sont pas bijectives, donc **elles n'ont pas de réciproque** telles quelles. On les **restreint** d'abord à un intervalle où elles sont strictement monotones — un arc du cercle sur lequel chaque valeur n'est atteinte qu'une fois.
@@ -336,6 +914,81 @@ La réponse est donc $\dfrac{3\pi}{4}$, et non $\dfrac{5\pi}{4}$.
 
 **Dans l'autre sens, aucun piège** : $\cos(\arccos x) = x$ pour tout $x\in[-1,1]$, $\sin(\arcsin x) = x$, $\tan(\arctan x) = x$. C'est la composition « réciproque **à l'extérieur** » qui demande de la vigilance.
 
+:::qcm{titre="Contrôle express — les réciproques" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="a"}
+$\arccos$ est à valeurs dans :
+
+#a
+$[0\,;\pi]$
+
+#b
+$\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$
+
+#c
+$[-1\,;1]$
+
+#solution
+$\arccos x$ est **l'unique angle de $[0\,;\pi]$** dont le cosinus vaut $x$.
+
+**c** est l'ensemble de **départ**, pas d'arrivée : $\arccos$ est définie sur $[-1\,;1]$ et arrive dans $[0\,;\pi]$. **b** est l'intervalle d'arrivée d'$\arcsin$.
+
+| Réciproque | définie sur | à valeurs dans |
+|---|---|---|
+| $\arccos$ | $[-1\,;1]$ | $[0\,;\pi]$ |
+| $\arcsin$ | $[-1\,;1]$ | $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ |
+| $\arctan$ | $\mathbb{R}$ | $\left]-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right[$ |
+::
+
+::qcm-question{label="2." bonne="b"}
+$\arcsin\dfrac12 = $
+
+#a
+$\dfrac{\pi}{3}$
+
+#b
+$\dfrac{\pi}{6}$
+
+#c
+$\dfrac{5\pi}{6}$
+
+#solution
+On cherche l'angle de $\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$ dont le **sinus** vaut $\dfrac12$. C'est $\dfrac{\pi}{6}$.
+
+**a** est $\arccos\dfrac12$ — la confusion sinus/cosinus. **c** a bien pour sinus $\dfrac12$, mais **dépasse $\dfrac{\pi}{2}$** : il n'est pas dans l'intervalle d'arrivée.
+
+**Le contrôle systématique**, à faire sur toute question de réciproque : le résultat est-il dans le bon intervalle ? Il élimine à lui seul une proposition sur trois.
+::
+
+::qcm-question{label="3." bonne="c"}
+$\arccos\left(\cos\dfrac{5\pi}{4}\right) = $
+
+#a
+$\dfrac{5\pi}{4}$
+
+#b
+$-\dfrac{5\pi}{4}$
+
+#c
+$\dfrac{3\pi}{4}$
+
+#solution
+$\arccos(\cos x) = x$ **seulement si** $x\in[0\,;\pi]$. Or $\dfrac{5\pi}{4}$ dépasse $\pi$ : la simplification est interdite.
+
+On ramène l'angle dans $[0\,;\pi]$ **sans changer la valeur du cosinus**, à l'aide de la parité puis de la périodicité :
+
+$$
+\cos\frac{5\pi}{4} = \cos\left(-\frac{5\pi}{4}\right) = \cos\left(-\frac{5\pi}{4}+2\pi\right) = \cos\frac{3\pi}{4}
+$$
+
+et $\dfrac{3\pi}{4}$ est bien dans $[0\,;\pi]$.
+
+⚠️ **Dans l'autre sens, aucun piège** : $\cos(\arccos x) = x$ pour tout $x\in[-1\,;1]$. C'est la réciproque **à l'extérieur** qui demande de la vigilance.
+::
+
+:::
+
+
 ## 10. Dérivées
 
 $$
@@ -349,6 +1002,79 @@ $$
 $$
 
 Le seul point de vigilance est le **signe moins** de la dérivée du cosinus. Il se retrouve sur la figure : quand $\theta$ augmente à partir de $0$, le point part vers la gauche, donc son abscisse — le cosinus — **diminue**. Une fonction qui décroît a bien une dérivée négative.
+
+:::qcm{titre="Contrôle express — les dérivées" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="b"}
+$\cos' = $
+
+#a
+$\sin$
+
+#b
+$-\sin$
+
+#c
+$-\cos$
+
+#solution
+$$
+\sin' = \cos \qquad\qquad \cos' = -\sin
+$$
+
+**Une seule des deux lignes porte un signe moins**, et c'est celle du cosinus.
+
+**Pourquoi**, sur la figure : quand $\theta$ augmente à partir de $0$, le point part vers la gauche, donc son abscisse — le cosinus — **diminue**. Une fonction qui décroît a une dérivée négative.
+::
+
+::qcm-question{label="2." bonne="c"}
+La dérivée de $x\mapsto\sin(3x)$ est :
+
+#a
+$\cos(3x)$
+
+#b
+$-3\cos(3x)$
+
+#c
+$3\cos(3x)$
+
+#solution
+$\left(\sin u\right)' = u'\cos u$, avec $u = 3x$ et $u' = 3$ :
+
+$$
+\left(\sin(3x)\right)' = 3\cos(3x)
+$$
+
+**a** oublie le facteur $u'$ — l'erreur numéro un. **b** ajoute un signe moins qui appartient au cosinus, pas au sinus.
+
+**Les deux vérifications de trois secondes**, à faire sur chaque dérivée composée : la fonction a-t-elle changé ? le facteur $u'$ est-il là ?
+::
+
+::qcm-question{label="3." bonne="a"}
+$\arccos'x = $
+
+#a
+$\dfrac{-1}{\sqrt{1-x^2}}$
+
+#b
+$\dfrac{1}{\sqrt{1-x^2}}$
+
+#c
+$\dfrac{1}{1+x^2}$
+
+#solution
+$$
+\arcsin'x = \frac{1}{\sqrt{1-x^2}} \qquad \arccos'x = \frac{-1}{\sqrt{1-x^2}} \qquad \arctan'x = \frac{1}{1+x^2}
+$$
+
+**Deux repères** qui évitent les erreurs : les deux « arc » en racine vont ensemble et sont **opposés** l'un de l'autre — leur somme vaut la constante $\dfrac{\pi}{2}$, donc la dérivée de cette somme est nulle. Et le signe moins va avec $\arccos$, qui est **décroissante**, comme le cosinus sur $[0\,;\pi]$.
+
+$\arctan$ est la seule des trois sans racine.
+::
+
+:::
+
 
 ## 11. Les formules d'addition et de duplication
 
@@ -400,6 +1126,83 @@ Or ce produit vaut $e^{ia}\times e^{ib} = e^{i(a+b)} = \cos(a+b)+i\sin(a+b)$. En
 ::
 
 **Les angles associés de la section 6 en sont des cas particuliers.** Avec $b = \pi$, la première formule donne $\cos(a+\pi) = \cos a\times(-1)-\sin a\times 0 = -\cos a$ — exactement la ligne du tableau. Il n'y a donc pas vingt formules à retenir dans ce chapitre, mais **une seule**, dont tout le reste se déduit.
+
+:::qcm{titre="Contrôle express — addition et duplication" icone="i-lucide-circle-check-big" compact}
+
+::qcm-question{label="1." bonne="c"}
+$\cos(a+b) = $
+
+#a
+$\cos a\cos b$
+
+#b
+$\cos a\cos b+\sin a\sin b$
+
+#c
+$\cos a\cos b-\sin a\sin b$
+
+#solution
+$$
+\cos(a+b) = \cos a\cos b-\sin a\sin b
+$$
+
+**Le cosinus garde les fonctions ensemble et retourne le signe** — c'est ce retournement, contraire à l'intuition, qui fait l'essentiel des erreurs. **b** est la formule de $\cos(a-b)$.
+
+**Le contrôle en trois secondes** : avec $a = b = \dfrac{\pi}{2}$, on doit retrouver $\cos\pi = -1$. La version **c** donne $0-1 = -1$ ; la version **b** donnerait $0+1 = 1$, donc elle est fausse.
+::
+
+::qcm-question{label="2." bonne="a"}
+$\sin(2a) = $
+
+#a
+$2\sin a\cos a$
+
+#b
+$\sin^2a-\cos^2a$
+
+#c
+$2\sin a$
+
+#solution
+C'est la formule d'addition $\sin(a+b) = \sin a\cos b+\cos a\sin b$ dans le cas $b = a$ :
+
+$$
+\sin(2a) = \sin a\cos a+\cos a\sin a = 2\sin a\cos a
+$$
+
+**b** est, au signe près, la formule de $\cos(2a)$ — c'est la confusion classique entre les deux duplications. **c** oublie le cosinus.
+
+**Le contrôle** : en $a = \dfrac{\pi}{2}$, $\sin\pi$ doit valoir $0$. La proposition **a** donne $2\times 1\times 0 = 0$ ; la **c** donnerait $2$.
+::
+
+::qcm-question{label="3." bonne="b"}
+$\cos^2a$ peut aussi s'écrire :
+
+#a
+$\dfrac{1-\cos(2a)}{2}$
+
+#b
+$\dfrac{1+\cos(2a)}{2}$
+
+#c
+$1-\cos(2a)$
+
+#solution
+On part de la forme $\cos(2a) = 2\cos^2a-1$, et on isole le carré :
+
+$$
+\cos^2a = \frac{1+\cos(2a)}{2}
+$$
+
+**a** est la formule de $\sin^2a$ : les deux ne diffèrent que par le signe, et l'échange est l'erreur la plus fréquente.
+
+**Le contrôle, imparable** : en $a = 0$, $\cos^2 0 = 1$. La proposition **b** donne $\dfrac{1+1}{2} = 1$ ; la **a** donne $0$, la **c** donne $0$. Une seule survit.
+
+**À quoi ça sert** : c'est la seule façon de dériver ou d'intégrer un $\cos^2$ sans s'y reprendre à deux fois.
+::
+
+:::
+
 
 ## Ce qu'il faut savoir par cœur
 
