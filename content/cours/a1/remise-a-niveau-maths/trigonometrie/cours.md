@@ -384,7 +384,7 @@ Aucun angle ne peut donc avoir ces deux valeurs.
 
 ## 4. Les valeurs remarquables
 
-Cinq angles suffisent, les autres s'y ramènent (section 6).
+Cinq angles suffisent à mémoriser. **Les douze autres se lisent, ils ne s'apprennent pas** — la méthode est juste en dessous du tableau.
 
 | $x$ | $0$ | $\dfrac{\pi}{6}$ | $\dfrac{\pi}{4}$ | $\dfrac{\pi}{3}$ | $\dfrac{\pi}{2}$ |
 |---|---|---|---|---|---|
@@ -401,31 +401,99 @@ Les entiers descendent de $4$ à $0$, et la ligne des sinus est la même **lue �
 
 **La vérification de bon sens** : quand $\theta$ augmente de $0$ à $\frac{\pi}{2}$, le point monte et se déplace vers la gauche. Le cosinus (l'abscisse) **décroît** de $1$ à $0$, le sinus (l'ordonnée) **croît** de $0$ à $1$. Si ton tableau dit le contraire, tu as inversé les deux lignes.
 
+### Lire n'importe quel point du cercle, sans rien apprendre de plus
+
+Les douze angles remarquables hors des axes ne cachent **aucune valeur nouvelle**. Il n'y en a que trois dans tout le cercle : $\dfrac12$, $\dfrac{\sqrt2}{2}$ et $\dfrac{\sqrt3}{2}$. Ce qui change d'un quadrant à l'autre, ce sont **les signes**, et rien d'autre.
+
+D'où une méthode en deux temps, valable partout, qui ne demande de retenir aucune formule supplémentaire.
+
+::rappel{titre="Le dénominateur donne les valeurs, le quadrant donne les signes" icone="i-lucide-key"}
+**1. Le dénominateur désigne la ligne du tableau.** Tout angle remarquable hors des axes s'écrit $\dfrac{n\pi}{d}$ avec $d$ valant $6$, $4$ ou $3$ — et **les valeurs sont toujours celles de $\dfrac{\pi}{d}$**, au signe près.
+
+| Dénominateur | $\lvert\cos\rvert$ | $\lvert\sin\rvert$ |
+|---|---|---|
+| $6$ | $\dfrac{\sqrt3}{2}$ | $\dfrac12$ |
+| $4$ | $\dfrac{\sqrt2}{2}$ | $\dfrac{\sqrt2}{2}$ |
+| $3$ | $\dfrac12$ | $\dfrac{\sqrt3}{2}$ |
+
+**2. Le quadrant donne les deux signes**, et il se lit sur la figure : à gauche de l'axe vertical le cosinus est négatif, sous l'axe horizontal le sinus est négatif.
+
+Pour trouver le quadrant sans dessiner, on compare la fraction $\dfrac{n}{d}$ à $\dfrac12$, $1$ et $\dfrac32$ — c'est-à-dire à un quart, un demi et trois quarts de tour.
+
+**C'est tout.** Aucune des douze positions ne demande autre chose.
+::
+
+**Deux exemples déroulés :**
+
+$\cos\dfrac{5\pi}{6}$ — le dénominateur est $6$, donc la valeur absolue du cosinus est $\dfrac{\sqrt3}{2}$. Comme $\dfrac56$ est entre $\dfrac12$ et $1$, le point est dans le deuxième quadrant, en haut à gauche, où le cosinus est négatif.
+
+$$
+\cos\frac{5\pi}{6} = -\frac{\sqrt3}{2}
+$$
+
+$\sin\dfrac{4\pi}{3}$ — dénominateur $3$, donc le sinus vaut $\dfrac{\sqrt3}{2}$ en valeur absolue. Comme $\dfrac43$ est entre $1$ et $\dfrac32$, le point est dans le troisième quadrant, en bas à gauche, où le sinus est négatif.
+
+$$
+\sin\frac{4\pi}{3} = -\frac{\sqrt3}{2}
+$$
+
+::rappel{titre="Et le raccourci par l'angle de référence, qui revient au même" icone="i-lucide-git-compare-arrows"}
+Beaucoup préfèrent passer par l'**angle de référence** : l'écart entre le rayon et l'axe **horizontal** le plus proche. Il vaut toujours $\dfrac{\pi}{6}$, $\dfrac{\pi}{4}$ ou $\dfrac{\pi}{3}$, et se calcule selon le quadrant :
+
+| Quadrant | Position | Angle de référence |
+|---|---|---|
+| 1 | en haut à droite | $\theta$ |
+| 2 | en haut à gauche | $\pi-\theta$ |
+| 3 | en bas à gauche | $\theta-\pi$ |
+| 4 | en bas à droite | $2\pi-\theta$ |
+
+C'est exactement la même chose : le calcul redonne toujours $\dfrac{\pi}{d}$. Sur $\dfrac{5\pi}{6}$, on retrouve $\pi-\dfrac{5\pi}{6} = \dfrac{\pi}{6}$ — le dénominateur l'annonçait déjà.
+
+⚠️ **Une écriture à surveiller** dans ce raccourci : le supplémentaire de $\dfrac{\pi}{3}$ s'écrit $\pi-\dfrac{\pi}{3} = \dfrac{2\pi}{3}$, et **jamais $1-\dfrac{\pi}{3}$**. Le demi-tour vaut $\pi$, pas $1$ — écrire $1$ mélange une mesure d'angle avec un nombre sans dimension, et le résultat n'est plus un angle remarquable du tout.
+::
+
+**Le tableau complet**, une fois la méthode comprise — à ne pas apprendre, mais à savoir reconstruire :
+
+| Quadrant | Dénominateur $6$ | Dénominateur $4$ | Dénominateur $3$ |
+|---|---|---|---|
+| **1** en haut à droite | $\dfrac{\pi}{6}$ : $\left(\dfrac{\sqrt3}{2}\,;\dfrac12\right)$ | $\dfrac{\pi}{4}$ : $\left(\dfrac{\sqrt2}{2}\,;\dfrac{\sqrt2}{2}\right)$ | $\dfrac{\pi}{3}$ : $\left(\dfrac12\,;\dfrac{\sqrt3}{2}\right)$ |
+| **2** en haut à gauche | $\dfrac{5\pi}{6}$ : $\left(-\dfrac{\sqrt3}{2}\,;\dfrac12\right)$ | $\dfrac{3\pi}{4}$ : $\left(-\dfrac{\sqrt2}{2}\,;\dfrac{\sqrt2}{2}\right)$ | $\dfrac{2\pi}{3}$ : $\left(-\dfrac12\,;\dfrac{\sqrt3}{2}\right)$ |
+| **3** en bas à gauche | $\dfrac{7\pi}{6}$ : $\left(-\dfrac{\sqrt3}{2}\,;-\dfrac12\right)$ | $\dfrac{5\pi}{4}$ : $\left(-\dfrac{\sqrt2}{2}\,;-\dfrac{\sqrt2}{2}\right)$ | $\dfrac{4\pi}{3}$ : $\left(-\dfrac12\,;-\dfrac{\sqrt3}{2}\right)$ |
+| **4** en bas à droite | $\dfrac{11\pi}{6}$ : $\left(\dfrac{\sqrt3}{2}\,;-\dfrac12\right)$ | $\dfrac{7\pi}{4}$ : $\left(\dfrac{\sqrt2}{2}\,;-\dfrac{\sqrt2}{2}\right)$ | $\dfrac{5\pi}{3}$ : $\left(\dfrac12\,;-\dfrac{\sqrt3}{2}\right)$ |
+
+Chaque colonne ne contient **qu'un seul couple de valeurs**, répété quatre fois avec les quatre combinaisons de signes. C'est ce que dit la méthode, écrit en entier.
+
+**Le contrôle qui rattrape presque toutes les erreurs de signe** : sur la figure, un point en haut a un sinus positif, un point à droite un cosinus positif. Deux regards, aucun calcul.
+
 ::cercle-trigo{titre="Placer les angles usuels" resume="Clique sur une étiquette du cercle, ou sur une pastille sous la figure : les valeurs exactes s’affichent à droite." angle="30" modes="explorer"}
 ::
 
 :::qcm{titre="Contrôle express — les valeurs remarquables" icone="i-lucide-circle-check-big" compact}
 
 ::qcm-question{label="1." bonne="b"}
-$\cos\dfrac{\pi}{4}+\sin\dfrac{\pi}{4} = $
+$\cos\dfrac{5\pi}{4} = $
 
 #a
-$1$
-
-#b
-$\sqrt2$
-
-#c
 $\dfrac{\sqrt2}{2}$
 
+#b
+$-\dfrac{\sqrt2}{2}$
+
+#c
+$-\dfrac12$
+
 #solution
-En $\dfrac{\pi}{4}$, le cosinus et le sinus sont **égaux** :
+**Le dénominateur donne la valeur** : il vaut $4$, donc le cosinus vaut $\dfrac{\sqrt2}{2}$ en valeur absolue — celle de $\dfrac{\pi}{4}$.
+
+**Le quadrant donne le signe** : $\dfrac54$ est entre $1$ et $\dfrac32$, donc le point est dans le troisième quadrant, **en bas à gauche**. À gauche, le cosinus est négatif.
 
 $$
-\frac{\sqrt2}{2}+\frac{\sqrt2}{2} = \frac{2\sqrt2}{2} = \sqrt2
+\cos\frac{5\pi}{4} = -\frac{\sqrt2}{2}
 $$
 
-**a** est ce que donnerait $\cos^2+\sin^2$, avec les carrés — l'identité de Pythagore, qui n'est pas ce qu'on demande ici. **c** oublie d'additionner.
+**c** a le bon signe mais la mauvaise valeur : $\dfrac12$ appartient au dénominateur $3$, pas au $4$.
+
+**Le contrôle** : $\dfrac{5\pi}{4}$ est juste après $\pi$, donc tout près du point $(-1\ ;0)$ — un cosinus proche de $-1$, ce que $-\dfrac{\sqrt2}{2} \approx -0{,}71$ respecte.
 ::
 
 ::qcm-question{label="2." bonne="c"}
