@@ -26,6 +26,12 @@ const extraits = useCoursExtraits()
 const corrige = computed(() => qcm?.corrige.value ?? false)
 const juste = computed(() => choisi.value === props.bonne)
 
+// Ce que le passage précédent disait de cette question précise : une erreur qui
+// revient ne se traite pas comme une étourderie, et un point regagné mérite
+// d'être vu là où il a été perdu.
+const rateeAvant = computed(() =>
+  !!props.label && !!qcm?.ratesPrecedents.value.includes(props.label))
+
 onMounted(() => qcm?.enregistrer({ id: uid, label: props.label, bonne: props.bonne }))
 onBeforeUnmount(() => qcm?.oublier(uid))
 
@@ -134,6 +140,16 @@ const uiSolution = { content: 'cours-body max-w-3xl' }
       <template v-else>
         Réponse attendue : la <strong class="text-highlighted uppercase">{{ bonne }}</strong>.
       </template>
+      <template v-if="rateeAvant">
+        <br>
+        <span class="text-error">Déjà ratée au passage précédent</span> — ouvre le cours plutôt que la solution.
+      </template>
+    </p>
+    <p
+      v-else-if="corrige && rateeAvant"
+      class="mt-3 mb-0 text-sm text-muted"
+    >
+      <span class="text-success">Ratée au passage précédent, juste aujourd'hui.</span>
     </p>
 
     <div
