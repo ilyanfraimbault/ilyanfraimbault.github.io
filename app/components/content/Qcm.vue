@@ -16,7 +16,23 @@ const props = defineProps<{
 // propre à chaque instance, sinon « Corriger » remonte toujours vers la première.
 const idResultat = `qcm-resultat-${useId()}`
 
-const { corrige, total, repondues, justes, ratees, corriger, recommencer } = provideQcm()
+const route = useRoute()
+
+// Clé de l'historique : elle doit survivre à un rebuild du site, donc pas de
+// `useId()` ici. Le chemin de la page et le titre du bloc suffisent à distinguer
+// les onze contrôles express d'une même page de cours. Sans titre, pas de
+// mémoire — mieux vaut aucun historique qu'un historique qui se mélange.
+const identifiant = computed(() => {
+  if (!props.titre) return null
+  const slug = props.titre.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+  return `${route.path}#${slug}`
+})
+
+const {
+  corrige, total, repondues, justes, ratees, corriger, recommencer,
+  tentatives, precedente, ecart, encoreRatees, rattrapees, oublierHistorique
+} = provideQcm(identifiant)
 
 const pourcentage = computed(() => total.value ? Math.round(100 * justes.value / total.value) : 0)
 
@@ -38,6 +54,34 @@ const verdict = computed(() => {
   if (pourcentage.value >= 50) return 'La moitié tient. Relis le cours des questions ratées avant de refaire ce QCM.'
   return 'Reprends le cours de ce thème avant de refaire le QCM : les erreurs sont trop nombreuses pour être des étourderies.'
 })
+
+/** « 14/20 » lisible d'un coup d'œil dans la frise des passages. */
+function noteCourte(t: { justes: number, total: number }) {
+  return `${t.justes}/${t.total}`
+}
+
+function tonNote(t: { justes: number, total: number }) {
+  const p = t.total ? 100 * t.justes / t.total : 0
+  if (p >= 80) return 'success'
+  if (p >= 50) return 'warning'
+  return 'error'
+}
+
+function dateCourte(t: number) {
+  return new Date(t).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short' })
+}
+
+const evolution = computed(() => {
+  if (ecart.value === null) return null
+  if (ecart.value > 0) return { texte: `+${ecart.value} depuis la dernière fois`, couleur: 'success' as const }
+  if (ecart.value < 0) return { texte: `${ecart.value} depuis la dernière fois`, couleur: 'error' as const }
+  return { texte: 'même score que la dernière fois', couleur: 'neutral' as const }
+})
+
+// Les erreurs qui n'étaient pas là au passage précédent : ni acquises, ni
+// vraiment nouvelles au fond, mais utiles à distinguer de celles qui résistent.
+const nouvellesRatees = computed(() =>
+  precedente.value ? ratees.value.filter(f => !f.label || !precedente.value!.ratees.includes(f.label)) : [])
 
 function allerA(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -122,6 +166,28 @@ function corrigerEtRemonter() {
             Tout est rempli.
           </template>
         </p>
+        <div
+          v-if="tentatives.length"
+          class="mb-3"
+        >
+          <p class="mt-0 mb-2 text-sm text-muted">
+            Déjà passé {{ tentatives.length }} fois, dernier score
+            <strong class="text-highlighted tabular-nums">{{ noteCourte(tentatives[tentatives.length - 1]!) }}</strong>.
+          </p>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <UBadge
+              v-for="(tentative, i) in tentatives"
+              :key="tentative.t"
+              :color="tonNote(tentative)"
+              variant="subtle"
+              size="sm"
+              class="tabular-nums"
+              :title="`Passage ${i + 1} — ${dateCourte(tentative.t)}`"
+              :label="noteCourte(tentative)"
+            />
+          </div>
+        </div>
+
         <UButton
           color="primary"
           icon="i-lucide-check-check"
@@ -153,31 +219,88 @@ function corrigerEtRemonter() {
             class="ml-2 align-middle"
             :label="`${pourcentage} %`"
           />
+          <UBadge
+            v-if="evolution"
+            :color="evolution.couleur"
+            variant="soft"
+            size="lg"
+            class="ml-2 align-middle"
+            :icon="ecart! > 0 ? 'i-lucide-trending-up' : ecart! < 0 ? 'i-lucide-trending-down' : 'i-lucide-minus'"
+            :label="evolution.texte"
+          />
         </p>
         <p class="mt-2 mb-0 text-sm text-muted">
           {{ verdict }}
         </p>
 
+        <p
+          v-if="rattrapees.length"
+          class="mt-3 mb-0 text-sm text-muted"
+        >
+          Acquises depuis le passage précédent :
+          <span class="font-medium text-highlighted">{{ rattrapees.join(' ') }}</span>
+        </p>
+
         <template v-if="ratees.length">
-          <p class="mt-4 mb-2 text-sm font-medium text-highlighted">
-            <template v-if="compact">
-              À revoir — la solution s'ouvre depuis la question :
+          <!-- Sans passage précédent, la liste reste d'un bloc : il n'y a rien à
+               comparer, et deux titres pour une seule idée embrouillent. -->
+          <template v-if="!precedente">
+            <p class="mt-4 mb-2 text-sm font-medium text-highlighted">
+              <template v-if="compact">
+                À revoir — la solution s'ouvre depuis la question :
+              </template>
+              <template v-else>
+                À revoir — chaque question ratée porte maintenant son indice, sa solution et son rappel de cours :
+              </template>
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <UButton
+                v-for="fiche in ratees"
+                :key="fiche.id"
+                size="xs"
+                color="error"
+                variant="soft"
+                :label="fiche.label || '?'"
+                @click="allerA(fiche.id)"
+              />
+            </div>
+          </template>
+
+          <template v-else>
+            <template v-if="encoreRatees.length">
+              <p class="mt-4 mb-2 text-sm font-medium text-highlighted">
+                Ratées à nouveau — ce sont celles-là qui demandent le cours, pas une relecture :
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <UButton
+                  v-for="fiche in encoreRatees"
+                  :key="fiche.id"
+                  size="xs"
+                  color="error"
+                  variant="solid"
+                  :label="fiche.label || '?'"
+                  @click="allerA(fiche.id)"
+                />
+              </div>
             </template>
-            <template v-else>
-              À revoir — chaque question ratée porte maintenant son indice, sa solution et son rappel de cours :
+
+            <template v-if="nouvellesRatees.length">
+              <p class="mt-4 mb-2 text-sm font-medium text-highlighted">
+                Ratées cette fois seulement — elles n'étaient pas tombées au passage précédent :
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <UButton
+                  v-for="fiche in nouvellesRatees"
+                  :key="fiche.id"
+                  size="xs"
+                  color="error"
+                  variant="soft"
+                  :label="fiche.label || '?'"
+                  @click="allerA(fiche.id)"
+                />
+              </div>
             </template>
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <UButton
-              v-for="fiche in ratees"
-              :key="fiche.id"
-              size="xs"
-              color="error"
-              variant="soft"
-              :label="fiche.label || '?'"
-              @click="allerA(fiche.id)"
-            />
-          </div>
+          </template>
         </template>
         <p
           v-else
@@ -186,15 +309,43 @@ function corrigerEtRemonter() {
           {{ compact ? 'Sans faute.' : 'Sans faute. Passe au thème suivant.' }}
         </p>
 
-        <UButton
-          class="mt-4"
-          color="neutral"
-          variant="subtle"
-          :size="compact ? 'xs' : 'md'"
-          icon="i-lucide-rotate-ccw"
-          label="Recommencer"
-          @click="recommencer"
-        />
+        <template v-if="tentatives.length > 1">
+          <p class="mt-4 mb-2 text-sm font-medium text-highlighted">
+            Tes passages, du plus ancien au plus récent :
+          </p>
+          <div class="flex flex-wrap items-center gap-1.5">
+            <UBadge
+              v-for="(tentative, i) in tentatives"
+              :key="tentative.t"
+              :color="tonNote(tentative)"
+              :variant="i === tentatives.length - 1 ? 'solid' : 'subtle'"
+              size="sm"
+              class="tabular-nums"
+              :title="`Passage ${i + 1} — ${dateCourte(tentative.t)}`"
+              :label="noteCourte(tentative)"
+            />
+          </div>
+        </template>
+
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          <UButton
+            color="neutral"
+            variant="subtle"
+            :size="compact ? 'xs' : 'md'"
+            icon="i-lucide-rotate-ccw"
+            label="Recommencer"
+            @click="recommencer"
+          />
+          <UButton
+            v-if="tentatives.length"
+            color="neutral"
+            variant="ghost"
+            size="xs"
+            icon="i-lucide-eraser"
+            label="Oublier l'historique"
+            @click="oublierHistorique"
+          />
+        </div>
       </template>
     </div>
   </section>
