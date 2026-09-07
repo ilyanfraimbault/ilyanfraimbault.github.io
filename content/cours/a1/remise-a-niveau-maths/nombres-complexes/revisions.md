@@ -34,10 +34,22 @@ Cette fiche va bien plus loin que le TD : elle traverse les **trois écritures**
 :::exercice{titre="Exercice 1" theme="Forme algébrique : sommes, produits et puissances" icone="i-lucide-plus"}
 Donner la forme algébrique des complexes suivants, c'est-à-dire les écrire sous la forme $a+bi$ avec $a$ et $b$ réels.
 
-::exo-question{label="1." cours="cours-operations"}
+::exo-question{label="1." cours="cours-operations" bonne="c"}
 $$
 z = 3+2i-1+3i
 $$
+
+#a
+$z = 4+5i$
+
+#b
+$z = 2-i$
+
+#c
+$z = 2+5i$
+
+#d
+$z = 2+6i$
 
 #indice
 Aucun produit ici, seulement une somme : on regroupe les termes sans $i$ entre eux, et les termes en $i$ entre eux. Le $i$ se comporte exactement comme une lettre qu'on factorise.
@@ -54,10 +66,22 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-operations"}
+::exo-question{label="2." cours="cours-operations" bonne="b"}
 $$
 z = 6+i-(2+4i)
 $$
+
+#a
+$z = 4+5i$
+
+#b
+$z = 4-3i$
+
+#c
+$z = 8+5i$
+
+#d
+$z = -4+3i$
 
 #indice
 Le piège est la parenthèse précédée d'un moins : elle change le signe des **deux** termes qu'elle contient, pas seulement du premier.
@@ -74,10 +98,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-operations"}
+::exo-question{label="3." cours="cours-operations" bonne="a"}
 $$
 z = 12-3i-4-5+8i
 $$
+
+#a
+$z = 3+5i$
+
+#b
+$z = 3-11i$
+
+#c
+$z = 21+5i$
+
+#d
+$z = 13+5i$
 
 #indice
 Cinq termes en vrac, aucune parenthèse : il suffit de trier. Trois réels d'un côté, deux imaginaires de l'autre.
@@ -92,10 +128,22 @@ $$
 $$
 ::
 
-::exo-question{label="4." cours="cours-operations"}
+::exo-question{label="4." cours="cours-operations" bonne="d"}
 $$
 z = (1+2i)(4+3i)
 $$
+
+#a
+$z = 10+11i$
+
+#b
+$z = 4+6i$
+
+#c
+$z = -2-11i$
+
+#d
+$z = -2+11i$
 
 #indice
 Double distributivité, comme pour $(a+b)(c+d)$. Le seul point propre aux complexes arrive à la fin : il reste un terme en $i^2$, qu'il faut remplacer par $-1$ — ce qui change son signe et le fait passer du côté réel.
@@ -118,10 +166,22 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-operations"}
+::exo-question{label="5." cours="cours-operations" bonne="b"}
 $$
 z = (3-i)(2+7i)
 $$
+
+#a
+$z = -1+19i$
+
+#b
+$z = 13+19i$
+
+#c
+$z = 6-7i$
+
+#d
+$z = 13-19i$
 
 #indice
 Même méthode qu'à la question précédente. Surveille le signe du terme en $i^2$ : ici le $i$ du premier facteur porte déjà un moins, et $-i\times 7i = -7i^2 = +7$.
@@ -136,10 +196,22 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-operations"}
+::exo-question{label="6." cours="cours-operations" bonne="c"}
 $$
 z = (1+i)^2
 $$
+
+#a
+$z = 2$
+
+#b
+$z = 2+2i$
+
+#c
+$z = 2i$
+
+#d
+$z = 0$
 
 #indice
 C'est une identité remarquable, $(a+b)^2 = a^2+2ab+b^2$, avec $b = i$. Le terme $b^2$ vaut donc $i^2 = -1$ : il annule exactement le $a^2$.
@@ -158,10 +230,22 @@ $$
 **À retenir** : $(1+i)^2 = 2i$ et, de la même façon, $(1-i)^2 = -2i$. Ces deux carrés transforment un binôme en un imaginaire pur, ce qui simplifie énormément les puissances élevées.
 ::
 
-::exo-question{label="7." cours="cours-operations"}
+::exo-question{label="7." cours="cours-operations" bonne="a"}
 $$
 z = \left(3+i\sqrt5\right)\left(3-i\sqrt5\right)
 $$
+
+#a
+$z = 14$
+
+#b
+$z = 4$
+
+#c
+$z = 9+5i$
+
+#d
+$z = -14$
 
 #indice
 Ne développe pas quatre produits pour rien : les deux facteurs sont **conjugués** l'un de l'autre. C'est l'identité $(a+b)(a-b) = a^2-b^2$, et le résultat est forcément un réel positif.
@@ -180,10 +264,22 @@ $$
 C'est le cas général $z\bar z = \lvert z\rvert^2$ : le produit d'un complexe par son conjugué est toujours un réel positif, et c'est exactement ce qui rend possible la méthode de l'exercice 2.
 ::
 
-::exo-question{label="8." cours="cours-operations"}
+::exo-question{label="8." cours="cours-operations" bonne="d"}
 $$
 z = (2-5i)^2
 $$
+
+#a
+$z = 29-20i$
+
+#b
+$z = 4+25i$
+
+#c
+$z = -21+20i$
+
+#d
+$z = -21-20i$
 
 #indice
 Identité remarquable $(a-b)^2 = a^2-2ab+b^2$ avec $a = 2$ et $b = 5i$. Attention au dernier terme : $b^2 = (5i)^2 = 25i^2 = -25$, il est **négatif** alors que le signe devant lui est un plus.
@@ -198,10 +294,22 @@ $$
 $$
 ::
 
-::exo-question{label="9." cours="cours-operations"}
+::exo-question{label="9." cours="cours-operations" bonne="b"}
 $$
 z = (1+i)(2-3i)(1+i)
 $$
+
+#a
+$z = 6-4i$
+
+#b
+$z = 6+4i$
+
+#c
+$z = -6+4i$
+
+#d
+$z = 4+6i$
 
 #indice
 Trois facteurs, mais deux sont identiques : commence par regrouper les deux $(1+i)$, dont le carré est déjà connu depuis la question 6. Le calcul se réduit alors à un seul produit.
@@ -224,10 +332,22 @@ $$
 $$
 ::
 
-::exo-question{label="10." cours="cours-operations"}
+::exo-question{label="10." cours="cours-operations" bonne="c"}
 $$
 z = (2+i)^2(1-2i)
 $$
+
+#a
+$z = 11+2i$
+
+#b
+$z = -5-2i$
+
+#c
+$z = 11-2i$
+
+#d
+$z = 5+10i$
 
 #indice
 Deux étapes, dans l'ordre : le carré d'abord, le produit ensuite. Ne développe surtout pas tout d'un bloc, c'est la porte ouverte aux erreurs de signe.
@@ -256,10 +376,22 @@ Donner la forme algébrique des complexes suivants en rendant le dénominateur r
 
 Le principe est le même à chaque fois : **multiplier haut et bas par le conjugué du dénominateur**. Comme $z\bar z = \lvert z\rvert^2$, le dénominateur devient un réel, et il ne reste qu'à diviser chaque partie.
 
-::exo-question{label="1." cours="cours-conjugue-quotient"}
+::exo-question{label="1." cours="cours-conjugue-quotient" bonne="a"}
 $$
 z = \frac{1}{1-i}
 $$
+
+#a
+$z = \dfrac12+\dfrac12 i$
+
+#b
+$z = \dfrac12-\dfrac12 i$
+
+#c
+$z = 1+i$
+
+#d
+$z = -\dfrac12+\dfrac12 i$
 
 #indice
 Le conjugué de $1-i$ est $1+i$. Multiplie numérateur et dénominateur par ce nombre : au dénominateur tu obtiendras $1^2+1^2$, sans aucun $i$.
@@ -278,10 +410,22 @@ $$
 **Contrôle.** $\left(\dfrac12+\dfrac12 i\right)(1-i) = \dfrac12-\dfrac12 i+\dfrac12 i-\dfrac12 i^2 = \dfrac12+\dfrac12 = 1$. C'est bien l'inverse de $1-i$.
 ::
 
-::exo-question{label="2." cours="cours-conjugue-quotient"}
+::exo-question{label="2." cours="cours-conjugue-quotient" bonne="d"}
 $$
 z = \frac{1}{2-i\sqrt3}
 $$
+
+#a
+$z = \dfrac27-\dfrac{\sqrt3}{7}i$
+
+#b
+$z = 2+i\sqrt3$
+
+#c
+$z = \dfrac27+\dfrac37 i$
+
+#d
+$z = \dfrac27+\dfrac{\sqrt3}{7}i$
 
 #indice
 La racine ne change rien à la méthode : le conjugué de $2-i\sqrt3$ est $2+i\sqrt3$, et le dénominateur deviendra $2^2+\left(\sqrt3\right)^2$.
@@ -296,10 +440,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-conjugue-quotient"}
+::exo-question{label="3." cours="cours-conjugue-quotient" bonne="b"}
 $$
 z = \frac{1}{4-3i}
 $$
+
+#a
+$z = \dfrac{4}{25}-\dfrac{3}{25}i$
+
+#b
+$z = \dfrac{4}{25}+\dfrac{3}{25}i$
+
+#c
+$z = \dfrac47+\dfrac37 i$
+
+#d
+$z = \dfrac14+\dfrac13 i$
 
 #indice
 Conjugué $4+3i$, dénominateur $4^2+3^2 = 25$. Un cas où les nombres tombent particulièrement bien.
@@ -314,10 +470,22 @@ $$
 $$
 ::
 
-::exo-question{label="4." cours="cours-conjugue-quotient"}
+::exo-question{label="4." cours="cours-conjugue-quotient" bonne="c"}
 $$
 z = \frac{4-6i}{3+2i}
 $$
+
+#a
+$z = 2i$
+
+#b
+$z = -2$
+
+#c
+$z = -2i$
+
+#d
+$z = \dfrac43-3i$
 
 #indice
 Ici le numérateur n'est plus $1$ : après multiplication par le conjugué $3-2i$, il faudra développer le produit $(4-6i)(3-2i)$ comme à l'exercice 1. Le résultat est plus simple qu'il n'y paraît.
@@ -340,10 +508,22 @@ $$
 La partie réelle est nulle : $z$ est un **imaginaire pur**.
 ::
 
-::exo-question{label="5." cours="cours-conjugue-quotient"}
+::exo-question{label="5." cours="cours-conjugue-quotient" bonne="a"}
 $$
 z = \frac{5+15i}{1+2i}
 $$
+
+#a
+$z = 7+i$
+
+#b
+$z = 7-i$
+
+#c
+$z = -5+i$
+
+#d
+$z = 5+\dfrac{15}{2}i$
 
 #indice
 Conjugué $1-2i$, dénominateur $1+4 = 5$. Tu peux aussi factoriser $5$ au numérateur pour alléger le calcul.
@@ -358,10 +538,22 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-conjugue-quotient"}
+::exo-question{label="6." cours="cours-conjugue-quotient" bonne="b"}
 $$
 z = \frac{1+2i}{1-2i}
 $$
+
+#a
+$z = \dfrac35+\dfrac45 i$
+
+#b
+$z = -\dfrac35+\dfrac45 i$
+
+#c
+$z = -\dfrac35-\dfrac45 i$
+
+#d
+$z = -3+4i$
 
 #indice
 Numérateur et dénominateur sont conjugués l'un de l'autre. Le dénominateur devient donc $\lvert 1+2i\rvert^2 = 5$, et le numérateur devient le **carré** de $1+2i$.
@@ -378,10 +570,22 @@ $$
 **Contrôle utile.** $\lvert z\rvert = \dfrac{\sqrt{9+16}}{5} = 1$ : le quotient de deux complexes conjugués est toujours de module $1$, puisqu'ils ont le même module.
 ::
 
-::exo-question{label="7." cours="cours-conjugue-quotient"}
+::exo-question{label="7." cours="cours-conjugue-quotient" bonne="d"}
 $$
 z = \frac{3-6i}{3+i}+\frac{4}{3-i}
 $$
+
+#a
+$z = \dfrac32+\dfrac{17}{10}i$
+
+#b
+$z = -\dfrac32-\dfrac{17}{10}i$
+
+#c
+$z = \dfrac{13}{10}-\dfrac{17}{10}i$
+
+#d
+$z = \dfrac32-\dfrac{17}{10}i$
 
 #indice
 Deux quotients à traiter **séparément** — chacun avec le conjugué de **son** dénominateur — puis on additionne les deux formes algébriques obtenues. Ne cherche pas de dénominateur commun, ce serait plus long.
@@ -410,10 +614,22 @@ $$
 $$
 ::
 
-::exo-question{label="8." cours="cours-conjugue-quotient"}
+::exo-question{label="8." cours="cours-conjugue-quotient" bonne="c"}
 $$
 z = \left(\frac{4-6i}{2-3i}\right)\left(\frac{1+3i}{3+2i}\right)
 $$
+
+#a
+$z = \dfrac{18}{13}-\dfrac{14}{13}i$
+
+#b
+$z = \dfrac{14}{13}+\dfrac{18}{13}i$
+
+#c
+$z = \dfrac{18}{13}+\dfrac{14}{13}i$
+
+#d
+$z = 2+3i$
 
 #indice
 Avant de te lancer dans deux multiplications par un conjugué, **regarde le premier quotient** : le numérateur n'est-il pas un multiple du dénominateur ? Une simplification immédiate évite tout le calcul.
@@ -450,10 +666,22 @@ Une équation du premier degré se résout dans $\mathbb{C}$ **exactement comme 
 
 ⚠️ **Trier, c'est déplacer — et déplacer, c'est changer de signe.** Tout terme qui traverse le signe égal change de signe ; ceux qui restent de leur côté n'y touchent pas. C'est là que se perdent la plupart des points.
 
-::exo-question{label="1." cours="cours-equations"}
+::exo-question{label="1." cours="cours-equations" bonne="b"}
 $$
 (1+i)z = 3-i
 $$
+
+#a
+$z = 1+2i$
+
+#b
+$z = 1-2i$
+
+#c
+$z = 2-i$
+
+#d
+$z = -1-2i$
 
 #indice
 Une équation du premier degré se résout dans $\mathbb{C}$ exactement comme dans $\mathbb{R}$ : on isole $z$ en divisant par le coefficient. Le quotient obtenu se traite ensuite par la méthode de l'exercice 2.
@@ -478,10 +706,22 @@ $$
 **Vérification.** $(1+i)(1-2i) = 1-2i+i-2i^2 = 3-i$. C'est bien le second membre.
 ::
 
-::exo-question{label="2." cours="cours-equations"}
+::exo-question{label="2." cours="cours-equations" bonne="a"}
 $$
 2z+1-i = iz+2
 $$
+
+#a
+$z = \dfrac15+\dfrac35 i$
+
+#b
+$z = \dfrac15-\dfrac35 i$
+
+#c
+$z = \dfrac35+\dfrac15 i$
+
+#d
+$z = 1+i$
 
 #indice
 Il y a des $z$ des deux côtés : on les rassemble d'un côté, les constantes de l'autre, puis on **factorise $z$**. Le coefficient obtenu, $2-i$, n'est pas réel, mais cela ne change rien à la méthode.
@@ -512,10 +752,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-equations"}
+::exo-question{label="3." cours="cours-equations" bonne="c"}
 $$
 (2z+1-i)(iz+3) = 0
 $$
+
+#a
+$S = \left\{\dfrac12-\dfrac12 i\ ;\ -3i\right\}$
+
+#b
+$S = \left\{-\dfrac12+\dfrac12 i\right\}$
+
+#c
+$S = \left\{-\dfrac12+\dfrac12 i\ ;\ 3i\right\}$
+
+#d
+$S = \left\{-\dfrac12-\dfrac12 i\ ;\ 3i\right\}$
 
 #indice
 Un produit est nul si et seulement si l'un de ses facteurs l'est — cette règle vaut dans $\mathbb{C}$ comme dans $\mathbb{R}$. Deux équations du premier degré à résoudre, donc deux solutions.
@@ -542,10 +794,22 @@ $$
 **Vérification du second.** $i\times 3i+3 = 3i^2+3 = -3+3 = 0$.
 ::
 
-::exo-question{label="4." cours="cours-equations"}
+::exo-question{label="4." cours="cours-equations" bonne="d"}
 $$
 \frac{z+1}{z-1} = 2i
 $$
+
+#a
+$z = \dfrac35+\dfrac45 i$
+
+#b
+$z = -\dfrac35-\dfrac45 i$
+
+#c
+$z = \dfrac45-\dfrac35 i$
+
+#d
+$z = \dfrac35-\dfrac45 i$
 
 #indice
 Commence par écarter la valeur interdite : le dénominateur ne doit pas être nul, donc $z \neq 1$. Multiplie ensuite les deux membres par $z-1$ pour retomber sur une équation du premier degré, et rassemble les $z$.
@@ -597,10 +861,22 @@ $$
 Cette valeur est bien différente de $1$, elle est donc recevable.
 ::
 
-::exo-question{label="5." cours="cours-equations"}
+::exo-question{label="5." cours="cours-equations" bonne="b"}
 $$
 (iz+1)(z+3i)(z-1+4i) = 0
 $$
+
+#a
+$S = \left\{-i\ ;\ 3i\ ;\ 1-4i\right\}$
+
+#b
+$S = \left\{i\ ;\ -3i\ ;\ 1-4i\right\}$
+
+#c
+$S = \left\{i\ ;\ -3i\ ;\ -1+4i\right\}$
+
+#d
+$S = \left\{-i\ ;\ -3i\ ;\ 1+4i\right\}$
 
 #indice
 Trois facteurs, donc trois équations du premier degré et trois solutions. Aucune n'est difficile : pour la première, repasse par $\dfrac1i = -i$.
@@ -631,10 +907,22 @@ $$
 z = [r\,;\theta] = r\left(\cos\theta+i\sin\theta\right) \qquad a = r\cos\theta \qquad b = r\sin\theta
 $$
 
-::exo-question{label="1." cours="cours-trigonometrique"}
+::exo-question{label="1." cours="cours-trigonometrique" bonne="c"}
 $$
 z_1 = \left[3\,;\frac{\pi}{4}\right]
 $$
+
+#a
+$z_{1} = \dfrac{3}{2}+\dfrac{3}{2}\,i$
+
+#b
+$z_{1} = \dfrac{3\sqrt2}{2}-\dfrac{3\sqrt2}{2}\,i$
+
+#c
+$z_{1} = \dfrac{3\sqrt2}{2}+\dfrac{3\sqrt2}{2}\,i$
+
+#d
+$z_{1} = \dfrac{\sqrt2}{2}+\dfrac{\sqrt2}{2}\,i$
 
 #indice
 Lis $\cos\dfrac\pi4$ et $\sin\dfrac\pi4$ dans le tableau — ils sont égaux — puis multiplie chacun par le module $3$.
@@ -651,10 +939,22 @@ $$
 Partie réelle et partie imaginaire égales et positives : le point est sur la bissectrice du premier quadrant, ce qui est bien la direction de l'angle $\dfrac\pi4$.
 ::
 
-::exo-question{label="2." cours="cours-trigonometrique"}
+::exo-question{label="2." cours="cours-trigonometrique" bonne="a"}
 $$
 z_2 = \left[4\,;\frac{\pi}{2}\right]
 $$
+
+#a
+$z_{2} = 4i$
+
+#b
+$z_{2} = -4i$
+
+#c
+$z_{2} = 4$
+
+#d
+$z_{2} = 2\sqrt2+2\sqrt2\,i$
 
 #indice
 $\dfrac\pi2$ est l'angle de l'axe vertical : le cosinus y est nul. Le résultat sera donc un imaginaire pur.
@@ -669,10 +969,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-trigonometrique"}
+::exo-question{label="3." cours="cours-trigonometrique" bonne="b"}
 $$
 z_3 = [7\,;\pi]
 $$
+
+#a
+$z_{3} = 7$
+
+#b
+$z_{3} = -7$
+
+#c
+$z_{3} = 7i$
+
+#d
+$z_{3} = -7i$
 
 #indice
 $\pi$ est l'angle du demi-axe horizontal négatif : le sinus y est nul, le cosinus vaut $-1$. Le résultat est un réel.
@@ -689,10 +1001,22 @@ $$
 ⚠️ $-7$ a pour module $7$ et pour argument $\pi$ : le module reste **positif**, c'est l'argument qui porte le signe.
 ::
 
-::exo-question{label="4." cours="cours-trigonometrique"}
+::exo-question{label="4." cours="cours-trigonometrique" bonne="d"}
 $$
 z_4 = [2\,;0]
 $$
+
+#a
+$z_{4} = 2i$
+
+#b
+$z_{4} = 0$
+
+#c
+$z_{4} = -2$
+
+#d
+$z_{4} = 2$
 
 #indice
 Argument nul : le point est sur le demi-axe horizontal positif. Un réel positif, donc, et lequel ?
@@ -709,10 +1033,22 @@ $$
 Cas général à retenir : $[r\,;0] = r$ pour tout réel $r > 0$.
 ::
 
-::exo-question{label="5." cours="cours-trigonometrique"}
+::exo-question{label="5." cours="cours-trigonometrique" bonne="a"}
 $$
 z_5 = \left[5\,;-\frac{\pi}{6}\right]
 $$
+
+#a
+$z_{5} = \dfrac{5\sqrt3}{2}-\dfrac52\,i$
+
+#b
+$z_{5} = \dfrac52-\dfrac{5\sqrt3}{2}\,i$
+
+#c
+$z_{5} = \dfrac{5\sqrt3}{2}+\dfrac52\,i$
+
+#d
+$z_{5} = -\dfrac{5\sqrt3}{2}-\dfrac52\,i$
 
 #indice
 L'angle est négatif : on tourne dans le sens horaire, donc le point est **sous** l'axe horizontal et la partie imaginaire sera négative. Le cosinus, lui, ne change pas de signe : il est pair.
@@ -731,10 +1067,22 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-trigonometrique"}
+::exo-question{label="6." cours="cours-trigonometrique" bonne="c"}
 $$
 z_6 = \left[\sqrt2\,;\frac{3\pi}{4}\right]
 $$
+
+#a
+$z_{6} = 1+i$
+
+#b
+$z_{6} = -1-i$
+
+#c
+$z_{6} = -1+i$
+
+#d
+$z_{6} = 1-i$
 
 #indice
 $\dfrac{3\pi}{4}$ est dans le deuxième quadrant : cosinus négatif, sinus positif. Les deux valent $\dfrac{\sqrt2}{2}$ au signe près, et le module est justement $\sqrt2$ — la simplification est totale.
@@ -749,10 +1097,22 @@ $$
 $$
 ::
 
-::exo-question{label="7." cours="cours-trigonometrique"}
+::exo-question{label="7." cours="cours-trigonometrique" bonne="d"}
 $$
 z_7 = \left[3\,;\frac{5\pi}{6}\right]
 $$
+
+#a
+$z_{7} = \dfrac32-\dfrac{3\sqrt3}{2}\,i$
+
+#b
+$z_{7} = \dfrac{3\sqrt3}{2}+\dfrac32\,i$
+
+#c
+$z_{7} = -\dfrac32+\dfrac{3\sqrt3}{2}\,i$
+
+#d
+$z_{7} = -\dfrac{3\sqrt3}{2}+\dfrac32\,i$
 
 #indice
 Encore le deuxième quadrant. $\dfrac{5\pi}{6} = \pi-\dfrac\pi6$ : son cosinus est l'opposé de celui de $\dfrac\pi6$, son sinus est le même.
@@ -767,10 +1127,22 @@ $$
 $$
 ::
 
-::exo-question{label="8." cours="cours-trigonometrique"}
+::exo-question{label="8." cours="cours-trigonometrique" bonne="b"}
 $$
 z_8 = \left[\sqrt3\,;\frac{2\pi}{3}\right]
 $$
+
+#a
+$z_{8} = -\dfrac32+\dfrac{\sqrt3}{2}\,i$
+
+#b
+$z_{8} = -\dfrac{\sqrt3}{2}+\dfrac32\,i$
+
+#c
+$z_{8} = \dfrac{\sqrt3}{2}+\dfrac32\,i$
+
+#d
+$z_{8} = -\dfrac{\sqrt3}{2}-\dfrac32\,i$
 
 #indice
 $\dfrac{2\pi}{3} = \pi-\dfrac\pi3$, toujours dans le deuxième quadrant. Pense à simplifier $\sqrt3\times\dfrac{\sqrt3}{2}$ à la fin.
@@ -785,10 +1157,22 @@ $$
 $$
 ::
 
-::exo-question{label="9." cours="cours-trigonometrique"}
+::exo-question{label="9." cours="cours-trigonometrique" bonne="c"}
 $$
 z = \left[4\,;-\frac{\pi}{4}\right]
 $$
+
+#a
+$z = 2\sqrt2+2\sqrt2\,i$
+
+#b
+$z = 2-2i$
+
+#c
+$z = 2\sqrt2-2\sqrt2\,i$
+
+#d
+$z = -2\sqrt2-2\sqrt2\,i$
 
 #indice
 Angle négatif du quatrième quadrant : cosinus positif, sinus négatif, tous deux égaux à $\dfrac{\sqrt2}{2}$ au signe près.
@@ -803,10 +1187,22 @@ $$
 $$
 ::
 
-::exo-question{label="10." cours="cours-trigonometrique"}
+::exo-question{label="10." cours="cours-trigonometrique" bonne="a"}
 $$
 z = \left[5\sqrt3\,;\frac{\pi}{6}\right]
 $$
+
+#a
+$z = \dfrac{15}{2}+\dfrac{5\sqrt3}{2}\,i$
+
+#b
+$z = \dfrac{5\sqrt3}{2}+\dfrac{15}{2}\,i$
+
+#c
+$z = \dfrac{15}{2}-\dfrac{5\sqrt3}{2}\,i$
+
+#d
+$z = \dfrac{5\sqrt3}{2}+\dfrac52\,i$
 
 #indice
 Le module contient une racine : le produit $5\sqrt3\times\dfrac{\sqrt3}{2}$ va se simplifier, puisque $\sqrt3\times\sqrt3 = 3$.
@@ -821,10 +1217,22 @@ $$
 $$
 ::
 
-::exo-question{label="11." cours="cours-trigonometrique"}
+::exo-question{label="11." cours="cours-trigonometrique" bonne="b"}
 $$
 z = \left[3\sqrt2\,;-\frac{3\pi}{4}\right]
 $$
+
+#a
+$z = 3-3i$
+
+#b
+$z = -3-3i$
+
+#c
+$z = -3+3i$
+
+#d
+$z = -\dfrac{3\sqrt2}{2}-\dfrac{3\sqrt2}{2}\,i$
 
 #indice
 Troisième quadrant : cosinus **et** sinus négatifs. Et là encore $\sqrt2\times\dfrac{\sqrt2}{2} = 1$ simplifie tout.
@@ -839,10 +1247,22 @@ $$
 $$
 ::
 
-::exo-question{label="12." cours="cours-trigonometrique"}
+::exo-question{label="12." cours="cours-trigonometrique" bonne="d"}
 $$
 z = \left[7\sqrt2\,;0\right]
 $$
+
+#a
+$z = 7\sqrt2\,i$
+
+#b
+$z = -7\sqrt2$
+
+#c
+$z = 7$
+
+#d
+$z = 7\sqrt2$
 
 #indice
 Argument nul, donc $z$ est un réel positif — égal à son module.
@@ -853,10 +1273,22 @@ $$
 $$
 ::
 
-::exo-question{label="13." cours="cours-trigonometrique"}
+::exo-question{label="13." cours="cours-trigonometrique" bonne="a"}
 $$
 z = \left[2\sqrt3\,;-\frac{2\pi}{3}\right]
 $$
+
+#a
+$z = -\sqrt3-3i$
+
+#b
+$z = -3-\sqrt3\,i$
+
+#c
+$z = -\sqrt3+3i$
+
+#d
+$z = \sqrt3-3i$
 
 #indice
 $-\dfrac{2\pi}{3}$ est dans le troisième quadrant : les deux parties seront négatives.
@@ -881,10 +1313,22 @@ $$
 r = \sqrt{a^2+b^2} \qquad \cos\theta = \frac{a}{r} \qquad \sin\theta = \frac{b}{r}
 $$
 
-::exo-question{label="1." cours="cours-trigonometrique"}
+::exo-question{label="1." cours="cours-trigonometrique" bonne="a"}
 $$
 z_1 = 3
 $$
+
+#a
+$z_{1} = [3\,;0]$
+
+#b
+$z_{1} = [3\,;\pi]$
+
+#c
+$z_{1} = \left[3\,;\dfrac\pi2\right]$
+
+#d
+$z_{1} = [0\,;3]$
 
 #indice
 Un réel positif est déjà sur le demi-axe horizontal positif. Pas besoin de calcul : quel est son module, quel est son argument ?
@@ -899,10 +1343,22 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-trigonometrique"}
+::exo-question{label="2." cours="cours-trigonometrique" bonne="b"}
 $$
 z_2 = 2i
 $$
+
+#a
+$z_{2} = \left[2\,;-\dfrac\pi2\right]$
+
+#b
+$z_{2} = \left[2\,;\dfrac\pi2\right]$
+
+#c
+$z_{2} = [2\,;0]$
+
+#d
+$z_{2} = \left[2i\,;\dfrac\pi2\right]$
 
 #indice
 Partie réelle nulle et partie imaginaire positive : le point est sur le demi-axe vertical **vers le haut**.
@@ -917,10 +1373,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-trigonometrique"}
+::exo-question{label="3." cours="cours-trigonometrique" bonne="c"}
 $$
 z_3 = -5
 $$
+
+#a
+$z_{3} = [-5\,;0]$
+
+#b
+$z_{3} = [5\,;0]$
+
+#c
+$z_{3} = [5\,;\pi]$
+
+#d
+$z_{3} = [-5\,;\pi]$
 
 #indice
 Le module est une longueur : il vaut $5$, pas $-5$. C'est l'argument qui doit rendre compte du signe.
@@ -937,10 +1405,22 @@ $$
 ⚠️ Écrire $[-5\,;0]$ serait faux : la forme trigonométrique exige un module **strictement positif**.
 ::
 
-::exo-question{label="4." cours="cours-trigonometrique"}
+::exo-question{label="4." cours="cours-trigonometrique" bonne="d"}
 $$
 z_4 = -i\sqrt2
 $$
+
+#a
+$z_{4} = \left[\sqrt2\,;\dfrac\pi2\right]$
+
+#b
+$z_{4} = \left[2\,;-\dfrac\pi2\right]$
+
+#c
+$z_{4} = \left[-\sqrt2\,;\dfrac\pi2\right]$
+
+#d
+$z_{4} = \left[\sqrt2\,;-\dfrac\pi2\right]$
 
 #indice
 Imaginaire pur de partie imaginaire négative : demi-axe vertical vers le bas.
@@ -955,10 +1435,22 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-trigonometrique"}
+::exo-question{label="5." cours="cours-trigonometrique" bonne="a"}
 $$
 z = 1+i
 $$
+
+#a
+$z = \left[\sqrt2\,;\dfrac\pi4\right]$
+
+#b
+$z = \left[2\,;\dfrac\pi4\right]$
+
+#c
+$z = \left[\sqrt2\,;\dfrac\pi3\right]$
+
+#d
+$z = \left[\sqrt2\,;-\dfrac\pi4\right]$
 
 #indice
 Module $\sqrt2$. Les deux rapports vaudront $\dfrac{1}{\sqrt2}$, qu'il faut rendre reconnaissable en multipliant haut et bas par $\sqrt2$.
@@ -979,10 +1471,22 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-trigonometrique"}
+::exo-question{label="6." cours="cours-trigonometrique" bonne="b"}
 $$
 z = 3-3i
 $$
+
+#a
+$z = \left[3\sqrt2\,;\dfrac\pi4\right]$
+
+#b
+$z = \left[3\sqrt2\,;-\dfrac\pi4\right]$
+
+#c
+$z = \left[3\,;-\dfrac\pi4\right]$
+
+#d
+$z = \left[3\sqrt2\,;-\dfrac{3\pi}{4}\right]$
 
 #indice
 Factorise $3$ pour retomber sur $3(1-i)$ : le module et l'argument se lisent alors depuis la question précédente, au signe de la partie imaginaire près.
@@ -1003,10 +1507,22 @@ $$
 $$
 ::
 
-::exo-question{label="7." cours="cours-trigonometrique"}
+::exo-question{label="7." cours="cours-trigonometrique" bonne="c"}
 $$
 z = 1+i\sqrt3
 $$
+
+#a
+$z = \left[2\,;\dfrac\pi6\right]$
+
+#b
+$z = \left[4\,;\dfrac\pi3\right]$
+
+#c
+$z = \left[2\,;\dfrac\pi3\right]$
+
+#d
+$z = \left[2\,;-\dfrac\pi3\right]$
 
 #indice
 Module $2$ — c'est le triangle $1$, $\sqrt3$, $2$ qui revient sans arrêt. Les rapports $\dfrac12$ et $\dfrac{\sqrt3}{2}$ désignent alors un angle du premier quadrant.
@@ -1027,10 +1543,22 @@ $$
 Attention à ne pas confondre : $\cos\theta = \dfrac12$ va avec $\dfrac\pi3$, tandis que $\cos\theta = \dfrac{\sqrt3}{2}$ va avec $\dfrac\pi6$.
 ::
 
-::exo-question{label="8." cours="cours-trigonometrique"}
+::exo-question{label="8." cours="cours-trigonometrique" bonne="d"}
 $$
 z = 2\sqrt3-2i
 $$
+
+#a
+$z = \left[4\,;\dfrac\pi6\right]$
+
+#b
+$z = \left[4\,;-\dfrac\pi3\right]$
+
+#c
+$z = \left[2\sqrt3\,;-\dfrac\pi6\right]$
+
+#d
+$z = \left[4\,;-\dfrac\pi6\right]$
 
 #indice
 Même triangle qu'à la question précédente, mais les rôles sont échangés et la partie imaginaire est négative.
@@ -1051,10 +1579,22 @@ $$
 $$
 ::
 
-::exo-question{label="9." cours="cours-trigonometrique"}
+::exo-question{label="9." cours="cours-trigonometrique" bonne="a"}
 $$
 z = \frac32-\frac{\sqrt3}{2}\,i
 $$
+
+#a
+$z = \left[\sqrt3\,;-\dfrac\pi6\right]$
+
+#b
+$z = \left[\sqrt3\,;\dfrac\pi6\right]$
+
+#c
+$z = \left[3\,;-\dfrac\pi6\right]$
+
+#d
+$z = \left[\sqrt3\,;-\dfrac\pi3\right]$
 
 #indice
 Les fractions ne changent rien : $a = \dfrac32$ et $b = -\dfrac{\sqrt3}{2}$. Le module vaut $\sqrt{\dfrac94+\dfrac34}$, à simplifier avant de calculer les rapports.
@@ -1075,10 +1615,22 @@ $$
 Le passage $\dfrac{3}{2\sqrt3} = \dfrac{\sqrt3}{2}$ s'obtient en multipliant haut et bas par $\sqrt3$ : $\dfrac{3\sqrt3}{6} = \dfrac{\sqrt3}{2}$.
 ::
 
-::exo-question{label="10." cours="cours-trigonometrique"}
+::exo-question{label="10." cours="cours-trigonometrique" bonne="b"}
 $$
 z = -\frac32-\frac{3\sqrt3}{2}\,i
 $$
+
+#a
+$z = \left[3\,;\dfrac{2\pi}{3}\right]$
+
+#b
+$z = \left[3\,;-\dfrac{2\pi}{3}\right]$
+
+#c
+$z = \left[3\,;-\dfrac{\pi}{3}\right]$
+
+#d
+$z = \left[9\,;-\dfrac{2\pi}{3}\right]$
 
 #indice
 Le module tombe rond. Ensuite, les deux rapports sont négatifs : il ne reste qu'un seul angle remarquable possible.
@@ -1099,10 +1651,22 @@ $$
 $$
 ::
 
-::exo-question{label="11." cours="cours-trigonometrique"}
+::exo-question{label="11." cours="cours-trigonometrique" bonne="c"}
 $$
 z = 5\sqrt2-5i\sqrt2
 $$
+
+#a
+$z = \left[10\,;\dfrac\pi4\right]$
+
+#b
+$z = \left[5\sqrt2\,;-\dfrac\pi4\right]$
+
+#c
+$z = \left[10\,;-\dfrac\pi4\right]$
+
+#d
+$z = \left[10\,;-\dfrac{3\pi}{4}\right]$
 
 #indice
 Factorise $5\sqrt2$ : il ne reste que $1-i$, dont l'argument est déjà connu.
@@ -1121,10 +1685,22 @@ $$
 $$
 ::
 
-::exo-question{label="12." cours="cours-trigonometrique"}
+::exo-question{label="12." cours="cours-trigonometrique" bonne="d"}
 $$
 z = 5+3i
 $$
+
+#a
+$z \approx \left[\sqrt{34}\,;0{,}983\right]$
+
+#b
+$z \approx \left[34\,;0{,}540\right]$
+
+#c
+$z \approx \left[\sqrt{34}\,;-0{,}540\right]$
+
+#d
+$z \approx \left[\sqrt{34}\,;0{,}540\right]$
 
 #indice
 Ici l'angle n'est **pas** remarquable : aucun tableau ne donnera $\cos\theta = \dfrac{5}{\sqrt{34}}$. L'énoncé demande donc une valeur approchée en radians. Comme $z$ est dans le premier quadrant, l'arc tangente s'applique directement.
@@ -1151,10 +1727,22 @@ $$
 **Contrôle.** $\sqrt{34} \approx 5{,}83$, et $5{,}83\cos(0{,}540) \approx 5$, $5{,}83\sin(0{,}540) \approx 3$.
 ::
 
-::exo-question{label="13." cours="cours-trigonometrique"}
+::exo-question{label="13." cours="cours-trigonometrique" bonne="a"}
 $$
 z = 2+7i
 $$
+
+#a
+$z \approx \left[\sqrt{53}\,;1{,}292\right]$
+
+#b
+$z \approx \left[\sqrt{53}\,;0{,}279\right]$
+
+#c
+$z \approx \left[53\,;1{,}292\right]$
+
+#d
+$z \approx \left[\sqrt{53}\,;-1{,}292\right]$
 
 #indice
 Même situation que la question précédente : premier quadrant, angle non remarquable, valeur approchée attendue.
@@ -1319,10 +1907,22 @@ $$
 
 **Les modules se multiplient, les arguments s'additionnent.** C'est tout l'intérêt de cette écriture.
 
-::exo-question{label="a." cours="cours-exponentielle"}
+::exo-question{label="a." cours="cours-exponentielle" bonne="b"}
 $$
 z = z_1\times z_2
 $$
+
+#a
+$\lvert z\rvert = 3$ et $\arg z = \dfrac{\pi}{12}$
+
+#b
+$\lvert z\rvert = 3$ et $\arg z = \dfrac{7\pi}{12}$
+
+#c
+$\lvert z\rvert = 4$ et $\arg z = \dfrac{7\pi}{12}$
+
+#d
+$\lvert z\rvert = 3$ et $\arg z = -\dfrac{7\pi}{12}$
 
 #indice
 Multiplie les modules, additionne les arguments. Pour la somme $\dfrac\pi4+\dfrac\pi3$, passe par le dénominateur commun $12$.
@@ -1343,10 +1943,22 @@ $$
 $$
 ::
 
-::exo-question{label="b." cours="cours-exponentielle"}
+::exo-question{label="b." cours="cours-exponentielle" bonne="c"}
 $$
 z = \frac{z_1}{z_2}
 $$
+
+#a
+$\lvert z\rvert = 3$ et $\arg z = \dfrac{7\pi}{12}$
+
+#b
+$\lvert z\rvert = 2$ et $\arg z = -\dfrac{\pi}{12}$
+
+#c
+$\lvert z\rvert = 3$ et $\arg z = -\dfrac{\pi}{12}$
+
+#d
+$\lvert z\rvert = 3$ et $\arg z = \dfrac{\pi}{12}$
 
 #indice
 Les modules se divisent, les arguments se **soustraient**. Comme $\lvert z_2\rvert = 1$, le module ne bouge pas.
@@ -1363,10 +1975,22 @@ $$
 $z_2$ est de module $1$ : le diviser par lui **fait tourner** sans changer la longueur.
 ::
 
-::exo-question{label="c." cours="cours-exponentielle"}
+::exo-question{label="c." cours="cours-exponentielle" bonne="d"}
 $$
 z = (z_1)^3
 $$
+
+#a
+$\lvert z\rvert = 9$ et $\arg z = \dfrac{3\pi}{4}$
+
+#b
+$\lvert z\rvert = 27$ et $\arg z = \dfrac{\pi}{4}$
+
+#c
+$\lvert z\rvert = 27$ et $\arg z = -\dfrac{3\pi}{4}$
+
+#d
+$\lvert z\rvert = 27$ et $\arg z = \dfrac{3\pi}{4}$
 
 #indice
 Le module est élevé à la puissance $3$, l'argument est **multiplié** par $3$. Ne confonds pas les deux opérations.
@@ -1383,10 +2007,22 @@ $$
 Développer $\left(\dfrac{3\sqrt2}{2}+\dfrac{3\sqrt2}{2}i\right)^3$ à la main donnerait le même résultat, avec dix fois plus de calculs : c'est exactement ce que cette forme évite.
 ::
 
-::exo-question{label="d." cours="cours-exponentielle"}
+::exo-question{label="d." cours="cours-exponentielle" bonne="a"}
 $$
 z = \frac{z_5}{z_6}
 $$
+
+#a
+$\lvert z\rvert = 2$ et $\arg z = -\dfrac{\pi}{2}$
+
+#b
+$\lvert z\rvert = 2$ et $\arg z = \dfrac{3\pi}{2}\ \text{soit}\ \dfrac{\pi}{2}$
+
+#c
+$\lvert z\rvert = 1$ et $\arg z = -\dfrac{\pi}{2}$
+
+#d
+$\lvert z\rvert = 3$ et $\arg z = -\dfrac{\pi}{2}$
 
 #indice
 $z_6 = e^{i\pi}$ vaut $-1$. Diviser par $-1$ ou multiplier par $-1$, c'est la même chose — l'argument tourne d'un demi-tour dans les deux cas.
@@ -1403,10 +2039,22 @@ $$
 Sous forme algébrique, $z = -2i$. Contrôle direct : $\dfrac{2i}{-1} = -2i$.
 ::
 
-::exo-question{label="e." cours="cours-exponentielle"}
+::exo-question{label="e." cours="cours-exponentielle" bonne="b"}
 $$
 z = z_3\times z_4
 $$
+
+#a
+$\lvert z\rvert = 11$ et $\arg z = \dfrac{5\pi}{6}$
+
+#b
+$\lvert z\rvert = 30$ et $\arg z = \dfrac{5\pi}{6}$
+
+#c
+$\lvert z\rvert = 30$ et $\arg z = \dfrac{\pi}{2}$
+
+#d
+$\lvert z\rvert = 30$ et $\arg z = -\dfrac{5\pi}{6}$
 
 #indice
 Modules $5$ et $6$, arguments $\dfrac{2\pi}{3}$ et $\dfrac\pi6$. Dénominateur commun $6$ pour la somme.
@@ -1421,10 +2069,22 @@ $$
 $$
 ::
 
-::exo-question{label="f." cours="cours-exponentielle"}
+::exo-question{label="f." cours="cours-exponentielle" bonne="c"}
 $$
 z = z_5\times z_6
 $$
+
+#a
+$\lvert z\rvert = 2$ et $\arg z = \dfrac{\pi}{2}$
+
+#b
+$\lvert z\rvert = 3$ et $\arg z = -\dfrac{\pi}{2}$
+
+#c
+$\lvert z\rvert = 2$ et $\arg z = -\dfrac{\pi}{2}$
+
+#d
+$\lvert z\rvert = 2$ et $\arg z = \pi$
 
 #indice
 La somme des arguments donne $\dfrac{3\pi}{2}$, qui sort de l'intervalle $]-\pi\,;\pi]$. On ramène en retirant un tour complet, $2\pi$.
@@ -1447,10 +2107,22 @@ $$
 Même résultat qu'à la question d., et ce n'est pas un hasard : $z_6 = -1$, donc multiplier ou diviser par $z_6$ revient au même.
 ::
 
-::exo-question{label="g." cours="cours-exponentielle"}
+::exo-question{label="g." cours="cours-exponentielle" bonne="d"}
 $$
 z = \frac{z_3}{z_4}
 $$
+
+#a
+$\lvert z\rvert = \dfrac65$ et $\arg z = \dfrac{\pi}{2}$
+
+#b
+$\lvert z\rvert = \dfrac56$ et $\arg z = \dfrac{5\pi}{6}$
+
+#c
+$\lvert z\rvert = \dfrac56$ et $\arg z = -\dfrac{\pi}{2}$
+
+#d
+$\lvert z\rvert = \dfrac56$ et $\arg z = \dfrac{\pi}{2}$
 
 #indice
 Le module devient une fraction, qui ne se simplifie pas. L'argument, lui, tombe sur une valeur très simple.
@@ -1467,10 +2139,22 @@ $$
 Argument $\dfrac\pi2$ : $z$ est un imaginaire pur de partie imaginaire positive, $z = \dfrac56 i$.
 ::
 
-::exo-question{label="h." cours="cours-exponentielle"}
+::exo-question{label="h." cours="cours-exponentielle" bonne="a"}
 $$
 z = (z_5)^8
 $$
+
+#a
+$\lvert z\rvert = 256$ et $\arg z = 0$
+
+#b
+$\lvert z\rvert = 16$ et $\arg z = 0$
+
+#c
+$\lvert z\rvert = 256$ et $\arg z = 4\pi\ \text{soit}\ \pi$
+
+#d
+$\lvert z\rvert = 256$ et $\arg z = \dfrac{\pi}{2}$
 
 #indice
 $2^8$ d'un côté, $8\times\dfrac\pi2$ de l'autre. Le second résultat est un multiple entier de $2\pi$ : que vaut alors l'exponentielle ?
@@ -1489,10 +2173,22 @@ $$
 $z = 256$, un réel positif. Contrôle par la forme algébrique : $z_5 = 2i$, et $(2i)^8 = 2^8 i^8 = 256\times 1 = 256$.
 ::
 
-::exo-question{label="i." cours="cours-exponentielle"}
+::exo-question{label="i." cours="cours-exponentielle" bonne="b"}
 $$
 z = \frac{1}{z_2}
 $$
+
+#a
+$\lvert z\rvert = 1$ et $\arg z = \dfrac{\pi}{3}$
+
+#b
+$\lvert z\rvert = 1$ et $\arg z = -\dfrac{\pi}{3}$
+
+#c
+$\lvert z\rvert = -1$ et $\arg z = \dfrac{\pi}{3}$
+
+#d
+$\lvert z\rvert = \dfrac13$ et $\arg z = -\dfrac{\pi}{3}$
 
 #indice
 L'inverse retourne le module et **change le signe** de l'argument. Ici le module vaut $1$, donc seul l'argument bouge.
@@ -1607,10 +2303,22 @@ Déterminer le conjugué de chaque nombre complexe et donner sa forme algébriqu
 
 Deux chemins existent : calculer $z$ d'abord puis changer le signe de sa partie imaginaire, ou conjuguer chaque facteur en se servant de $\overline{z_1z_2} = \overline{z_1}\times\overline{z_2}$. Le premier est plus sûr tant qu'on n'est pas à l'aise.
 
-::exo-question{label="1." cours="cours-conjugue-quotient"}
+::exo-question{label="1." cours="cours-conjugue-quotient" bonne="c"}
 $$
 z = (3+i)(-13-2i)
 $$
+
+#a
+$\bar z = -37-19i$
+
+#b
+$\bar z = 37+19i$
+
+#c
+$\bar z = -37+19i$
+
+#d
+$\bar z = -39+19i$
 
 #indice
 Développe le produit, réduis, puis change le signe de la partie imaginaire. Rien de plus.
@@ -1625,10 +2333,22 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-conjugue-quotient"}
+::exo-question{label="2." cours="cours-conjugue-quotient" bonne="d"}
 $$
 z = i(1-i)^3
 $$
+
+#a
+$\bar z = 2-2i$
+
+#b
+$\bar z = -2+2i$
+
+#c
+$\bar z = -2-2i$
+
+#d
+$\bar z = 2+2i$
 
 #indice
 Ne développe pas le cube d'un coup. Passe par $(1-i)^2 = -2i$, un résultat qui revient sans cesse, puis multiplie une fois de plus par $(1-i)$.
@@ -1655,10 +2375,22 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-conjugue-quotient"}
+::exo-question{label="3." cours="cours-conjugue-quotient" bonne="a"}
 $$
 z = \frac{2-3i}{8+5i}
 $$
+
+#a
+$\bar z = \dfrac{1}{89}+\dfrac{34}{89}i$
+
+#b
+$\bar z = \dfrac{1}{89}-\dfrac{34}{89}i$
+
+#c
+$\bar z = \dfrac{16}{39}+\dfrac{34}{39}i$
+
+#d
+$\bar z = \dfrac14+\dfrac{3}{5}i$
 
 #indice
 Un quotient : multiplie haut et bas par le conjugué du dénominateur, $8-5i$. Le dénominateur devient $8^2+5^2$.
@@ -1675,10 +2407,22 @@ $$
 **Raccourci.** On aurait pu conjuguer directement le quotient : $\overline{\left(\dfrac{z_1}{z_2}\right)} = \dfrac{\overline{z_1}}{\overline{z_2}} = \dfrac{2+3i}{8-5i}$, ce qui redonne le même résultat.
 ::
 
-::exo-question{label="4." cours="cours-conjugue-quotient"}
+::exo-question{label="4." cours="cours-conjugue-quotient" bonne="b"}
 $$
 z = \frac{2}{i+1}-\frac{3}{1-i}
 $$
+
+#a
+$\bar z = -\dfrac12-\dfrac52 i$
+
+#b
+$\bar z = -\dfrac12+\dfrac52 i$
+
+#c
+$\bar z = \dfrac12+\dfrac52 i$
+
+#d
+$\bar z = -\dfrac12+\dfrac12 i$
 
 #indice
 Deux quotients à traiter séparément, chacun avec le conjugué de son propre dénominateur. Attention, $i+1$ et $1-i$ **ne sont pas** le même nombre : ils sont conjugués l'un de l'autre.
@@ -1711,10 +2455,22 @@ $$
 :::exercice{titre="Exercice 9" theme="Équations du second degré, dont une avec le conjugué" icone="i-lucide-square-radical"}
 Résoudre dans $\mathbb{C}$ chacune des équations suivantes.
 
-::exo-question{label="1." cours="cours-equations"}
+::exo-question{label="1." cours="cours-equations" bonne="b"}
 $$
 2z^2-6z+5 = 0
 $$
+
+#a
+$S = \left\{\dfrac{3-i}{4}\ ;\ \dfrac{3+i}{4}\right\}$
+
+#b
+$S = \left\{\dfrac{3-i}{2}\ ;\ \dfrac{3+i}{2}\right\}$
+
+#c
+$S = \varnothing$ : le discriminant vaut $-4$.
+
+#d
+$S = \left\{\dfrac{-3-i}{2}\ ;\ \dfrac{-3+i}{2}\right\}$
 
 #indice
 Coefficients réels : le discriminant s'applique tel quel. S'il est négatif, écris $\sqrt{\Delta}$ sous la forme $i\sqrt{\lvert\Delta\rvert}$ — jamais $\sqrt{-4}$, qui n'a pas de sens.
@@ -1739,10 +2495,22 @@ $$
 **Vérification par somme et produit.** La somme des racines vaut $3 = -\dfrac{b}{a} = \dfrac64$… soit $\dfrac32$ ? Non : $\dfrac{3-i}{2}+\dfrac{3+i}{2} = 3$, et $-\dfrac{b}{a} = \dfrac{6}{2} = 3$. Le produit vaut $\dfrac{9+1}{4} = \dfrac{10}{4} = \dfrac52 = \dfrac{c}{a}$. Les deux contrôles passent.
 ::
 
-::exo-question{label="2." cours="cours-equations"}
+::exo-question{label="2." cours="cours-equations" bonne="a"}
 $$
 z^2+z+1 = 0
 $$
+
+#a
+$S = \left\{\dfrac{-1-i\sqrt3}{2}\ ;\ \dfrac{-1+i\sqrt3}{2}\right\}$
+
+#b
+$S = \left\{\dfrac{1-i\sqrt3}{2}\ ;\ \dfrac{1+i\sqrt3}{2}\right\}$
+
+#c
+$S = \left\{\dfrac{-1-3i}{2}\ ;\ \dfrac{-1+3i}{2}\right\}$
+
+#d
+$S = \varnothing$
 
 #indice
 Même méthode, avec $a = b = c = 1$. Le résultat est célèbre : ce sont les deux racines cubiques de l'unité autres que $1$.
@@ -1763,10 +2531,22 @@ $$
 Ces deux nombres sont de module $1$ et d'arguments $\pm\dfrac{2\pi}{3}$ : élevés au cube, ils donnent $e^{\pm 2i\pi} = 1$.
 ::
 
-::exo-question{label="3." cours="cours-equations"}
+::exo-question{label="3." cours="cours-equations" bonne="d"}
 $$
 z^2+2\bar z+1 = 0
 $$
+
+#a
+$S = \left\{-1\right\}$
+
+#b
+$S = \left\{1+2i\ ;\ 1-2i\right\}$
+
+#c
+$S = \left\{-1\ ;\ 1+2i\right\}$
+
+#d
+$S = \left\{-1\ ;\ 1+2i\ ;\ 1-2i\right\}$
 
 #indice
 ⚠️ **Le discriminant ne s'applique pas** : l'équation contient $\bar z$, elle n'est donc pas polynomiale en $z$. Dès qu'un conjugué apparaît, le réflexe est de poser $z = x+iy$ avec $x$ et $y$ **réels**, puis d'écrire que la partie réelle et la partie imaginaire sont nulles toutes les deux.
@@ -1903,8 +2683,20 @@ $$
 
 Déterminer l'ensemble des points d'affixe $z$ tels que :
 
-::exo-question{label="1." cours="cours-ensembles"}
+::exo-question{label="1." cours="cours-ensembles" bonne="c"}
 $Z$ soit un nombre réel.
+
+#a
+l'ensemble d'équation $x^2+y^2-x+2y = 0$
+
+#b
+l'ensemble d'équation $2x+y-2 = 0$
+
+#c
+l'ensemble d'équation $2x-y-2 = 0$
+
+#d
+l'ensemble d'équation $x-2y-2 = 0$
 
 #indice
 La seule méthode : écrire $Z$ sous forme algébrique en multipliant haut et bas par le conjugué du dénominateur, puis annuler la **partie imaginaire**.
@@ -1947,8 +2739,20 @@ C'est la **droite** d'équation $y = 2x-2$, privée du point $A(1\,;0)$ où $Z$ 
 **Contrôle.** Le point $(0\,;-2)$ vérifie l'équation, et correspond à $z = -2i$ : alors $Z = \dfrac{-2i+2i}{-2i-1} = 0$, qui est bien réel.
 ::
 
-::exo-question{label="2." cours="cours-ensembles"}
+::exo-question{label="2." cours="cours-ensembles" bonne="a"}
 $Z$ soit un imaginaire pur.
+
+#a
+l'ensemble d'équation $x^2+y^2-x+2y = 0$
+
+#b
+l'ensemble d'équation $x^2+y^2+x-2y = 0$
+
+#c
+l'ensemble d'équation $2x-y-2 = 0$
+
+#d
+l'ensemble d'équation $x^2+y^2-x-2y = 0$
 
 #indice
 Cette fois c'est la **partie réelle** qu'on annule, calculée à la question précédente. Développe et regroupe : tu verras apparaître $x^2+y^2$, signature d'un cercle.
@@ -1984,10 +2788,22 @@ Dans chaque cas, trouver l'ensemble des points dont l'affixe $z$ satisfait la co
 
 Un module est une **distance** : $\lvert z-z_A\rvert = AM$. Tout l'exercice consiste à faire apparaître cette forme, puis à lire la figure.
 
-::exo-question{label="1." cours="cours-ensembles"}
+::exo-question{label="1." cours="cours-ensembles" bonne="b"}
 $$
 \lvert z-3\rvert = \lvert z-1+i\rvert
 $$
+
+#a
+le cercle de diamètre $[AB]$, avec $A(3\,;0)$ et $B(1\,;-1)$
+
+#b
+la médiatrice du segment $[AB]$, avec $A(3\,;0)$ et $B(1\,;-1)$
+
+#c
+la médiatrice du segment $[AB]$, avec $A(-3\,;0)$ et $B(-1\,;1)$
+
+#d
+la droite $(AB)$, avec $A(3\,;0)$ et $B(1\,;-1)$
 
 #indice
 Réécris chaque membre sous la forme $\lvert z-z_A\rvert$, quitte à factoriser un signe : $z-1+i$ s'écrit $z-(1-i)$. Tu obtiendras alors $AM = BM$, ce qui caractérise une figure très classique.
@@ -2022,10 +2838,22 @@ $$
 Une équation du premier degré : c'est bien une droite. Son point de passage $\left(\dfrac32\,;\dfrac12\right)$ est le milieu de $[AB]$, comme attendu.
 ::
 
-::exo-question{label="2." cours="cours-ensembles"}
+::exo-question{label="2." cours="cours-ensembles" bonne="d"}
 $$
 \lvert z+2-i\rvert = \sqrt5
 $$
+
+#a
+le cercle de centre $A(2\,;-1)$ et de rayon $\sqrt5$
+
+#b
+le disque fermé de centre $A(-2\,;1)$ et de rayon $\sqrt5$
+
+#c
+le cercle de centre $A(-2\,;1)$ et de rayon $5$
+
+#d
+le cercle de centre $A(-2\,;1)$ et de rayon $\sqrt5$
 
 #indice
 Fais apparaître un signe moins à l'intérieur du module : $z+2-i = z-(-2+i)$. Le centre est le point d'affixe $-2+i$, et surtout **pas** $2-i$.
@@ -2046,10 +2874,22 @@ $$
 ⚠️ L'erreur classique est de lire le centre $(2\,;-1)$. Le module s'écrit $\lvert z-z_A\rvert$ : ce qui figure après le signe moins est l'affixe du centre, il faut donc changer les signes de ce qu'on lit dans l'énoncé.
 ::
 
-::exo-question{label="3." cours="cours-ensembles"}
+::exo-question{label="3." cours="cours-ensembles" bonne="c"}
 $$
 \lvert z+3-i\rvert \leqslant 2
 $$
+
+#a
+le cercle de centre $A(-3\,;1)$ et de rayon $2$
+
+#b
+le disque **ouvert** de centre $A(-3\,;1)$ et de rayon $2$
+
+#c
+le disque **fermé** de centre $A(-3\,;1)$ et de rayon $2$
+
+#d
+le disque **fermé** de centre $A(3\,;-1)$ et de rayon $2$
 
 #indice
 Même réécriture que précédemment, mais l'égalité est devenue une **inégalité large** : l'ensemble n'est plus une courbe mais une surface, bord compris.
@@ -2076,8 +2916,20 @@ $$
 z' = \frac{iz}{z-i}
 $$
 
-::exo-question{label="1.a." cours="cours-ensembles"}
+::exo-question{label="1.a." cours="cours-ensembles" bonne="b"}
 Déterminer les points $M$ tels que $M = M'$.
+
+#a
+$z = 0$ seulement
+
+#b
+$z = 0$ ou $z = 2i$
+
+#c
+$z = i$ ou $z = 2i$
+
+#d
+$z = 0$ ou $z = i$
 
 #indice
 $M = M'$ signifie $z' = z$. Multiplie par $z-i$ pour te débarrasser du quotient, ramène tout d'un côté, puis **factorise** — tu obtiendras une équation produit.
@@ -2102,8 +2954,20 @@ $$
 Les points invariants sont donc l'origine $O$ et le point d'affixe $2i$, tous deux différents de $A$ : les deux conviennent.
 ::
 
-::exo-question{label="1.b." cours="cours-ensembles"}
+::exo-question{label="1.b." cours="cours-ensembles" bonne="a"}
 Déterminer l'affixe du point $B'$ associé au point $B$ d'affixe $1$.
+
+#a
+$z_{B'} = -\dfrac12+\dfrac12 i$
+
+#b
+$z_{B'} = \dfrac12+\dfrac12 i$
+
+#c
+$z_{B'} = -\dfrac12-\dfrac12 i$
+
+#d
+$z_{B'} = 1+i$
 
 #indice
 Remplace simplement $z$ par $1$ dans la formule, puis rends le dénominateur réel.
@@ -2118,8 +2982,20 @@ $$
 $$
 ::
 
-::exo-question{label="1.c." cours="cours-ensembles"}
+::exo-question{label="1.c." cours="cours-ensembles" bonne="c"}
 Déterminer l'affixe du point $C$ tel que l'affixe de son image $C'$ soit $2$.
+
+#a
+$z_C = \dfrac25+\dfrac45 i$
+
+#b
+$z_C = -\dfrac45+\dfrac25 i$
+
+#c
+$z_C = -\dfrac25+\dfrac45 i$
+
+#d
+$z_C = -\dfrac25-\dfrac45 i$
 
 #indice
 Cette fois c'est l'image qui est connue : on résout $\dfrac{iz}{z-i} = 2$ d'inconnue $z$. Multiplie par $z-i$, rassemble les $z$, factorise.
@@ -2182,8 +3058,20 @@ $$
 $$
 ::
 
-::exo-question{label="2.b." cours="cours-ensembles"}
+::exo-question{label="2.b." cours="cours-ensembles" bonne="d"}
 Déterminer l'ensemble $\Gamma$ des points $M$, distincts de $A$, pour lesquels $z'$ est réel.
+
+#a
+le cercle de centre $\left(0\,;\dfrac12\right)$ et de rayon $1$, privé de $A$
+
+#b
+l'axe des abscisses, privé de $A$
+
+#c
+le cercle de centre $\left(0\,;1\right)$ et de rayon $\dfrac12$, privé de $A$
+
+#d
+le cercle de centre $\left(0\,;\dfrac12\right)$ et de rayon $\dfrac12$, privé de $A$
 
 #indice
 $z'$ est réel quand $y' = 0$. Comme le dénominateur ne s'annule jamais pour $M \neq A$, il suffit d'annuler le numérateur. Complète ensuite le carré en $y$ pour reconnaître la figure.
