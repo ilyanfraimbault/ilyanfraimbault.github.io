@@ -33,10 +33,22 @@ Contrairement au TD, cette fiche **ne regroupe pas les fonctions par type** : un
 
 :::exercice{titre="Révisions dérivées" theme="Trente-quatre fonctions à dériver, dans l'ordre du sujet et sans regroupement par type" icone="i-lucide-list-ordered"}
 
-::exo-question{label="1." cours="cours-tableau"}
+::exo-question{label="1." cours="cours-tableau" bonne="c"}
 $$
 f(x) = -5x^3+4x^2-9x-5
 $$
+
+#a
+$f'(x) = -5x^2+4x-9$
+
+#b
+$f'(x) = -15x^3+8x^2-9x$
+
+#c
+$f'(x) = -15x^2+8x-9$
+
+#d
+$f'(x) = -15x^2+8x$
 
 #indice
 Un polynôme se dérive **terme à terme**, et chaque terme relève de la ligne $\left(x^\alpha\right)' = \alpha x^{\alpha-1}$ du tableau. Les coefficients suivent sans rien changer, et la constante $-5$ disparaît.
@@ -55,10 +67,22 @@ $$
 $f$ est un polynôme : elle est dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="2." cours="cours-tableau"}
+::exo-question{label="2." cours="cours-tableau" bonne="a"}
 $$
 f(x) = -\frac12 x^4+3x^3-4x^2+\sqrt3\,x+1
 $$
+
+#a
+$f'(x) = -2x^3+9x^2-8x+\sqrt3$
+
+#b
+$f'(x) = -2x^3+9x^2-8x+\sqrt3\,x$
+
+#c
+$f'(x) = -2x^3+9x^2-8x$
+
+#d
+$f'(x) = -\dfrac12 x^3+3x^2-4x+\sqrt3$
 
 #indice
 Même geste qu'à la question précédente. Le seul piège est le terme $\sqrt3\,x$ : le radical porte sur le $3$ **seul**, donc $\sqrt3$ est une **constante** qui multiplie $x$. Sa dérivée est $\sqrt3$, et non quelque chose en $\dfrac{1}{2\sqrt x}$.
@@ -87,10 +111,22 @@ $$
 Dérivable sur $\mathbb{R}$, comme tout polynôme — le coefficient irrationnel n'y change rien.
 ::
 
-::exo-question{label="3." cours="cours-tableau"}
+::exo-question{label="3." cours="cours-tableau" bonne="d"}
 $$
 f(x) = -\sqrt{x}+\frac{x^2}{2}
 $$
+
+#a
+$f'(x) = \dfrac{1}{2\sqrt x}+x$
+
+#b
+$f'(x) = -\dfrac{1}{\sqrt x}+x$
+
+#c
+$f'(x) = -\dfrac{1}{2\sqrt x}+2x$
+
+#d
+$f'(x) = -\dfrac{1}{2\sqrt x}+x$
 
 #indice
 Une somme de deux termes, tous deux dans le tableau : $\left(\sqrt x\right)' = \dfrac{1}{2\sqrt x}$, et $\dfrac{x^2}{2}$ n'est que $\dfrac12 x^2$.
@@ -113,10 +149,22 @@ $$
 $f$ est définie sur $[0\,;+\infty[$ et dérivable sur $]0\,;+\infty[$ seulement : en $0$, la racine a une tangente verticale.
 ::
 
-::exo-question{label="4." cours="cours-produit"}
+::exo-question{label="4." cours="cours-produit" bonne="b"}
 $$
 f(x) = (x-2)\sqrt{x}
 $$
+
+#a
+$f'(x) = \dfrac{1}{2\sqrt x}$
+
+#b
+$f'(x) = \dfrac{3x-2}{2\sqrt x}$
+
+#c
+$f'(x) = \dfrac{3x+2}{2\sqrt x}$
+
+#d
+$f'(x) = \dfrac{x-2}{2\sqrt x}$
 
 #indice
 Deux chemins mènent au résultat, et les deux sont bons.
@@ -151,10 +199,22 @@ $$
 Les deux chemins concordent. Dérivable sur $]0\,;+\infty[$.
 ::
 
-::exo-question{label="5." cours="cours-tableau"}
+::exo-question{label="5." cours="cours-tableau" bonne="a"}
 $$
 f(x) = \frac{x^3+12x-1}{4}
 $$
+
+#a
+$f'(x) = \dfrac{3x^2+12}{4}$
+
+#b
+$f'(x) = 3x^2+12$
+
+#c
+$f'(x) = \dfrac{3x^2+12x}{4}$
+
+#d
+$f'(x) = \dfrac{3x^2}{4}$
 
 #indice
 Ne pas se laisser impressionner par la barre de fraction : le dénominateur est une **constante**, pas une fonction. Il n'y a donc aucune formule de quotient à sortir.
@@ -175,10 +235,22 @@ $$
 On peut aussi l'écrire $\dfrac34 x^2+3$. Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="6." cours="cours-composees"}
+::exo-question{label="6." cours="cours-composees" bonne="d"}
 $$
 f(x) = (7x-2)^2
 $$
+
+#a
+$f'(x) = 14x-4$
+
+#b
+$f'(x) = 2(7x-2)^2$
+
+#c
+$f'(x) = 98x+28$
+
+#d
+$f'(x) = 98x-28$
 
 #indice
 Deux chemins, encore. Le développement $(7x-2)^2 = 49x^2-28x+4$ marche très bien ici.
@@ -207,10 +279,22 @@ $$
 Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="7." cours="cours-reecriture"}
+::exo-question{label="7." cours="cours-reecriture" bonne="b"}
 $$
 f(x) = \left(\sqrt{x}+1\right)^2
 $$
+
+#a
+$f'(x) = 2\left(\sqrt x+1\right)$
+
+#b
+$f'(x) = 1+\dfrac{1}{\sqrt x}$
+
+#c
+$f'(x) = 1+\dfrac{2}{\sqrt x}$
+
+#d
+$f'(x) = \dfrac{1}{2\sqrt x}$
 
 #indice
 Ici le développement est nettement plus court, parce que le carré d'une racine **efface** la racine :
@@ -245,10 +329,22 @@ $$
 Même résultat. Dérivable sur $]0\,;+\infty[$.
 ::
 
-::exo-question{label="8." cours="cours-tableau"}
+::exo-question{label="8." cours="cours-tableau" bonne="c"}
 $$
 f(x) = x+\sin x
 $$
+
+#a
+$f'(x) = \cos x$
+
+#b
+$f'(x) = 1-\cos x$
+
+#c
+$f'(x) = 1+\cos x$
+
+#d
+$f'(x) = 1+\sin x$
 
 #indice
 Une somme, donc deux dérivations indépendantes. Les deux termes sont dans le tableau, et le sinus s'y dérive en cosinus — sans signe moins, celui-ci n'apparaissant que dans l'autre sens.
@@ -265,10 +361,22 @@ $$
 Dérivable sur $\mathbb{R}$. Remarque utile : comme $\cos x \geqslant -1$, on a $f'(x) \geqslant 0$, donc $f$ est croissante sur $\mathbb{R}$, avec des tangentes horizontales aux points où $\cos x = -1$.
 ::
 
-::exo-question{label="9." cours="cours-produit"}
+::exo-question{label="9." cours="cours-produit" bonne="a"}
 $$
 f(x) = x\sin x
 $$
+
+#a
+$f'(x) = \sin x+x\cos x$
+
+#b
+$f'(x) = \cos x$
+
+#c
+$f'(x) = x\cos x$
+
+#d
+$f'(x) = \sin x-x\cos x$
 
 #indice
 Un produit, cette fois : $u = x$ et $v = \sin x$. Rien ne se simplifie au préalable, la formule $(uv)' = u'v+uv'$ est le seul chemin.
@@ -293,10 +401,22 @@ $$
 Rien ne se factorise ici : la forme obtenue est la forme finale. Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="10." cours="cours-reecriture"}
+::exo-question{label="10." cours="cours-reecriture" bonne="c"}
 $$
 f(x) = \frac{4}{x^3}
 $$
+
+#a
+$f'(x) = \dfrac{12}{x^4}$
+
+#b
+$f'(x) = -\dfrac{12}{x^2}$
+
+#c
+$f'(x) = -\dfrac{12}{x^4}$
+
+#d
+$f'(x) = -\dfrac{4}{x^4}$
 
 #indice
 Inutile de sortir la formule de l'inverse : le dénominateur est une simple puissance de $x$. On **réécrit** :
@@ -325,10 +445,22 @@ $$
 C'est l'exposant qui apporte le signe moins : la dérivée est **négative** partout où elle existe. Cohérent, $f$ est décroissante sur chacun des deux intervalles de son domaine $\mathbb{R}^*$.
 ::
 
-::exo-question{label="11." cours="cours-inverse"}
+::exo-question{label="11." cours="cours-inverse" bonne="b"}
 $$
 f(x) = \frac{2}{3x-5}
 $$
+
+#a
+$f'(x) = \dfrac{6}{(3x-5)^2}$
+
+#b
+$f'(x) = -\dfrac{6}{(3x-5)^2}$
+
+#c
+$f'(x) = -\dfrac{2}{(3x-5)^2}$
+
+#d
+$f'(x) = -\dfrac{6}{3x-5}$
 
 #indice
 Le numérateur est une **constante** : la formule du quotient serait du gaspillage. Celle de l'inverse suffit :
@@ -353,10 +485,22 @@ $$
 Le carré au dénominateur est toujours positif : $f'$ est strictement négative, donc $f$ décroît sur chacun des deux intervalles de $\mathbb{R}\setminus\left\{\dfrac53\right\}$ — mais pas sur leur réunion.
 ::
 
-::exo-question{label="12." cours="cours-quotient"}
+::exo-question{label="12." cours="cours-quotient" bonne="d"}
 $$
 f(x) = \frac{1-2x}{x-2}
 $$
+
+#a
+$f'(x) = -2$
+
+#b
+$f'(x) = \dfrac{3}{x-2}$
+
+#c
+$f'(x) = -\dfrac{3}{(x-2)^2}$
+
+#d
+$f'(x) = \dfrac{3}{(x-2)^2}$
 
 #indice
 Un vrai quotient : $u = 1-2x$ et $v = x-2$.
@@ -389,10 +533,22 @@ $$
 La dérivée est strictement positive : $f$ croît sur $]-\infty\,;2[$ et sur $]2\,;+\infty[$. Dérivable sur $\mathbb{R}\setminus\{2\}$.
 ::
 
-::exo-question{label="13." cours="cours-tableau"}
+::exo-question{label="13." cours="cours-tableau" bonne="a"}
 $$
 f(x) = x^4+x^2+1
 $$
+
+#a
+$f'(x) = 4x^3+2x$
+
+#b
+$f'(x) = 4x^3+2x+1$
+
+#c
+$f'(x) = 4x^3+2x^2$
+
+#d
+$f'(x) = 4x^4+2x^2$
 
 #indice
 Un polynôme : terme à terme, sans autre règle. La constante $1$ disparaît.
@@ -409,10 +565,22 @@ $$
 On peut factoriser pour lire le signe : $f'(x) = 2x\left(2x^2+1\right)$. Comme $2x^2+1 > 0$, le signe de $f'$ est celui de $x$ : $f$ décroît puis croît, avec un minimum en $0$. Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="14." cours="cours-tableau"}
+::exo-question{label="14." cours="cours-tableau" bonne="c"}
 $$
 f(x) = 2x^4-3x^3+\frac12 x^2
 $$
+
+#a
+$f'(x) = 8x^3-9x^2+\dfrac{x}{2}$
+
+#b
+$f'(x) = 8x^3+9x^2+x$
+
+#c
+$f'(x) = 8x^3-9x^2+x$
+
+#d
+$f'(x) = 2x^3-3x^2+\dfrac12 x$
 
 #indice
 Même chose. Le coefficient $\dfrac12$ du dernier terme se simplifie agréablement contre le $2$ que fait descendre la dérivation.
@@ -433,10 +601,22 @@ $$
 Factorisable en $x\left(8x^2-9x+1\right)$, soit $x(8x-1)(x-1)$ — utile si l'on doit ensuite dresser un tableau de signes. Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="15." cours="cours-quotient"}
+::exo-question{label="15." cours="cours-quotient" bonne="b"}
 $$
 f(x) = \frac{x^2+x-1}{x^2+x+1}
 $$
+
+#a
+$f'(x) = -\dfrac{2(2x+1)}{\left(x^2+x+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{2(2x+1)}{\left(x^2+x+1\right)^2}$
+
+#c
+$f'(x) = \dfrac{2(2x+1)}{x^2+x+1}$
+
+#d
+$f'(x) = \dfrac{4x+2}{\left(x^2+x-1\right)^2}$
 
 #indice
 La formule du quotient s'applique, mais regarde d'abord les deux polynômes : ils ne diffèrent que par leur constante. Leurs **dérivées sont donc identiques**, toutes deux égales à $2x+1$.
@@ -467,10 +647,22 @@ $$
 **Le domaine.** Le dénominateur $x^2+x+1$ a pour discriminant $1-4 = -3 < 0$ : il ne s'annule jamais. $f$ est donc dérivable sur $\mathbb{R}$ **tout entier**, malgré la barre de fraction.
 ::
 
-::exo-question{label="16." cours="cours-quotient"}
+::exo-question{label="16." cours="cours-quotient" bonne="c"}
 $$
 f(x) = \frac{x^2+3x+2}{x^2-5x+6}
 $$
+
+#a
+$f'(x) = \dfrac{2x+3}{2x-5}$
+
+#b
+$f'(x) = \dfrac{8x^2-8x-28}{\left(x^2-5x+6\right)^2}$
+
+#c
+$f'(x) = \dfrac{-8x^2+8x+28}{\left(x^2-5x+6\right)^2}$
+
+#d
+$f'(x) = \dfrac{-8x^2+8x+28}{x^2-5x+6}$
 
 #indice
 Premier réflexe devant deux trinômes : **factoriser**, au cas où quelque chose se simplifierait. Ici $x^2+3x+2 = (x+1)(x+2)$ et $x^2-5x+6 = (x-2)(x-3)$ — aucun facteur commun, donc pas de raccourci. Mais la factorisation du dénominateur donne le domaine.
@@ -511,10 +703,22 @@ On peut factoriser par $-4$ : $f'(x) = \dfrac{-4\left(2x^2-2x-7\right)}{\left(x^
 **Le contrôle** : les termes en $x^3$ doivent disparaître, puisque le degré du numérateur d'une dérivée de quotient est toujours inférieur d'au moins un au produit attendu. S'il en reste un, c'est qu'une erreur s'est glissée dans un développement.
 ::
 
-::exo-question{label="17." cours="cours-quotient"}
+::exo-question{label="17." cours="cours-quotient" bonne="a"}
 $$
 f(x) = x+1-\frac{2x}{x+3}
 $$
+
+#a
+$f'(x) = 1-\dfrac{6}{(x+3)^2}$
+
+#b
+$f'(x) = 1+\dfrac{6}{(x+3)^2}$
+
+#c
+$f'(x) = 1-\dfrac{2}{(x+3)^2}$
+
+#d
+$f'(x) = 1-\dfrac{6}{x+3}$
 
 #indice
 C'est une **somme**, dont l'un des termes est un quotient. On dérive donc terme à terme, et seul le dernier demande du travail.
@@ -545,10 +749,22 @@ $$
 Dérivable sur $\mathbb{R}\setminus\{-3\}$.
 ::
 
-::exo-question{label="18." cours="cours-quotient"}
+::exo-question{label="18." cours="cours-quotient" bonne="d"}
 $$
 f(x) = \frac{x^2+2x+6}{x-1}
 $$
+
+#a
+$f'(x) = 2x+2$
+
+#b
+$f'(x) = \dfrac{x^2-2x-8}{x-1}$
+
+#c
+$f'(x) = \dfrac{-x^2+2x+8}{(x-1)^2}$
+
+#d
+$f'(x) = \dfrac{x^2-2x-8}{(x-1)^2}$
 
 #indice
 Formule du quotient, avec $u = x^2+2x+6$ et $v = x-1$. Le dénominateur étant de degré $1$, sa dérivée vaut $1$ : le second produit est simplement $u$ lui-même, précédé du signe moins.
@@ -585,10 +801,22 @@ $$
 Le numérateur se factorise : $x^2-2x-8 = (x-4)(x+2)$, ce qui donne directement les deux points où la tangente est horizontale, en $x = -2$ et $x = 4$.
 ::
 
-::exo-question{label="19." cours="cours-reecriture"}
+::exo-question{label="19." cours="cours-reecriture" bonne="b"}
 $$
 f(x) = \frac{4x+7}{x^2}
 $$
+
+#a
+$f'(x) = \dfrac{4x+14}{x^3}$
+
+#b
+$f'(x) = -\dfrac{4x+14}{x^3}$
+
+#c
+$f'(x) = -\dfrac{4x+14}{x^4}$
+
+#d
+$f'(x) = \dfrac{2}{x}$
 
 #indice
 La formule du quotient marche, mais il y a bien plus rapide : **séparer la fraction en deux**, puisque le dénominateur est un simple monôme.
@@ -625,10 +853,22 @@ $$
 Même résultat, après simplification par $x$. Dérivable sur $\mathbb{R}^*$.
 ::
 
-::exo-question{label="20." cours="cours-quotient"}
+::exo-question{label="20." cours="cours-quotient" bonne="d"}
 $$
 f(x) = \frac{2-x^2}{2+x^2}
 $$
+
+#a
+$f'(x) = -1$
+
+#b
+$f'(x) = \dfrac{8x}{\left(2+x^2\right)^2}$
+
+#c
+$f'(x) = -\dfrac{8x}{2+x^2}$
+
+#d
+$f'(x) = -\dfrac{8x}{\left(2+x^2\right)^2}$
 
 #indice
 Formule du quotient, avec $u = 2-x^2$ et $v = 2+x^2$. Attention au signe de $u'$ : le $-x^2$ donne $-2x$.
@@ -665,10 +905,22 @@ $$
 **Le domaine.** $2+x^2 \geqslant 2 > 0$ pour tout réel : le dénominateur ne s'annule jamais, et $f$ est dérivable sur $\mathbb{R}$ tout entier.
 ::
 
-::exo-question{label="21." cours="cours-reecriture"}
+::exo-question{label="21." cours="cours-reecriture" bonne="c"}
 $$
 f(x) = \frac{1}{\sqrt{x}}
 $$
+
+#a
+$f'(x) = \dfrac{1}{2x\sqrt x}$
+
+#b
+$f'(x) = -\dfrac{1}{2\sqrt x}$
+
+#c
+$f'(x) = -\dfrac{1}{2x\sqrt x}$
+
+#d
+$f'(x) = -\dfrac{1}{\sqrt x}$
 
 #indice
 Ni quotient ni inverse à traiter comme tels : c'est une **puissance de $x$**, et une seule réécriture suffit.
@@ -697,10 +949,22 @@ $$
 Définie et dérivable sur $]0\,;+\infty[$ — la racine au dénominateur exclut $0$ des deux côtés.
 ::
 
-::exo-question{label="22." cours="cours-reecriture"}
+::exo-question{label="22." cours="cours-reecriture" bonne="a"}
 $$
 f(x) = \frac{2}{5x}-\frac{3x}{4}
 $$
+
+#a
+$f'(x) = -\dfrac{2}{5x^2}-\dfrac34$
+
+#b
+$f'(x) = \dfrac{2}{5x^2}-\dfrac34$
+
+#c
+$f'(x) = -\dfrac{2}{5x^2}-\dfrac{3x}{4}$
+
+#d
+$f'(x) = -\dfrac{2}{5x}-\dfrac34$
 
 #indice
 Une somme de deux termes, dont aucun n'exige de formule de quotient : les deux dénominateurs sont des constantes multipliées par $x$, ou des constantes tout court.
@@ -727,10 +991,22 @@ $$
 Les deux termes sont négatifs : $f$ décroît sur chacun des deux intervalles de $\mathbb{R}^*$.
 ::
 
-::exo-question{label="23." cours="cours-composees"}
+::exo-question{label="23." cours="cours-composees" bonne="b"}
 $$
 f(x) = \frac{1}{(2x-1)^2}
 $$
+
+#a
+$f'(x) = \dfrac{4}{(2x-1)^3}$
+
+#b
+$f'(x) = -\dfrac{4}{(2x-1)^3}$
+
+#c
+$f'(x) = -\dfrac{2}{(2x-1)^3}$
+
+#d
+$f'(x) = -\dfrac{4}{(2x-1)^4}$
 
 #indice
 Deux lectures possibles, et la plus économique est celle qui voit une **puissance négative d'une forme composée** :
@@ -761,10 +1037,22 @@ $$
 Attention : le dénominateur est ici au **cube**, donc il change de signe de part et d'autre de $\dfrac12$ — contrairement aux carrés des questions précédentes. Dérivable sur $\mathbb{R}\setminus\left\{\dfrac12\right\}$.
 ::
 
-::exo-question{label="24." cours="cours-quotient"}
+::exo-question{label="24." cours="cours-quotient" bonne="c"}
 $$
 f(x) = \frac{x^2-4x+8}{2x-5}
 $$
+
+#a
+$f'(x) = x-2$
+
+#b
+$f'(x) = \dfrac{2x^2-10x+4}{2x-5}$
+
+#c
+$f'(x) = \dfrac{2x^2-10x+4}{(2x-5)^2}$
+
+#d
+$f'(x) = \dfrac{-2x^2+10x-4}{(2x-5)^2}$
 
 #indice
 Formule du quotient, avec $u = x^2-4x+8$ et $v = 2x-5$. Le $v' = 2$ multiplie **tout** le numérateur $u$ dans le second terme : parenthéser avant de distribuer le signe moins.
@@ -805,10 +1093,22 @@ $$
 On peut factoriser par $2$ : $f'(x) = \dfrac{2\left(x^2-5x+2\right)}{(2x-5)^2}$.
 ::
 
-::exo-question{label="25." cours="cours-inverse"}
+::exo-question{label="25." cours="cours-inverse" bonne="d"}
 $$
 f(x) = 4x-1+\frac{1}{4-x}
 $$
+
+#a
+$f'(x) = 4-\dfrac{1}{(4-x)^2}$
+
+#b
+$f'(x) = 4+\dfrac{1}{4-x}$
+
+#c
+$f'(x) = \dfrac{1}{(4-x)^2}$
+
+#d
+$f'(x) = 4+\dfrac{1}{(4-x)^2}$
 
 #indice
 Une somme dont seul le dernier terme demande une formule. Le numérateur y étant constant, c'est celle de l'inverse :
@@ -837,10 +1137,22 @@ $$
 Les deux termes étant strictement positifs, $f$ est croissante sur chacun des deux intervalles de $\mathbb{R}\setminus\{4\}$.
 ::
 
-::exo-question{label="26." cours="cours-quotient"}
+::exo-question{label="26." cours="cours-quotient" bonne="a"}
 $$
 f(x) = \frac{1}{x^2}\sin x
 $$
+
+#a
+$f'(x) = \dfrac{x\cos x-2\sin x}{x^3}$
+
+#b
+$f'(x) = \dfrac{x\cos x+2\sin x}{x^3}$
+
+#c
+$f'(x) = \dfrac{\cos x}{2x}$
+
+#d
+$f'(x) = \dfrac{\cos x-2\sin x}{x^3}$
 
 #indice
 L'écriture est celle d'un produit, mais il est plus simple de la lire comme un **quotient** :
@@ -877,10 +1189,22 @@ $$
 Ne pas oublier cette simplification : c'est elle qui fait passer le dénominateur de $x^4$ à $x^3$. Dérivable sur $\mathbb{R}^*$.
 ::
 
-::exo-question{label="27." cours="cours-inverse"}
+::exo-question{label="27." cours="cours-inverse" bonne="b"}
 $$
 f(x) = \frac{1}{\cos x}
 $$
+
+#a
+$f'(x) = -\dfrac{\sin x}{\cos^2 x}$
+
+#b
+$f'(x) = \dfrac{\sin x}{\cos^2 x}$
+
+#c
+$f'(x) = -\dfrac{1}{\sin x}$
+
+#d
+$f'(x) = \dfrac{\sin x}{\cos x}$
 
 #indice
 Numérateur constant, donc formule de l'inverse, avec $u = \cos x$.
@@ -903,10 +1227,22 @@ $$
 Cette fonction porte un nom, la **sécante**, et sa dérivée s'écrit aussi $\tan x\times\dfrac{1}{\cos x}$ — la même chose, réarrangée.
 ::
 
-::exo-question{label="28." cours="cours-composees"}
+::exo-question{label="28." cours="cours-composees" bonne="c"}
 $$
 f(x) = \sqrt{x-4}
 $$
+
+#a
+$f'(x) = \dfrac{1}{2\sqrt x}$
+
+#b
+$f'(x) = \dfrac{1}{\sqrt{x-4}}$
+
+#c
+$f'(x) = \dfrac{1}{2\sqrt{x-4}}$
+
+#d
+$f'(x) = \dfrac{x-4}{2\sqrt{x-4}}$
 
 #indice
 Une racine composée :
@@ -935,10 +1271,22 @@ $$
 En $x = 4$, la fonction existe et vaut $0$, mais sa tangente est **verticale**.
 ::
 
-::exo-question{label="29." cours="cours-composees"}
+::exo-question{label="29." cours="cours-composees" bonne="d"}
 $$
 f(x) = (-2x+3)^4
 $$
+
+#a
+$f'(x) = 4(-2x+3)^3$
+
+#b
+$f'(x) = 8(-2x+3)^3$
+
+#c
+$f'(x) = -8(-2x+3)^4$
+
+#d
+$f'(x) = -8(-2x+3)^3$
 
 #indice
 Développer un exposant $4$ serait long et inutile : c'est le cas où la formule de la puissance composée s'impose.
@@ -965,10 +1313,22 @@ On peut aussi l'écrire $-8(3-2x)^3$, ce qui est la même chose.
 **Le contrôle de signe** : pour $x < \dfrac32$, la parenthèse est positive, donc $f'$ est négative et $f$ décroît ; elle croît ensuite. Le minimum en $x = \dfrac32$ est cohérent avec une puissance paire. Dérivable sur $\mathbb{R}$.
 ::
 
-::exo-question{label="30." cours="cours-composees"}
+::exo-question{label="30." cours="cours-composees" bonne="a"}
 $$
 f(x) = \left(\frac{x-3}{x-2}\right)^2
 $$
+
+#a
+$f'(x) = \dfrac{2(x-3)}{(x-2)^3}$
+
+#b
+$f'(x) = \dfrac{2(x-3)}{(x-2)^2}$
+
+#c
+$f'(x) = \dfrac{2(x-3)}{x-2}$
+
+#d
+$f'(x) = \dfrac{2(x-3)}{(x-2)^4}$
 
 #indice
 Deux couches emboîtées : un **carré**, à l'intérieur duquel vit un **quotient**. On dérive de l'extérieur vers l'intérieur.
@@ -999,10 +1359,22 @@ $$
 Les deux dénominateurs se rassemblent en $(x-2)^3$. Dérivable sur $\mathbb{R}\setminus\{2\}$, et la dérivée s'annule en $x = 3$ — le point où la fonction elle-même vaut $0$, ce qui est cohérent pour un carré.
 ::
 
-::exo-question{label="31." cours="cours-quotient"}
+::exo-question{label="31." cours="cours-quotient" bonne="b"}
 $$
 f(x) = x^2+1-\frac{2x}{x+3}
 $$
+
+#a
+$f'(x) = 2x+\dfrac{6}{(x+3)^2}$
+
+#b
+$f'(x) = 2x-\dfrac{6}{(x+3)^2}$
+
+#c
+$f'(x) = 2x-\dfrac{2}{(x+3)^2}$
+
+#d
+$f'(x) = 2x-\dfrac{6}{x+3}$
 
 #indice
 C'est la question 17 avec un $x^2$ à la place du $x$ : le terme fractionnaire est **identique**, seule la partie polynomiale change.
@@ -1027,10 +1399,22 @@ $$
 Dérivable sur $\mathbb{R}\setminus\{-3\}$.
 ::
 
-::exo-question{label="32." cours="cours-produit"}
+::exo-question{label="32." cours="cours-produit" bonne="c"}
 $$
 f(x) = \sqrt{x-1}\,\sqrt{3-x}
 $$
+
+#a
+$f'(x) = \dfrac{x-2}{\sqrt{(x-1)(3-x)}}$
+
+#b
+$f'(x) = \dfrac{2-x}{2\sqrt{(x-1)(3-x)}}$
+
+#c
+$f'(x) = \dfrac{2-x}{\sqrt{(x-1)(3-x)}}$
+
+#d
+$f'(x) = \dfrac{1}{4\sqrt{x-1}\,\sqrt{3-x}}$
 
 #indice
 Deux chemins, et le second est nettement plus court.
@@ -1085,10 +1469,22 @@ $$
 Même résultat. La dérivée s'annule en $x = 2$, milieu de l'intervalle : la fonction y atteint son maximum, ce que la symétrie de $[1\,;3]$ laissait prévoir.
 ::
 
-::exo-question{label="33." cours="cours-produit"}
+::exo-question{label="33." cours="cours-produit" bonne="d"}
 $$
 f(x) = \frac{x-1}{x+3}\sqrt{x}
 $$
+
+#a
+$f'(x) = \dfrac{x^2-10x-3}{2\sqrt x\,(x+3)^2}$
+
+#b
+$f'(x) = \dfrac{x^2+10x-3}{2\sqrt x\,(x+3)}$
+
+#c
+$f'(x) = \dfrac{4\sqrt x}{(x+3)^2}$
+
+#d
+$f'(x) = \dfrac{x^2+10x-3}{2\sqrt x\,(x+3)^2}$
 
 #indice
 Un **produit** dont le premier facteur est lui-même un quotient. Deux couches, donc, mais elles ne s'emboîtent pas : elles se juxtaposent.
@@ -1141,10 +1537,22 @@ $$
 $$
 ::
 
-::exo-question{label="34." cours="cours-composees"}
+::exo-question{label="34." cours="cours-composees" bonne="a"}
 $$
 f(x) = \left(\frac{x+3}{\sqrt{x}-1}\right)^2
 $$
+
+#a
+$f'(x) = \dfrac{(x+3)\left(x-2\sqrt x-3\right)}{\sqrt x\left(\sqrt x-1\right)^3}$
+
+#b
+$f'(x) = \dfrac{(x+3)\left(x-2\sqrt x-3\right)}{\sqrt x\left(\sqrt x-1\right)^2}$
+
+#c
+$f'(x) = \dfrac{2(x+3)}{\left(\sqrt x-1\right)^2}$
+
+#d
+$f'(x) = \dfrac{(x+3)\left(x+2\sqrt x-3\right)}{\sqrt x\left(\sqrt x-1\right)^3}$
 
 #indice
 La plus longue de la fiche, mais elle n'ajoute rien de neuf : c'est la question 30 avec une racine dans le dénominateur interne.
