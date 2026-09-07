@@ -32,12 +32,24 @@ Un réflexe à prendre dès le palier 1 : **écrire $u$, $v$, $u'$ et $v'$ à pa
 :::exercice{titre="Palier 1 — Dériver terme à terme" theme="Le tableau des dérivées usuelles, et le réflexe de réécriture" badge="★☆☆☆☆" icone="i-lucide-sprout"}
 Aucune formule d'opération ici : rien que le tableau, appliqué morceau par morceau. Le seul vrai travail est de **reconnaître** chaque morceau, quitte à le réécrire d'abord.
 
-::exo-question{label="1." cours="xfvr-tableau"}
+::exo-question{label="1." cours="xfvr-tableau" bonne="c"}
 Dériver les fonctions suivantes sur $\mathbb{R}$.
 
 $$
 f(x) = 3x^4-5x^2+7x-2 \qquad g(x) = \frac{x^3}{3}-\frac{x^2}{2}+x
 $$
+
+#a
+$f'(x) = 12x^3-10x+7-2$ et $g'(x) = x^2-x+1$
+
+#b
+$f'(x) = 12x^3-10x+7$ et $g'(x) = \dfrac{x^2}{3}-\dfrac{x}{2}+1$
+
+#c
+$f'(x) = 12x^3-10x+7$ et $g'(x) = x^2-x+1$
+
+#d
+$f'(x) = 12x^3-10x$ et $g'(x) = x^2-x$
 
 #indice
 Une somme se dérive **terme à terme** : il n'existe pas d'autre règle, et il n'y a rien à combiner à la fin.
@@ -101,12 +113,24 @@ $$
 Au passage, ce $g'$ ne s'annule jamais : son discriminant vaut $1-4 = -3 < 0$. La fonction $g$ est donc strictement croissante sur $\mathbb{R}$ — une information qu'on obtient gratuitement, et qui resservira au palier 5.
 ::
 
-::exo-question{label="2." cours="xfvr-reecriture"}
+::exo-question{label="2." cours="xfvr-reecriture" bonne="a"}
 Dériver les fonctions suivantes sur $]0\,;+\infty[$.
 
 $$
 f(x) = \frac{1}{x^3} \qquad g(x) = \sqrt{x}+\frac{1}{\sqrt{x}} \qquad h(x) = \frac{5}{x^2}
 $$
+
+#a
+$-\dfrac{3}{x^4}$ ; $\dfrac{1}{2\sqrt x}-\dfrac{1}{2x\sqrt x}$ ; $-\dfrac{10}{x^3}$
+
+#b
+$-\dfrac{3}{x^4}$ ; $\dfrac{1}{2\sqrt x}+\dfrac{1}{2x\sqrt x}$ ; $-\dfrac{10}{x^3}$
+
+#c
+$\dfrac{3}{x^4}$ ; $\dfrac{1}{2\sqrt x}-\dfrac{1}{2x\sqrt x}$ ; $\dfrac{10}{x^3}$
+
+#d
+$-\dfrac{3}{x^2}$ ; $\dfrac{1}{2\sqrt x}-\dfrac{1}{2x\sqrt x}$ ; $-\dfrac{10}{x}$
 
 #indice
 Aucune de ces trois fonctions ne demande la formule du quotient. Toutes se ramènent à la **seule ligne du tableau qui compte vraiment** :
@@ -178,12 +202,24 @@ h(x) = 5x^{-2} \quad\Longrightarrow\quad h'(x) = 5\times(-2)x^{-3} = \boxed{-\fr
 $$
 ::
 
-::exo-question{label="3." cours="xfvr-tableau"}
+::exo-question{label="3." cours="xfvr-tableau" bonne="b"}
 Dériver les fonctions suivantes, après avoir simplifié leur écriture.
 
 $$
 f(x) = \frac{x^2+3x}{x} \quad (x\neq 0) \qquad g(x) = x^2\left(1-\frac{2}{x}\right) \quad (x\neq 0) \qquad h(x) = (2x+1)^2
 $$
+
+#a
+$f'(x) = 1$ ; $g'(x) = 2x-2$ ; $h'(x) = 2(2x+1)$
+
+#b
+$f'(x) = 1$ ; $g'(x) = 2x-2$ ; $h'(x) = 8x+4$
+
+#c
+$f'(x) = 2x+3$ ; $g'(x) = 2x-2$ ; $h'(x) = 8x+4$
+
+#d
+$f'(x) = 1$ ; $g'(x) = 2x+2$ ; $h'(x) = 8x+4$
 
 #indice
 Avant d'appliquer la moindre formule d'opération, une question à se poser systématiquement : **l'écriture se simplifie-t-elle ?**
@@ -247,7 +283,7 @@ $$
 :::exercice{titre="Palier 2 — Produits, inverses et quotients" theme="Les trois formules d'opération, et leurs pièges de signe" badge="★★☆☆☆" icone="i-lucide-x"}
 Trois formules, et toujours la même méthode en trois temps : **poser** $u$ et $v$, **calculer** $u'$ et $v'$ à part, **remplacer** puis simplifier. Les sauter de tête est la première cause d'erreur du chapitre.
 
-::exo-question{label="1." cours="xfvr-produit"}
+::exo-question{label="1." cours="xfvr-produit" bonne="d"}
 Dériver, sur le domaine indiqué :
 
 $$
@@ -255,6 +291,18 @@ f(x) = (3x-2)(x^2+1) \ \text{ sur } \mathbb{R}
 \qquad
 g(x) = (x^2-1)\sqrt{x} \ \text{ sur } ]0\,;+\infty[
 $$
+
+#a
+$f'(x) = 6x$ ; $g'(x) = \dfrac{5x^2-1}{2\sqrt x}$
+
+#b
+$f'(x) = 9x^2-4x+3$ ; $g'(x) = \dfrac{x^2-1}{2\sqrt x}$
+
+#c
+$f'(x) = 9x^2+4x+3$ ; $g'(x) = \dfrac{5x^2-1}{2\sqrt x}$
+
+#d
+$f'(x) = 9x^2-4x+3$ ; $g'(x) = \dfrac{5x^2-1}{2\sqrt x}$
 
 #indice
 $$
@@ -336,7 +384,7 @@ $$
 **Contrôle par la réécriture** : $g(x) = x^{5/2}-x^{1/2}$, donc $g'(x) = \dfrac52 x^{3/2}-\dfrac12 x^{-1/2}$, ce qui vaut bien $\dfrac{5x^2-1}{2\sqrt x}$ après mise au même dénominateur. ✓
 ::
 
-::exo-question{label="2." cours="xfvr-inverse-quotient"}
+::exo-question{label="2." cours="xfvr-inverse-quotient" bonne="a"}
 Dériver, sur le domaine indiqué :
 
 $$
@@ -344,6 +392,18 @@ f(x) = \frac{1}{x^2+1} \ \text{ sur } \mathbb{R}
 \qquad
 g(x) = \frac{3}{2x-5} \ \text{ sur } \mathbb{R}\setminus\left\{\tfrac52\right\}
 $$
+
+#a
+$f'(x) = -\dfrac{2x}{\left(x^2+1\right)^2}$ ; $g'(x) = -\dfrac{6}{(2x-5)^2}$
+
+#b
+$f'(x) = -\dfrac{2x}{x^2+1}$ ; $g'(x) = -\dfrac{6}{(2x-5)^2}$
+
+#c
+$f'(x) = -\dfrac{2x}{\left(x^2+1\right)^2}$ ; $g'(x) = -\dfrac{3}{(2x-5)^2}$
+
+#d
+$f'(x) = \dfrac{2x}{\left(x^2+1\right)^2}$ ; $g'(x) = \dfrac{6}{(2x-5)^2}$
 
 #indice
 Inutile de sortir la formule du quotient : le numérateur est une **constante**, et la formule de l'inverse suffit.
@@ -393,7 +453,7 @@ $$
 Le carré au dénominateur est toujours positif : $g'$ est donc **strictement négative** partout où elle existe. La fonction $g$ est décroissante sur chacun des deux intervalles de son domaine — mais pas sur leur réunion, puisqu'elle n'est pas définie en $\dfrac52$.
 ::
 
-::exo-question{label="3." cours="xfvr-inverse-quotient"}
+::exo-question{label="3." cours="xfvr-inverse-quotient" bonne="b"}
 Dériver, sur le domaine indiqué :
 
 $$
@@ -401,6 +461,18 @@ f(x) = \frac{2x+1}{x^2+1} \ \text{ sur } \mathbb{R}
 \qquad
 g(x) = \frac{x+3}{4-x} \ \text{ sur } \mathbb{R}\setminus\{4\}
 $$
+
+#a
+$f'(x) = \dfrac{2x^2+2x-2}{\left(x^2+1\right)^2}$ ; $g'(x) = \dfrac{7}{(4-x)^2}$
+
+#b
+$f'(x) = \dfrac{-2x^2-2x+2}{\left(x^2+1\right)^2}$ ; $g'(x) = \dfrac{7}{(4-x)^2}$
+
+#c
+$f'(x) = \dfrac{-2x^2-2x+2}{\left(x^2+1\right)^2}$ ; $g'(x) = -\dfrac{7}{(4-x)^2}$
+
+#d
+$f'(x) = \dfrac{2}{2x}$ ; $g'(x) = \dfrac{1}{-1}$
 
 #indice
 $$
@@ -476,7 +548,7 @@ Les $x$ se sont annulés : c'est normal, une fonction de la forme $\dfrac{ax+b}{
 :::exercice{titre="Palier 3 — Les formes composées" theme="Dériver l'enveloppe, puis multiplier par la dérivée de l'intérieur" badge="★★★☆☆" icone="i-lucide-layers"}
 Une seule idée gouverne tout ce palier : quand une fonction est **appliquée à une autre**, on dérive l'enveloppe en laissant l'intérieur tel quel, puis on multiplie par la dérivée de l'intérieur. Le $u'$ oublié est l'erreur la plus coûteuse du chapitre.
 
-::exo-question{label="1." cours="xfvr-composees"}
+::exo-question{label="1." cours="xfvr-composees" bonne="c"}
 Dériver :
 
 $$
@@ -484,6 +556,18 @@ f(x) = \left(3x^2-x+1\right)^5 \ \text{ sur } \mathbb{R}
 \qquad
 g(x) = \sqrt{x^2+4} \ \text{ sur } \mathbb{R}
 $$
+
+#a
+$f'(x) = 5\left(3x^2-x+1\right)^4$ ; $g'(x) = \dfrac{1}{2\sqrt{x^2+4}}$
+
+#b
+$f'(x) = 5(6x-1)\left(3x^2-x+1\right)^4$ ; $g'(x) = \dfrac{2x}{\sqrt{x^2+4}}$
+
+#c
+$f'(x) = 5(6x-1)\left(3x^2-x+1\right)^4$ ; $g'(x) = \dfrac{x}{\sqrt{x^2+4}}$
+
+#d
+$f'(x) = 5(6x-1)\left(3x^2-x+1\right)^5$ ; $g'(x) = \dfrac{x}{\sqrt{x^2+4}}$
 
 #indice
 $$
@@ -543,7 +627,7 @@ $$
 Le domaine mérite un mot : $x^2+4$ est **strictement positif** pour tout $x$ réel, donc $g$ est définie **et** dérivable sur $\mathbb{R}$ tout entier. C'est le cas favorable — au palier 4, on verra que dès que l'intérieur peut s'annuler, les deux domaines cessent de coïncider.
 ::
 
-::exo-question{label="2." cours="xfvr-composees"}
+::exo-question{label="2." cours="xfvr-composees" bonne="d"}
 Dériver :
 
 $$
@@ -553,6 +637,18 @@ g(x) = \ln\left(x^2+1\right) \ \text{ sur } \mathbb{R}
 \qquad
 h(x) = x\,e^{-x} \ \text{ sur } \mathbb{R}
 $$
+
+#a
+$f'(x) = e^{3x^2-1}$ ; $g'(x) = \dfrac{2x}{x^2+1}$ ; $h'(x) = (1-x)e^{-x}$
+
+#b
+$f'(x) = 6x\,e^{3x^2-1}$ ; $g'(x) = \dfrac{1}{x^2+1}$ ; $h'(x) = (1-x)e^{-x}$
+
+#c
+$f'(x) = 6x\,e^{3x^2-1}$ ; $g'(x) = \dfrac{2x}{x^2+1}$ ; $h'(x) = (1+x)e^{-x}$
+
+#d
+$f'(x) = 6x\,e^{3x^2-1}$ ; $g'(x) = \dfrac{2x}{x^2+1}$ ; $h'(x) = (1-x)e^{-x}$
 
 #indice
 $$
@@ -630,7 +726,7 @@ $$
 Comme $e^{-x} > 0$ toujours, le signe de $h'$ est celui de $1-x$ : la fonction $h$ croît jusqu'en $x = 1$ puis décroît. Sans la factorisation, cette lecture aurait demandé un calcul de plus.
 ::
 
-::exo-question{label="3." cours="xfvr-composees"}
+::exo-question{label="3." cours="xfvr-composees" bonne="a"}
 Dériver :
 
 $$
@@ -640,6 +736,18 @@ g(x) = \cos^2 x
 \qquad
 h(x) = e^{\sin(2x)}
 $$
+
+#a
+$f'(x) = 3\cos\left(3x+\dfrac{\pi}{4}\right)$ ; $g'(x) = -2\sin x\cos x$ ; $h'(x) = 2\cos(2x)\,e^{\sin(2x)}$
+
+#b
+$f'(x) = \cos\left(3x+\dfrac{\pi}{4}\right)$ ; $g'(x) = -2\sin x\cos x$ ; $h'(x) = 2\cos(2x)\,e^{\sin(2x)}$
+
+#c
+$f'(x) = 3\cos\left(3x+\dfrac{\pi}{4}\right)$ ; $g'(x) = 2\sin x\cos x$ ; $h'(x) = \cos(2x)\,e^{\sin(2x)}$
+
+#d
+$f'(x) = -3\cos\left(3x+\dfrac{\pi}{4}\right)$ ; $g'(x) = -2\sin x\cos x$ ; $h'(x) = e^{\sin(2x)}$
 
 #indice
 $$
@@ -729,12 +837,24 @@ $$
 :::exercice{titre="Palier 4 — Où une fonction est-elle dérivable ?" theme="Domaine de définition, domaine de dérivabilité, et le taux d'accroissement" badge="★★★★☆" icone="i-lucide-scan-line"}
 Savoir dériver ne suffit pas : il faut aussi dire **où** la dérivée existe, et le justifier en une phrase. C'est la partie rédactionnelle du chapitre, et elle rapporte des points faciles à condition de connaître les formules toutes faites.
 
-::exo-question{label="1." cours="xfvr-derivabilite"}
+::exo-question{label="1." cours="xfvr-derivabilite" bonne="b"}
 Donner l'ensemble de définition **et** l'ensemble de dérivabilité de chacune des fonctions suivantes, en justifiant.
 
 $$
 f(x) = \sqrt{x-3} \qquad g(x) = \frac{2x+1}{x^2-4} \qquad h(x) = \ln(3-x)
 $$
+
+#a
+$\mathcal{D}_f = \mathcal{D}_{f'} = [3\,;+\infty[$ ; $\mathcal{D}_g = \mathcal{D}_{g'} = \mathbb{R}\setminus\{-2\,;2\}$ ; $\mathcal{D}_h = \mathcal{D}_{h'} = \,]-\infty\,;3[$
+
+#b
+$\mathcal{D}_f = [3\,;+\infty[$ et $\mathcal{D}_{f'} = \,]3\,;+\infty[$ ; $\mathcal{D}_g = \mathcal{D}_{g'} = \mathbb{R}\setminus\{-2\,;2\}$ ; $\mathcal{D}_h = \mathcal{D}_{h'} = \,]-\infty\,;3[$
+
+#c
+$\mathcal{D}_f = \,]3\,;+\infty[$ et $\mathcal{D}_{f'} = [3\,;+\infty[$ ; $\mathcal{D}_g = \mathcal{D}_{g'} = \mathbb{R}\setminus\{2\}$ ; $\mathcal{D}_h = \mathcal{D}_{h'} = \,]-\infty\,;3]$
+
+#d
+$\mathcal{D}_f = [3\,;+\infty[$ et $\mathcal{D}_{f'} = \,]3\,;+\infty[$ ; $\mathcal{D}_g = \mathcal{D}_{g'} = \mathbb{R}$ ; $\mathcal{D}_h = \mathcal{D}_{h'} = \mathbb{R}\setminus\{3\}$
 
 #indice
 Chaque structure impose sa condition, et la justification attendue tient en une ligne :
@@ -803,7 +923,7 @@ $$
 Sa dérivée vaut $h'(x) = \dfrac{-1}{3-x}$ : le $-1$ vient de la dérivée de l'intérieur, et c'est l'oubli classique sur ce type d'expression.
 ::
 
-::exo-question{label="2." cours="xfvr-derivabilite"}
+::exo-question{label="2." cours="xfvr-derivabilite" bonne="c"}
 Donner l'ensemble de dérivabilité de
 
 $$
@@ -811,6 +931,18 @@ f(x) = \frac{x+1}{x^2+x+1}
 \qquad
 g(x) = \frac{1}{x^2-5x+6}
 $$
+
+#a
+$f$ sur $\mathbb{R}\setminus\{-1\}$ ; $g$ sur $\mathbb{R}\setminus\{2\,;3\}$
+
+#b
+$f$ sur $\mathbb{R}$ ; $g$ sur $\mathbb{R}\setminus\{-2\,;-3\}$
+
+#c
+$f$ sur $\mathbb{R}$ ; $g$ sur $\mathbb{R}\setminus\{2\,;3\}$
+
+#d
+$f$ sur $\mathbb{R}$ ; $g$ sur $\mathbb{R}$
 
 #indice
 Devant un quotient, le réflexe « il y a un dénominateur, donc on retire des valeurs » est faux une fois sur deux. La seule question à poser est : **ce dénominateur s'annule-t-il vraiment ?**
@@ -950,7 +1082,7 @@ Les deux limites latérales existent et sont finies, mais elles ne coïncident p
 :::exercice{titre="Palier 5 — Continuité, TVI et bijection" theme="Les trois théorèmes du chapitre, et la rédaction qu'ils demandent" badge="★★★★★" icone="i-lucide-git-branch"}
 Dernier palier, et le plus rédactionnel : ici, le calcul est court et c'est la **justification** qui compte. Chaque théorème a ses hypothèses, et les oublier coûte plus cher qu'une erreur de signe.
 
-::exo-question{label="1." cours="xfvr-continuite"}
+::exo-question{label="1." cours="xfvr-continuite" bonne="d"}
 Soit $f$ définie sur $\mathbb{R}$ par
 
 $$
@@ -958,6 +1090,18 @@ f(x) = \frac{x^2-4}{x-2} \ \text{ si } x\neq 2, \qquad f(2) = a
 $$
 
 Déterminer la valeur de $a$ pour laquelle $f$ est continue en $2$.
+
+#a
+$a = 0$
+
+#b
+$a = 2$
+
+#c
+$a = -4$
+
+#d
+$a = 4$
 
 #indice
 La continuité en un point $x_0$ tient en une seule égalité, celle qui relie la limite et la valeur :
@@ -1015,8 +1159,20 @@ $$
 **Ce que cela signifie.** Pour $a = 4$, la fonction $f$ coïncide avec $x\mapsto x+2$ sur $\mathbb{R}$ entier : la courbe est la droite d'équation $y = x+2$, sans trou. Pour toute autre valeur de $a$, il subsiste un point isolé au-dessus ou au-dessous de la droite, et la fonction est discontinue en $2$.
 ::
 
-::exo-question{label="2." cours="xfvr-tvi"}
+::exo-question{label="2." cours="xfvr-tvi" bonne="a"}
 Montrer que l'équation $x^3+x-1 = 0$ admet une **unique** solution $\alpha$ dans l'intervalle $[0\,;1]$, puis donner un encadrement de $\alpha$ à $0{,}1$ près.
+
+#a
+unique solution dans $[0\,;1]$, et $0{,}6 < \alpha < 0{,}7$
+
+#b
+unique solution dans $[0\,;1]$, et $0{,}5 < \alpha < 0{,}6$
+
+#c
+unique solution dans $[0\,;1]$, et $0{,}7 < \alpha < 0{,}8$
+
+#d
+deux solutions dans $[0\,;1]$
 
 #indice
 Le mot **unique** est le signal : il faut deux arguments, et non un seul.
@@ -1101,11 +1257,23 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="xfvr-bijection"}
+::exo-question{label="3." cours="xfvr-bijection" bonne="b"}
 Soit $f$ définie sur $\mathbb{R}$ par $f(x) = x^3+x$.
 
 1. Montrer que $f$ réalise une bijection de $\mathbb{R}$ sur $\mathbb{R}$.
 2. Calculer $\left(f^{-1}\right)'(2)$.
+
+#a
+$f$ est bijective de $\mathbb{R}$ sur $\mathbb{R}$, et $\left(f^{-1}\right)'(2) = 4$
+
+#b
+$f$ est bijective de $\mathbb{R}$ sur $\mathbb{R}$, et $\left(f^{-1}\right)'(2) = \dfrac14$
+
+#c
+$f$ est bijective de $\mathbb{R}$ sur $\mathbb{R}$, et $\left(f^{-1}\right)'(2) = \dfrac{1}{13}$
+
+#d
+$f$ n'est pas bijective : elle n'est pas monotone sur $\mathbb{R}$
 
 #indice
 **Pour la bijection**, trois hypothèses à vérifier, dans cet ordre : $f$ est **continue**, **strictement monotone** sur l'intervalle, et ses **limites aux bornes** donnent l'intervalle d'arrivée. Les trois ensemble constituent le théorème de la bijection ; en omettre une suffit à invalider la conclusion.

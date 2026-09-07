@@ -27,12 +27,24 @@ Sous chaque question, trois boutons :
 :::exercice{titre="Palier 1 — Domaines et règles de calcul" theme="Où une expression a un sens, et comment la simplifier" badge="★☆☆☆☆" icone="i-lucide-sprout"}
 Avant de dériver ou de résoudre quoi que ce soit, deux automatismes : savoir **où** une expression existe, et savoir la **réduire**. Tout le reste du chapitre s'appuie dessus.
 
-::exo-question{label="1." cours="xfu-domaines"}
+::exo-question{label="1." cours="xfu-domaines" bonne="c"}
 Déterminer l'ensemble de définition de chacune des fonctions suivantes.
 
 $$
 f(x) = \ln\left(x^2-4\right) \qquad g(x) = \ln(3-x)+\ln(x+1) \qquad h(x) = \frac{1}{e^x-1}
 $$
+
+#a
+$\mathcal{D}_f = \,]2\,;+\infty[$ ; $\mathcal{D}_g = \,]-1\,;3[$ ; $\mathcal{D}_h = \mathbb{R}$
+
+#b
+$\mathcal{D}_f = \,]-\infty\,;-2[\,\cup\,]2\,;+\infty[$ ; $\mathcal{D}_g = \mathbb{R}\setminus\{3\}$ ; $\mathcal{D}_h = \mathbb{R}^*$
+
+#c
+$\mathcal{D}_f = \,]-\infty\,;-2[\,\cup\,]2\,;+\infty[$ ; $\mathcal{D}_g = \,]-1\,;3[$ ; $\mathcal{D}_h = \mathbb{R}^*$
+
+#d
+$\mathcal{D}_f = \,]-2\,;2[$ ; $\mathcal{D}_g = \,]-1\,;3[$ ; $\mathcal{D}_h = \,]0\,;+\infty[$
 
 #indice
 Trois contraintes seulement, et elles se repèrent à l'œil : ce qui est **sous un logarithme** doit être **strictement positif**, ce qui est **au dénominateur** doit être **non nul**, et l'exponentielle, elle, n'impose jamais rien — elle est définie sur $\mathbb{R}$ tout entier.
@@ -96,12 +108,24 @@ $$
 À noter : l'exponentielle n'a apporté aucune contrainte de définition — elle n'en apporte jamais.
 ::
 
-::exo-question{label="2." cours="xfu-regles"}
+::exo-question{label="2." cours="xfu-regles" bonne="d"}
 Simplifier les expressions suivantes, en supposant $x > 0$ là où c'est nécessaire.
 
 $$
 A = e^{2\ln 5} \qquad B = \ln 8-3\ln 2 \qquad C = e^{\ln x+1} \qquad D = \ln\left(e^{-3}\right)
 $$
+
+#a
+$A = 10$ ; $B = \ln 2$ ; $C = ex$ ; $D = -3$
+
+#b
+$A = 25$ ; $B = 0$ ; $C = x+e$ ; $D = 3$
+
+#c
+$A = 25$ ; $B = \ln 2$ ; $C = ex$ ; $D = -3$
+
+#d
+$A = 25$ ; $B = 0$ ; $C = ex$ ; $D = -3$
 
 #indice
 Deux fonctions réciproques l'une de l'autre : $e^{\ln t} = t$ pour $t>0$, et $\ln\left(e^t\right) = t$ pour tout réel $t$. Tout l'exercice consiste à **fabriquer** ces motifs.
@@ -161,12 +185,24 @@ D = \boxed{-3}
 $$
 ::
 
-::exo-question{label="3." cours="xfu-regles"}
+::exo-question{label="3." cours="xfu-regles" bonne="a"}
 Écrire le plus simplement possible :
 
 $$
 E = \ln\left(\sqrt{e}\right) \qquad F = e^{-\ln 3} \qquad G = \ln\left(\frac{e^5}{e^2}\right) \qquad H = \ln 2+\ln 50-\ln 4
 $$
+
+#a
+$E = \dfrac12$ ; $F = \dfrac13$ ; $G = 3$ ; $H = 2\ln 5$
+
+#b
+$E = \dfrac12$ ; $F = -\dfrac13$ ; $G = \dfrac52$ ; $H = 2\ln 5$
+
+#c
+$E = \sqrt{e}$ ; $F = \dfrac13$ ; $G = 3$ ; $H = \ln 25$
+
+#d
+$E = \dfrac12$ ; $F = \dfrac13$ ; $G = \dfrac52$ ; $H = \ln 48$
 
 #indice
 Une racine carrée est une puissance $\tfrac12$, et un exposant négatif est l'inverse : $e^{-t} = \dfrac{1}{e^t}$. Ces deux réécritures suffisent pour $E$ et $F$.
@@ -230,12 +266,24 @@ $$
 :::exercice{titre="Palier 2 — Équations et inéquations" theme="Changement de variable, conditions d'existence, sens de variation" badge="★★☆☆☆" icone="i-lucide-equal"}
 Trois réflexes à installer : poser $X = e^x$ quand l'exponentielle apparaît à deux puissances, **écrire les conditions d'existence avant de résoudre**, et se rappeler que $\ln$ comme $\exp$ sont strictement croissantes — donc qu'elles conservent le sens d'une inégalité.
 
-::exo-question{label="1." cours="xfu-equations"}
+::exo-question{label="1." cours="xfu-equations" bonne="b"}
 Résoudre dans $\mathbb{R}$ l'équation
 
 $$
 e^{2x}-5e^x+6 = 0
 $$
+
+#a
+$\mathcal{S} = \lbrace 2\ ;\ 3 \rbrace$
+
+#b
+$\mathcal{S} = \lbrace \ln 2\ ;\ \ln 3 \rbrace$
+
+#c
+$\mathcal{S} = \lbrace -\ln 2\ ;\ -\ln 3 \rbrace$
+
+#d
+$\mathcal{S} = \varnothing$
 
 #indice
 L'équation ne contient que des puissances de $e^x$ : en effet $e^{2x} = \left(e^x\right)^2$. En posant $X = e^x$, elle devient un simple trinôme du second degré en $X$.
@@ -307,12 +355,24 @@ $$
 **Vérification** pour $x = \ln 2$ : $e^{2\ln 2}-5e^{\ln 2}+6 = 4-10+6 = 0$. ✓
 ::
 
-::exo-question{label="2." cours="xfu-equations"}
+::exo-question{label="2." cours="xfu-equations" bonne="c"}
 Résoudre dans $\mathbb{R}$ l'équation
 
 $$
 \ln(x+3)+\ln(x-1) = \ln 5
 $$
+
+#a
+$\mathcal{S} = \lbrace -4\ ;\ 2 \rbrace$
+
+#b
+$\mathcal{S} = \lbrace 5 \rbrace$
+
+#c
+$\mathcal{S} = \lbrace 2 \rbrace$
+
+#d
+$\mathcal{S} = \lbrace 8 \rbrace$
 
 #indice
 La toute première chose à écrire — avant le moindre calcul — ce sont les **conditions d'existence** : les deux quantités sous logarithme doivent être strictement positives, simultanément. Elles se résument à une seule inégalité.
@@ -386,12 +446,24 @@ $$
 **Vérification** : $\ln 5+\ln 1 = \ln 5+0 = \ln 5$. ✓
 ::
 
-::exo-question{label="3." cours="xfu-inequations"}
+::exo-question{label="3." cours="xfu-inequations" bonne="d"}
 Résoudre dans $\mathbb{R}$ les inéquations suivantes.
 
 a) $\ln(2x-1) \leqslant 1$
 
 b) $e^{-x} > 3$
+
+#a
+a) $\left]\dfrac12\,;\dfrac{e+1}{2}\right]$ ; b) $\left]-\ln 3\,;+\infty\right[$
+
+#b
+a) $\left]-\infty\,;\dfrac{e+1}{2}\right]$ ; b) $\left]-\infty\,;-\ln 3\right[$
+
+#c
+a) $\left]\dfrac12\,;\dfrac{e}{2}\right]$ ; b) $\left]-\infty\,;\ln 3\right[$
+
+#d
+a) $\left]\dfrac12\,;\dfrac{e+1}{2}\right]$ ; b) $\left]-\infty\,;-\ln 3\right[$
 
 #indice
 Pour a), commence encore par la condition d'existence. Puis écris le membre de droite **comme un logarithme** : $1 = \ln e$. Comme $\ln$ est strictement croissante, l'inégalité entre les logarithmes équivaut à la même inégalité entre les arguments — **le sens est conservé**.
@@ -467,7 +539,7 @@ $$
 :::exercice{titre="Palier 3 — Dériver, puis passer à la limite" theme="Formules de dérivation composée, croissances comparées, étude complète" badge="★★★☆☆" icone="i-lucide-trending-up"}
 On passe à l'analyse. Les deux formules qui portent tout le palier : $\left(e^u\right)' = u'e^u$ et $\bigl(\ln u\bigr)' = \dfrac{u'}{u}$.
 
-::exo-question{label="1." cours="xfu-derivees"}
+::exo-question{label="1." cours="xfu-derivees" bonne="a"}
 Calculer la dérivée de chacune des fonctions suivantes, sur l'intervalle indiqué.
 
 $$
@@ -475,6 +547,18 @@ f(x) = x^2e^{-x} \ \text{ sur } \mathbb{R} \qquad
 g(x) = \frac{\ln x}{x} \ \text{ sur } \left]0;+\infty\right[ \qquad
 h(x) = \ln\left(1+e^x\right) \ \text{ sur } \mathbb{R}
 $$
+
+#a
+$f'(x) = x(2-x)e^{-x}$ ; $g'(x) = \dfrac{1-\ln x}{x^2}$ ; $h'(x) = \dfrac{e^x}{1+e^x}$
+
+#b
+$f'(x) = 2x\,e^{-x}$ ; $g'(x) = \dfrac{1-\ln x}{x^2}$ ; $h'(x) = \dfrac{e^x}{1+e^x}$
+
+#c
+$f'(x) = x(2-x)e^{-x}$ ; $g'(x) = \dfrac{\ln x-1}{x^2}$ ; $h'(x) = \dfrac{1}{1+e^x}$
+
+#d
+$f'(x) = x(x-2)e^{-x}$ ; $g'(x) = \dfrac{1-\ln x}{x}$ ; $h'(x) = e^x$
 
 #indice
 Trois formes différentes, donc trois formules différentes : commence par **identifier la structure** avant de dériver.
@@ -546,12 +630,24 @@ $$
 Cette dérivée est strictement positive : $h$ est strictement croissante sur $\mathbb{R}$.
 ::
 
-::exo-question{label="2." cours="xfu-limites"}
+::exo-question{label="2." cours="xfu-limites" bonne="b"}
 Déterminer les limites suivantes.
 
 $$
 \lim_{x\to+\infty}\frac{e^x}{x^3} \qquad \lim_{x\to 0^+}x\ln x \qquad \lim_{x\to+\infty}\left(x-\ln x\right)
 $$
+
+#a
+$0$, $-\infty$ et $+\infty$
+
+#b
+$+\infty$, $0$ et $+\infty$
+
+#c
+$+\infty$, $-\infty$ et $0$
+
+#d
+$0$, $0$ et $+\infty$
 
 #indice
 Les deux premières sont des **formes indéterminées** que le cours tranche directement, à condition de reconnaître laquelle : « $\dfrac{\infty}{\infty}$ » pour la première, « $0\times\infty$ » pour la deuxième. La phrase à retenir : **l'exponentielle l'emporte sur toute puissance, et toute puissance l'emporte sur le logarithme**.
@@ -730,12 +826,24 @@ Deux difficultés distinctes ici. D'abord, une équation trigonométrique a **de
 ::cercle-trigo{titre="D’où viennent les deux familles de solutions" resume="La droite coupe le cercle en deux points : d’où deux solutions par tour, et deux familles à écrire." mode="equations" modes="equations"}
 ::
 
-::exo-question{label="1." cours="xfu-equations-trigo"}
+::exo-question{label="1." cours="xfu-equations-trigo" bonne="c"}
 Résoudre sur l'intervalle $\left[0\,;\,2\pi\right[$ les équations suivantes.
 
 a) $2\cos x-\sqrt3 = 0$
 
 b) $\sin(2x) = \sin\left(x+\dfrac{\pi}{3}\right)$
+
+#a
+a) $\left\lbrace \dfrac{\pi}{6} \right\rbrace$ ; b) $\left\lbrace \dfrac{\pi}{3} \right\rbrace$
+
+#b
+a) $\left\lbrace \dfrac{\pi}{6}\ ;\ \dfrac{5\pi}{6} \right\rbrace$ ; b) $\left\lbrace \dfrac{2\pi}{9}\ ;\ \dfrac{\pi}{3}\ ;\ \dfrac{8\pi}{9}\ ;\ \dfrac{14\pi}{9} \right\rbrace$
+
+#c
+a) $\left\lbrace \dfrac{\pi}{6}\ ;\ \dfrac{11\pi}{6} \right\rbrace$ ; b) $\left\lbrace \dfrac{2\pi}{9}\ ;\ \dfrac{\pi}{3}\ ;\ \dfrac{8\pi}{9}\ ;\ \dfrac{14\pi}{9} \right\rbrace$
+
+#d
+a) $\left\lbrace \dfrac{\pi}{6}\ ;\ \dfrac{11\pi}{6} \right\rbrace$ ; b) $\left\lbrace \dfrac{\pi}{3}\ ;\ \dfrac{8\pi}{9} \right\rbrace$
 
 #indice
 Pour a), isole d'abord $\cos x$, puis reconnais une valeur remarquable. L'équation $\cos x = \cos a$ a **deux** familles de solutions : $x = a+2k\pi$ et $x = -a+2k\pi$. Il reste à ne garder que celles qui tombent dans $\left[0;2\pi\right[$ — attention, $-\dfrac{\pi}{6}$ n'y est pas, mais son représentant $\dfrac{11\pi}{6}$ y est.
@@ -817,7 +925,7 @@ $$
 **Vérification** pour $x = \dfrac{2\pi}{9}$ : $\sin\dfrac{4\pi}{9} = \sin 80° \approx 0{,}985$, et $\sin\left(\dfrac{2\pi}{9}+\dfrac{\pi}{3}\right) = \sin\dfrac{5\pi}{9} = \sin 100°\approx 0{,}985$. ✓
 ::
 
-::exo-question{label="2." cours="xfu-reciproques"}
+::exo-question{label="2." cours="xfu-reciproques" bonne="d"}
 Donner les valeurs exactes de
 
 $$
@@ -825,6 +933,18 @@ $$
 $$
 
 puis simplifier $\cos(\arcsin x)$ pour $x\in\left[-1\,;\,1\right]$.
+
+#a
+$\dfrac{\pi}{3}$, $\dfrac{5\pi}{6}$, $\dfrac{4\pi}{3}$ et $\cos(\arcsin x) = x$
+
+#b
+$\dfrac{2\pi}{3}$, $\dfrac{5\pi}{6}$, $\dfrac{\pi}{3}$ et $\cos(\arcsin x) = \sqrt{1-x^2}$
+
+#c
+$\dfrac{2\pi}{3}$, $\dfrac{\pi}{6}$, $\dfrac{4\pi}{3}$ et $\cos(\arcsin x) = 1-x^2$
+
+#d
+$\dfrac{2\pi}{3}$, $\dfrac{\pi}{6}$, $\dfrac{\pi}{3}$ et $\cos(\arcsin x) = \sqrt{1-x^2}$
 
 #indice
 La phrase à se répéter : **$\arccos t$ est l'unique angle de $\left[0;\pi\right]$ dont le cosinus vaut $t$**, $\arcsin t$ l'unique angle de $\left[-\dfrac{\pi}{2};\dfrac{\pi}{2}\right]$ dont le sinus vaut $t$, et $\arctan t$ l'unique angle de $\left]-\dfrac{\pi}{2};\dfrac{\pi}{2}\right[$ dont la tangente vaut $t$.
@@ -910,7 +1030,7 @@ $$
 **Contrôle** en $x = 1$ : $\arcsin 1 = \dfrac{\pi}{2}$ et $\cos\dfrac{\pi}{2} = 0 = \sqrt{1-1}$. ✓
 ::
 
-::exo-question{label="3." cours="xfu-reciproques"}
+::exo-question{label="3." cours="xfu-reciproques" bonne="a"}
 a) Calculer la dérivée de $x\mapsto \arctan(2x)$ sur $\mathbb{R}$.
 
 b) On pose, pour $x>0$,
@@ -920,6 +1040,18 @@ $$
 $$
 
 Montrer que $\varphi$ est constante sur $\left]0\,;\,+\infty\right[$, puis déterminer cette constante.
+
+#a
+$\dfrac{2}{1+4x^2}$, et $\varphi(x) = \dfrac{\pi}{2}$ pour tout $x>0$
+
+#b
+$\dfrac{1}{1+4x^2}$, et $\varphi(x) = \dfrac{\pi}{2}$ pour tout $x>0$
+
+#c
+$\dfrac{2}{1+4x^2}$, et $\varphi(x) = \pi$ pour tout $x>0$
+
+#d
+$\dfrac{2}{1+2x^2}$, et $\varphi(x) = \dfrac{\pi}{4}$ pour tout $x>0$
 
 #indice
 Pour a), la formule est $\left(\arctan u\right)' = \dfrac{u'}{1+u^2}$. Attention à élever **tout** $u$ au carré, coefficient compris.
@@ -999,10 +1131,22 @@ $$
 \mathrm{ch}\,x = \frac{e^x+e^{-x}}{2} \qquad \mathrm{sh}\,x = \frac{e^x-e^{-x}}{2} \qquad \mathrm{th}\,x = \frac{\mathrm{sh}\,x}{\mathrm{ch}\,x}
 $$
 
-::exo-question{label="1." cours="xfu-hyperboliques"}
+::exo-question{label="1." cours="xfu-hyperboliques" bonne="b"}
 a) Démontrer que, pour tout réel $x$, $\ \mathrm{ch}^2x-\mathrm{sh}^2x = 1$.
 
 b) Exprimer $\mathrm{ch}(2x)$ en fonction de $\mathrm{ch}\,x$ **seulement**.
+
+#a
+$\mathrm{ch}(2x) = \mathrm{ch}^2x+\mathrm{sh}^2x$
+
+#b
+$\mathrm{ch}(2x) = 2\,\mathrm{ch}^2x-1$
+
+#c
+$\mathrm{ch}(2x) = 2\,\mathrm{ch}^2x+1$
+
+#d
+$\mathrm{ch}(2x) = 1-2\,\mathrm{ch}^2x$
 
 #indice
 Pour a), la voie la plus courte n'est pas de développer les deux carrés séparément mais d'utiliser l'identité $a^2-b^2 = (a-b)(a+b)$ : les deux facteurs $\mathrm{ch}\,x-\mathrm{sh}\,x$ et $\mathrm{ch}\,x+\mathrm{sh}\,x$ se simplifient spectaculairement.
@@ -1072,7 +1216,7 @@ $$
 **Contrôle** en $x = 0$ : $\mathrm{ch}\,0 = 1$, et $2\times 1-1 = 1 = \mathrm{ch}\,0$. ✓
 ::
 
-::exo-question{label="2." cours="xfu-hyperboliques"}
+::exo-question{label="2." cours="xfu-hyperboliques" bonne="c"}
 a) Calculer $\mathrm{ch}'$ et $\mathrm{sh}'$.
 
 b) En déduire que, pour tout réel $x$,
@@ -1080,6 +1224,18 @@ b) En déduire que, pour tout réel $x$,
 $$
 \mathrm{th}'(x) = \frac{1}{\mathrm{ch}^2x} = 1-\mathrm{th}^2x
 $$
+
+#a
+$\mathrm{ch}' = -\mathrm{sh}$, $\mathrm{sh}' = \mathrm{ch}$, et $\mathrm{th}'(x) = 1+\mathrm{th}^2x$
+
+#b
+$\mathrm{ch}' = \mathrm{sh}$, $\mathrm{sh}' = -\mathrm{ch}$, et $\mathrm{th}'(x) = \dfrac{1}{\mathrm{sh}^2x}$
+
+#c
+$\mathrm{ch}' = \mathrm{sh}$, $\mathrm{sh}' = \mathrm{ch}$, et $\mathrm{th}'(x) = \dfrac{1}{\mathrm{ch}^2x} = 1-\mathrm{th}^2x$
+
+#d
+$\mathrm{ch}' = \mathrm{sh}$, $\mathrm{sh}' = \mathrm{ch}$, et $\mathrm{th}'(x) = \mathrm{th}^2x-1$
 
 #indice
 Pour a), dérive directement les définitions. Le seul point d'attention est la dérivée de $e^{-x}$, qui vaut $-e^{-x}$ : c'est ce signe qui fait que les deux fonctions **s'échangent** en se dérivant, sans le signe moins du cas trigonométrique.

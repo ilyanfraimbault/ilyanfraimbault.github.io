@@ -26,8 +26,20 @@ Un conseil propre à ce chapitre : **garder le cercle du guide ouvert à côté*
 :::exercice{titre="Palier 1 — Le radian et le tour du cercle" theme="Convertir, placer un angle, reconnaître son quadrant" badge="★☆☆☆☆" icone="i-lucide-sprout"}
 Avant toute formule, une seule chose à acquérir : savoir **où** se trouve un angle sur le cercle. Tout le reste se lit ensuite sur la figure.
 
-::exo-question{label="1." cours="xtr-radian"}
+::exo-question{label="1." cours="xtr-radian" bonne="b"}
 Convertir en radians les angles de $30°$, $135°$ et $210°$. Convertir en degrés les angles de $\dfrac{\pi}{5}$ et $\dfrac{7\pi}{6}$.
+
+#a
+$\dfrac{\pi}{6}$, $\dfrac{4\pi}{3}$ et $\dfrac{7\pi}{6}$ ; puis $30°$ et $210°$
+
+#b
+$\dfrac{\pi}{6}$, $\dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6}$ ; puis $36°$ et $210°$
+
+#c
+$\dfrac{\pi}{5}$, $\dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6}$ ; puis $36°$ et $210°$
+
+#d
+$\dfrac{\pi}{6}$, $\dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6}$ ; puis $36°$ et $150°$
 
 #indice
 Une seule égalité à retenir, et les deux conversions s'en déduisent :
@@ -87,8 +99,20 @@ $$
 La dernière ligne confirme la troisième : les deux conversions sont bien réciproques l'une de l'autre.
 ::
 
-::exo-question{label="2." cours="xtr-radian"}
+::exo-question{label="2." cours="xtr-radian" bonne="c"}
 Pour chacun des angles $\dfrac{2\pi}{3}$, $-\dfrac{\pi}{4}$ et $\dfrac{5\pi}{4}$, dire dans quel quadrant se trouve le point du cercle associé, puis donner le **signe** de son cosinus et de son sinus.
+
+#a
+2ᵉ, 4ᵉ et 3ᵉ quadrants ; $\cos>0$ et $\sin>0$ ; $\cos>0$ et $\sin<0$ ; $\cos<0$ et $\sin<0$
+
+#b
+2ᵉ, 1ᵉʳ et 3ᵉ quadrants ; $\cos<0$ et $\sin>0$ ; $\cos>0$ et $\sin>0$ ; $\cos<0$ et $\sin<0$
+
+#c
+2ᵉ, 4ᵉ et 3ᵉ quadrants ; $\cos<0$ et $\sin>0$ ; $\cos>0$ et $\sin<0$ ; $\cos<0$ et $\sin<0$
+
+#d
+2ᵉ, 4ᵉ et 3ᵉ quadrants ; $\cos<0$ et $\sin>0$ ; $\cos<0$ et $\sin>0$ ; $\cos<0$ et $\sin>0$
 
 #indice
 Le cercle est coupé en quatre quadrants par les deux axes. Les frontières sont $0$, $\dfrac{\pi}{2}$, $\pi$ et $\dfrac{3\pi}{2}$ — ou, pour un angle négatif, on tourne dans le sens **des aiguilles d'une montre**.
@@ -132,8 +156,20 @@ $$
 Ce réflexe resservira à chaque palier : c'est le couple des deux signes qui désigne un quadrant, et un seul.
 ::
 
-::exo-question{label="3." cours="xtr-valeurs"}
+::exo-question{label="3." cours="xtr-valeurs" bonne="d"}
 Donner les valeurs exactes de $\cos\dfrac{\pi}{6}$, $\sin\dfrac{\pi}{4}$, $\cos\dfrac{\pi}{3}$ et $\sin\dfrac{\pi}{2}$.
+
+#a
+$\dfrac12$, $\dfrac{\sqrt2}{2}$, $\dfrac{\sqrt3}{2}$ et $1$
+
+#b
+$\dfrac{\sqrt3}{2}$, $\dfrac{\sqrt2}{2}$, $\dfrac{\sqrt3}{2}$ et $0$
+
+#c
+$\dfrac{\sqrt3}{2}$, $\dfrac12$, $\dfrac12$ et $1$
+
+#d
+$\dfrac{\sqrt3}{2}$, $\dfrac{\sqrt2}{2}$, $\dfrac12$ et $1$
 
 #indice
 Trois angles seulement sont à connaître par cœur — $\dfrac{\pi}{6}$, $\dfrac{\pi}{4}$, $\dfrac{\pi}{3}$ — plus les cas évidents $0$ et $\dfrac{\pi}{2}$.
@@ -185,8 +221,20 @@ Les deux premières se retrouvent sur le cercle : $\dfrac{\pi}{6}$ est un petit 
 :::exercice{titre="Palier 2 — Ramener un angle dans le tour" theme="Périodicité, parité, et lecture d'un angle quelconque" badge="★★☆☆☆" icone="i-lucide-rotate-cw"}
 Un angle plus grand qu'un tour, ou négatif, ne demande aucun calcul nouveau : il suffit de le **ramener** sur le cercle, puis de lire.
 
-::exo-question{label="1." cours="xtr-periodicite"}
+::exo-question{label="1." cours="xtr-periodicite" bonne="a"}
 Simplifier $\cos(x+2\pi)$, $\sin(x-4\pi)$, $\cos(-x)$ et $\sin(-x)$.
+
+#a
+$\cos x$, $\sin x$, $\cos x$ et $-\sin x$
+
+#b
+$\cos x$, $\sin x$, $-\cos x$ et $\sin x$
+
+#c
+$\cos x$, $-\sin x$, $\cos x$ et $-\sin x$
+
+#d
+$-\cos x$, $-\sin x$, $\cos x$ et $-\sin x$
 
 #indice
 Deux propriétés, et rien d'autre.
@@ -240,8 +288,20 @@ $$
 Ces quatre égalités servent à chaque fois qu'un angle sort de l'intervalle $[0\,;2\pi[$ : on commence par s'y ramener, et seulement ensuite on lit la valeur.
 ::
 
-::exo-question{label="2." cours="xtr-periodicite"}
+::exo-question{label="2." cours="xtr-periodicite" bonne="b"}
 Calculer les valeurs exactes de $\cos\dfrac{17\pi}{6}$ et de $\sin\left(-\dfrac{11\pi}{4}\right)$.
+
+#a
+$\cos\dfrac{17\pi}{6} = \dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{11\pi}{4}\right) = -\dfrac{\sqrt2}{2}$
+
+#b
+$\cos\dfrac{17\pi}{6} = -\dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{11\pi}{4}\right) = -\dfrac{\sqrt2}{2}$
+
+#c
+$\cos\dfrac{17\pi}{6} = -\dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{11\pi}{4}\right) = \dfrac{\sqrt2}{2}$
+
+#d
+$\cos\dfrac{17\pi}{6} = -\dfrac12$ et $\sin\left(-\dfrac{11\pi}{4}\right) = -\dfrac{\sqrt2}{2}$
 
 #indice
 Aucune de ces deux valeurs n'est dans la table : il faut d'abord **ramener l'angle dans un tour**, en lui retirant ou en lui ajoutant un multiple entier de $2\pi$.
@@ -301,8 +361,20 @@ $$
 **Contrôle de cohérence** : $-\dfrac{3\pi}{4}$ est dans le troisième quadrant, où le sinus est négatif. Le résultat l'est bien.
 ::
 
-::exo-question{label="3." cours="xtr-tangente"}
+::exo-question{label="3." cours="xtr-tangente" bonne="c"}
 Donner $\tan\dfrac{\pi}{4}$, $\tan\dfrac{\pi}{3}$ et $\tan\left(-\dfrac{\pi}{6}\right)$. Pour quelles valeurs de $x$ la tangente n'est-elle pas définie ?
+
+#a
+$1$, $\dfrac{\sqrt3}{3}$ et $-\sqrt3$ ; non définie pour $x \neq k\pi$
+
+#b
+$1$, $\sqrt3$ et $\dfrac{\sqrt3}{3}$ ; non définie pour $x = \dfrac{\pi}{2}+k\pi$
+
+#c
+$1$, $\sqrt3$ et $-\dfrac{\sqrt3}{3}$ ; non définie pour $x = \dfrac{\pi}{2}+k\pi$
+
+#d
+$1$, $\sqrt3$ et $-\dfrac{\sqrt3}{3}$ ; non définie pour $x = k\pi$
 
 #indice
 La tangente n'est pas une nouvelle fonction à apprendre : c'est un **quotient** de deux valeurs déjà connues,
@@ -368,8 +440,20 @@ $$
 :::exercice{titre="Palier 3 — Les angles associés" theme="Les quatre symétries du cercle, et comment s'en servir" badge="★★★☆☆" icone="i-lucide-flip-horizontal"}
 Les formules d'angles associés ne s'apprennent pas par cœur : elles se **lisent** sur la figure. Chaque ligne correspond à une symétrie, et il suffit de suivre ce que deviennent l'abscisse et l'ordonnée du point.
 
-::exo-question{label="1." cours="xtr-associes"}
+::exo-question{label="1." cours="xtr-associes" bonne="d"}
 Exprimer $\cos(\pi-x)$, $\sin(\pi-x)$, $\cos(\pi+x)$ et $\sin(\pi+x)$ en fonction de $\cos x$ et $\sin x$.
+
+#a
+$-\cos x$, $-\sin x$, $-\cos x$ et $-\sin x$
+
+#b
+$\cos x$, $\sin x$, $-\cos x$ et $-\sin x$
+
+#c
+$-\cos x$, $\sin x$, $\cos x$ et $\sin x$
+
+#d
+$-\cos x$, $\sin x$, $-\cos x$ et $-\sin x$
 
 #indice
 Ne cherche pas à retenir les quatre lignes : place le point d'angle $x$ sur le cercle, puis demande-toi **où atterrit** le point d'angle $\pi-x$, puis celui d'angle $\pi+x$.
@@ -414,12 +498,24 @@ $$
 **Vérification sur une valeur connue**, avec $x = \dfrac{\pi}{3}$. La première ligne annonce $\cos\dfrac{2\pi}{3} = -\cos\dfrac{\pi}{3} = -\dfrac12$ : c'est bien la valeur attendue dans le deuxième quadrant, où le cosinus est négatif.
 ::
 
-::exo-question{label="2." cours="xtr-associes"}
+::exo-question{label="2." cours="xtr-associes" bonne="a"}
 Simplifier l'expression
 
 $$
 A = \cos(\pi-x)+\sin\left(\frac{\pi}{2}+x\right)+\cos(-x)+\sin(\pi+x)
 $$
+
+#a
+$A = \cos x-\sin x$
+
+#b
+$A = \cos x+\sin x$
+
+#c
+$A = -\cos x-\sin x$
+
+#d
+$A = 2\cos x$
 
 #indice
 Chaque terme se traite **séparément**, avec la symétrie qui lui correspond, avant toute tentative de regroupement. Écris les quatre transformations les unes sous les autres, puis additionne.
@@ -491,8 +587,20 @@ $$
 **Vérification** avec $x = 0$ : l'énoncé donne $\cos\pi+\sin\dfrac{\pi}{2}+\cos 0+\sin\pi = -1+1+1+0 = 1$, et la forme simplifiée donne $\cos 0-\sin 0 = 1$. ✓
 ::
 
-::exo-question{label="3." cours="xtr-associes"}
+::exo-question{label="3." cours="xtr-associes" bonne="b"}
 Sans calculatrice, donner les valeurs exactes de $\cos\dfrac{5\pi}{6}$, $\sin\dfrac{7\pi}{4}$ et $\cos\dfrac{4\pi}{3}$.
+
+#a
+$\dfrac{\sqrt3}{2}$, $-\dfrac{\sqrt2}{2}$ et $-\dfrac12$
+
+#b
+$-\dfrac{\sqrt3}{2}$, $-\dfrac{\sqrt2}{2}$ et $-\dfrac12$
+
+#c
+$-\dfrac{\sqrt3}{2}$, $\dfrac{\sqrt2}{2}$ et $\dfrac12$
+
+#d
+$-\dfrac12$, $-\dfrac{\sqrt2}{2}$ et $-\dfrac{\sqrt3}{2}$
 
 #indice
 Aucun de ces trois angles n'est dans la table, mais chacun est le **symétrique** d'un angle qui, lui, y est. La méthode tient en deux temps :
@@ -559,8 +667,20 @@ $$
 :::exercice{titre="Palier 4 — Résoudre une équation trigonométrique" theme="Les deux familles de solutions, et ce qu'il faut en garder" badge="★★★★☆" icone="i-lucide-equal"}
 C'est le point du chapitre qui coûte le plus de points aux examens, pour une raison simple : une équation trigonométrique a **une infinité** de solutions, réparties en **deux familles**, et on en oublie systématiquement une.
 
-::exo-question{label="1." cours="xtr-equations"}
+::exo-question{label="1." cours="xtr-equations" bonne="c"}
 Résoudre dans $\mathbb{R}$ l'équation $\cos x = \dfrac12$, puis donner les solutions appartenant à $[0\,;2\pi[$.
+
+#a
+$x = \dfrac{\pi}{3}+2k\pi$ seulement ; $S_{[0;2\pi[} = \left\{\dfrac{\pi}{3}\right\}$
+
+#b
+$x = \dfrac{\pi}{3}+k\pi$ ou $x = -\dfrac{\pi}{3}+k\pi$ ; $S_{[0;2\pi[} = \left\{\dfrac{\pi}{3}\,;\dfrac{5\pi}{3}\right\}$
+
+#c
+$x = \dfrac{\pi}{3}+2k\pi$ ou $x = -\dfrac{\pi}{3}+2k\pi$ ; $S_{[0;2\pi[} = \left\{\dfrac{\pi}{3}\,;\dfrac{5\pi}{3}\right\}$
+
+#d
+$x = \dfrac{\pi}{3}+2k\pi$ ou $x = -\dfrac{\pi}{3}+2k\pi$ ; $S_{[0;2\pi[} = \left\{\dfrac{\pi}{3}\,;\dfrac{2\pi}{3}\right\}$
 
 #indice
 Le point de départ est toujours le même : trouver **un** angle $\alpha$ dont le cosinus vaut la valeur demandée. Ici, $\alpha$ est dans la table.
@@ -624,8 +744,20 @@ $$
 Deux solutions dans un tour : c'est exactement le nombre de points d'intersection lus sur la figure. Une seule solution trouvée aurait été le signe qu'une famille a été oubliée.
 ::
 
-::exo-question{label="2." cours="xtr-equations"}
+::exo-question{label="2." cours="xtr-equations" bonne="d"}
 Résoudre dans $\mathbb{R}$ l'équation $\sin(2x) = \dfrac{\sqrt3}{2}$.
+
+#a
+$x = \dfrac{\pi}{3}+2k\pi$ ou $x = \dfrac{2\pi}{3}+2k\pi$, $k\in\mathbb{Z}$
+
+#b
+$x = \dfrac{\pi}{6}+2k\pi$ ou $x = \dfrac{\pi}{3}+2k\pi$, $k\in\mathbb{Z}$
+
+#c
+$x = \dfrac{\pi}{6}+k\pi$ seulement, $k\in\mathbb{Z}$
+
+#d
+$x = \dfrac{\pi}{6}+k\pi$ ou $x = \dfrac{\pi}{3}+k\pi$, $k\in\mathbb{Z}$
 
 #indice
 Deux différences avec la question précédente, et une seule vraie difficulté.
@@ -679,8 +811,20 @@ $$
 **Vérification** sur la première solution, avec $k = 0$ : $\sin\left(2\times\dfrac{\pi}{6}\right) = \sin\dfrac{\pi}{3} = \dfrac{\sqrt3}{2}$. ✓ Et sur la seconde : $\sin\left(2\times\dfrac{\pi}{3}\right) = \sin\dfrac{2\pi}{3} = \dfrac{\sqrt3}{2}$. ✓
 ::
 
-::exo-question{label="3." cours="xtr-equations"}
+::exo-question{label="3." cours="xtr-equations" bonne="a"}
 Résoudre dans $\mathbb{R}$ l'équation $\sin x = \cos(2x)$.
+
+#a
+$x = \dfrac{\pi}{6}+\dfrac{2k\pi}{3}$ ou $x = -\dfrac{\pi}{2}+2k\pi$, $k\in\mathbb{Z}$
+
+#b
+$x = \dfrac{\pi}{6}+2k\pi$ ou $x = -\dfrac{\pi}{2}+2k\pi$, $k\in\mathbb{Z}$
+
+#c
+$x = \dfrac{\pi}{6}+\dfrac{2k\pi}{3}$ ou $x = \dfrac{\pi}{2}+2k\pi$, $k\in\mathbb{Z}$
+
+#d
+$x = \dfrac{\pi}{3}+\dfrac{2k\pi}{3}$ ou $x = -\dfrac{\pi}{2}+2k\pi$, $k\in\mathbb{Z}$
 
 #indice
 Tant que l'équation mêle un sinus et un cosinus, aucune des deux formules de résolution ne s'applique : il faut d'abord **tout écrire avec la même fonction**.
@@ -772,8 +916,20 @@ $$
 :::exercice{titre="Palier 5 — Arccos, arcsin et arctan" theme="Les fonctions réciproques, et le piège de arccos(cos x)" badge="★★★★★" icone="i-lucide-undo-2"}
 Une dernière marche, et c'est la plus glissante du chapitre. Les fonctions réciproques renvoient **un seul** angle là où l'équation en avait une infinité : tout le sujet est de savoir **lequel**.
 
-::exo-question{label="1." cours="xtr-reciproques"}
+::exo-question{label="1." cours="xtr-reciproques" bonne="b"}
 Calculer $\arccos\dfrac{\sqrt2}{2}$, $\arcsin\left(-\dfrac12\right)$ et $\arctan(1)$.
+
+#a
+$\dfrac{\pi}{4}$, $\dfrac{\pi}{6}$ et $\dfrac{\pi}{4}$
+
+#b
+$\dfrac{\pi}{4}$, $-\dfrac{\pi}{6}$ et $\dfrac{\pi}{4}$
+
+#c
+$\dfrac{\pi}{4}$, $-\dfrac{\pi}{6}$ et $\dfrac{\pi}{3}$
+
+#d
+$-\dfrac{\pi}{4}$, $-\dfrac{\pi}{6}$ et $\dfrac{\pi}{4}$
 
 #indice
 Chacune de ces trois fonctions répond à la question « quel angle a ce cosinus / ce sinus / cette tangente ? » — mais en n'ayant le droit de répondre que **dans un intervalle imposé** :
@@ -827,8 +983,20 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="xtr-reciproques"}
+::exo-question{label="2." cours="xtr-reciproques" bonne="c"}
 Calculer $\arccos\left(\cos\dfrac{\pi}{5}\right)$, puis $\arccos\left(\cos\dfrac{7\pi}{5}\right)$. Commenter.
+
+#a
+$\dfrac{\pi}{5}$ et $\dfrac{7\pi}{5}$
+
+#b
+$\dfrac{\pi}{5}$ et $-\dfrac{3\pi}{5}$
+
+#c
+$\dfrac{\pi}{5}$ et $\dfrac{3\pi}{5}$
+
+#d
+$\dfrac{\pi}{5}$ et $\dfrac{2\pi}{5}$
 
 #indice
 La tentation est d'écrire que les deux fonctions se simplifient et de répondre l'angle de départ à chaque fois. C'est vrai **une seule fois sur deux**, et c'est tout l'objet de la question.
@@ -890,8 +1058,20 @@ $$
 La règle jumelle vaut pour l'arcsin, avec un autre intervalle : $\arcsin(\sin x) = x$ seulement si $x\in\left[-\dfrac{\pi}{2}\,;\dfrac{\pi}{2}\right]$.
 ::
 
-::exo-question{label="3." cours="xtr-reciproques"}
+::exo-question{label="3." cours="xtr-reciproques" bonne="d"}
 Simplifier $\cos(\arcsin t)$ pour $t\in[-1\,;1]$.
+
+#a
+$\cos(\arcsin t) = t$
+
+#b
+$\cos(\arcsin t) = 1-t^2$
+
+#c
+$\cos(\arcsin t) = -\sqrt{1-t^2}$
+
+#d
+$\cos(\arcsin t) = \sqrt{1-t^2}$
 
 #indice
 Attention au sens de lecture : ici la réciproque est **à l'intérieur**, et c'est ce qui rend la simplification possible sans condition.

@@ -69,8 +69,20 @@ D'où la lecture :
 Deux critères à retenir, ils resserviront à chaque palier : $\boxed{z \text{ est réel} \iff \mathcal{I}m(z) = 0}$ et $\boxed{z \text{ est imaginaire pur} \iff \mathcal{R}e(z) = 0}$.
 ::
 
-::exo-question{label="2." cours="xnc-puissances-i"}
+::exo-question{label="2." cours="xnc-puissances-i" bonne="c"}
 Calculer $i^3$, $i^4$, $i^{10}$ et $i^{2027}$, puis la somme $i+i^2+i^3+i^4$.
+
+#a
+$i^3 = i$, $i^4 = 1$, $i^{10} = 1$, $i^{2027} = i$ ; la somme vaut $1$
+
+#b
+$i^3 = -i$, $i^4 = -1$, $i^{10} = -1$, $i^{2027} = -i$ ; la somme vaut $0$
+
+#c
+$i^3 = -i$, $i^4 = 1$, $i^{10} = -1$, $i^{2027} = -i$ ; la somme vaut $0$
+
+#d
+$i^3 = -i$, $i^4 = 1$, $i^{10} = -1$, $i^{2027} = i$ ; la somme vaut $2i$
 
 #indice
 Tout part de la seule règle du jeu : $i^2 = -1$. En la réappliquant, on obtient $i^3$ puis $i^4$ — et là, quelque chose de remarquable se produit qui rend inutile tout calcul pour les grands exposants.
@@ -132,12 +144,24 @@ $$
 C'est vrai de **quatre puissances consécutives quelconques** : leur somme est toujours nulle.
 ::
 
-::exo-question{label="3." cours="xnc-forme-algebrique"}
+::exo-question{label="3." cours="xnc-forme-algebrique" bonne="d"}
 Déterminer les réels $x$ et $y$ tels que
 
 $$
 (2x-1)+(y+3)i = 5-2i
 $$
+
+#a
+$x = 6$ et $y = -2$
+
+#b
+$x = 3$ et $y = 1$
+
+#c
+$x = 2$ et $y = -5$
+
+#d
+$x = 3$ et $y = -5$
 
 #indice
 Deux nombres complexes sont égaux **si et seulement si** leurs parties réelles coïncident **et** leurs parties imaginaires coïncident. Une seule égalité complexe se casse donc en **deux équations réelles** indépendantes — c'est ce qu'on appelle « identifier ».
@@ -183,8 +207,20 @@ $$
 
 Toutes les réponses sont à donner sous forme algébrique, c'est-à-dire sous la forme $a+bi$ avec $a$ et $b$ réels.
 
-::exo-question{label="1." cours="xnc-operations"}
+::exo-question{label="1." cours="xnc-operations" bonne="a"}
 Donner la forme algébrique de $z_1+z_2$, de $z_1-z_2$ et de $z_1 z_2$.
+
+#a
+$z_1+z_2 = -2-i$ ; $z_1-z_2 = 4-3i$ ; $z_1z_2 = -1+7i$
+
+#b
+$z_1+z_2 = -2-i$ ; $z_1-z_2 = 4-3i$ ; $z_1z_2 = -3-2i$
+
+#c
+$z_1+z_2 = -2-i$ ; $z_1-z_2 = -4+3i$ ; $z_1z_2 = -1+7i$
+
+#d
+$z_1+z_2 = -2-3i$ ; $z_1-z_2 = 4-i$ ; $z_1z_2 = -5+7i$
 
 #indice
 Pour la somme et la différence, on regroupe parties réelles ensemble et parties imaginaires ensemble, exactement comme pour des vecteurs. Le seul piège de la différence : le signe moins se distribue sur **les deux** composantes du second nombre.
@@ -244,8 +280,20 @@ z_1z_2 = -3+2+(1+6)i = \boxed{-1+7i}
 $$
 ::
 
-::exo-question{label="2." cours="xnc-operations"}
+::exo-question{label="2." cours="xnc-operations" bonne="b"}
 Calculer $z_1^2$. Calculer ensuite $(1+i)^2$, puis en déduire $(1+i)^4$ et $(1+i)^8$ **sans développer**.
+
+#a
+$z_1^2 = 5-4i$ ; $(1+i)^2 = 2i$ ; $(1+i)^4 = -4$ ; $(1+i)^8 = 16$
+
+#b
+$z_1^2 = -3-4i$ ; $(1+i)^2 = 2i$ ; $(1+i)^4 = -4$ ; $(1+i)^8 = 16$
+
+#c
+$z_1^2 = -3-4i$ ; $(1+i)^2 = 2i$ ; $(1+i)^4 = 4$ ; $(1+i)^8 = 16$
+
+#d
+$z_1^2 = -3-4i$ ; $(1+i)^2 = 1+2i$ ; $(1+i)^4 = -4$ ; $(1+i)^8 = -16$
 
 #indice
 Un carré de complexe se traite avec l'identité remarquable $(a+b)^2 = a^2+2ab+b^2$, sans rien changer à la formule. Il y a une soustraction dans $(1-2i)^2$ ? Alors **le signe moins fait partie de $b$** : on pose $b = -2i$ et on remplace $b$ par $-2i$ partout dans la formule, y compris dans le double produit et dans le carré.
@@ -319,12 +367,24 @@ $$
 On retiendra que $(1+i)^2 = 2i$ et $(1-i)^2 = -2i$ : ces deux identités transforment n'importe quelle puissance de $1\pm i$ en un calcul de deux lignes.
 ::
 
-::exo-question{label="3." cours="xnc-conjugue-quotient"}
+::exo-question{label="3." cours="xnc-conjugue-quotient" bonne="c"}
 Donner $\overline{z_2}$ et calculer $z_2\overline{z_2}$. En déduire la méthode, puis donner la forme algébrique de
 
 $$
 \frac{2+i}{1-3i}
 $$
+
+#a
+$\overline{z_2} = -3+i$ ; $z_2\overline{z_2} = 8$ ; $\dfrac{2+i}{1-3i} = -\dfrac{1}{10}+\dfrac{7}{10}i$
+
+#b
+$\overline{z_2} = -3-i$ ; $z_2\overline{z_2} = 10$ ; $\dfrac{2+i}{1-3i} = \dfrac{1}{10}-\dfrac{7}{10}i$
+
+#c
+$\overline{z_2} = -3-i$ ; $z_2\overline{z_2} = 10$ ; $\dfrac{2+i}{1-3i} = -\dfrac{1}{10}+\dfrac{7}{10}i$
+
+#d
+$\overline{z_2} = -3-i$ ; $z_2\overline{z_2} = 10$ ; $\dfrac{2+i}{1-3i} = \dfrac{5}{10}+\dfrac{7}{10}i$
 
 #indice
 Le conjugué s'obtient en changeant le signe de la partie imaginaire, et lui seul. Son intérêt tient dans une propriété : $z\bar z = a^2+b^2$, un **réel positif** — plus aucun $i$ ne subsiste.
@@ -392,12 +452,24 @@ $$
 :::exercice{titre="Palier 3 — Résoudre dans C" theme="Équation du premier degré, discriminant négatif, condition pour qu'un nombre soit réel" badge="★★★☆☆" icone="i-lucide-equal"}
 Les techniques du palier 2 servent maintenant d'outils : isoler l'inconnue, puis remettre le résultat sous forme algébrique.
 
-::exo-question{label="1." cours="xnc-conjugue-quotient"}
+::exo-question{label="1." cours="xnc-conjugue-quotient" bonne="d"}
 Résoudre dans $\mathbb{C}$ l'équation
 
 $$
 2z+3 = iz-1
 $$
+
+#a
+$\mathcal{S} = \left\lbrace -\dfrac{8}{5}+\dfrac{4}{5}i \right\rbrace$
+
+#b
+$\mathcal{S} = \left\lbrace \dfrac{8}{5}+\dfrac{4}{5}i \right\rbrace$
+
+#c
+$\mathcal{S} = \left\lbrace -\dfrac{4}{5}-\dfrac{8}{5}i \right\rbrace$
+
+#d
+$\mathcal{S} = \left\lbrace -\dfrac{8}{5}-\dfrac{4}{5}i \right\rbrace$
 
 #indice
 C'est une équation du premier degré : elle se résout **exactement comme dans $\mathbb{R}$**. On rassemble les termes en $z$ d'un côté, les constantes de l'autre, puis on factorise par $z$.
@@ -455,12 +527,24 @@ $$
 **Vérification** : $2z+3 = -\dfrac{16}{5}-\dfrac{8}{5}i+3 = -\dfrac15-\dfrac85 i$, et $iz-1 = -\dfrac{8}{5}i-\dfrac45 i^2-1 = \dfrac45-1-\dfrac85 i = -\dfrac15-\dfrac85 i$. ✓
 ::
 
-::exo-question{label="2." cours="xnc-second-degre"}
+::exo-question{label="2." cours="xnc-second-degre" bonne="a"}
 Résoudre dans $\mathbb{C}$ l'équation
 
 $$
 z^2-4z+13 = 0
 $$
+
+#a
+$\mathcal{S} = \lbrace 2+3i\ ;\ 2-3i \rbrace$
+
+#b
+$\mathcal{S} = \lbrace -2+3i\ ;\ -2-3i \rbrace$
+
+#c
+$\mathcal{S} = \varnothing$ : le discriminant vaut $-36$.
+
+#d
+$\mathcal{S} = \lbrace 2+6i\ ;\ 2-6i \rbrace$
 
 #indice
 On applique la méthode du second degré **sans rien changer** : $\Delta = b^2-4ac$. Ici le discriminant est négatif, ce qui dans $\mathbb{R}$ signifiait « pas de solution » ; dans $\mathbb{C}$, cela signifie au contraire **deux solutions conjuguées**.
@@ -516,8 +600,20 @@ $$
 **Vérification** par somme et produit des racines : $S = (2+3i)+(2-3i) = 4 = -\dfrac{b}{a}$ ✓ et $P = (2+3i)(2-3i) = 4+9 = 13 = \dfrac{c}{a}$ ✓
 ::
 
-::exo-question{label="3." cours="xnc-forme-algebrique"}
+::exo-question{label="3." cours="xnc-forme-algebrique" bonne="b"}
 Déterminer tous les réels $x$ tels que le nombre $(x+2i)(1-i)$ soit **réel**.
+
+#a
+$x = -2$
+
+#b
+$x = 2$
+
+#c
+$x = 0$
+
+#d
+aucun réel ne convient
 
 #indice
 Un produit ne se lit pas : il faut d'abord le **développer** et le remettre sous la forme $A+Bi$, où $A$ et $B$ sont deux expressions **réelles** dépendant de $x$. C'est là qu'il faut être attentif à ne pas laisser un $i$ traîner dans $A$.
@@ -577,8 +673,20 @@ $$
 
 où l'on a noté entre parenthèses l'**affixe** de chaque point.
 
-::exo-question{label="1." cours="xnc-affixes"}
+::exo-question{label="1." cours="xnc-affixes" bonne="c"}
 Déterminer l'affixe du vecteur $\overrightarrow{AB}$, la distance $AB$, puis l'affixe du milieu $I$ de $[AB]$.
+
+#a
+$z_{\overrightarrow{AB}} = -3+4i$ ; $AB = 5$ ; $z_I = \dfrac52$
+
+#b
+$z_{\overrightarrow{AB}} = 3-4i$ ; $AB = 7$ ; $z_I = \dfrac52+2i$
+
+#c
+$z_{\overrightarrow{AB}} = 3-4i$ ; $AB = 5$ ; $z_I = \dfrac52$
+
+#d
+$z_{\overrightarrow{AB}} = 3-4i$ ; $AB = 25$ ; $z_I = 5$
 
 #indice
 Trois formules, et une seule chose à ne pas confondre : l'affixe d'un **vecteur** se calcule par « extrémité moins origine », donc $z_{\overrightarrow{AB}} = z_B-z_A$ — dans cet ordre.
@@ -636,8 +744,20 @@ $$
 Les parties imaginaires se compensent : $I$ est le point de coordonnées $\left(\dfrac52;0\right)$, situé sur l'axe des abscisses.
 ::
 
-::exo-question{label="2." cours="xnc-affixes"}
+::exo-question{label="2." cours="xnc-affixes" bonne="d"}
 Calculer $AC$ et $BC$, puis déterminer la nature du triangle $ABC$.
+
+#a
+$AC = 5$, $BC = 5\sqrt2$ : le triangle est équilatéral
+
+#b
+$AC = 5$, $BC = 5$ : le triangle est isocèle en $C$
+
+#c
+$AC = 5\sqrt2$, $BC = 5$ : le triangle est isocèle rectangle en $B$
+
+#d
+$AC = 5$, $BC = 5\sqrt2$ : le triangle est isocèle rectangle en $A$
 
 #indice
 Trois longueurs suffisent à décider de la nature d'un triangle, et elles se calculent toutes de la même façon : $XY = \lvert z_Y-z_X\rvert$. La distance $AB$ a déjà été trouvée à la question précédente.
@@ -701,12 +821,24 @@ $$
 On retrouve bien la relation caractéristique $BC = AB\sqrt2$ entre l'hypoténuse et les côtés de l'angle droit.
 ::
 
-::exo-question{label="3." cours="xnc-ensembles"}
+::exo-question{label="3." cours="xnc-ensembles" bonne="a"}
 Déterminer et décrire l'ensemble des points $M$ d'affixe $z$ tels que :
 
 a) $\lvert z-2+i\rvert = 3$ ;
 
 b) $\lvert z-1\rvert = \lvert z+i\rvert$.
+
+#a
+a) le cercle de centre $\Omega(2\,;-1)$ et de rayon $3$ ; b) la médiatrice de $[AB]$, avec $A(1\,;0)$ et $B(0\,;-1)$
+
+#b
+a) le cercle de centre $\Omega(-2\,;1)$ et de rayon $3$ ; b) la médiatrice de $[AB]$, avec $A(1\,;0)$ et $B(0\,;-1)$
+
+#c
+a) le disque de centre $\Omega(2\,;-1)$ et de rayon $3$ ; b) le cercle de diamètre $[AB]$, avec $A(1\,;0)$ et $B(0\,;-1)$
+
+#d
+a) le cercle de centre $\Omega(2\,;-1)$ et de rayon $9$ ; b) la droite $(AB)$, avec $A(1\,;0)$ et $B(0\,;1)$
 
 #indice
 Tout repose sur une seule lecture : $\lvert z-z_A\rvert$ **est la distance** $AM$, où $A$ est le point d'affixe $z_A$. La difficulté n'est donc pas le calcul mais l'écriture : il faut faire apparaître une différence, en rangeant l'expression sous la forme $z-z_A$.
@@ -791,8 +923,20 @@ Dernier palier : on change de point de vue. Plutôt que de repérer un complexe 
 ::cercle-trigo{titre="Situer un argument sur le cercle" resume="Le couple (signe du cosinus, signe du sinus) désigne un quadrant, et un seul : c’est ce qui départage les deux angles candidats." angle="120" modes="explorer"}
 ::
 
-::exo-question{label="1." cours="xnc-module-argument"}
+::exo-question{label="1." cours="xnc-module-argument" bonne="b"}
 Déterminer le module et un argument de $z = -1+i\sqrt3$, puis donner sa forme exponentielle.
+
+#a
+$\lvert z\rvert = 2$, $\theta = -\dfrac{2\pi}{3}$, $z = 2e^{-i\frac{2\pi}{3}}$
+
+#b
+$\lvert z\rvert = 2$, $\theta = \dfrac{2\pi}{3}$, $z = 2e^{i\frac{2\pi}{3}}$
+
+#c
+$\lvert z\rvert = 4$, $\theta = \dfrac{2\pi}{3}$, $z = 4e^{i\frac{2\pi}{3}}$
+
+#d
+$\lvert z\rvert = 2$, $\theta = \dfrac{\pi}{3}$, $z = 2e^{i\frac{\pi}{3}}$
 
 #indice
 L'ordre des opérations n'est pas négociable : **le module d'abord**, l'argument ensuite. Le module se calcule directement, $\lvert z\rvert = \sqrt{a^2+b^2}$, et c'est lui qui sert à normaliser pour trouver l'angle.
@@ -852,7 +996,7 @@ $$
 **Vérification** : $2\left(\cos\dfrac{2\pi}{3}+i\sin\dfrac{2\pi}{3}\right) = 2\left(-\dfrac12+i\dfrac{\sqrt3}{2}\right) = -1+i\sqrt3$. ✓
 ::
 
-::exo-question{label="2." cours="xnc-exponentielle"}
+::exo-question{label="2." cours="xnc-exponentielle" bonne="c"}
 On pose $z_1 = 1+i$ et $z_2 = \sqrt3+i$.
 
 a) Donner la forme exponentielle de $z_1$ et de $z_2$.
@@ -860,6 +1004,18 @@ a) Donner la forme exponentielle de $z_1$ et de $z_2$.
 b) En déduire la forme exponentielle de $\dfrac{z_1}{z_2}$.
 
 c) Donner la forme algébrique de $\dfrac{z_1}{z_2}$, puis en déduire les valeurs exactes de $\cos\dfrac{\pi}{12}$ et $\sin\dfrac{\pi}{12}$.
+
+#a
+$z_1 = \sqrt2\,e^{i\frac{\pi}{4}}$, $z_2 = 2e^{i\frac{\pi}{6}}$, $\dfrac{z_1}{z_2} = \dfrac{\sqrt2}{2}\,e^{i\frac{5\pi}{12}}$, soit $\dfrac{\sqrt3+1}{4}+\dfrac{\sqrt3-1}{4}i$
+
+#b
+$z_1 = \sqrt2\,e^{i\frac{\pi}{4}}$, $z_2 = 2e^{i\frac{\pi}{3}}$, $\dfrac{z_1}{z_2} = \dfrac{\sqrt2}{2}\,e^{-i\frac{\pi}{12}}$, soit $\dfrac{\sqrt3+1}{4}+\dfrac{\sqrt3-1}{4}i$
+
+#c
+$z_1 = \sqrt2\,e^{i\frac{\pi}{4}}$, $z_2 = 2e^{i\frac{\pi}{6}}$, $\dfrac{z_1}{z_2} = \dfrac{\sqrt2}{2}\,e^{i\frac{\pi}{12}}$, soit $\dfrac{\sqrt3+1}{4}+\dfrac{\sqrt3-1}{4}i$
+
+#d
+$z_1 = 2e^{i\frac{\pi}{4}}$, $z_2 = 2e^{i\frac{\pi}{6}}$, $\dfrac{z_1}{z_2} = e^{i\frac{\pi}{12}}$, soit $\dfrac{\sqrt3-1}{4}+\dfrac{\sqrt3+1}{4}i$
 
 #indice
 Pour a), on applique deux fois la méthode de la question précédente. Les deux modules et les deux angles sont des valeurs remarquables.
@@ -963,8 +1119,20 @@ $$
 **Contrôle numérique** : $\dfrac{\sqrt6+\sqrt2}{4}\approx 0{,}966$, et $\cos 15° \approx 0{,}966$. ✓
 ::
 
-::exo-question{label="3." cours="xnc-exponentielle"}
+::exo-question{label="3." cours="xnc-exponentielle" bonne="d"}
 Calculer $(1+i)^{12}$, puis $\left(-1+i\sqrt3\right)^{2026}$, et donner chaque résultat sous forme algébrique.
+
+#a
+$(1+i)^{12} = 64$ et $\left(-1+i\sqrt3\right)^{2026} = 2^{2025}-2^{2025}\sqrt3\,i$
+
+#b
+$(1+i)^{12} = -64$ et $\left(-1+i\sqrt3\right)^{2026} = 2^{2026}$
+
+#c
+$(1+i)^{12} = -64i$ et $\left(-1+i\sqrt3\right)^{2026} = -2^{2025}-2^{2025}\sqrt3\,i$
+
+#d
+$(1+i)^{12} = -64$ et $\left(-1+i\sqrt3\right)^{2026} = -2^{2025}+2^{2025}\sqrt3\,i$
 
 #indice
 Développer est hors de question : c'est précisément ce que la forme exponentielle permet d'éviter. La formule à utiliser est celle de Moivre, $\left(re^{i\theta}\right)^n = r^n e^{in\theta}$ — **le module est élevé à la puissance $n$, l'argument est multiplié par $n$**.
