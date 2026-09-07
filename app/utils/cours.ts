@@ -44,3 +44,33 @@ export function coursTypeInfo(type?: string | null): CoursTypeInfo | null {
   if (!type) return null
   return coursTypes[type as CoursType] ?? null
 }
+
+/**
+ * Réduit un intitulé à un identifiant lisible et stable : « Exercice 3 — Études
+ * de fonctions » devient « exercice-3-etudes-de-fonctions ». Sert à composer les
+ * clés de mémoire, qui doivent survivre à un rebuild du site — d'où le refus des
+ * identifiants engendrés à la volée par `useId()`.
+ */
+export function slugifier(texte: string): string {
+  return texte
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+/**
+ * Chemin de fiche sous sa forme canonique, sans barre oblique finale : GitHub
+ * Pages redirige « /page » vers « /page/ », alors qu'une carte de lien pointe
+ * vers la forme nue. Sans ce passage obligé, une même fiche aurait deux mémoires.
+ */
+export function cheminCanonique(chemin: string): string {
+  return chemin.replace(/\/+$/, '') || '/'
+}
+
+/** Identité d'une question, unique dans tout le site et stable entre deux builds. */
+export function identiteQuestion(chemin: string, bloc: string | null, label?: string): string | null {
+  if (!bloc || !label) return null
+  return `${cheminCanonique(chemin)}#${bloc}#${label}`
+}

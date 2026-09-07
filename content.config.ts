@@ -156,7 +156,10 @@ export default defineContentConfig({
         annee: z.string().optional(),
         matiere: z.string().optional(),
         ordre: z.number().optional(),
-        icone: z.string().optional()
+        icone: z.string().optional(),
+        // Rempli au build par le hook `content:file:afterParse` de nuxt.config.ts.
+        // Ne pas l'écrire à la main dans un frontmatter : il serait écrasé.
+        questions: z.number().optional()
       })
     })
   }

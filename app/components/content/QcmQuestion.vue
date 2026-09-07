@@ -22,6 +22,15 @@ const solutionOuverte = ref(false)
 
 const qcm = useQcm()
 const extraits = useCoursExtraits()
+const progression = useProgression()
+const bloc = useBloc()
+const route = useRoute()
+
+// La question compte dans la progression de la fiche, comme celle d'un exercice.
+// La relation est à sens unique : le QCM écrit ce qu'il a réussi, mais ne relit
+// jamais cette mémoire — sinon la copie arriverait pré-remplie et ne voudrait
+// plus rien dire.
+const identite = computed(() => identiteQuestion(route.path, bloc?.slug.value ?? null, props.label))
 
 const corrige = computed(() => qcm?.corrige.value ?? false)
 const juste = computed(() => choisi.value === props.bonne)
@@ -32,13 +41,24 @@ const juste = computed(() => choisi.value === props.bonne)
 const rateeAvant = computed(() =>
   !!props.label && !!qcm?.ratesPrecedents.value.includes(props.label))
 
-onMounted(() => qcm?.enregistrer({ id: uid, label: props.label, bonne: props.bonne }))
-onBeforeUnmount(() => qcm?.oublier(uid))
+onMounted(() => {
+  qcm?.enregistrer({ id: uid, label: props.label, bonne: props.bonne })
+  progression?.declarer(identite.value)
+})
+onBeforeUnmount(() => {
+  qcm?.oublier(uid)
+  progression?.oublier(identite.value)
+})
 
 // Le conteneur remet les réponses à zéro en sortant du mode corrigé : la question
-// suit le mouvement plutôt que de garder un choix orphelin.
+// suit le mouvement plutôt que de garder un choix orphelin. Une question déjà
+// gagnée le reste en revanche : recommencer un QCM ne défait pas la progression.
 watch(corrige, (actif) => {
-  if (!actif) choisi.value = null
+  if (!actif) {
+    choisi.value = null
+    return
+  }
+  if (juste.value && choisi.value) progression?.reussir(identite.value, choisi.value)
 })
 
 function choisir(lettre: string) {

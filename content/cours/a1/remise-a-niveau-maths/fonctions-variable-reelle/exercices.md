@@ -30,8 +30,20 @@ Le bon réflexe : chercher, puis l'indice, puis le cours, et la solution en dern
 :::exercice{titre="Exercice 1" theme="Sommes de fonctions élémentaires"}
 Déterminer la fonction dérivée des fonctions suivantes. Ce sont des sommes : on dérive **terme à terme**, chaque terme se lisant directement dans le tableau de la section 4.
 
-::exo-question{label="1." cours="cours-tableau"}
+::exo-question{label="1." cours="cours-tableau" bonne="b"}
 $f(x) = 2x+1$
+
+#a
+$f'(x) = 2x$
+
+#b
+$f'(x) = 2$
+
+#c
+$f'(x) = 2x+1$
+
+#d
+$f'(x) = 3$
 
 #indice
 La dérivation est linéaire : la dérivée d'une somme est la somme des dérivées. Et souviens-toi qu'une constante ne varie pas… donc sa dérivée est nulle.
@@ -46,8 +58,20 @@ $$
 C'est cohérent : le graphe de $f$ est une droite de coefficient directeur $2$, et la pente d'une droite est la même en tout point.
 ::
 
-::exo-question{label="2." cours="cours-tableau"}
+::exo-question{label="2." cours="cours-tableau" bonne="a"}
 $f(x) = x^2-3x$
+
+#a
+$f'(x) = 2x-3$
+
+#b
+$f'(x) = 2x-3x$
+
+#c
+$f'(x) = x-3$
+
+#d
+$f'(x) = 2x+3$
 
 #indice
 Deux termes, deux applications de la règle $(x^\alpha)' = \alpha x^{\alpha-1}$. Le facteur $-3$ sort de la dérivée : $(k\,u)' = k\,u'$.
@@ -60,8 +84,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-tableau"}
+::exo-question{label="3." cours="cours-tableau" bonne="c"}
 $f(x) = \sqrt{x}+\dfrac{1}{x}$
+
+#a
+$f'(x) = \dfrac{1}{2\sqrt x}+\dfrac{1}{x^2}$
+
+#b
+$f'(x) = \dfrac{1}{\sqrt x}-\dfrac{1}{x^2}$
+
+#c
+$f'(x) = \dfrac{1}{2\sqrt x}-\dfrac{1}{x^2}$
+
+#d
+$f'(x) = \dfrac{1}{2\sqrt x}-\dfrac{1}{x}$
 
 #indice
 Les deux termes figurent tels quels dans le tableau des dérivées usuelles. Si tu ne les as pas mémorisés, réécris-les en puissances : $\sqrt{x} = x^{1/2}$ et $\dfrac{1}{x} = x^{-1}$, puis applique $(x^\alpha)' = \alpha x^{\alpha-1}$.
@@ -82,8 +118,20 @@ $$
 Le signe moins du second terme n'est pas une erreur de recopie : il vient de l'exposant $-1$ de $x^{-1}$.
 ::
 
-::exo-question{label="4." cours="cours-tableau"}
+::exo-question{label="4." cours="cours-tableau" bonne="d"}
 $f(x) = x^4+x^3+x^2$
+
+#a
+$f'(x) = 4x^4+3x^3+2x^2$
+
+#b
+$f'(x) = x^3+x^2+x$
+
+#c
+$f'(x) = 4x^3+3x^2+2x+1$
+
+#d
+$f'(x) = 4x^3+3x^2+2x$
 
 #indice
 Trois monômes, trois fois la même règle. À chaque fois, l'exposant descend en facteur et diminue de $1$.
@@ -100,8 +148,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-tableau"}
+::exo-question{label="5." cours="cours-tableau" bonne="a"}
 $f(x) = \dfrac{5}{x}+3\sqrt{x}$
+
+#a
+$f'(x) = -\dfrac{5}{x^2}+\dfrac{3}{2\sqrt x}$
+
+#b
+$f'(x) = \dfrac{5}{x^2}+\dfrac{3}{2\sqrt x}$
+
+#c
+$f'(x) = -\dfrac{5}{x^2}+\dfrac{3}{\sqrt x}$
+
+#d
+$f'(x) = -\dfrac{1}{x^2}+\dfrac{3}{2\sqrt x}$
 
 #indice
 Ne te laisse pas impressionner par les coefficients : ce sont des constantes multiplicatives, elles sortent de la dérivée sans rien changer. Écris $\dfrac{5}{x} = 5\times\dfrac{1}{x}$ et $3\sqrt{x} = 3\times\sqrt{x}$, puis dérive chaque fonction de base. Le piège est d'oublier le $\dfrac{1}{2}$ qui figure dans la dérivée de la racine.
@@ -120,8 +180,20 @@ $$
 *⚠️ La correction officielle imprime $\dfrac{3}{\sqrt{x}}$ pour le second terme : le facteur $\dfrac{1}{2}$ de $(\sqrt{x})' = \dfrac{1}{2\sqrt{x}}$ a été perdu — c'est bien $\dfrac{3}{2\sqrt{x}}$.*
 ::
 
-::exo-question{label="6." cours="cours-reecriture"}
+::exo-question{label="6." cours="cours-reecriture" bonne="b"}
 $f(x) = -\dfrac{2}{x}+\dfrac{2}{\sqrt{x}}$
+
+#a
+$f'(x) = -\dfrac{2}{x^2}-\dfrac{1}{x\sqrt x}$
+
+#b
+$f'(x) = \dfrac{2}{x^2}-\dfrac{1}{x\sqrt x}$
+
+#c
+$f'(x) = \dfrac{2}{x^2}+\dfrac{1}{x\sqrt x}$
+
+#d
+$f'(x) = \dfrac{2}{x^2}-\dfrac{2}{x\sqrt x}$
 
 #indice
 Le second terme n'est pas dans le tableau tel quel : une racine **au dénominateur**. Réécris-le en puissance, $\dfrac{1}{\sqrt{x}} = x^{-1/2}$, et la règle $(x^\alpha)' = \alpha x^{\alpha-1}$ redevient applicable. Surveille les signes : il y en a un dans l'énoncé, et un autre qui apparaîtra au cours du calcul.
@@ -152,8 +224,20 @@ $$
 :::exercice{titre="Exercice 2" theme="Produits et simplification préalable"}
 Déterminer la fonction dérivée des fonctions suivantes. Réflexe numéro un : **regarder si l'écriture se simplifie** avant de dériver. Sinon, on pose $u$ et $v$, et on applique $(uv)' = u'v+uv'$.
 
-::exo-question{label="1." cours="cours-produit"}
+::exo-question{label="1." cours="cours-produit" bonne="c"}
 $f(x) = x(x-2)$
+
+#a
+$f'(x) = x-2$
+
+#b
+$f'(x) = 1$
+
+#c
+$f'(x) = 2x-2$
+
+#d
+$f'(x) = 2x+2$
 
 #indice
 Deux chemins mènent au résultat : appliquer la formule du produit, ou développer d'abord pour retomber sur une simple somme de monômes. Essaie les deux et vérifie qu'ils donnent la même chose — c'est un bon test de ta maîtrise de la formule.
@@ -172,8 +256,20 @@ $$
 *Vérification par l'autre chemin* : en développant, $f(x) = x^2-2x$, dont la dérivée est bien $2x-2$.
 ::
 
-::exo-question{label="2." cours="cours-produit"}
+::exo-question{label="2." cours="cours-produit" bonne="d"}
 $f(x) = (2x^2-3)(x+1)$
+
+#a
+$f'(x) = 4x$
+
+#b
+$f'(x) = 6x^2+4x+3$
+
+#c
+$f'(x) = 2x^2+4x-3$
+
+#d
+$f'(x) = 6x^2+4x-3$
 
 #indice
 C'est un produit de deux polynômes : pose $u = 2x^2-3$ et $v = x+1$. Applique $(uv)' = u'v+uv'$ en veillant à ne pas intervertir $u'$ et $v'$, puis développe pour présenter un polynôme rangé par degrés décroissants.
@@ -196,8 +292,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-reecriture"}
+::exo-question{label="3." cours="cours-reecriture" bonne="a"}
 $f(x) = \sqrt{x}\times\dfrac{1}{x}$
+
+#a
+$f'(x) = -\dfrac{1}{2x\sqrt x}$
+
+#b
+$f'(x) = \dfrac{1}{2x\sqrt x}$
+
+#c
+$f'(x) = -\dfrac{1}{2\sqrt x\,x^2}$
+
+#d
+$f'(x) = -\dfrac{1}{2\sqrt x}$
 
 #indice
 Avant de sortir la formule du produit, regarde ce que vaut réellement cette expression : $\dfrac{\sqrt{x}}{x}$ se simplifie ! Écris tout en puissances de $x$ et additionne les exposants — il ne restera qu'une seule fonction élémentaire à dériver.
@@ -222,8 +330,20 @@ $$
 *La correction officielle applique directement la formule du produit : $f'(x) = \dfrac{1}{2\sqrt{x}}\times\dfrac{1}{x}-\dfrac{\sqrt{x}}{x^2}$ — c'est le même résultat, car $\dfrac{1}{2x\sqrt{x}}-\dfrac{1}{x\sqrt{x}} = -\dfrac{1}{2x\sqrt{x}}$.*
 ::
 
-::exo-question{label="4." cours="cours-produit"}
+::exo-question{label="4." cours="cours-produit" bonne="b"}
 $f(x) = (2x+1)\sqrt{x}$
+
+#a
+$f'(x) = \dfrac{2x+1}{2\sqrt x}$
+
+#b
+$f'(x) = \dfrac{6x+1}{2\sqrt x}$
+
+#c
+$f'(x) = \dfrac{2x+1}{\sqrt x}$
+
+#d
+$f'(x) = \dfrac{1}{\sqrt x}$
 
 #indice
 Ici la simplification n'aide pas : c'est un vrai produit, avec un facteur polynomial et un facteur racine. Après application de la formule, tu obtiendras une somme dont un terme est une fraction : mets tout au même dénominateur $2\sqrt{x}$, en te servant de l'identité $\sqrt{x}\times\sqrt{x} = x$.
@@ -252,8 +372,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-composees"}
+::exo-question{label="5." cours="cours-composees" bonne="c"}
 $f(x) = (x^2-3x-1)^2$
+
+#a
+$f'(x) = 2(x^2-3x-1)$
+
+#b
+$f'(x) = (2x-3)^2$
+
+#c
+$f'(x) = 2(2x-3)\left(x^2-3x-1\right)$
+
+#d
+$f'(x) = 2(2x-3)\left(x^2-3x-1\right)^2$
 
 #indice
 Un carré, ce n'est jamais qu'une puissance $u^n$ : la Prop 3.3 s'applique directement, avec $n = 2$. Tu pourrais aussi développer, mais tu obtiendrais un polynôme de degré $4$ à dériver — le détour est nettement plus long.
@@ -272,8 +404,20 @@ $$
 *Pourquoi ne pas développer le carré ? On pourrait, mais la Prop 3.3 est plus rapide et donne un résultat déjà factorisé — bien pratique pour étudier ensuite le signe de $f'$.*
 ::
 
-::exo-question{label="6." cours="cours-reecriture"}
+::exo-question{label="6." cours="cours-reecriture" bonne="d"}
 $f(x) = (x^2+1)\times\dfrac{1}{x}$
+
+#a
+$f'(x) = -\dfrac{2x}{x^2}$
+
+#b
+$f'(x) = 1+\dfrac{1}{x^2}$
+
+#c
+$f'(x) = -\dfrac{1}{x^2}$
+
+#d
+$f'(x) = 1-\dfrac{1}{x^2}$
 
 #indice
 Comme à la question **3.**, commence par simplifier. Multiplier par $\dfrac{1}{x}$ revient à diviser par $x$ : sépare alors la fraction en deux morceaux, et tu retomberas sur une somme de fonctions déjà croisées à l'exercice 1.
@@ -296,8 +440,20 @@ $$
 :::exercice{titre="Exercice 3" theme="Inverses et la proposition 3.5"}
 Déterminer la fonction dérivée des fonctions suivantes. Elles sont toutes de la forme $\dfrac{k}{u} = k\times\dfrac{1}{u}$ : la **Prop 3.5** donne $\left(\dfrac{1}{u}\right)' = -\dfrac{u'}{u^2}$, donc $\left(\dfrac{k}{u}\right)' = -\dfrac{k\,u'}{u^2}$. À chaque fois : poser $u$, calculer $u'$, appliquer — en surveillant les signes.
 
-::exo-question{label="1." cours="cours-inverse"}
+::exo-question{label="1." cours="cours-inverse" bonne="a"}
 $f(x) = \dfrac{1}{x^2+1}$
+
+#a
+$f'(x) = -\dfrac{2x}{\left(x^2+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{2x}{\left(x^2+1\right)^2}$
+
+#c
+$f'(x) = -\dfrac{2x}{x^2+1}$
+
+#d
+$f'(x) = -\dfrac{1}{\left(x^2+1\right)^2}$
 
 #indice
 Le numérateur est constant : inutile de sortir la formule du quotient, la Prop 3.5 suffit et va plus vite. Pose $u$ égal au dénominateur, calcule $u'$, et n'oublie ni le signe moins ni le carré au dénominateur.
@@ -316,8 +472,20 @@ $$
 Remarque : $u = x^2+1$ ne s'annule jamais, $f$ est donc dérivable sur $\mathbb{R}$ tout entier.
 ::
 
-::exo-question{label="2." cours="cours-inverse"}
+::exo-question{label="2." cours="cours-inverse" bonne="b"}
 $f(x) = \dfrac{1}{\sqrt{x}+1}$
+
+#a
+$f'(x) = -\dfrac{1}{\left(\sqrt x+1\right)^2}$
+
+#b
+$f'(x) = -\dfrac{1}{2\sqrt x\,\left(\sqrt x+1\right)^2}$
+
+#c
+$f'(x) = \dfrac{1}{2\sqrt x\,\left(\sqrt x+1\right)^2}$
+
+#d
+$f'(x) = -\dfrac{1}{2\sqrt x\,\left(\sqrt x+1\right)}$
 
 #indice
 Attention à la lecture de l'énoncé : la racine ne porte que sur $x$, le dénominateur est bien $\sqrt{x}+1$. C'est encore une forme $\dfrac{1}{u}$, mais cette fois $u'$ demande la dérivée de la racine. Pense aussi à te demander sur quel intervalle tout cela a un sens.
@@ -342,8 +510,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-inverse"}
+::exo-question{label="3." cours="cours-inverse" bonne="c"}
 $f(x) = \dfrac{3}{2x^2+1}$
+
+#a
+$f'(x) = -\dfrac{4x}{\left(2x^2+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{12x}{\left(2x^2+1\right)^2}$
+
+#c
+$f'(x) = -\dfrac{12x}{\left(2x^2+1\right)^2}$
+
+#d
+$f'(x) = -\dfrac{12x}{2x^2+1}$
 
 #indice
 Le numérateur $3$ est une constante multiplicative : elle traverse la dérivation sans être modifiée. Autrement dit, dérive $\dfrac{1}{2x^2+1}$ et multiplie le tout par $3$.
@@ -360,8 +540,20 @@ $$
 $$
 ::
 
-::exo-question{label="4." cours="cours-inverse"}
+::exo-question{label="4." cours="cours-inverse" bonne="d"}
 $f(x) = -\dfrac{3}{x-6}$
+
+#a
+$f'(x) = -\dfrac{3}{(x-6)^2}$
+
+#b
+$f'(x) = \dfrac{1}{(x-6)^2}$
+
+#c
+$f'(x) = \dfrac{3}{x-6}$
+
+#d
+$f'(x) = \dfrac{3}{(x-6)^2}$
 
 #indice
 Ici $k = -3$ : le signe moins de l'énoncé fait partie de la constante. Combiné au signe moins de la Prop 3.5, cela va donner un résultat… positif. Prends le temps de poser le calcul plutôt que de deviner le signe final.
@@ -380,8 +572,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-inverse"}
+::exo-question{label="5." cours="cours-inverse" bonne="a"}
 $f(x) = -\dfrac{2}{x^2+x+1}$
+
+#a
+$f'(x) = \dfrac{2(2x+1)}{\left(x^2+x+1\right)^2}$
+
+#b
+$f'(x) = -\dfrac{2(2x+1)}{\left(x^2+x+1\right)^2}$
+
+#c
+$f'(x) = \dfrac{2x+1}{\left(x^2+x+1\right)^2}$
+
+#d
+$f'(x) = \dfrac{2(2x+1)}{x^2+x+1}$
 
 #indice
 Même mécanique qu'à la question précédente, avec cette fois $u' $ non constant. Deux signes moins vont se rencontrer : lequel survit ? Écris la formule complète avant de simplifier, c'est le meilleur moyen de ne pas se tromper.
@@ -400,8 +604,20 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-inverse"}
+::exo-question{label="6." cours="cours-inverse" bonne="b"}
 $f(x) = \dfrac{1}{3-5x}$
+
+#a
+$f'(x) = -\dfrac{5}{(3-5x)^2}$
+
+#b
+$f'(x) = \dfrac{5}{(3-5x)^2}$
+
+#c
+$f'(x) = -\dfrac{1}{(3-5x)^2}$
+
+#d
+$f'(x) = \dfrac{5}{3-5x}$
 
 #indice
 Cette fois, c'est $u'$ qui est négatif — le $x$ est précédé d'un $-5$. Encore une rencontre de deux signes moins dans la formule de la Prop 3.5. Et note que le dénominateur, étant élevé au carré, reste positif quel que soit $x$.
@@ -426,8 +642,20 @@ Le dénominateur étant un carré, $f'$ est strictement positive : $f$ est crois
 :::exercice{titre="Exercice 4" theme="Quotients"}
 Déterminer la fonction dérivée des fonctions suivantes. Le numérateur n'est plus constant : il faut la formule du quotient $\left(\dfrac{u}{v}\right)' = \dfrac{u'v-uv'}{v^2}$. Démarche systématique : poser $u$ et $v$, calculer $u'$ et $v'$, écrire le numérateur **sans se tromper d'ordre**, puis développer et simplifier — le dénominateur $v^2$, lui, reste tel quel.
 
-::exo-question{label="1." cours="cours-quotient"}
+::exo-question{label="1." cours="cours-quotient" bonne="c"}
 $f(x) = \dfrac{x-1}{x+2}$
+
+#a
+$f'(x) = 1$
+
+#b
+$f'(x) = -\dfrac{3}{(x+2)^2}$
+
+#c
+$f'(x) = \dfrac{3}{(x+2)^2}$
+
+#d
+$f'(x) = \dfrac{3}{x+2}$
 
 #indice
 Le numérateur $u'v-uv'$ n'est **pas** symétrique : l'ordre des deux termes compte, et une inversion donnerait le résultat opposé. Attention aussi au signe moins qui se distribue sur toute la parenthèse $uv'$.
@@ -448,8 +676,20 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-quotient"}
+::exo-question{label="2." cours="cours-quotient" bonne="d"}
 $f(x) = \dfrac{\sqrt{x}}{x^2+1}$
+
+#a
+$f'(x) = \dfrac{1+3x^2}{2\sqrt x\,\left(x^2+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{1-3x^2}{2\sqrt x\,\left(x^2+1\right)}$
+
+#c
+$f'(x) = \dfrac{1}{2\sqrt x\,\left(x^2+1\right)^2}$
+
+#d
+$f'(x) = \dfrac{1-3x^2}{2\sqrt x\,\left(x^2+1\right)^2}$
 
 #indice
 Formule du quotient classique, mais $u' = \dfrac{1}{2\sqrt{x}}$ est lui-même une fraction : le numérateur obtenu sera donc une différence à mettre au même dénominateur $2\sqrt{x}$. Au final tu auras une fraction de fraction — pense à la « descendre » proprement.
@@ -476,8 +716,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-quotient"}
+::exo-question{label="3." cours="cours-quotient" bonne="a"}
 $f(x) = \dfrac{x^2}{x-1}$
+
+#a
+$f'(x) = \dfrac{x(x-2)}{(x-1)^2}$
+
+#b
+$f'(x) = \dfrac{x(x+2)}{(x-1)^2}$
+
+#c
+$f'(x) = 2x$
+
+#d
+$f'(x) = \dfrac{x(x-2)}{x-1}$
 
 #indice
 Applique la formule, développe le numérateur puis regroupe. Le résultat se factorise joliment : cherche le facteur commun, cela rendra l'étude du signe de $f'$ immédiate.
@@ -504,8 +756,20 @@ $$
 Sous cette forme factorisée, on lit immédiatement que $f'$ s'annule en $0$ et en $2$.
 ::
 
-::exo-question{label="4." cours="cours-quotient"}
+::exo-question{label="4." cours="cours-quotient" bonne="b"}
 $f(x) = \dfrac{2x-3}{1-x}$
+
+#a
+$f'(x) = \dfrac{1}{(1-x)^2}$
+
+#b
+$f'(x) = -\dfrac{1}{(1-x)^2}$
+
+#c
+$f'(x) = -2$
+
+#d
+$f'(x) = -\dfrac{5}{(1-x)^2}$
 
 #indice
 Le piège est au dénominateur : la dérivée de $1-x$ n'est pas $1$. Une fois ce signe correctement pris en compte, tout se simplifie et il ne reste qu'une constante au numérateur — négative.
@@ -524,8 +788,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-quotient"}
+::exo-question{label="5." cours="cours-quotient" bonne="c"}
 $f(x) = \dfrac{x^2+x+1}{x^2+1}$
+
+#a
+$f'(x) = \dfrac{x^2-1}{\left(x^2+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{1-x^2}{x^2+1}$
+
+#c
+$f'(x) = \dfrac{1-x^2}{\left(x^2+1\right)^2}$
+
+#d
+$f'(x) = \dfrac{2x+1}{2x}$
 
 #indice
 Les deux dérivées $u'$ et $v'$ se ressemblent beaucoup, mais elles ne sont pas égales : recopie soigneusement $u' = 2x+1$, le $+1$ n'est pas décoratif. Développe ensuite chaque produit à part avant de faire la différence, les termes de degré $3$ doivent disparaître.
@@ -558,8 +834,20 @@ $$
 *⚠️ La correction officielle écrit au numérateur $2x(x^2+1)-2x(x^2+x+1)$ : le $u' = 2x+1$ y est devenu $2x$ (coquille). Avec le bon $u'$, on retrouve bien $1-x^2$.*
 ::
 
-::exo-question{label="6." cours="cours-quotient"}
+::exo-question{label="6." cours="cours-quotient" bonne="d"}
 $f(x) = \dfrac{2x^2+1}{2x^2-1}$
+
+#a
+$f'(x) = \dfrac{8x}{\left(2x^2-1\right)^2}$
+
+#b
+$f'(x) = -\dfrac{8x}{2x^2-1}$
+
+#c
+$f'(x) = 1$
+
+#d
+$f'(x) = -\dfrac{8x}{\left(2x^2-1\right)^2}$
 
 #indice
 Ici $u'$ et $v'$ sont identiques. Plutôt que de tout développer, mets ce facteur commun en évidence dès l'écriture du numérateur : la parenthèse restante se réduit alors à une simple constante.
@@ -590,8 +878,20 @@ Pour chacune des fonctions suivantes, donner l'ensemble sur lequel elle est dér
 
 Trois règles suffisent ici : un polynôme est dérivable sur $\mathbb{R}$ ; un quotient est dérivable partout où le **dénominateur ne s'annule pas** ; enfin $\sqrt{x}$ est **définie** sur $[0,+\infty[$ mais **dérivable seulement sur** $]0,+\infty[$.
 
-::exo-question{label="1." cours="cours-domaine"}
+::exo-question{label="1." cours="cours-domaine" bonne="b"}
 $f_1(x) = \sqrt{x}$
+
+#a
+Dérivable sur $[0;+\infty[$, et $f_{1}'(x) = \dfrac{1}{2\sqrt x}$
+
+#b
+Dérivable sur $]0;+\infty[$, et $f_{1}'(x) = \dfrac{1}{2\sqrt x}$
+
+#c
+Dérivable sur $]0;+\infty[$, et $f_{1}'(x) = \dfrac{1}{\sqrt x}$
+
+#d
+Dérivable sur $[0;+\infty[$, et $f_{1}'(x) = \dfrac{1}{2}\sqrt x$
 
 #indice
 Attention au piège classique : l'ensemble de définition et l'ensemble de dérivabilité ne coïncident pas ici. Regarde ce que devient $\dfrac{1}{2\sqrt{x}}$ quand $x$ s'approche de $0$ — que peux-tu en dire de la tangente en ce point ?
@@ -608,8 +908,20 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-domaine"}
+::exo-question{label="2." cours="cours-domaine" bonne="c"}
 $f_2(x) = \dfrac{1}{x}$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{2}'(x) = -\dfrac{1}{x^2}$
+
+#b
+Dérivable sur $\mathbb{R}^*$, et $f_{2}'(x) = \dfrac{1}{x^2}$
+
+#c
+Dérivable sur $\mathbb{R}^*$, et $f_{2}'(x) = -\dfrac{1}{x^2}$
+
+#d
+Dérivable sur $\mathbb{R}^*$, et $f_{2}'(x) = -\dfrac{1}{x}$
 
 #indice
 Une seule valeur pose problème, celle qui annule le dénominateur. Une fois écartée, la dérivée se lit dans le tableau — ou s'obtient en écrivant la fonction comme une puissance.
@@ -624,8 +936,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-domaine"}
+::exo-question{label="3." cours="cours-domaine" bonne="a"}
 $f_3(x) = x^2+5x-1$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{3}'(x) = 2x+5$
+
+#b
+Dérivable sur $\mathbb{R}$, et $f_{3}'(x) = 2x+5-1$
+
+#c
+Dérivable sur $\mathbb{R}^*$, et $f_{3}'(x) = 2x+5$
+
+#d
+Dérivable sur $\mathbb{R}$, et $f_{3}'(x) = x+5$
 
 #indice
 Quelle est la nature de cette fonction ? Pour cette famille, la question de l'ensemble de dérivabilité ne se pose même pas : aucun dénominateur, aucune racine.
@@ -640,8 +964,20 @@ $$
 $$
 ::
 
-::exo-question{label="4." cours="cours-domaine"}
+::exo-question{label="4." cours="cours-domaine" bonne="d"}
 $f_4(x) = 3x^3+5x^2-2x+2$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{4}'(x) = 9x^2+10x$
+
+#b
+Dérivable sur $\mathbb{R}$, et $f_{4}'(x) = 3x^2+5x-2$
+
+#c
+Dérivable sur $\mathbb{R}$, et $f_{4}'(x) = 9x^2+10x+2$
+
+#d
+Dérivable sur $\mathbb{R}$, et $f_{4}'(x) = 9x^2+10x-2$
 
 #indice
 Même famille qu'à la question précédente : dérivable partout. Il ne reste qu'à appliquer trois fois la règle des puissances, sans oublier que la constante disparaît.
@@ -658,8 +994,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-domaine"}
+::exo-question{label="5." cours="cours-domaine" bonne="b"}
 $f_5(x) = \dfrac{3}{x}$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{5}'(x) = -\dfrac{3}{x^2}$
+
+#b
+Dérivable sur $\mathbb{R}^*$, et $f_{5}'(x) = -\dfrac{3}{x^2}$
+
+#c
+Dérivable sur $\mathbb{R}^*$, et $f_{5}'(x) = \dfrac{3}{x^2}$
+
+#d
+Dérivable sur $\mathbb{R}^*$, et $f_{5}'(x) = -\dfrac{1}{x^2}$
 
 #indice
 C'est la fonction de la question **2.** multipliée par une constante — l'ensemble de dérivabilité est donc le même, et la dérivée aussi, au facteur près.
@@ -674,8 +1022,20 @@ $$
 $$
 ::
 
-::exo-question{label="6." cours="cours-produit"}
+::exo-question{label="6." cours="cours-produit" bonne="c"}
 $f_6(x) = (x+3)(x-2)$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{6}'(x) = 1$
+
+#b
+Dérivable sur $\mathbb{R}$, et $f_{6}'(x) = 2x-1$
+
+#c
+Dérivable sur $\mathbb{R}$, et $f_{6}'(x) = 2x+1$
+
+#d
+Dérivable sur $\mathbb{R}$, et $f_{6}'(x) = 2x+6$
 
 #indice
 Lis bien l'énoncé : il s'agit d'un **produit**, pas d'un quotient. C'est donc un polynôme déguisé — développe-le, ou applique $(uv)' = u'v+uv'$, les deux voies donnent le même résultat.
@@ -698,8 +1058,20 @@ $$
 *⚠️ La correction officielle donne $\dfrac{-5}{(x-2)^2}$ : c'est la dérivée du **quotient** $\dfrac{x+3}{x-2}$, pas du produit $(x+3)(x-2)$ (erreur de recopie). Le bon résultat est $2x+1$.*
 ::
 
-::exo-question{label="7." cours="cours-produit"}
+::exo-question{label="7." cours="cours-produit" bonne="a"}
 $f_7(x) = (3x+5)(5x^2+1)$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{7}'(x) = 45x^2+50x+3$
+
+#b
+Dérivable sur $\mathbb{R}$, et $f_{7}'(x) = 30x$
+
+#c
+Dérivable sur $\mathbb{R}$, et $f_{7}'(x) = 15x^2+50x+3$
+
+#d
+Dérivable sur $\mathbb{R}$, et $f_{7}'(x) = 45x^2+50x-3$
 
 #indice
 Encore un produit, à ne pas confondre avec un quotient. Applique $(uv)' = u'v+uv'$, puis développe et regroupe par degrés : tu dois obtenir un polynôme du second degré, sans aucun dénominateur.
@@ -720,8 +1092,20 @@ $$
 *⚠️ Même erreur de recopie dans la correction officielle, qui applique la formule du **quotient** $\dfrac{3x+5}{5x^2+1}$ ; pour le produit demandé, le résultat est $45x^2+50x+3$ — signe $+$ entre les deux termes, et pas de dénominateur.*
 ::
 
-::exo-question{label="8." cours="cours-domaine"}
+::exo-question{label="8." cours="cours-domaine" bonne="d"}
 $f_8(x) = \dfrac{x+1}{x-1}$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{8}'(x) = -\dfrac{2}{(x-1)^2}$
+
+#b
+Dérivable sur $\mathbb{R}\setminus\{1\}$, et $f_{8}'(x) = \dfrac{2}{(x-1)^2}$
+
+#c
+Dérivable sur $\mathbb{R}\setminus\{1\}$, et $f_{8}'(x) = 1$
+
+#d
+Dérivable sur $\mathbb{R}\setminus\{1\}$, et $f_{8}'(x) = -\dfrac{2}{(x-1)^2}$
 
 #indice
 Cette fois c'est bien un quotient : commence par chercher la valeur interdite. Pour le calcul, comme $u' = v' = 1$, le numérateur de la formule se réduit très vite — mais fais bien attention au signe moins devant $uv'$.
@@ -742,8 +1126,20 @@ $$
 $f_8'$ est toujours strictement négative : $f_8$ est décroissante sur chacun des deux intervalles.
 ::
 
-::exo-question{label="9." cours="cours-quotient"}
+::exo-question{label="9." cours="cours-quotient" bonne="b"}
 $f_9(x) = \dfrac{3x-4}{5-x}$
+
+#a
+Dérivable sur $\mathbb{R}\setminus\{5\}$, et $f_{9}'(x) = -\dfrac{11}{(5-x)^2}$
+
+#b
+Dérivable sur $\mathbb{R}\setminus\{5\}$, et $f_{9}'(x) = \dfrac{11}{(5-x)^2}$
+
+#c
+Dérivable sur $\mathbb{R}$, et $f_{9}'(x) = \dfrac{11}{(5-x)^2}$
+
+#d
+Dérivable sur $\mathbb{R}\setminus\{5\}$, et $f_{9}'(x) = -3$
 
 #indice
 La valeur interdite se lit sur le dénominateur. Et attention : ce dénominateur est de la forme $5-x$, sa dérivée n'est donc pas $1$ — c'est exactement le piège de l'exercice 4, question **4.**
@@ -762,8 +1158,20 @@ $$
 $$
 ::
 
-::exo-question{label="10." cours="cours-quotient"}
+::exo-question{label="10." cours="cours-quotient" bonne="c"}
 $f_{10}(x) = x^2+\dfrac{x+1}{x^2+1}$
+
+#a
+Dérivable sur $\mathbb{R}$, et $f_{10}'(x) = 2x+\dfrac{1+2x-x^2}{\left(x^2+1\right)^2}$
+
+#b
+Dérivable sur $\mathbb{R}$, et $f_{10}'(x) = 2x+\dfrac{1-2x-x^2}{x^2+1}$
+
+#c
+Dérivable sur $\mathbb{R}$, et $f_{10}'(x) = 2x+\dfrac{1-2x-x^2}{\left(x^2+1\right)^2}$
+
+#d
+Dérivable sur $\mathbb{R}$, et $f_{10}'(x) = 2x+\dfrac{1}{2x}$
 
 #indice
 Décompose : c'est une somme d'un polynôme et d'un quotient, chacun se dérive de son côté. Pour l'ensemble de dérivabilité, demande-toi si $x^2+1$ peut s'annuler — pense à son minimum.
@@ -788,8 +1196,20 @@ $$
 :::exercice{titre="Exercice 6" theme="Exercice bilan avec exponentielle, logarithme et trigonométrie"}
 Pour chacune des fonctions suivantes, déterminer sa fonction dérivée sur l'intervalle indiqué. C'est l'exercice de synthèse : pour chaque fonction, **identifier la forme** (somme ? produit ? quotient ? $\dfrac{k}{u}$ ? $e^u$ ? $\ln u$ ?), citer la formule des sections 4 et 5, puis l'appliquer.
 
-::exo-question{label="1." cours="cours-tableau"}
+::exo-question{label="1." cours="cours-tableau" bonne="a"}
 $f(x) = 3x+2$ sur $\mathbb{R}$
+
+#a
+$f'(x) = 3$
+
+#b
+$f'(x) = 3x$
+
+#c
+$f'(x) = 3x+2$
+
+#d
+$f'(x) = 5$
 
 #indice
 Une fonction affine : son graphe est une droite. Que vaut la pente d'une droite, et varie-t-elle d'un point à l'autre ?
@@ -802,8 +1222,20 @@ $$
 $$
 ::
 
-::exo-question{label="2." cours="cours-tableau"}
+::exo-question{label="2." cours="cours-tableau" bonne="b"}
 $f(x) = 1-7x$ sur $\mathbb{R}$
+
+#a
+$f'(x) = 7$
+
+#b
+$f'(x) = -7$
+
+#c
+$f'(x) = 1-7x$
+
+#d
+$f'(x) = -7x$
 
 #indice
 Encore une fonction affine, mais écrite dans l'autre sens. Le coefficient devant $x$ est-il bien $7$, ou $-7$ ?
@@ -816,8 +1248,20 @@ $$
 $$
 ::
 
-::exo-question{label="3." cours="cours-tableau"}
+::exo-question{label="3." cours="cours-tableau" bonne="c"}
 $f(x) = \dfrac{1}{7}-\dfrac{5}{7}x$ sur $\mathbb{R}$
+
+#a
+$f'(x) = -\dfrac{4}{7}$
+
+#b
+$f'(x) = \dfrac{5}{7}$
+
+#c
+$f'(x) = -\dfrac{5}{7}$
+
+#d
+$f'(x) = -\dfrac{5}{7}x$
 
 #indice
 Les fractions ne changent rien à l'affaire : $\dfrac{1}{7}$ est une constante, et $\dfrac{5}{7}$ un simple coefficient. Toujours une fonction affine.
@@ -830,8 +1274,20 @@ $$
 $$
 ::
 
-::exo-question{label="4." cours="cours-tableau"}
+::exo-question{label="4." cours="cours-tableau" bonne="d"}
 $f(x) = x^2-x+1$ sur $\mathbb{R}$
+
+#a
+$f'(x) = x$
+
+#b
+$f'(x) = 2x+1$
+
+#c
+$f'(x) = 2x$
+
+#d
+$f'(x) = 2x-1$
 
 #indice
 Un trinôme : trois termes, dérivés séparément. Rappelle-toi que $x$ s'écrit $x^1$ et que sa dérivée vaut $1$.
@@ -844,8 +1300,20 @@ $$
 $$
 ::
 
-::exo-question{label="5." cours="cours-tableau"}
+::exo-question{label="5." cours="cours-tableau" bonne="a"}
 $f(x) = \dfrac{2}{3}x^3-\dfrac{1}{2}x^2+x$ sur $\mathbb{R}$
+
+#a
+$f'(x) = 2x^2-x+1$
+
+#b
+$f'(x) = 2x^2-x$
+
+#c
+$f'(x) = \dfrac23 x^2-\dfrac12 x+1$
+
+#d
+$f'(x) = 2x^2+x+1$
 
 #indice
 Polynôme à coefficients fractionnaires : dérive normalement, puis simplifie chaque coefficient. Les fractions se simplifient très bien contre les exposants qui descendent — surveille que le degré du premier terme reste bien $2$ après dérivation.
@@ -864,8 +1332,20 @@ $$
 *⚠️ La correction officielle imprime $2x-x+1$ : l'exposant du premier terme a sauté, il faut lire $2x^2-x+1$.*
 ::
 
-::exo-question{label="6." cours="cours-composees"}
+::exo-question{label="6." cours="cours-composees" bonne="b"}
 $f(x) = 2\sqrt{x}$ sur $\mathbb{R}_+^*$
+
+#a
+$f'(x) = \dfrac{1}{2\sqrt x}$
+
+#b
+$f'(x) = \dfrac{1}{\sqrt x}$
+
+#c
+$f'(x) = \dfrac{2}{\sqrt x}$
+
+#d
+$f'(x) = 2\sqrt x$
 
 #indice
 Fonction élémentaire multipliée par une constante. Le $2$ du facteur et le $2$ du dénominateur de $(\sqrt{x})'$ vont se rencontrer : que reste-t-il ?
@@ -882,8 +1362,20 @@ $$
 L'intervalle $\mathbb{R}_+^*$ est bien celui de dérivabilité : en $0$, la racine n'est pas dérivable.
 ::
 
-::exo-question{label="7." cours="cours-composees"}
+::exo-question{label="7." cours="cours-composees" bonne="c"}
 $f(x) = x+2\ln(x)$ sur $]0,+\infty[$
+
+#a
+$f'(x) = 1+2x$
+
+#b
+$f'(x) = 1+\dfrac{1}{2x}$
+
+#c
+$f'(x) = 1+\dfrac{2}{x}$
+
+#d
+$f'(x) = \dfrac{2}{x}$
 
 #indice
 Une somme de deux termes, dont un logarithme « nu » : sa dérivée est dans le tableau de la section 4, pas besoin de la Prop 3.2 ici puisqu'il n'y a rien à l'intérieur du $\ln$ hormis $x$.
@@ -902,8 +1394,20 @@ $$
 L'intervalle $]0,+\infty[$ est imposé par le domaine du logarithme.
 ::
 
-::exo-question{label="8." cours="cours-reecriture"}
+::exo-question{label="8." cours="cours-reecriture" bonne="d"}
 $f(x) = \dfrac{1}{x^2}$ sur $\mathbb{R}^*$
+
+#a
+$f'(x) = \dfrac{2}{x^3}$
+
+#b
+$f'(x) = -\dfrac{1}{2x}$
+
+#c
+$f'(x) = -\dfrac{2}{x}$
+
+#d
+$f'(x) = -\dfrac{2}{x^3}$
 
 #indice
 Deux routes possibles : écrire $f(x) = x^{-2}$ et appliquer la règle des puissances, ou voir une forme $\dfrac{1}{u}$ et appliquer la Prop 3.5. Prends-en une, puis vérifie avec l'autre — elles doivent donner exactement la même chose.
@@ -928,8 +1432,20 @@ $$
 $$
 ::
 
-::exo-question{label="9." cours="cours-inverse"}
+::exo-question{label="9." cours="cours-inverse" bonne="a"}
 $f(x) = \dfrac{1}{\sin x}+\dfrac{1}{\cos(x)}$
+
+#a
+$f'(x) = -\dfrac{\cos x}{\sin^2 x}+\dfrac{\sin x}{\cos^2 x}$
+
+#b
+$f'(x) = \dfrac{\cos x}{\sin^2 x}-\dfrac{\sin x}{\cos^2 x}$
+
+#c
+$f'(x) = -\dfrac{1}{\cos x}+\dfrac{1}{\sin x}$
+
+#d
+$f'(x) = -\dfrac{\cos x}{\sin x}+\dfrac{\sin x}{\cos x}$
 
 #indice
 Deux termes, deux fois la Prop 3.5. Le second réserve une surprise : la dérivée du cosinus porte déjà un signe moins, qui va rencontrer celui de la formule. Pense aussi à te demander si « sur $\mathbb{R}$ » est vraiment tenable, vu les dénominateurs.
@@ -958,8 +1474,20 @@ $$
 *⚠️ L'énoncé écrit « sur $\mathbb{R}$ », mais il faut $\sin x \neq 0$ **et** $\cos x \neq 0$, c'est-à-dire $x \neq k\dfrac{\pi}{2}$, $k\in\mathbb{Z}$.*
 ::
 
-::exo-question{label="10." cours="cours-reecriture"}
+::exo-question{label="10." cours="cours-reecriture" bonne="b"}
 $f(x) = x+\dfrac{1}{\sqrt{x}}$
+
+#a
+$f'(x) = 1+\dfrac{1}{2x\sqrt x}$
+
+#b
+$f'(x) = 1-\dfrac{1}{2x\sqrt x}$
+
+#c
+$f'(x) = 1-\dfrac{1}{2\sqrt x}$
+
+#d
+$f'(x) = -\dfrac{1}{2x\sqrt x}$
 
 #indice
 Le second terme est une racine au dénominateur : réécris-le en puissance pour le ramener au tableau. Et regarde d'un œil critique l'intervalle annoncé par l'énoncé — $\dfrac{1}{\sqrt{x}}$ a-t-il un sens pour tout réel ?
@@ -978,8 +1506,20 @@ $$
 *⚠️ L'énoncé écrit « sur $\mathbb{R}$ », mais $\dfrac{1}{\sqrt{x}}$ exige $x > 0$ : le bon ensemble est $\mathbb{R}_+^*$.*
 ::
 
-::exo-question{label="11." cours="cours-composees"}
+::exo-question{label="11." cours="cours-composees" bonne="c"}
 $f(x) = \dfrac{5}{x+e^x}$ sur $\mathbb{R}$
+
+#a
+$f'(x) = -\dfrac{5}{\left(x+e^x\right)^2}$
+
+#b
+$f'(x) = \dfrac{5\left(1+e^x\right)}{\left(x+e^x\right)^2}$
+
+#c
+$f'(x) = -\dfrac{5\left(1+e^x\right)}{\left(x+e^x\right)^2}$
+
+#d
+$f'(x) = -\dfrac{5\left(1+e^x\right)}{x+e^x}$
 
 #indice
 Numérateur constant, donc Prop 3.5 plutôt que formule du quotient. Le dénominateur est une somme dont l'un des termes est sa propre dérivée. Interroge-toi aussi : ce dénominateur peut-il s'annuler ?
@@ -1004,8 +1544,20 @@ $$
 *⚠️ Il faut $x+e^x \neq 0$ : cela exclut un unique réel $x_0 \approx -0{,}567$, celui où $e^x = -x$.*
 ::
 
-::exo-question{label="12." cours="cours-produit"}
+::exo-question{label="12." cours="cours-produit" bonne="d"}
 $f(x) = x(x^2+3)$ sur $\mathbb{R}$
+
+#a
+$f'(x) = 2x$
+
+#b
+$f'(x) = x^2+3$
+
+#c
+$f'(x) = 3x^2+3x$
+
+#d
+$f'(x) = 3x^2+3$
 
 #indice
 Un produit, oui — mais avant de dégainer $(uv)' = u'v+uv'$, regarde ce que donne un simple développement. Tu obtiendras un polynôme de degré $3$ dérivable en une ligne.
@@ -1026,8 +1578,20 @@ $$
 *Par la formule du produit : $1\times(x^2+3)+x\times 2x = x^2+3+2x^2 = 3x^2+3$. Même résultat.*
 ::
 
-::exo-question{label="13." cours="cours-composees"}
+::exo-question{label="13." cours="cours-composees" bonne="a"}
 $f(x) = e^x(x^2+2x+5)$ sur $\mathbb{R}$
+
+#a
+$f'(x) = e^x\left(x^2+4x+7\right)$
+
+#b
+$f'(x) = e^x(2x+2)$
+
+#c
+$f'(x) = e^x\left(x^2+2x+5\right)$
+
+#d
+$f'(x) = e^x\left(x^2+4x+5\right)$
 
 #indice
 Produit d'une exponentielle par un polynôme. La formule s'applique sans difficulté, mais ne t'arrête pas là : dès qu'une exponentielle apparaît dans les deux termes, le réflexe est de la mettre en facteur.
@@ -1050,8 +1614,20 @@ $$
 $$
 ::
 
-::exo-question{label="14." cours="cours-produit"}
+::exo-question{label="14." cours="cours-produit" bonne="b"}
 $f(x) = (x+1)\ln(x^2+x+1)$ sur $]0,+\infty[$
+
+#a
+$f'(x) = \dfrac{2x+1}{x^2+x+1}$
+
+#b
+$f'(x) = \ln\left(x^2+x+1\right)+\dfrac{(x+1)(2x+1)}{x^2+x+1}$
+
+#c
+$f'(x) = \ln\left(x^2+x+1\right)+\dfrac{x+1}{x^2+x+1}$
+
+#d
+$f'(x) = \dfrac{(x+1)(2x+1)}{x^2+x+1}$
 
 #indice
 C'est un produit dont le second facteur est lui-même une forme composée $\ln u$. Deux formules s'emboîtent donc : $(uv)' = u'v+uv'$ à l'extérieur, et $(\ln u)' = \dfrac{u'}{u}$ à l'intérieur. Traite le $\ln u$ à part avant de tout assembler.
@@ -1076,8 +1652,20 @@ $$
 $$
 ::
 
-::exo-question{label="15." cours="cours-composees"}
+::exo-question{label="15." cours="cours-composees" bonne="c"}
 $f(x) = x\cos(2x-1)$ sur $\mathbb{R}$
+
+#a
+$f'(x) = -2\sin(2x-1)$
+
+#b
+$f'(x) = \cos(2x-1)-x\sin(2x-1)$
+
+#c
+$f'(x) = \cos(2x-1)-2x\sin(2x-1)$
+
+#d
+$f'(x) = \cos(2x-1)+2x\sin(2x-1)$
 
 #indice
 Produit, avec un cosinus composé au second facteur. La formule $\big(\cos(ax+b)\big)' = -a\sin(ax+b)$ te donne directement la dérivée de ce facteur — deux erreurs classiques ici : oublier le signe moins, ou oublier le facteur $a$.
@@ -1102,8 +1690,20 @@ $$
 $$
 ::
 
-::exo-question{label="16." cours="cours-quotient"}
+::exo-question{label="16." cours="cours-quotient" bonne="d"}
 $f(x) = \dfrac{1-7x}{2x+1}$ sur $\mathbb{R}-\left\{-\dfrac{1}{2}\right\}$
+
+#a
+$f'(x) = -\dfrac{7}{2}$
+
+#b
+$f'(x) = \dfrac{9}{(2x+1)^2}$
+
+#c
+$f'(x) = -\dfrac{9}{2x+1}$
+
+#d
+$f'(x) = -\dfrac{9}{(2x+1)^2}$
 
 #indice
 Quotient à numérateur non constant : formule complète. Les termes en $x$ vont se neutraliser, il ne restera qu'une constante. Et au dénominateur, recopie soigneusement $v$ avant de l'élever au carré.
@@ -1126,8 +1726,20 @@ $$
 *⚠️ La correction officielle écrit $(2x-1)^2$ au dénominateur : coquille, le dénominateur de $f$ est $2x+1$, donc $v^2 = (2x+1)^2$.*
 ::
 
-::exo-question{label="17." cours="cours-inverse"}
+::exo-question{label="17." cours="cours-inverse" bonne="a"}
 $f(x) = \dfrac{1}{x^2+x+1}$ sur $\mathbb{R}$
+
+#a
+$f'(x) = -\dfrac{2x+1}{\left(x^2+x+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{2x+1}{\left(x^2+x+1\right)^2}$
+
+#c
+$f'(x) = -\dfrac{1}{\left(x^2+x+1\right)^2}$
+
+#d
+$f'(x) = -\dfrac{2x+1}{x^2+x+1}$
 
 #indice
 Numérateur constant, donc Prop 3.5. L'énoncé affirme que $f$ est dérivable sur $\mathbb{R}$ tout entier : pour t'en convaincre, calcule le discriminant du dénominateur.
@@ -1144,8 +1756,20 @@ $$
 $$
 ::
 
-::exo-question{label="18." cours="cours-composees"}
+::exo-question{label="18." cours="cours-composees" bonne="b"}
 $f(x) = e^{-x^2}$ sur $\mathbb{R}$
+
+#a
+$f'(x) = e^{-x^2}$
+
+#b
+$f'(x) = -2x\,e^{-x^2}$
+
+#c
+$f'(x) = 2x\,e^{-x^2}$
+
+#d
+$f'(x) = -2x\,e^{-2x}$
 
 #indice
 Forme $e^u$ : la formule $(e^u)' = u'e^u$ conserve l'exponentielle intacte et la multiplie par la dérivée de l'exposant. Attention au signe de cet exposant, $u = -x^2$ et non $x^2$.
@@ -1164,8 +1788,20 @@ $$
 L'exponentielle n'est jamais modifiée par la dérivation : elle est simplement multipliée par $u'$.
 ::
 
-::exo-question{label="19." cours="cours-composees"}
+::exo-question{label="19." cours="cours-composees" bonne="c"}
 $f(x) = \dfrac{1}{\sqrt{x+1}+1}$ sur $]-1,+\infty[$
+
+#a
+$f'(x) = -\dfrac{1}{\left(\sqrt{x+1}+1\right)^2}$
+
+#b
+$f'(x) = \dfrac{1}{2\sqrt{x+1}\,\left(\sqrt{x+1}+1\right)^2}$
+
+#c
+$f'(x) = -\dfrac{1}{2\sqrt{x+1}\,\left(\sqrt{x+1}+1\right)^2}$
+
+#d
+$f'(x) = -\dfrac{1}{2\sqrt{x+1}\,\left(\sqrt{x+1}+1\right)}$
 
 #indice
 La question la plus emboîtée de l'exercice : une forme $\dfrac{1}{u}$ dont le $u$ contient lui-même une racine composée. Traite $u'$ à part avec la Prop 3.4, puis reporte dans la Prop 3.5. Tu obtiendras une fraction au numérateur d'une fraction : simplifie l'étage.

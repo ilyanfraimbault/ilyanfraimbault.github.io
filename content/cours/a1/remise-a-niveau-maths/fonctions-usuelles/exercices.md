@@ -34,9 +34,21 @@ Résoudre les équations suivantes après avoir déterminé le domaine de résol
 2. **Se débarrasser de ln/exp** grâce à la bijection (Déf 1.2 et stricte croissance) : $\ln(A) = c \iff A = e^c$ ; $e^A = c$ avec $c>0$ $\iff A = \ln c$ ; $\ln(A) = \ln(B) \iff A = B$.
 3. **Vérifier** que les solutions trouvées appartiennent au domaine, puis conclure par l'ensemble $S$.
 
-::exo-question{label="1." cours="cours-equations"}
+::exo-question{label="1." cours="cours-equations" bonne="c"}
 
 $\ln(x+1) = 1$
+
+#a
+$S = \{e\}$
+
+#b
+$S = \{e+1\}$
+
+#c
+$S = \{e-1\}$
+
+#d
+$S = \{0\}$
 
 #indice
 
@@ -56,9 +68,21 @@ $$
 
 ::
 
-::exo-question{label="2." cours="cours-equations"}
+::exo-question{label="2." cours="cours-equations" bonne="a"}
 
 $e^{x-1} = 3$
+
+#a
+$S = \{1+\ln 3\}$
+
+#b
+$S = \{\ln 3-1\}$
+
+#c
+$S = \{e^3+1\}$
+
+#d
+$S = \{\ln 2\}$
 
 #indice
 
@@ -76,9 +100,21 @@ $$
 
 ::
 
-::exo-question{label="3." cours="cours-equations"}
+::exo-question{label="3." cours="cours-equations" bonne="d"}
 
 $\ln(x^2+1) = \ln(2x)$
+
+#a
+$S = \{0\ ;1\}$
+
+#b
+$S = \varnothing$
+
+#c
+$S = \{-1\ ;1\}$
+
+#d
+$S = \{1\}$
 
 #indice
 
@@ -104,9 +140,21 @@ $$
 
 ::
 
-::exo-question{label="4." cours="cours-equations"}
+::exo-question{label="4." cours="cours-equations" bonne="b"}
 
 $\ln(x-2) = \ln(x+1)$
+
+#a
+$S = \{3\}$
+
+#b
+$S = \varnothing$
+
+#c
+$S = \mathbb{R}$
+
+#d
+$S = \left]2,+\infty\right[$
 
 #indice
 
@@ -138,9 +186,21 @@ $$
 \ln(A) \leqslant \ln(B) \iff A \leqslant B \quad (\text{sur le domaine où } A, B > 0).
 $$
 
-::exo-question{label="1." cours="cours-inequations"}
+::exo-question{label="1." cours="cours-inequations" bonne="b"}
 
 $\ln(x-2) \leqslant \ln(2x-1)$
+
+#a
+$S = \left]\dfrac12,+\infty\right[$
+
+#b
+$S = \left]2,+\infty\right[$
+
+#c
+$S = \left]-1,+\infty\right[$
+
+#d
+$S = \left[2,+\infty\right[$
 
 #indice
 
@@ -160,9 +220,21 @@ $$
 
 ::
 
-::exo-question{label="2." cours="cours-inequations"}
+::exo-question{label="2." cours="cours-inequations" bonne="c"}
 
 $\ln\!\left(1+\dfrac{2}{x}\right) \geqslant \ln x$
+
+#a
+$S = \left]0,2\right[$
+
+#b
+$S = \left[-1,2\right]$
+
+#c
+$S = \left]0,2\right]$
+
+#d
+$S = \left[2,+\infty\right[$
 
 #indice
 
@@ -188,9 +260,21 @@ $$
 
 ::
 
-::exo-question{label="3." cours="cours-inequations"}
+::exo-question{label="3." cours="cours-inequations" bonne="a"}
 
 $\ln x \leqslant \ln(x^2-2x)$
+
+#a
+$S = \left[3,+\infty\right[$
+
+#b
+$S = \left]2,+\infty\right[$
+
+#c
+$S = \left]3,+\infty\right[$
+
+#d
+$S = \left]0,3\right]$
 
 #indice
 
@@ -590,9 +674,21 @@ et la formule des angles complémentaires pour convertir un sinus : $\sin\theta 
 ::cercle-trigo{titre="D’où viennent les deux familles de solutions" resume="La droite coupe le cercle en deux points : d’où deux solutions par tour, et deux familles à écrire." mode="equations" modes="equations"}
 ::
 
-::exo-question{label="1." cours="cours-equations-trigo"}
+::exo-question{label="1." cours="cours-equations-trigo" bonne="d"}
 
 Déterminer les réels $x$ tels que $\cos\left(x-\dfrac{\pi}{4}\right) = \sin\left(2x-\dfrac{\pi}{3}\right)$.
+
+#a
+$S = \left\{\dfrac{13\pi}{36}+\dfrac{2k\pi}{3},\; k\in\mathbb{Z}\right\}$
+
+#b
+$S = \left\{\dfrac{7\pi}{12}+2k\pi,\; k\in\mathbb{Z}\right\}$
+
+#c
+$S = \left\{\dfrac{13\pi}{36}+2k\pi,\; k\in\mathbb{Z}\right\}\cup\left\{\dfrac{7\pi}{12}+2k\pi,\; k\in\mathbb{Z}\right\}$
+
+#d
+$S = \left\{\dfrac{13\pi}{36}+\dfrac{2k\pi}{3},\; k\in\mathbb{Z}\right\}\cup\left\{\dfrac{7\pi}{12}+2k\pi,\; k\in\mathbb{Z}\right\}$
 
 #indice
 
@@ -636,9 +732,21 @@ $$
 
 ::
 
-::exo-question{label="2." cours="cours-equations-trigo"}
+::exo-question{label="2." cours="cours-equations-trigo" bonne="a"}
 
 Résoudre sur l'intervalle indiqué : $\cos(x) = \dfrac{1}{2}$ dans $[0,2\pi]$.
+
+#a
+$S = \left\{\dfrac{\pi}{3},\; \dfrac{5\pi}{3}\right\}$
+
+#b
+$S = \left\{\dfrac{\pi}{3}\right\}$
+
+#c
+$S = \left\{\dfrac{\pi}{3},\; -\dfrac{\pi}{3}\right\}$
+
+#d
+$S = \left\{\dfrac{\pi}{6},\; \dfrac{11\pi}{6}\right\}$
 
 #indice
 
@@ -670,9 +778,21 @@ Soit $f$ une fonction définie sur $\mathbb{R}$. Calculer $f'(x)$ dans chacun de
 
 **Méthode** : mêmes réflexes que dans le chapitre *Fonctions d'une variable réelle* (identifier la forme : somme, produit, carré, quotient), avec $\sin' = \cos$ et $\cos' = -\sin$ (Prop 2.3), et $\big(\sin(ax+b)\big)' = a\cos(ax+b)$.
 
-::exo-question{label="1." cours="cours-derivees"}
+::exo-question{label="1." cours="cours-derivees" bonne="b"}
 
 $f(x) = x^2+\cos x$
+
+#a
+$f'(x) = 2x+\sin x$
+
+#b
+$f'(x) = 2x-\sin x$
+
+#c
+$f'(x) = 2x-\cos x$
+
+#d
+$f'(x) = -\sin x$
 
 #indice
 
@@ -688,9 +808,21 @@ $$
 
 ::
 
-::exo-question{label="2." cours="cours-derivees"}
+::exo-question{label="2." cours="cours-derivees" bonne="c"}
 
 $f(x) = \sin 2x$
+
+#a
+$f'(x) = \cos 2x$
+
+#b
+$f'(x) = -2\cos 2x$
+
+#c
+$f'(x) = 2\cos 2x$
+
+#d
+$f'(x) = 2\sin 2x$
 
 #indice
 
@@ -706,9 +838,21 @@ $$
 
 ::
 
-::exo-question{label="3." cours="cours-derivees"}
+::exo-question{label="3." cours="cours-derivees" bonne="d"}
 
 $f(x) = \cos x\sin x$
+
+#a
+$f'(x) = -\cos x\sin x$
+
+#b
+$f'(x) = \sin^2x-\cos^2x$
+
+#c
+$f'(x) = \cos^2x+\sin^2x$
+
+#d
+$f'(x) = \cos^2x-\sin^2x$
 
 #indice
 
@@ -728,9 +872,21 @@ $$
 
 ::
 
-::exo-question{label="4." cours="cours-derivees"}
+::exo-question{label="4." cours="cours-derivees" bonne="a"}
 
 $f(x) = \sin^2x$
+
+#a
+$f'(x) = 2\sin x\cos x$
+
+#b
+$f'(x) = 2\sin x$
+
+#c
+$f'(x) = -2\sin x\cos x$
+
+#d
+$f'(x) = 2\cos^2 x$
 
 #indice
 
@@ -746,9 +902,21 @@ $$
 
 ::
 
-::exo-question{label="5." cours="cours-derivees"}
+::exo-question{label="5." cours="cours-derivees" bonne="b"}
 
 $f(x) = x^2\cos x$
+
+#a
+$f'(x) = -2x\sin x$
+
+#b
+$f'(x) = 2x\cos x-x^2\sin x$
+
+#c
+$f'(x) = 2x\cos x+x^2\sin x$
+
+#d
+$f'(x) = 2x\sin x-x^2\cos x$
 
 #indice
 
@@ -764,9 +932,21 @@ $$
 
 ::
 
-::exo-question{label="6." cours="cours-derivees"}
+::exo-question{label="6." cours="cours-derivees" bonne="c"}
 
 $f(x) = \cos^2x$
+
+#a
+$f'(x) = 2\cos x\sin x$
+
+#b
+$f'(x) = -2\cos x$
+
+#c
+$f'(x) = -2\sin x\cos x$
+
+#d
+$f'(x) = -2\sin^2 x$
 
 #indice
 
@@ -782,9 +962,21 @@ $$
 
 ::
 
-::exo-question{label="7." cours="cours-derivees"}
+::exo-question{label="7." cours="cours-derivees" bonne="d"}
 
 $f(x) = \sin x+\cos x$
+
+#a
+$f'(x) = \cos x+\sin x$
+
+#b
+$f'(x) = -\cos x-\sin x$
+
+#c
+$f'(x) = \sin x-\cos x$
+
+#d
+$f'(x) = \cos x-\sin x$
 
 #indice
 
@@ -802,9 +994,21 @@ $$
 
 ::
 
-::exo-question{label="8." cours="cours-derivees"}
+::exo-question{label="8." cours="cours-derivees" bonne="a"}
 
 $f(x) = \dfrac{2\cos x+3}{2\cos x-3}$
+
+#a
+$f'(x) = \dfrac{12\sin x}{(2\cos x-3)^2}$
+
+#b
+$f'(x) = -\dfrac{12\sin x}{(2\cos x-3)^2}$
+
+#c
+$f'(x) = \dfrac{12\sin x}{2\cos x-3}$
+
+#d
+$f'(x) = \dfrac{-8\sin x\cos x}{(2\cos x-3)^2}$
 
 #indice
 
