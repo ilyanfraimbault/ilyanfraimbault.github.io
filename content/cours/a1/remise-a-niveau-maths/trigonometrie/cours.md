@@ -1940,9 +1940,21 @@ $$
 
 :::exercice{titre="S'entraîner" theme="Sept questions pour vérifier que la figure est bien lue"}
 
-::question{label="1."}
+::question{label="1." bonne="c"}
 
 Convertir $135°$ en radians, puis $\dfrac{7\pi}{6}$ en degrés.
+
+#a
+$135° = \dfrac{4\pi}{3}$ et $\dfrac{7\pi}{6} = 210°$
+
+#b
+$135° = \dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6} = 150°$
+
+#c
+$135° = \dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6} = 210°$
+
+#d
+$135° = \dfrac{3\pi}{4}$ et $\dfrac{7\pi}{6} = 240°$
 
 #indice
 
@@ -1968,9 +1980,21 @@ $$
 
 ::
 
-::question{label="2."}
+::question{label="2." bonne="a"}
 
 Donner les valeurs exactes de $\cos\left(-\dfrac{5\pi}{6}\right)$ et $\sin\left(-\dfrac{5\pi}{6}\right)$.
+
+#a
+$\cos\left(-\dfrac{5\pi}{6}\right) = -\dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{5\pi}{6}\right) = -\dfrac12$
+
+#b
+$\cos\left(-\dfrac{5\pi}{6}\right) = \dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{5\pi}{6}\right) = -\dfrac12$
+
+#c
+$\cos\left(-\dfrac{5\pi}{6}\right) = -\dfrac{\sqrt3}{2}$ et $\sin\left(-\dfrac{5\pi}{6}\right) = \dfrac12$
+
+#d
+$\cos\left(-\dfrac{5\pi}{6}\right) = -\dfrac12$ et $\sin\left(-\dfrac{5\pi}{6}\right) = -\dfrac{\sqrt3}{2}$
 
 #indice
 
@@ -2000,9 +2024,21 @@ $$
 
 ::
 
-::question{label="3."}
+::question{label="3." bonne="d"}
 
 Dans quel quadrant se trouve un angle $\theta$ tel que $\cos\theta < 0$ et $\sin\theta > 0$ ? Donner un angle remarquable qui convient.
+
+#a
+le 3ᵉ quadrant, $\theta\in\left]\pi,\dfrac{3\pi}{2}\right[$ — par exemple $\dfrac{5\pi}{4}$
+
+#b
+le 4ᵉ quadrant, $\theta\in\left]\dfrac{3\pi}{2},2\pi\right[$ — par exemple $\dfrac{7\pi}{4}$
+
+#c
+le 1ᵉʳ quadrant, $\theta\in\left]0,\dfrac{\pi}{2}\right[$ — par exemple $\dfrac{\pi}{4}$
+
+#d
+le 2ᵉ quadrant, $\theta\in\left]\dfrac{\pi}{2},\pi\right[$ — par exemple $\dfrac{3\pi}{4}$
 
 #indice
 
@@ -2020,9 +2056,21 @@ C'est exactement le raisonnement qu'on tient pour déterminer l'argument d'un no
 
 ::
 
-::question{label="4."}
+::question{label="4." bonne="b"}
 
 Simplifier $A = \cos(\pi-x)+\cos(\pi+x)+\sin\left(\dfrac{\pi}{2}+x\right)$.
+
+#a
+$A = \cos x$
+
+#b
+$A = -\cos x$
+
+#c
+$A = -3\cos x$
+
+#d
+$A = \sin x-\cos x$
 
 #indice
 
@@ -2046,9 +2094,21 @@ $$
 
 ::
 
-::question{label="5."}
+::question{label="5." bonne="c"}
 
 Résoudre $\sin x = \dfrac{\sqrt3}{2}$ sur $[0,2\pi]$.
+
+#a
+$S = \left\{\dfrac{\pi}{3}\right\}$
+
+#b
+$S = \left\{\dfrac{\pi}{6},\ \dfrac{5\pi}{6}\right\}$
+
+#c
+$S = \left\{\dfrac{\pi}{3},\ \dfrac{2\pi}{3}\right\}$
+
+#d
+$S = \left\{\dfrac{\pi}{3},\ \dfrac{4\pi}{3}\right\}$
 
 #indice
 
@@ -2074,9 +2134,21 @@ $$
 
 ::
 
-::question{label="6."}
+::question{label="6." bonne="a"}
 
 Résoudre $\cos(2x) = -\dfrac12$ sur $[0,\pi]$.
+
+#a
+$S = \left\{\dfrac{\pi}{3},\ \dfrac{2\pi}{3}\right\}$
+
+#b
+$S = \left\{\dfrac{2\pi}{3},\ \dfrac{4\pi}{3}\right\}$
+
+#c
+$S = \left\{\dfrac{2\pi}{3}\right\}$
+
+#d
+$S = \left\{\dfrac{\pi}{6},\ \dfrac{5\pi}{6}\right\}$
 
 #indice
 
@@ -2108,9 +2180,21 @@ $$
 
 ::
 
-::question{label="7."}
+::question{label="7." bonne="b"}
 
 Calculer $\arccos\left(\cos\dfrac{7\pi}{6}\right)$ et $\arcsin\left(\sin\dfrac{5\pi}{4}\right)$.
+
+#a
+$\arccos\left(\cos\dfrac{7\pi}{6}\right) = \dfrac{7\pi}{6}$ et $\arcsin\left(\sin\dfrac{5\pi}{4}\right) = \dfrac{5\pi}{4}$
+
+#b
+$\arccos\left(\cos\dfrac{7\pi}{6}\right) = \dfrac{5\pi}{6}$ et $\arcsin\left(\sin\dfrac{5\pi}{4}\right) = -\dfrac{\pi}{4}$
+
+#c
+$\arccos\left(\cos\dfrac{7\pi}{6}\right) = \dfrac{5\pi}{6}$ et $\arcsin\left(\sin\dfrac{5\pi}{4}\right) = \dfrac{\pi}{4}$
+
+#d
+$\arccos\left(\cos\dfrac{7\pi}{6}\right) = \dfrac{\pi}{6}$ et $\arcsin\left(\sin\dfrac{5\pi}{4}\right) = -\dfrac{\pi}{4}$
 
 #indice
 
