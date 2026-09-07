@@ -27,8 +27,20 @@ Le bon réflexe : chercher, puis l'indice, puis le cours, et la solution en dern
 :::exercice{titre="Exercice 1" theme="Forme algébrique d'une somme, d'un produit et d'un quotient"}
 On pose $z_1 = 2+3i$ et $z_2 = 4-2i$. Donner la forme algébrique de chacune des expressions suivantes.
 
-::exo-question{label="a)" cours="cours-operations"}
+::exo-question{label="a)" cours="cours-operations" bonne="b"}
 $z_1 + z_2$
+
+#a
+$6+5i$
+
+#b
+$6+i$
+
+#c
+$-2+5i$
+
+#d
+$8-6i$
 
 #indice
 L'addition de deux complexes se fait « composante par composante », exactement comme pour des vecteurs : on additionne les parties réelles entre elles, et les parties imaginaires entre elles. Aucune règle particulière à connaître ici, $i$ se comporte comme une variable qu'on factorise.
@@ -43,8 +55,20 @@ $$
 La forme algébrique cherchée est donc $\boxed{6+i}$, de partie réelle $6$ et de partie imaginaire $1$.
 ::
 
-::exo-question{label="b)" cours="cours-operations"}
+::exo-question{label="b)" cours="cours-operations" bonne="c"}
 $z_1 \times z_2$
+
+#a
+$2+8i$
+
+#b
+$8-6i$
+
+#c
+$14+8i$
+
+#d
+$14-8i$
 
 #indice
 Développe le produit comme un produit de deux binômes (double distributivité, la même que pour $(a+b)(c+d)$). Le seul point spécifique aux complexes intervient à la fin : il reste un terme en $i^2$, qu'il faut remplacer par $-1$ — attention, cela change le signe de ce terme et il rejoint alors la partie réelle.
@@ -63,8 +87,20 @@ z_1 z_2 = 8+6+(-4+12)i = \boxed{14+8i}
 $$
 ::
 
-::exo-question{label="c)" cours="cours-operations"}
+::exo-question{label="c)" cours="cours-operations" bonne="d"}
 $z_1^2$
+
+#a
+$13+12i$
+
+#b
+$4+12i$
+
+#c
+$-5+6i$
+
+#d
+$-5+12i$
 
 #indice
 C'est un carré : l'identité remarquable $(a+b)^2 = a^2+2ab+b^2$ s'applique telle quelle. Le piège classique est le terme $(3i)^2$ : n'oublie pas d'élever **à la fois** le $3$ et le $i$ au carré.
@@ -83,8 +119,20 @@ z_1^2 = 4-9+12i = \boxed{-5+12i}
 $$
 ::
 
-::exo-question{label="d)" cours="cours-conjugue-quotient"}
+::exo-question{label="d)" cours="cours-conjugue-quotient" bonne="a"}
 $z_1 \times \overline{z_1}$
+
+#a
+$13$
+
+#b
+$-5$
+
+#c
+$\sqrt{13}$
+
+#d
+$-5+12i$
 
 #indice
 Tu peux développer, mais il y a beaucoup plus rapide : le produit d'un complexe par son conjugué est une propriété du cours qui donne directement un **nombre réel**. Regarde la formule $z\bar z = a^2+b^2$ — le résultat ne comporte aucun $i$.
@@ -99,8 +147,20 @@ $$
 Vérification en développant, si l'on préfère : $(2+3i)(2-3i) = 4-9i^2 = 4+9 = 13$. C'est le carré du module de $z_1$, et c'est précisément ce qui rend la méthode du conjugué utile aux questions suivantes.
 ::
 
-::exo-question{label="e)" cours="cours-conjugue-quotient"}
+::exo-question{label="e)" cours="cours-conjugue-quotient" bonne="c"}
 $\dfrac{1}{z_2}$
+
+#a
+$\dfrac{1}{4}+\dfrac{1}{2}i$
+
+#b
+$\dfrac{1}{3}+\dfrac{1}{6}i$
+
+#c
+$\dfrac{1}{5}+\dfrac{1}{10}i$
+
+#d
+$\dfrac{1}{5}-\dfrac{1}{10}i$
 
 #indice
 Un quotient n'est pas sous forme algébrique tant qu'il reste un $i$ au dénominateur. La méthode du cours consiste à multiplier haut et bas par le conjugué du dénominateur : grâce à la question **d)**, le dénominateur devient alors un réel, et il ne reste qu'à séparer les deux morceaux de la fraction.
@@ -119,8 +179,20 @@ $$
 $$
 ::
 
-::exo-question{label="f)" cours="cours-conjugue-quotient"}
+::exo-question{label="f)" cours="cours-conjugue-quotient" bonne="b"}
 $\dfrac{z_1}{z_2}$
+
+#a
+$\dfrac{7}{10}+\dfrac{4}{5}i$
+
+#b
+$\dfrac{1}{10}+\dfrac{4}{5}i$
+
+#c
+$\dfrac{1}{10}-\dfrac{4}{5}i$
+
+#d
+$\dfrac{1}{2}-\dfrac{3}{2}i$
 
 #indice
 Même méthode qu'en **e)** : on multiplie haut et bas par $\overline{z_2}$. Le dénominateur a déjà été calculé à la question précédente, il ne reste donc qu'un produit de deux complexes à développer au numérateur — attention à ne pas confondre $\overline{z_2}$ avec $z_2$ dans ce développement.
@@ -149,8 +221,20 @@ $$
 :::exercice{titre="Exercice 2" theme="Équation du second degré à discriminant négatif"}
 Résoudre dans $\mathbb{C}$ l'équation $x^2+x+1 = 0$.
 
-::exo-question{label="1." cours="cours-second-degre"}
+::exo-question{label="1." cours="cours-second-degre" bonne="d"}
 Déterminer l'ensemble des solutions.
+
+#a
+$S = \varnothing$ : le discriminant est négatif.
+
+#b
+$S = \left\{\dfrac{1-i\sqrt{3}}{2},\; \dfrac{1+i\sqrt{3}}{2}\right\}$
+
+#c
+$S = \left\{\dfrac{-1-3i}{2},\; \dfrac{-1+3i}{2}\right\}$
+
+#d
+$S = \left\{\dfrac{-1-i\sqrt{3}}{2},\; \dfrac{-1+i\sqrt{3}}{2}\right\}$
 
 #indice
 La méthode est exactement celle du second degré vue au lycée : on identifie $a$, $b$, $c$ puis on calcule le discriminant. La seule différence est ce qu'on fait quand $\Delta < 0$ : dans $\mathbb{R}$ on concluait « pas de solution », dans $\mathbb{C}$ on écrit $\sqrt{\Delta} = i\sqrt{-\Delta}$ et les deux racines existent bel et bien.
@@ -199,8 +283,20 @@ On applique $M(x,y) \mapsto z = x+yi$ :
 $M_2$ est sur l'axe des ordonnées, donc sa partie réelle est nulle ; $M_3$ est sur l'axe des abscisses, donc sa partie imaginaire est nulle.
 ::
 
-::exo-question{label="b)" cours="cours-affixes"}
+::exo-question{label="b)" cours="cours-affixes" bonne="a"}
 Donner l'affixe du vecteur $\overrightarrow{M_2M_4}$.
+
+#a
+$4-i$
+
+#b
+$-4+i$
+
+#c
+$4+5i$
+
+#d
+$4+2i$
 
 #indice
 Souviens-toi de la formule des coordonnées d'un vecteur : $\overrightarrow{AB}$ a pour coordonnées $(x_B-x_A,\ y_B-y_A)$. La même règle vaut pour les affixes — « extrémité moins origine ». Le sens compte : $\overrightarrow{M_2M_4}$ et $\overrightarrow{M_4M_2}$ ont des affixes opposées.
@@ -215,8 +311,20 @@ $$
 On peut le relire sur la figure : pour aller de $M_2(0,3)$ à $M_4(4,2)$, on avance de $4$ vers la droite et on descend de $1$, ce qui correspond bien au vecteur de coordonnées $(4,-1)$.
 ::
 
-::exo-question{label="c)" cours="cours-affixes"}
+::exo-question{label="c)" cours="cours-affixes" bonne="b"}
 Calculer l'affixe du milieu du segment $[M_2M_3]$.
+
+#a
+$-2+3i$
+
+#b
+$-1+\dfrac{3}{2}i$
+
+#c
+$-2+\dfrac{3}{2}i$
+
+#d
+$-1+3i$
 
 #indice
 La formule du milieu se transpose des coordonnées aux affixes sans changement : c'est la moyenne des deux affixes. Attention à bien diviser **les deux** parties par $2$, la réelle comme l'imaginaire.
@@ -235,8 +343,20 @@ Le milieu a donc pour coordonnées $\left(-1,\ \dfrac{3}{2}\right)$, ce qui est 
 :::exercice{titre="Exercice 4" theme="Forme exponentielle"}
 Donner une forme exponentielle du nombre complexe $z = \sqrt{3}-3i$.
 
-::exo-question{label="1." cours="cours-module-exponentielle"}
+::exo-question{label="1." cours="cours-module-exponentielle" bonne="c"}
 Écrire $z$ sous la forme $re^{i\theta}$.
+
+#a
+$2\sqrt{3}\,e^{i\pi/3}$
+
+#b
+$12\,e^{-i\pi/3}$
+
+#c
+$2\sqrt{3}\,e^{-i\pi/3}$
+
+#d
+$2\sqrt{3}\,e^{-i\pi/6}$
 
 #indice
 La méthode se déroule toujours en trois temps : module, puis argument, puis écriture finale. Pour l'argument, calcule **les deux** valeurs $\cos\theta$ et $\sin\theta$ — une seule ne suffit pas à déterminer l'angle, puisque deux angles distincts partagent le même cosinus. Ici le signe de la partie imaginaire t'indique déjà dans quel demi-plan chercher.
