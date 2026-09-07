@@ -22,12 +22,16 @@ const route = useRoute()
 // `useId()` ici. Le chemin de la page et le titre du bloc suffisent à distinguer
 // les onze contrôles express d'une même page de cours. Sans titre, pas de
 // mémoire — mieux vaut aucun historique qu'un historique qui se mélange.
-const identifiant = computed(() => {
-  if (!props.titre) return null
-  const slug = props.titre.normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-  return `${route.path}#${slug}`
-})
+// Le chemin passe par sa forme canonique : les hébergeurs statiques redirigent
+// « /page » vers « /page/ », et sans cela une même page aurait deux mémoires
+// selon l'URL par laquelle on y est arrivé.
+const identifiant = computed(() =>
+  props.titre ? `${cheminCanonique(route.path)}#${slugifier(props.titre)}` : null)
+
+// Les questions du QCM comptent dans la progression de la fiche au même titre
+// que celles d'un exercice : le bloc leur prête son titre pour qu'elles composent
+// leur identité.
+provideBloc(() => props.titre)
 
 const {
   corrige, total, repondues, justes, ratees, corriger, recommencer,

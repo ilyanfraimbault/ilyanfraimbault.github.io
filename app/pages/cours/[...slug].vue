@@ -17,6 +17,10 @@ if (!page.value) {
 const { openAll, closeAll } = provideCoursReveal()
 provideCoursExtraits()
 
+// Les blocs de questions de la page — exercices comme QCM — viennent s'y compter :
+// c'est ce total qui alimente la barre ci-dessous et celle des cartes de lien.
+const { total: totalQuestions, reussies, pourcentage, oublierProgression } = provideProgression(contentPath)
+
 const parent = computed(() => {
   const segments = contentPath.value.split('/').filter(Boolean)
   return segments.length > 1 ? `/${segments.slice(0, -1).join('/')}` : null
@@ -73,6 +77,33 @@ useSeoMeta({
           >
             {{ page.description }}
           </p>
+          <div
+            v-if="totalQuestions"
+            class="pt-2"
+          >
+            <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+              <span class="text-sm text-muted">
+                <span class="font-medium text-highlighted tabular-nums">{{ reussies }} / {{ totalQuestions }}</span>
+                question{{ totalQuestions > 1 ? 's' : '' }} trouvée{{ totalQuestions > 1 ? 's' : '' }}
+              </span>
+              <UButton
+                v-if="reussies"
+                color="neutral"
+                variant="ghost"
+                size="xs"
+                icon="i-lucide-eraser"
+                label="Repartir de zéro"
+                @click="oublierProgression"
+              />
+            </div>
+            <UProgress
+              class="mt-2"
+              size="xs"
+              :color="pourcentage === 100 ? 'success' : 'primary'"
+              :model-value="reussies"
+              :max="totalQuestions"
+            />
+          </div>
           <div
             v-if="page.interactif"
             class="flex flex-wrap items-center gap-2 pt-2"
