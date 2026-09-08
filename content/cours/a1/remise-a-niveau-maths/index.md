@@ -67,3 +67,8 @@ Les résultats ont été vérifiés par calcul formel puis confrontés aux élé
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths/nombres-complexes/entrainement" titre="Nombres complexes" description="De « qu'est-ce que i » à la formule de Moivre, en cinq paliers" type="entrainement" meta="15 questions"}
 ::
+
+## Emporter mes résultats
+
+::export-resultats
+::
