@@ -148,6 +148,11 @@ exp et ln et leurs règles algébriques, les équations et inéquations, les cro
 
 À savoir sans hésiter : la hiérarchie **exponentielle $\gg$ puissances $\gg$ logarithme**, les intervalles d'arrivée d'arccos, arcsin et arctan, et le fait que $\mathrm{ch}' = \mathrm{sh}$ **sans** signe moins, contrairement au cosinus.
 
+## Emporter mes résultats
+
+::export-resultats
+::
+
 ## Les autres pages du chapitre
 
 ::carte-lien{to="/cours/a1/remise-a-niveau-maths" titre="Remise à niveau en maths" description="Les quatre chapitres : cours, exercices du TD corrigés et fiches d'entraînement" icone="i-lucide-sigma" meta="4 chapitres"}
