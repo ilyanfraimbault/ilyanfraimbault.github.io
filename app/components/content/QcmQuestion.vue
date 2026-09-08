@@ -44,10 +44,12 @@ const rateeAvant = computed(() =>
 onMounted(() => {
   qcm?.enregistrer({ id: uid, label: props.label, bonne: props.bonne })
   progression?.declarer(identite.value)
+  bloc?.ajouter(identite.value)
 })
 onBeforeUnmount(() => {
   qcm?.oublier(uid)
   progression?.oublier(identite.value)
+  bloc?.retirer(identite.value)
 })
 
 // Le conteneur remet les réponses à zéro en sortant du mode corrigé : la question

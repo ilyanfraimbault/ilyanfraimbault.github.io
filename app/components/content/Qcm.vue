@@ -31,7 +31,15 @@ const identifiant = computed(() =>
 // Les questions du QCM comptent dans la progression de la fiche au même titre
 // que celles d'un exercice : le bloc leur prête son titre pour qu'elles composent
 // leur identité.
-provideBloc(() => props.titre)
+const { ids } = provideBloc(() => props.titre)
+
+const progression = useProgression()
+
+// Le décompte cumulé des questions un jour trouvées, à côté du titre — le même
+// que porte un bloc d'exercice. Il ne dit pas la même chose que le score de la
+// copie affiché en pied : celui-ci vaut pour le passage en cours, celui-là pour
+// tout ce qui a fini par être acquis.
+const trouvees = computed(() => [...ids].filter(id => progression?.memoire(id)).length)
 
 const {
   corrige, total, repondues, justes, ratees, corriger, recommencer,
@@ -129,6 +137,15 @@ function corrigerEtRemonter() {
         size="sm"
         class="shrink-0"
         :label="duree"
+      />
+      <UBadge
+        v-if="ids.size && trouvees"
+        :color="trouvees === ids.size ? 'success' : 'neutral'"
+        variant="subtle"
+        size="sm"
+        class="shrink-0 tabular-nums"
+        :icon="trouvees === ids.size ? 'i-lucide-check' : undefined"
+        :label="`${trouvees} / ${ids.size}`"
       />
     </div>
     <p
